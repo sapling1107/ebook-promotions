@@ -243,7 +243,7 @@ def main():
             and prev_sig.get(x["platform"])
             and prev_sig.get(x["platform"]) != signature
         ):
-        changed_platforms.append(x["platform"])
+            changed_platforms.append(x["platform"])
 
         items.append(
             {
