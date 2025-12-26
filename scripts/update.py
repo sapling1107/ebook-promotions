@@ -89,34 +89,43 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
 
 def extract_bw_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
-    candidates = []
 
+    texts = []
     for a in soup.select("a"):
-        txt = a.get_text(" ", strip=True)
-        if not txt:
+        t = a.get_text(" ", strip=True)
+        if not t:
+            continue
+        t = re.sub(r"\s+", " ", t).strip()
+        if len(t) < 6 or len(t) > 60:
             continue
 
-        # 排除明顯不是活動的導航/系統詞
-        if any(bad in txt for bad in [
-            "會員資料", "會員通知", "登入", "註冊",
-            "推薦主題", "活動列表", "查看更多"
+        # 明顯不是活動的導覽字
+        if any(bad in t for bad in [
+            "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多"
         ]):
             continue
 
-        # 太短或太長的不要
-        if len(txt) < 6 or len(txt) > 50:
+        # 這次的地雷：把「限制級/連載」類全部踢掉
+        if any(bad in t for bad in [
+            "限制級", "連載", "聲音作品", "雜誌", "日文書", "作品"
+        ]):
             continue
 
-        candidates.append(txt)
+        texts.append(t)
 
-    # 只保留「看起來像促銷活動」的
-    filtered = [
-        t for t in candidates
-        if any(k in t for k in ["折", "%", "滿", "限", "回饋", "書展", "前", "到"])
-    ]
+    # 只收「真的像促銷活動」的字串（更硬核一點）
+    promo = []
+    for t in texts:
+        if re.search(r"\d+\s*折", t):          # 63折、75折
+            promo.append(t); continue
+        if re.search(r"\d+\s*%|％", t):        # 79% / 79％
+            promo.append(t); continue
+        if re.search(r"滿\s*\d+", t):          # 滿1500
+            promo.append(t); continue
+        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]):
+            promo.append(t); continue
 
-    return pick_unique_texts(filtered, limit=6)
-
+    return pick_unique_texts(promo, limit=6)
     # 先抓「看起來像活動卡片/列表」的連結文字
     candidates = []
 
