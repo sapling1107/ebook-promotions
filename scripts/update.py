@@ -8,6 +8,7 @@ from typing import List, Dict, Any
 import requests
 from bs4 import BeautifulSoup
 
+PARSER_VERSION = 2
 URLS = [
     {
         "platform": "BookWalker",
@@ -169,9 +170,9 @@ def extract_readmoo_cards(html: str) -> List[str]:
     return pick_unique_texts(merged, limit=10)
 
 
-def load_prev_signature() -> Dict[str, str]:
+def load_prev_signature() -> Dict[str, Any]:
     if not os.path.exists(OUT_JSON):
-        return {}
+        return {"parser_version": None, "sig": {}}
     try:
         with open(OUT_JSON, "r", encoding="utf-8") as f:
             prev = json.load(f)
@@ -181,9 +182,9 @@ def load_prev_signature() -> Dict[str, str]:
             signature = it.get("signature", "")
             if platform:
                 sig[platform] = signature
-        return sig
+        return {"parser_version": prev.get("parser_version"), "sig": sig}
     except Exception:
-        return {}
+        return {"parser_version": None, "sig": {}}
 
 
 def make_signature(page_title: str, card_titles: List[str], status: int, error: str) -> str:
@@ -201,7 +202,9 @@ def main():
     tz = timezone(timedelta(hours=8))  # 台灣時間
     now = datetime.now(tz).strftime("%Y-%m-%d %H:%M")
 
-    prev_sig = load_prev_signature()
+    prev = load_prev_signature()
+    prev_sig = prev["sig"]
+    prev_ver = prev["parser_version"]
 
     items = []
     changed_platforms = []
@@ -235,8 +238,12 @@ def main():
 
         signature = make_signature(title, card_titles, status, error)
 
-        if prev_sig.get(x["platform"]) and prev_sig.get(x["platform"]) != signature:
-            changed_platforms.append(x["platform"])
+        if (
+            prev_ver == PARSER_VERSION
+            and prev_sig.get(x["platform"])
+            and prev_sig.get(x["platform"]) != signature
+        ):
+        changed_platforms.append(x["platform"])
 
         items.append(
             {
@@ -254,6 +261,7 @@ def main():
     os.makedirs("data", exist_ok=True)
 
     payload = {
+        "parser_version": PARSER_VERSION,
         "updated_at_taipei": now,
         "has_new_changes": "是" if len(changed_platforms) > 0 else "否",
         "changed_platforms": changed_platforms,
