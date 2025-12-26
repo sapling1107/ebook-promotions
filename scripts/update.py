@@ -89,6 +89,33 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
 
 def extract_bw_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
+    candidates = []
+
+    for a in soup.select("a"):
+        txt = a.get_text(" ", strip=True)
+        if not txt:
+            continue
+
+        # 排除明顯不是活動的導航/系統詞
+        if any(bad in txt for bad in [
+            "會員資料", "會員通知", "登入", "註冊",
+            "推薦主題", "活動列表", "查看更多"
+        ]):
+            continue
+
+        # 太短或太長的不要
+        if len(txt) < 6 or len(txt) > 50:
+            continue
+
+        candidates.append(txt)
+
+    # 只保留「看起來像促銷活動」的
+    filtered = [
+        t for t in candidates
+        if any(k in t for k in ["折", "%", "滿", "限", "回饋", "書展", "前", "到"])
+    ]
+
+    return pick_unique_texts(filtered, limit=6)
 
     # 先抓「看起來像活動卡片/列表」的連結文字
     candidates = []
