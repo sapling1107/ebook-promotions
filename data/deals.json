@@ -1,0 +1,47 @@
+{
+  "updated_at_taipei": "2025-12-26 18:19",
+  "items": [
+    {
+      "platform": "BookWalker",
+      "url": "https://www.bookwalker.com.tw/event",
+      "note": "主題&活動列表",
+      "page_title": "推薦主題&amp;活動 BOOK☆WALKER 台灣漫讀 / 電子書平台",
+      "error": ""
+    },
+    {
+      "platform": "Readmoo",
+      "url": "https://readmoo.com/campaign/activities",
+      "note": "進行中活動",
+      "page_title": "",
+      "error": ""
+    },
+    {
+      "platform": "HyRead",
+      "url": "https://ebook.hyread.com.tw/Template/store/event_list.jsp",
+      "note": "熱門活動",
+      "page_title": "HyRead ebook 電子書店",
+      "error": ""
+    },
+    {
+      "platform": "Pubu",
+      "url": "https://www.pubu.com.tw/activity/ongoing",
+      "note": "全站活動",
+      "page_title": "",
+      "error": "403 Client Error: Forbidden for url: https://www.pubu.com.tw/activity/ongoing"
+    },
+    {
+      "platform": "Kobo",
+      "url": "https://www.kobo.com/tw/zh",
+      "note": "折扣多在主頁（弱來源）",
+      "page_title": "",
+      "error": "403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh"
+    },
+    {
+      "platform": "博客來",
+      "url": "https://activity.books.com.tw/crosscat/show/A00000062854?loc=mood_001",
+      "note": "電子書活動入口（可能會調整）",
+      "page_title": "每日e書99｜嚴選暢銷電子書，天天更新、天天都有新發現",
+      "error": ""
+    }
+  ]
+}
