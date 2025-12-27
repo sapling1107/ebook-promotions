@@ -180,6 +180,8 @@ def extract_bw_cards(html: str) -> List[str]:
         texts = []
         for a in h4.find_all("a"):
             t = a.get_text(" ", strip=True)
+            if not t:
+                t = (a.get("title") or a.get("alt") or "").strip()
             if t:
                 texts.append(t)
 
@@ -188,7 +190,7 @@ def extract_bw_cards(html: str) -> List[str]:
             joined = re.sub(r"\s+", " ", joined).strip()
 
             # 基本過濾，避免抓到垃圾
-            if 6 <= len(joined) <= 120:
+            if 6 <= len(joined) <= 200:
                 candidates.append(joined)
 
     for a in soup.select("a"):
