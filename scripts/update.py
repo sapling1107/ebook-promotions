@@ -454,9 +454,6 @@ def load_prev_signature() -> Dict[str, Any]:
         return {"parser_version": prev.get("parser_version"), "sig": sig}
     except Exception:
         return {"parser_version": None, "sig": {}}
-        
-    if platform == "BookWalker":
-        signature["ts"] = datetime.now().strftime("%Y-%m-%d")
 
 def make_signature(platform: str, page_title: str, card_titles: List[str], status: int, error: str) -> str:
     base = {
@@ -510,8 +507,6 @@ def main():
                 card_titles = extract_pubu_cards(html)
 
             # ===== BookWalker：新活動排前（只 reorder，不 filter）=====
-            if platform == "BookWalker" and card_titles:
-                prev_titles = set()
 
             # 從昨天的資料撈出舊的 BW 標題
                 try:
