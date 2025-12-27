@@ -84,13 +84,13 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
         cleaned.append(t)
 
     def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
-    kept: List[str] = []
-    seen = set()
+        kept: List[str] = []
+        seen = set()
 
-    for t in texts:
-        t = re.sub(r"\s+", " ", (t or "")).strip()
-        if not t:
-            continue
+        for t in texts:
+            t = re.sub(r"\s+", " ", (t or "")).strip()
+            if not t:
+                continue
 
         if t in seen:
             continue
