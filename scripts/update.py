@@ -196,8 +196,11 @@ def extract_bw_cards(html: str) -> List[str]:
         return s
 
     scored = [(score(t), t) for t in candidates]
-    scored = [(sc, t) for (sc, t) in scored if sc > 0]
     scored.sort(key=lambda x: x[0], reverse=True)
+
+    # 直接取排序後的文字，不用分數當門檻
+    picked = [t for (_, t) in scored]
+
     # 新活動：今天有、昨天沒有
     new_items = [t for (_, t) in scored if t not in prev_titles]
 
