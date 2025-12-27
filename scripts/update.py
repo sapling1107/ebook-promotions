@@ -196,6 +196,29 @@ def extract_bw_cards(html: str) -> List[str]:
             if len(candidates) >= 80:
                 break
 
+    # 補抓：掃描「卡片文字區塊」（不在 <a> 裡的）
+    if len(candidates) < 30:
+        for el in soup.select("div, section, article"):
+            texts = [t.strip() for t in el.stripped_strings if t.strip()]
+            if len(texts) < 2:
+                continue
+
+            joined = " ".join(texts)
+            # 只抓「看起來像活動」的文字組合
+            if any(k in joined for k in [
+                "年度閱讀報告",
+                "一日限時",
+                "限時優惠",
+                "特價",
+                "折",
+                "99元",
+                "優惠券",
+                "點數",
+            ]):
+            # 避免整段太長
+            joined = joined[:120] if len(joined) > 120 else joined
+            add_candidate(joined)
+
     # ---- 打分排序：分數只用來「排前面」，絕對不做生死線 ----
     def score(t: str) -> int:
         s = 0
@@ -226,17 +249,17 @@ def extract_bw_cards(html: str) -> List[str]:
         else:
             promo_like.append(t)
 
-    # 組裝輸出：促銷先 20，活動任務補 10（你要「一定有東西」所以給得夠）
+    # 組裝輸出：促銷先 15，活動任務補 5（你要「一定有東西」所以給得夠）
     out = []
-    out.extend(promo_like[:20])
-    out.extend(activity_like[:10])
+    out.extend(promo_like[:15])
+    out.extend(activity_like[:5])
 
     # 最終保底：如果上面不小心變空（理論上不會），直接回 candidates 前 15
     if not out:
-        out = candidates[:30]
+        out = candidates[:15]
 
     # 用「保序去重」避免被 pick_unique_texts 刪光
-    return pick_unique_texts_keep_order(out, limit=30)
+    return pick_unique_texts_keep_order(out, limit=15)
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
@@ -669,7 +692,7 @@ def main():
                     "HyRead": 24,
                     "Pubu": 36,
                 }
-                limit = display_limits.get(it["platform"], 25)
+                limit = display_limits.get(it["platform"], 20)
 
                 for t in it["card_titles"][:limit]:
                     html_lines.append(f"<li>{t}</li>")
