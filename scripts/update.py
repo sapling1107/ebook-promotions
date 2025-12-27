@@ -95,6 +95,16 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
 def extract_bw_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
 
+    prev_titles = set()
+    try:
+        with open("data/deals.json", "r", encoding="utf-8") as f:
+            prev = json.load(f)
+        for it in prev.get("items", []):
+            if it.get("platform") == "BookWalker":
+                prev_titles = set(it.get("card_titles", []))
+    except Exception:
+        pass
+
     candidates = []
     for a in soup.select("a"):
         t = a.get_text(" ", strip=True)
@@ -135,6 +145,11 @@ def extract_bw_cards(html: str) -> List[str]:
     scored = [(score(t), t) for t in candidates]
     scored = [(sc, t) for (sc, t) in scored if sc > 0]
     scored.sort(key=lambda x: x[0], reverse=True)
+    # 新活動：今天有、昨天沒有
+    new_items = [t for (_, t) in scored if t not in prev_titles]
+
+    # 保證最多保留 2 個新活動
+    guaranteed_new = new_items[:2]
 
     # 分兩類：促銷型 vs 活動型
     promo_like = []
@@ -146,7 +161,7 @@ def extract_bw_cards(html: str) -> List[str]:
             promo_like.append(t)
 
     # 促銷型先取 6，活動型補 2（避免漏掉你在意的活動）
-    picked = promo_like[:12] + activity_like[:3]
+    picked = guaranteed_new + promo_like
 
     return pick_unique_texts(picked, limit=15)
 
