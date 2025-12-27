@@ -238,40 +238,6 @@ def extract_bw_cards(html: str) -> List[str]:
     # 用「保序去重」避免被 pick_unique_texts 刪光
     return pick_unique_texts_keep_order(out, limit=15)
 
-# ===== BookWalker：新活動排前（只 reorder，不 filter）=====
-if platform == "BookWalker" and card_titles:
-    prev_titles = set()
-
-    # 從昨天的資料撈出舊的 BW 標題
-    try:
-        with open(OUT_JSON, "r", encoding="utf-8") as f:
-            prev = json.load(f)
-        for it in prev.get("items", []):
-            if it.get("platform") == "BookWalker":
-                prev_titles = set(it.get("card_titles", []))
-                break
-    except Exception:
-        prev_titles = set()
-
-    # 新活動：今天有、昨天沒有
-    new_items = [t for t in card_titles if t not in prev_titles]
-
-    # 舊活動
-    old_items = [t for t in card_titles if t in prev_titles]
-
-    # 新的放前面（只換順序）
-    card_titles = new_items + old_items
-
-    # 顯示用：幫新活動加 🆕
-    display_titles = []
-    for t in card_titles:
-        if t in new_items:
-            display_titles.append("🆕 " + t)
-        else:
-            display_titles.append(t)
-
-    card_titles = display_titles
-# ===== BookWalker 排序結束 =====
 
 def extract_readmoo_cards(html: str) -> List[str]:
     import re
@@ -542,6 +508,41 @@ def main():
                 card_titles = extract_books_cards(html)
             elif x.get("extra") == "pubu":
                 card_titles = extract_pubu_cards(html)
+
+            # ===== BookWalker：新活動排前（只 reorder，不 filter）=====
+            if platform == "BookWalker" and card_titles:
+                prev_titles = set()
+
+            # 從昨天的資料撈出舊的 BW 標題
+                try:
+                    with open(OUT_JSON, "r", encoding="utf-8") as f:
+                        prev = json.load(f)
+                    for it in prev.get("items", []):
+                        if it.get("platform") == "BookWalker":
+                            prev_titles = set(it.get("card_titles", []))
+                            break
+                except Exception:
+                    prev_titles = set()
+
+            # 新活動：今天有、昨天沒有
+                new_items = [t for t in card_titles if t not in prev_titles]
+
+            # 舊活動
+                old_items = [t for t in card_titles if t in prev_titles]
+
+            # 新的放前面（只換順序）
+                card_titles = new_items + old_items
+
+            # 顯示用：幫新活動加 🆕
+                display_titles = []
+                for t in card_titles:
+                    if t in new_items:
+                        display_titles.append("🆕 " + t)
+                    else:
+                        display_titles.append(t)
+
+                card_titles = display_titles
+            # ===== BookWalker 排序結束 =====
 
         except requests.HTTPError as e:
             # 例如 403
