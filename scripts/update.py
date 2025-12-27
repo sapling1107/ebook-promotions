@@ -453,16 +453,18 @@ def load_prev_signature() -> Dict[str, Any]:
         return {"parser_version": prev.get("parser_version"), "sig": sig}
     except Exception:
         return {"parser_version": None, "sig": {}}
+        
+    if platform == "BookWalker":
+        signature["ts"] = datetime.now().strftime("%Y-%m-%d")
 
-
-def make_signature(page_title: str, card_titles: List[str], status: int, error: str) -> str:
-    # 用「最能代表今日狀態」的資訊做簽名
+def make_signature(platform: str, page_title: str, card_titles: List[str], status: int, error: str) -> str:
     base = {
         "status": status,
         "title": page_title or "",
         "cards": (card_titles or [])[:8],
         "error": (error or "")[:120],
     }
+
     return json.dumps(base, ensure_ascii=False, sort_keys=True)
 
 
@@ -516,7 +518,7 @@ def main():
         except Exception as e:
             error = str(e)
 
-        signature = make_signature(title, card_titles, status, error)
+        signature = make_signature(x["platform"], title, card_titles, status, error)
 
         if (
             prev_ver == PARSER_VERSION
