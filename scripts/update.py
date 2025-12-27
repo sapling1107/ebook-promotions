@@ -437,7 +437,7 @@ def make_signature(page_title: str, card_titles: List[str], status: int, error: 
     base = {
         "status": status,
         "title": page_title or "",
-        "cards": card_titles[:8],
+        "cards": (card_titles or [])[:8],
         "error": (error or "")[:120],
     }
     return json.dumps(base, ensure_ascii=False, sort_keys=True)
