@@ -150,19 +150,23 @@ def strip_new_prefix(t: str) -> str:
         t = t.replace("🆕", "", 1).strip()
     return t
 
-def mark_new_for_platform(platform: str, card_titles: list[str], out_json_path: str) -> tuple[list[str], list[str]]:
+def mark_new_for_platform(platform: str, card_titles, out_json_path: str):
     """
     回傳： (raw_titles_for_save, display_titles_for_html)
-    - raw_titles_for_save：乾淨版（不含🆕）
-    - display_titles_for_html：顯示版（新活動加🆕）
+    - raw_titles_for_save：乾淨版（不含🆕）→ 寫入 JSON / 做 signature 用
+    - display_titles_for_html：顯示版（新活動加🆕）→ 只用在 HTML
     """
     if not card_titles:
         return [], []
 
-    # 乾淨化今日抓到的
-    raw_today = [strip_new_prefix(t) for t in card_titles if (t or "").strip()]
+    # 今日（乾淨化）
+    raw_today = []
+    for t in (card_titles or []):
+        t2 = strip_new_prefix(t)
+        if t2:
+            raw_today.append(t2)
 
-    # 讀昨天的
+    # 昨日
     prev_titles = set()
     try:
         with open(out_json_path, "r", encoding="utf-8") as f:
@@ -174,7 +178,7 @@ def mark_new_for_platform(platform: str, card_titles: list[str], out_json_path: 
     except Exception:
         prev_titles = set()
 
-    # 新舊判定
+    # 新舊判定 + 排序
     new_items = [t for t in raw_today if t not in prev_titles]
     old_items = [t for t in raw_today if t in prev_titles]
 
@@ -502,6 +506,7 @@ def main():
         error = ""
         status = 0
         card_titles: List[str] = []
+        card_titles_for_html: List[str] = []
 
         try:
             res = fetch_html(x["url"])
@@ -526,9 +531,13 @@ def main():
             elif x.get("extra") == "pubu":
                 card_titles = extract_pubu_cards(html)
 
+            platform = x["platform"]
+
+            # BW / HyRead / Pubu：新活動排前 + 顯示🆕（但 JSON 存乾淨版）
             if platform in ("BookWalker", "HyRead", "Pubu") and card_titles:
                 card_titles, card_titles_for_html = mark_new_for_platform(platform, card_titles, OUT_JSON)
             else:
+                # 其他平台：顯示版就等於原本
                 card_titles_for_html = card_titles
 
         except requests.HTTPError as e:
@@ -665,8 +674,8 @@ def main():
                 }
                 limit = display_limits.get(it["platform"], 20)
 
-                titles = it.get("card_titles_for_html") or it.get("card_titles") or []
-                for t in titles[:limit]:
+                show_list = it.get("card_titles_for_html") or it.get("card_titles") or []
+                for t in show_list[:limit]:
                     html_lines.append(f"<li>{t}</li>")
                 html_lines.append("</ul>")
 
