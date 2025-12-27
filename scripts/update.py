@@ -83,17 +83,17 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
             continue
         cleaned.append(t)
 
-    def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
-        kept: List[str] = []
-        seen = set()
+def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
+    kept: List[str] = []
+    seen = set()
 
-        for t in texts:
-            t = re.sub(r"\s+", " ", (t or "")).strip()
-            if not t:
-                continue
+    for t in texts:
+        t = re.sub(r"\s+", " ", (t or "")).strip()
+        if not t:
+            continue
 
         if t in seen:
-                continue
+            continue
 
         # 子字串去重：避免同活動拆兩行時塞滿名額（保留先出現者＝新活動）
         if any(t in k for k in kept):
@@ -101,6 +101,7 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
 
         seen.add(t)
         kept.append(t)
+
         if len(kept) >= limit:
             break
 
