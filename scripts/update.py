@@ -236,7 +236,7 @@ def extract_bw_cards(html: str) -> List[str]:
         out = candidates[:15]
 
     # 用「保序去重」避免被 pick_unique_texts 刪光
-    return pick_unique_texts_keep_order(out, limit=15)
+    return pick_unique_texts_keep_order(out, limit=30)
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
