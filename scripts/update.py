@@ -239,25 +239,25 @@ def extract_bw_cards(html: str) -> List[str]:
                 add_candidate(joined)
 
     # ---- 打分排序：分數只用來「排前面」，絕對不做生死線 ----
-    def score(t: str) -> int:
-        s = 0
-        if re.search(r"\d+\s*折", t): s += 6
-        if re.search(r"\d+\s*(%|％)", t): s += 5
-        if re.search(r"滿\s*\d+", t): s += 5
-        if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5
-        if re.search(r"\d{1,2}[./-]\d{1,2}", t): s += 4
-        if re.search(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}", t): s += 4
-        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]): s += 3
+#     def score(t: str) -> int:
+#        s = 0
+#        if re.search(r"\d+\s*折", t): s += 6
+#        if re.search(r"\d+\s*(%|％)", t): s += 5
+#        if re.search(r"滿\s*\d+", t): s += 5
+#        if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5
+#        if re.search(r"\d{1,2}[./-]\d{1,2}", t): s += 4
+#        if re.search(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}", t): s += 4
+#        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]): s += 3
 
         # 你在意的活動型：加分，避免被折扣型擠掉
-        if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]): s += 6
+#        if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]): s += 6
 
         # 低品質噪音略扣，但不致死
-        if any(k in t for k in ["限制級", "連載"]): s -= 2
-        return s
+#        if any(k in t for k in ["限制級", "連載"]): s -= 2
+#        return s
 
-    scored = [(score(t), t) for t in candidates]
-    scored.sort(key=lambda x: x[0], reverse=True)
+#    scored = [(score(t), t) for t in candidates]
+#    scored.sort(key=lambda x: x[0], reverse=True)
 
     # 分桶：折扣促銷 vs 活動任務（兩種都要保留）
     promo_like: List[str] = []
@@ -273,12 +273,12 @@ def extract_bw_cards(html: str) -> List[str]:
     out.extend(promo_like[:15])
     out.extend(activity_like[:5])
 
-    # 最終保底：如果上面不小心變空（理論上不會），直接回 candidates 前 15
+    # 最終保底：如果上面不小心變空（理論上不會），直接回 candidates 前 20
     if not out:
-        out = candidates[:15]
+        out = candidates[:20]
 
     # 用「保序去重」避免被 pick_unique_texts 刪光
-    return pick_unique_texts_keep_order(out, limit=15)
+    return pick_unique_texts_keep_order(out, limit=20)
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
