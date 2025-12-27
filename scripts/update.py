@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 PARSER_VERSION = 2
 URLS = [
     {
-        "platform": "BookWalker",
+        "platform": "BookWalker", #BW
         "url": "https://www.bookwalker.com.tw/event",
         "note": "主題&活動列表",
         "extra": "bw",
