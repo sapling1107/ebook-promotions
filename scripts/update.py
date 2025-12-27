@@ -144,141 +144,65 @@ def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
 
     return kept
 
-
 def extract_bw_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
 
-    # 1) 先從 <a> 抓候選（你原本做法）
-    candidates: List[str] = []
+    results = []
     seen = set()
 
-    def add_candidate(t: str):
-        t = re.sub(r"\s+", " ", (t or "")).strip()
-        if not t:
-            return
-        if len(t) < 6:
-            return
-        # 放寬上限，BW 很常「標題＋副標」很長
-        if len(t) > 220:
-            t = t[:217] + "…"
+    NAV_WORDS = [
+        "會員資料", "會員通知", "登入", "註冊",
+        "搜尋", "購物車", "我的書櫃",
+        "下載APP", "推薦主題", "活動列表",
+    ]
 
-        # 導覽/系統字先踢掉（第一層）
-        if any(bad in t for bad in [
-            "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多", "下載APP",
-            "搜尋", "購物車", "我的書櫃", "點數兌換", "序號", "儲值"
-        ]):
-            return
+    for a in soup.select("a[href]"):
+        href = (a.get("href") or "").strip()
+        if not href:
+            continue
 
-        # 避免重複
-        if t in seen:
-            return
-        seen.add(t)
-        candidates.append(t)
+        # 只抓 BookWalker 活動頁
+        if "bookwalker.com.tw/event/" not in href:
+            continue
 
-    # ✅ 優先處理 BW 的 <h4> 活動標題（主標 + 副標被拆開的情況）
-    for h4 in soup.find_all("h4"):
-        texts = []
-        for a in h4.find_all("a"):
-            t = a.get_text(" ", strip=True)
-            if not t:
-                t = (a.get("title") or a.get("alt") or "").strip()
-            if t:
-                texts.append(t)
+        parts = []
 
-        if len(texts) >= 2:
-            joined = " ".join(texts)
-            joined = re.sub(r"\s+", " ", joined).strip()
+        # a 內文字
+        txt = a.get_text(" ", strip=True)
+        if txt:
+            parts.append(txt)
 
-            if "99元" in joined or "年度閱讀報告" in joined:
-                print("BW_H4_JOINED:", joined)    
-            add_candidate(joined)   # ← 🔴 關鍵：走同一條管線
+        # title / alt
+        if a.get("title"):
+            parts.append(a["title"])
+        if a.get("alt"):
+            parts.append(a["alt"])
 
-    for a in soup.select("a"):
-        add_candidate(a.get_text(" ", strip=True))
+        # 圖片 alt（BW 很常把文案放在這）
+        img = a.find("img")
+        if img and img.get("alt"):
+            parts.append(img["alt"])
 
-    # 2) 如果 candidates 太少（或被你踢光），第二層：抓標題類元素
-    if len(candidates) < 8:
-        for el in soup.select("h1,h2,h3,h4,.title,.card-title,.event-title"):
-            add_candidate(el.get_text(" ", strip=True))
+        # 合併、去重、正規化
+        text = " ".join(dict.fromkeys(p.strip() for p in parts if p.strip()))
+        text = re.sub(r"\s+", " ", text).strip()
 
-    # 3) 如果還是太少，第三層保底：掃整頁可見文字，挑像「活動」的句子
-    if len(candidates) < 8:
-        for t in soup.stripped_strings:
-            tt = re.sub(r"\s+", " ", (t or "")).strip()
-            if not tt or len(tt) < 6:
-                continue
-            # 只收「看起來像活動」的字串（折扣/日期/特價/滿額/回饋/書展）
-            if any(k in tt for k in ["折", "%", "％", "元", "滿", "再折", "回饋", "優惠", "特價", "書展", "限時"]) or \
-               re.search(r"\d{1,2}[./-]\d{1,2}", tt):
-                add_candidate(tt)
-            if len(candidates) >= 80:
-                break
+        if not text:
+            continue
 
-    # 補抓：掃描「卡片文字區塊」（不在 <a> 裡的）
-    if len(candidates) < 30:
-        for el in soup.select("div, section, article"):
-            texts = [t.strip() for t in el.stripped_strings if t.strip()]
-            if len(texts) < 2:
-                continue
+        # 最後才擋導覽字（不早殺）
+        if any(w in text for w in NAV_WORDS):
+            continue
 
-            joined = " ".join(texts)
-            # 只抓「看起來像活動」的文字組合
-            if any(k in joined for k in [
-                "年度閱讀報告",
-                "一日限時",
-                "限時優惠",
-                "特價",
-                "折",
-                "99元",
-                "優惠券",
-                "點數",
-            ]):
-                # 避免整段太長
-                if len(joined) > 120:
-                    joined = joined[:120] + "…"
-                add_candidate(joined)
+        if text in seen:
+            continue
 
-    # ---- 打分排序：分數只用來「排前面」，絕對不做生死線 ----
-    def score(t: str) -> int:
-        s = 0
-        if re.search(r"\d+\s*折", t): s += 6
-        if re.search(r"\d+\s*(%|％)", t): s += 5
-        if re.search(r"滿\s*\d+", t): s += 5
-        if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5
-        if re.search(r"\d{1,2}[./-]\d{1,2}", t): s += 4
-        if re.search(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}", t): s += 4
-        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]): s += 3
+        seen.add(text)
+        results.append(text)
 
-        # 你在意的活動型：加分，避免被折扣型擠掉
-        if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]): s += 6
+    # 什麼都不管，只限制最多顯示幾筆
+    return results[:30]
 
-        # 低品質噪音略扣，但不致死
-        if any(k in t for k in ["限制級", "連載"]): s -= 2
-        return s
-
-    scored = [(score(t), t) for t in candidates]
-    scored.sort(key=lambda x: x[0], reverse=True)
-
-    # 分桶：折扣促銷 vs 活動任務（兩種都要保留）
-    promo_like: List[str] = []
-    activity_like: List[str] = []
-    for sc, t in scored:
-        if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]):
-            activity_like.append(t)
-        else:
-            promo_like.append(t)
-
-    # 組裝輸出：促銷先 15，活動任務補 5（你要「一定有東西」所以給得夠）
-    out = []
-    out.extend(promo_like[:15])
-    out.extend(activity_like[:5])
-
-    # 最終保底：如果上面不小心變空（理論上不會），直接回 candidates 前 20
-    if not out:
-        out = candidates[:20]
-
-    # 用「保序去重」避免被 pick_unique_texts 刪光
-    return pick_unique_texts_keep_order(out, limit=20)
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
