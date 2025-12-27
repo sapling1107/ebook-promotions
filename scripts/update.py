@@ -175,6 +175,22 @@ def extract_bw_cards(html: str) -> List[str]:
         seen.add(t)
         candidates.append(t)
 
+    # ✅ 優先處理 BW 的 <h4> 活動標題（主標 + 副標被拆開的情況）
+    for h4 in soup.find_all("h4"):
+        texts = []
+        for a in h4.find_all("a"):
+            t = a.get_text(" ", strip=True)
+            if t:
+                texts.append(t)
+
+        if len(texts) >= 2:
+            joined = " ".join(texts)
+            joined = re.sub(r"\s+", " ", joined).strip()
+
+            # 基本過濾，避免抓到垃圾
+            if 6 <= len(joined) <= 120:
+                candidates.append(joined)
+
     for a in soup.select("a"):
         add_candidate(a.get_text(" ", strip=True))
 
