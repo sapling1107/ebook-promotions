@@ -26,8 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      - name: Generate deals.json + index.html
+      - name: Run python scripts/update.py
         run: |
+          set -x
           python scripts/update.py
 
       - name: Commit changes
