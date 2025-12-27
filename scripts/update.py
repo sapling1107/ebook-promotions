@@ -93,7 +93,7 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
                 continue
 
         if t in seen:
-            continue
+                continue
 
         # 子字串去重：避免同活動拆兩行時塞滿名額（保留先出現者＝新活動）
         if any(t in k for k in kept):
