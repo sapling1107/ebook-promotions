@@ -71,83 +71,68 @@ def fetch_html(url: str) -> Dict[str, Any]:
 
 
 def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
-    out = []
-    seen = set()
+    # 1) 基礎清理
+    cleaned = []
     for t in texts:
         t = re.sub(r"\s+", " ", (t or "")).strip()
-        if not t:
+        if not t or len(t) < 4:
             continue
-        if len(t) < 3:
+        cleaned.append(t)
+
+    # 2) 先用長度排序：長的在前（資訊量通常比較高）
+    cleaned = sorted(set(cleaned), key=len, reverse=True)
+
+    # 3) 子字串去重：如果 t 完全包含在已保留的某一條裡，就丟掉
+    kept = []
+    for t in cleaned:
+        if any(t in k for k in kept):
             continue
-        if t in seen:
-            continue
-        seen.add(t)
-        out.append(t)
-        if len(out) >= limit:
-            break
-    return out
+        kept.append(t)
+
+    return kept[:limit]
 
 
 def extract_bw_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
 
-    texts = []
+    candidates = []
     for a in soup.select("a"):
         t = a.get_text(" ", strip=True)
+        t = re.sub(r"\s+", " ", (t or "")).strip()
         if not t:
             continue
-        t = re.sub(r"\s+", " ", t).strip()
-        if len(t) < 6 or len(t) > 60:
+        if len(t) < 6 or len(t) > 80:
             continue
 
-        # 明顯不是活動的導覽字
+        # 踢掉明顯導覽/系統字
         if any(bad in t for bad in [
-            "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多"
+            "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多", "下載APP"
         ]):
             continue
 
-        # 這次的地雷：把「限制級/連載」類全部踢掉
-        if any(bad in t for bad in [
-            "限制級", "連載", "聲音作品", "雜誌", "日文書", "作品"
-        ]):
-            continue
+        candidates.append(t)
 
-        texts.append(t)
+    # 只在 BW 做「像活動」的排序，而不是硬過濾（避免抓不到）
+    def score(t: str) -> int:
+        s = 0
+        if re.search(r"\d+\s*折", t): s += 6          # 63折、7折
+        if re.search(r"\d+\s*(%|％)", t): s += 5      # 79%
+        if re.search(r"滿\s*\d+", t): s += 5          # 滿1500
+        if re.search(r"\d{1,2}[./]\d{1,2}", t): s += 4  # 12/24、12.24
+        if re.search(r"\d{4}[./]\d{1,2}[./]\d{1,2}", t): s += 4  # 2025/12/26
+        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼", "特價"]): s += 3
+        if any(k in t for k in ["限制級", "聲音作品", "連載"]): s -= 5  # 這類很容易洗版
+        return s
 
-    # 只收「真的像促銷活動」的字串（更硬核一點）
-    promo = []
-    for t in texts:
-        if re.search(r"\d+\s*折", t):          # 63折、75折
-            promo.append(t); continue
-        if re.search(r"\d+\s*%|％", t):        # 79% / 79％
-            promo.append(t); continue
-        if re.search(r"滿\s*\d+", t):          # 滿1500
-            promo.append(t); continue
-        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]):
-            promo.append(t); continue
+    # 先去掉太弱的（分數<=0 多半是雜訊）
+    scored = [(score(t), t) for t in candidates]
+    scored = [t for (sc, t) in scored if sc > 0]
 
-    return pick_unique_texts(promo, limit=6)
-    # 先抓「看起來像活動卡片/列表」的連結文字
-    candidates = []
+    # 分數高的優先
+    scored.sort(key=lambda x: score(x), reverse=True)
 
-    # 常見：活動列表會有很多 <a> 的可見文字
-    for a in soup.select("a"):
-        txt = a.get_text(" ", strip=True)
-        # 過濾掉導覽、登入、常見無意義連結
-        if not txt:
-            continue
-        if txt in {"點我查看活動", "更多", "返回", "登入", "註冊"}:
-            continue
-        # 過濾過長的段落型文字
-        if len(txt) > 60:
-            continue
-        candidates.append(txt)
-
-    # 再用一些常見關鍵字提升命中率（不硬性依賴）
-    boosted = [t for t in candidates if any(k in t for k in ["折", "滿", "會員", "優惠", "活動", "書展", "限定", "回饋"])]
-    merged = boosted + candidates
-
-    return pick_unique_texts(merged, limit=10)
+    # 最後交給 pick_unique_texts 做子字串去重
+    return pick_unique_texts(scored, limit=8)
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
