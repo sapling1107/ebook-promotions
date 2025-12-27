@@ -237,6 +237,9 @@ def extract_bw_cards(html: str) -> List[str]:
 
     return pick_unique_texts(picked, limit=15)
 
+    if platform == "BookWalker":
+        print("BW cards:", card_titles)
+
 
 def extract_readmoo_cards(html: str) -> List[str]:
     import re
