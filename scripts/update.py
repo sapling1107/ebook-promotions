@@ -148,97 +148,95 @@ def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
 def extract_bw_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
 
-    prev_titles = set()
-    try:
-        with open("data/deals.json", "r", encoding="utf-8") as f:
-            prev = json.load(f)
-        for it in prev.get("items", []):
-            if it.get("platform") == "BookWalker":
-                prev_titles = set(it.get("card_titles", []))
-    except Exception:
-        pass
+    # 1) 先從 <a> 抓候選（你原本做法）
+    candidates: List[str] = []
+    seen = set()
 
-    candidates = []
-    for a in soup.select("a"):
-        t = a.get_text(" ", strip=True)
+    def add_candidate(t: str):
         t = re.sub(r"\s+", " ", (t or "")).strip()
         if not t:
-            continue
-        if len(t) < 6 or len(t) > 160:
-            continue
+            return
+        if len(t) < 6:
+            return
+        # 放寬上限，BW 很常「標題＋副標」很長
+        if len(t) > 220:
+            t = t[:217] + "…"
 
-        # 導覽/系統字踢掉
+        # 導覽/系統字先踢掉（第一層）
         if any(bad in t for bad in [
-            "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多", "下載APP"
+            "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多", "下載APP",
+            "搜尋", "購物車", "我的書櫃", "點數", "序號", "儲值"
         ]):
-            continue
+            return
 
+        # 避免重複
+        if t in seen:
+            return
+        seen.add(t)
         candidates.append(t)
 
+    for a in soup.select("a"):
+        add_candidate(a.get_text(" ", strip=True))
+
+    # 2) 如果 candidates 太少（或被你踢光），第二層：抓標題類元素
+    if len(candidates) < 8:
+        for el in soup.select("h1,h2,h3,h4,.title,.card-title,.event-title"):
+            add_candidate(el.get_text(" ", strip=True))
+
+    # 3) 如果還是太少，第三層保底：掃整頁可見文字，挑像「活動」的句子
+    if len(candidates) < 8:
+        for t in soup.stripped_strings:
+            tt = re.sub(r"\s+", " ", (t or "")).strip()
+            if not tt or len(tt) < 6:
+                continue
+            # 只收「看起來像活動」的字串（折扣/日期/特價/滿額/回饋/書展）
+            if any(k in tt for k in ["折", "%", "％", "元", "滿", "再折", "回饋", "優惠", "特價", "書展", "限時"]) or \
+               re.search(r"\d{1,2}[./-]\d{1,2}", tt):
+                add_candidate(tt)
+            if len(candidates) >= 80:
+                break
+
+    # ---- 打分排序：分數只用來「排前面」，絕對不做生死線 ----
     def score(t: str) -> int:
         s = 0
-        # 折扣/價格/門檻/日期：強訊號
         if re.search(r"\d+\s*折", t): s += 6
         if re.search(r"\d+\s*(%|％)", t): s += 5
         if re.search(r"滿\s*\d+", t): s += 5
-        if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5  # 99元、2000元
-        if re.search(r"\d{1,2}[./]\d{1,2}", t): s += 4
-        if re.search(r"\d{4}[./]\d{1,2}[./]\d{1,2}", t): s += 4
-        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼", "特價"]): s += 3
+        if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5
+        if re.search(r"\d{1,2}[./-]\d{1,2}", t): s += 4
+        if re.search(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}", t): s += 4
+        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]): s += 3
 
-        # 活動型（你剛剛點名的閱讀報告/點數券）：加分讓它不會被擠掉
+        # 你在意的活動型：加分，避免被折扣型擠掉
         if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]): s += 6
 
-        # 不要再用「日文書」扣分（它有時就是正常活動標題的一部分）
-        # 但仍然保留對「限制級/連載」的負分以避免洗版
-        if any(k in t for k in ["限制級", "連載"]): s -= 6
-
+        # 低品質噪音略扣，但不致死
+        if any(k in t for k in ["限制級", "連載"]): s -= 2
         return s
 
     scored = [(score(t), t) for t in candidates]
     scored.sort(key=lambda x: x[0], reverse=True)
 
-    # 直接取排序後的文字，不用分數當門檻
-    picked = [t for (_, t) in scored]
-
-    # ✅ 如果候選太少或完全抓不到，就直接回傳空（讓前端顯示入口即可）
-    # 但如果有 candidates，至少要回傳一些，避免 BW 區塊整個空白
-    if candidates and not scored:
-        return pick_unique_texts_keep_order(candidates, limit=15)
-
-    # 如果 scored 沒東西（理論上不會），也要保底
-    if not scored:
-        return []
-    
-    # 新活動：今天有、昨天沒有
-    new_items = [t for (_, t) in scored if t not in prev_titles]
-
-    # 保證最多保留 2 個新活動
-    guaranteed_new = new_items[:2]
-
-    # 分兩類：促銷型 vs 活動型
-    promo_like = []
-    activity_like = []
+    # 分桶：折扣促銷 vs 活動任務（兩種都要保留）
+    promo_like: List[str] = []
+    activity_like: List[str] = []
     for sc, t in scored:
         if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]):
             activity_like.append(t)
         else:
             promo_like.append(t)
 
-    def clip(s: str, n: int = 100) -> str:
-        return s if len(s) <= n else s[: n-1] + "…"
+    # 組裝輸出：促銷先 12，活動任務補 6（你要「一定有東西」所以給得夠）
+    out = []
+    out.extend(promo_like[:12])
+    out.extend(activity_like[:6])
 
-    promo_like = [clip(t, 100) for t in promo_like]
-    activity_like = [clip(t, 100) for t in activity_like]
-    guaranteed_new = [clip(t, 100) for t in guaranteed_new]
+    # 最終保底：如果上面不小心變空（理論上不會），直接回 candidates 前 15
+    if not out:
+        out = candidates[:15]
 
-    # 促銷型先取 6，活動型補 2（避免漏掉你在意的活動）
-    picked = guaranteed_new + promo_like
-
-    return pick_unique_texts(picked, limit=15)
-
-    if platform == "BookWalker":
-        print("BW cards:", card_titles)
+    # 用「保序去重」避免被 pick_unique_texts 刪光
+    return pick_unique_texts_keep_order(out, limit=15)
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
