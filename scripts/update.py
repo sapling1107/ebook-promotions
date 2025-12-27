@@ -526,6 +526,11 @@ def main():
             elif x.get("extra") == "pubu":
                 card_titles = extract_pubu_cards(html)
 
+            if platform in ("BookWalker", "HyRead", "Pubu") and card_titles:
+                card_titles, card_titles_for_html = mark_new_for_platform(platform, card_titles, OUT_JSON)
+            else:
+                card_titles_for_html = card_titles
+
         except requests.HTTPError as e:
             # 例如 403
             error = str(e)
@@ -582,10 +587,6 @@ def main():
             blocked = True
             blocked_reason = "入口模式：博客來活動頁資訊流雜訊高，v1 先只保留入口連結"
 
-        if platform in ("BookWalker", "HyRead", "Pubu") and card_titles:
-            card_titles, card_titles_for_html = mark_new_for_platform(platform, card_titles, OUT_JSON)
-        else:
-            card_titles_for_html = card_titles
 
         items.append(
             {
