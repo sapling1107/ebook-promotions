@@ -372,8 +372,8 @@ def main():
                     blocked = True
                     blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
 
-if x.get("extra") is None and x["platform"] not in ("Kobo", "Pubu"):  # 你自己想例外邊個都得
-    cards = ["（未設定解析器 extra，暫時不會解析出活動）"]
+        if x.get("extra") is None and x["platform"] not in ("Kobo", "Pubu"):  
+            cards = ["（未設定解析器 extra，暫時不會解析出活動）"]
 
         items.append(
             {
