@@ -164,7 +164,7 @@ def extract_bw_cards(html: str) -> List[str]:
         t = re.sub(r"\s+", " ", (t or "")).strip()
         if not t:
             continue
-        if len(t) < 6 or len(t) > 90:
+        if len(t) < 6 or len(t) > 160:
             continue
 
         # 導覽/系統字踢掉
@@ -215,6 +215,13 @@ def extract_bw_cards(html: str) -> List[str]:
             activity_like.append(t)
         else:
             promo_like.append(t)
+
+    def clip(s: str, n: int = 100) -> str:
+        return s if len(s) <= n else s[: n-1] + "…"
+
+    promo_like = [clip(t, 100) for t in promo_like]
+    activity_like = [clip(t, 100) for t in activity_like]
+    guaranteed_new = [clip(t, 100) for t in guaranteed_new]
 
     # 促銷型先取 6，活動型補 2（避免漏掉你在意的活動）
     picked = guaranteed_new + promo_like
