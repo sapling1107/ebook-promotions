@@ -313,6 +313,10 @@ def main():
                 card_titles = extract_bw_cards(html)
             elif x.get("extra") == "readmoo":
                 card_titles = extract_readmoo_cards(html)
+            elif x.get("extra") == "hyread":
+                card_titles = extract_hyread_cards(html)
+            elif x.get("extra") == "books":
+                card_titles = extract_books_cards(html)
 
         except requests.HTTPError as e:
             # 例如 403
@@ -362,11 +366,7 @@ def main():
                     blocked = True
                     blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
 
-        elif x.get("extra") == "hyread":
-            card_titles = extract_hyread_cards(html)
 
-        elif x.get("extra") == "books":
-            card_titles = extract_books_cards(html)
 
         items.append(
             {
