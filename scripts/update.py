@@ -186,6 +186,10 @@ def extract_bw_cards(html: str) -> List[str]:
         # 合併、去重、正規化
         text = " ".join(dict.fromkeys(p.strip() for p in parts if p.strip()))
         text = re.sub(r"\s+", " ", text).strip()
+        # 🧹 去掉「整句重複」（BW 常見：主標+副標 出現兩次）
+        half = len(text) // 2
+        if text[:half].strip() == text[half:].strip():
+            text = text[:half].strip()
 
         if not text:
             continue
