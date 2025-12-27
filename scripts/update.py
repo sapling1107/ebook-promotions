@@ -167,72 +167,47 @@ def extract_bw_cards(html: str) -> List[str]:
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
-    soup = BeautifulSoup(html, "html.parser")
+    """
+    Readmoo 的活動資料在 HTML 內的 JS 變數：
+    const READMOO_CAMPAIGNS = [...]
+    不用 BeautifulSoup，直接抽 JSON。
+    """
+    import re
+    import json
 
-    candidates = []
+    # 1) 抓 JS 變數
+    m = re.search(
+        r"const\s+READMOO_CAMPAIGNS\s*=\s*(\[\{.*?\}\]);",
+        html,
+        re.S
+    )
+    if not m:
+        return []
 
-    # 1) Readmoo 活動頁的重點：抓所有指向「活動內頁」的連結
-    #    通常會是 /campaign/xxxx 這種，且不是 /campaign/activities 本身
-    for a in soup.select('a[href*="/campaign/"]'):
-        href = a.get("href", "") or ""
-        if "/campaign/activities" in href:
-            continue
+    try:
+        data = json.loads(m.group(1))
+    except Exception:
+        return []
 
-        # 先試可見文字
-        txt = a.get_text(" ", strip=True)
-        txt = re.sub(r"\s+", " ", (txt or "")).strip()
+    cards = []
+    for item in data:
+        name = (item.get("name") or "").strip()
+        desc = (item.get("description") or "").strip()
+        start = (item.get("start_date") or "").strip()
+        end = (item.get("end_date") or "").strip()
+        link = (item.get("link") or "").strip()
 
-        # 如果連結本身沒文字（很多是圖片卡），改抓 aria-label / title
-        if not txt:
-            txt = (a.get("aria-label") or a.get("title") or "").strip()
+        # 組成一行，避免被拆成多行
+        line = " ".join(x for x in [
+            name,
+            desc,
+            f"{start}–{end}" if start or end else ""
+        ] if x)
 
-        # 還是沒有，就抓卡片內圖片的 alt
-        if not txt:
-            img = a.select_one("img[alt]")
-            if img:
-                txt = (img.get("alt") or "").strip()
+        if line:
+            cards.append(line)
 
-        # 最後再補一層：抓卡片內常見標題元素（有些會放在 div/span）
-        if not txt:
-            tnode = a.select_one("h1,h2,h3,h4,.title,.name,.campaign-title,.card-title")
-            if tnode:
-                txt = tnode.get_text(" ", strip=True).strip()
-
-        txt = re.sub(r"\s+", " ", (txt or "")).strip()
-        if not txt:
-            continue
-        if len(txt) < 4 or len(txt) > 80:
-            continue
-
-        # 排除明顯不是活動的字
-        if any(bad in txt for bad in ["登入", "註冊", "我的", "搜尋", "更多", "返回"]):
-            continue
-
-        candidates.append(txt)
-
-    # 2) 如果上面抓不到，再用備援：抓整頁短標題（但避免把導覽抓進來）
-    if not candidates:
-        for tag in soup.select("h1, h2, h3, a"):
-            txt = tag.get_text(" ", strip=True).strip()
-            txt = re.sub(r"\s+", " ", txt)
-            if not txt or len(txt) < 4 or len(txt) > 80:
-                continue
-            if any(bad in txt for bad in ["登入", "註冊", "我的", "搜尋", "更多", "返回", "活動"]):
-                continue
-            candidates.append(txt)
-
-    # 3) 去重＋子字串去重（用你已經強化過的 pick_unique_texts）
-    #    先把明顯像促銷的放前面
-    promo_like = []
-    other = []
-    for t in candidates:
-        if any(k in t for k in ["折", "%", "％", "滿", "再折", "限時", "回饋", "優惠", "特價"]):
-            promo_like.append(t)
-        else:
-            other.append(t)
-
-    picked = promo_like + other
-    return pick_unique_texts(picked, limit=12)
+    return cards
 
 
 def load_prev_signature() -> Dict[str, Any]:
