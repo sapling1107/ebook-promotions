@@ -210,6 +210,54 @@ def extract_readmoo_cards(html: str) -> List[str]:
 
     return cards
 
+def extract_hyread_cards(html: str) -> List[str]:
+    soup = BeautifulSoup(html, "html.parser")
+    candidates = []
+
+    for a in soup.select("a"):
+        href = (a.get("href") or "")
+        txt = a.get_text(" ", strip=True)
+        txt = re.sub(r"\s+", " ", (txt or "")).strip()
+        if not txt:
+            continue
+        if len(txt) < 6 or len(txt) > 80:
+            continue
+
+        # 排除導覽/系統
+        if any(bad in txt for bad in ["登入", "註冊", "會員", "搜尋", "客服", "更多", "返回"]):
+            continue
+
+        # HyRead 活動頁多半是 event / store / Template 相關連結；不硬綁但加權
+        if "event" in href or "Template" in href or "store" in href:
+            candidates.append(txt)
+        else:
+            # 仍然收一些看起來像活動的
+            if any(k in txt for k in ["折", "優惠", "活動", "限時", "回饋", "滿", "特價"]):
+                candidates.append(txt)
+
+    return pick_unique_texts(candidates, limit=12)
+
+def extract_books_cards(html: str) -> List[str]:
+    soup = BeautifulSoup(html, "html.parser")
+    candidates = []
+
+    for a in soup.select("a"):
+        txt = a.get_text(" ", strip=True)
+        txt = re.sub(r"\s+", " ", (txt or "")).strip()
+        if not txt:
+            continue
+        if len(txt) < 6 or len(txt) > 80:
+            continue
+
+        if any(bad in txt for bad in ["登入", "註冊", "會員", "購物車", "客服", "更多", "返回"]):
+            continue
+
+        # 只保留比較像活動的
+        if any(k in txt for k in ["折", "優惠", "活動", "書展", "特價", "回饋", "滿", "限時"]):
+            candidates.append(txt)
+
+    return pick_unique_texts(candidates, limit=12)
+
 def load_prev_signature() -> Dict[str, Any]:
     if not os.path.exists(OUT_JSON):
         return {"parser_version": None, "sig": {}}
@@ -313,6 +361,12 @@ def main():
                 if not card_titles:
                     blocked = True
                     blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
+
+        elif x.get("extra") == "hyread":
+            card_titles = extract_hyread_cards(html)
+
+        elif x.get("extra") == "books":
+            card_titles = extract_books_cards(html)
 
         items.append(
             {
