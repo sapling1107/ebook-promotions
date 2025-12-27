@@ -201,6 +201,15 @@ def extract_bw_cards(html: str) -> List[str]:
     # 直接取排序後的文字，不用分數當門檻
     picked = [t for (_, t) in scored]
 
+    # ✅ 如果候選太少或完全抓不到，就直接回傳空（讓前端顯示入口即可）
+    # 但如果有 candidates，至少要回傳一些，避免 BW 區塊整個空白
+    if candidates and not scored:
+        return pick_unique_texts_keep_order(candidates, limit=15)
+
+    # 如果 scored 沒東西（理論上不會），也要保底
+    if not scored:
+        return []
+    
     # 新活動：今天有、昨天沒有
     new_items = [t for (_, t) in scored if t not in prev_titles]
 
