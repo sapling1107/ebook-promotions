@@ -212,30 +212,75 @@ def extract_readmoo_cards(html: str) -> List[str]:
 
 def extract_hyread_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
-    candidates = []
 
-    for a in soup.select("a"):
-        href = (a.get("href") or "")
-        txt = a.get_text(" ", strip=True)
-        txt = re.sub(r"\s+", " ", (txt or "")).strip()
-        if not txt:
-            continue
-        if len(txt) < 6 or len(txt) > 80:
-            continue
+    results = []
+    seen = set()
 
-        # 排除導覽/系統
-        if any(bad in txt for bad in ["登入", "註冊", "會員", "搜尋", "客服", "更多", "返回"]):
+    # HyRead 活動頁通常是一張張卡片，每張卡片內有「主標題」+「紅字副標(日期/折扣)」
+    # 我們做法：從每個 <a> 往上找卡片容器，抽「最像主標」與「最像折扣/日期」的兩段。
+    for a in soup.select("a[href]"):
+        href = (a.get("href") or "").strip()
+        if not href:
             continue
 
-        # HyRead 活動頁多半是 event / store / Template 相關連結；不硬綁但加權
-        if "event" in href or "Template" in href or "store" in href:
-            candidates.append(txt)
+        # 這條規則用來避免抓到導覽連結；若你發現抓太少，可把這行註解掉
+        if "event" not in href.lower():
+            continue
+
+        # 往上找容器（最多爬 5 層），抓一整張卡片的文字
+        node = a
+        container_texts = None
+        for _ in range(5):
+            if node and node.name in ("div", "li", "article", "section"):
+                texts = [t.strip() for t in node.stripped_strings if t.strip()]
+                # 卡片通常至少會有 2 段文字
+                if len(texts) >= 2:
+                    container_texts = texts
+                    break
+            node = node.parent
+
+        if not container_texts:
+            continue
+
+        # 主標：挑「比較不像日期/折扣」且字數合理的句子
+        # 副標：挑「含折/元/%/滿/日期符號」的句子
+        def looks_like_meta(s: str) -> bool:
+            return bool(re.search(r"(折|元|%|％|滿|再折|限時|週末|限定|\d{1,2}[./-]\d{1,2}|/)", s))
+
+        title = ""
+        subtitle = ""
+
+        # 先找副標（通常紅字那行）
+        meta_candidates = [t for t in container_texts if looks_like_meta(t) and len(t) <= 60]
+        if meta_candidates:
+            # 通常第一個就很像日期/折扣
+            subtitle = meta_candidates[0]
+
+        # 再找主標
+        title_candidates = [t for t in container_texts if (not looks_like_meta(t)) and 4 <= len(t) <= 30]
+        if title_candidates:
+            title = title_candidates[0]
         else:
-            # 仍然收一些看起來像活動的
-            if any(k in txt for k in ["折", "優惠", "活動", "限時", "回饋", "滿", "特價"]):
-                candidates.append(txt)
+            # 找不到就退而求其次：取第一個短句當主標
+            short = [t for t in container_texts if 4 <= len(t) <= 30]
+            title = short[0] if short else ""
 
-    return pick_unique_texts(candidates, limit=12)
+        title = re.sub(r"\s+", " ", title).strip()
+        subtitle = re.sub(r"\s+", " ", subtitle).strip()
+
+        if not title:
+            continue
+
+        line = f"{title}｜{subtitle}" if subtitle else title
+        # 避免超長
+        if len(line) > 90:
+            line = line[:87] + "…"
+
+        if line not in seen:
+            seen.add(line)
+            results.append(line)
+
+    return pick_unique_texts(results, limit=12)
 
 def extract_books_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
@@ -375,6 +420,11 @@ def main():
         if x.get("extra") is None and x["platform"] not in ("Kobo", "Pubu"):  
             cards = ["（未設定解析器 extra，暫時不會解析出活動）"]
 
+        # 博客來：入口模式（不顯示擷取卡片，避免被商品/套組洗版）
+        if x["platform"] == "博客來":
+            blocked = True
+            blocked_reason = "入口模式：博客來活動頁資訊流雜訊高，v1 先只保留入口連結"
+
         items.append(
             {
                 "platform": x["platform"],
@@ -421,7 +471,6 @@ def main():
     html_lines.append("<hr style='opacity:.35'/>")
 
     for it in items:
-        is_blocked = bool(it.get("blocked"))
         is_403 = (it.get("http_status") == 403) or ("403" in (it.get("error") or ""))
         # 弱化：403 變灰 + 降低透明度
         wrap_style = "opacity:.45; filter: grayscale(1);" if is_403 else "opacity:1;"
@@ -435,10 +484,11 @@ def main():
         if it["note"]:
             html_lines.append(f"<p style='margin:4px 0;'>備註：{it['note']}</p>")
 
-        # 額外抓卡片標題（只在 BW/Readmoo 有）
-        # 模式 3：Readmoo 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
-        if it["platform"] == "Readmoo" and is_blocked:
-            reason = it.get("blocked_reason") or "需要 JavaScript 驗證，無法取得活動清單"
+        is_blocked = bool(it.get("blocked"))
+
+        # 模式 3：Readmoo / 博客來 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
+        if it["platform"] in ("Readmoo", "博客來") and is_blocked:
+            reason = it.get("blocked_reason") or "入口模式"
             html_lines.append(f"<p style='margin:6px 0; color:#666;'>（{reason}）</p>")
         else:
             if it.get("card_titles"):
@@ -448,10 +498,16 @@ def main():
                     html_lines.append(f"<li>{t}</li>")
                 html_lines.append("</ul>")
 
+        # error：若是 Readmoo/博客來入口模式，就不要用紅字嚇人（原因已經顯示）
+        if it.get("error") and not (it["platform"] in ("Readmoo", "博客來") and is_blocked):
+            html_lines.append(
+                f"<p style='margin:6px 0; color:#b00020;'>（抓取失敗：{it['error']}）</p>"
+            )
+       
+
         html_lines.append(f"<p style='margin:6px 0;'><a href='{it['url']}' target='_blank' rel='noopener noreferrer'>→ 點我查看活動</a></p>")
 
-        if it["error"] and not (it["platform"] == "Readmoo" and is_blocked):
-            html_lines.append(f"<p style='margin:6px 0; color:#b00020;'>（抓取失敗：{it['error']}）</p>")
+
 
         html_lines.append("</section>")
         html_lines.append("<hr style='opacity:.25'/>")
