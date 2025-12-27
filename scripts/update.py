@@ -32,7 +32,7 @@ URLS = [
         "platform": "Pubu",
         "url": "https://www.pubu.com.tw/activity/ongoing",
         "note": "全站活動",
-        "extra": None,
+        "extra": "pubu",
     },
     {
         "platform": "Kobo",
@@ -303,6 +303,69 @@ def extract_books_cards(html: str) -> List[str]:
 
     return pick_unique_texts(candidates, limit=12)
 
+def extract_pubu_cards(html: str) -> List[str]:
+    soup = BeautifulSoup(html, "html.parser")
+    results = []
+    seen = set()
+
+    # Pubu 卡片常見有「活動期間 2025-xx-xx - 2026-xx-xx」
+    date_re = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+    # 做法：找出包含日期的文字區塊，往上找卡片容器，再抽出標題
+    for el in soup.find_all(string=lambda s: s and date_re.search(s)):
+        txt = re.sub(r"\s+", " ", str(el)).strip()
+        # 只處理看起來像「活動期間」那種
+        if "活動期間" not in txt and "活動時間" not in txt and len(date_re.findall(txt)) < 2:
+            continue
+
+        # 往上找卡片容器
+        node = el.parent
+        container = None
+        for _ in range(6):
+            if not node:
+                break
+            if node.name in ("div", "li", "article", "section"):
+                texts = [t.strip() for t in node.stripped_strings if t.strip()]
+                # 卡片應該會有標題 + 期間，至少 2 段
+                if len(texts) >= 2:
+                    container = node
+                    break
+            node = node.parent
+
+        if not container:
+            continue
+
+        texts = [t.strip() for t in container.stripped_strings if t.strip()]
+
+        # 嘗試找標題：通常是第一個比較短、且不包含日期/活動期間的句子
+        title = ""
+        for t in texts:
+            if len(t) <= 40 and (not date_re.search(t)) and ("活動期間" not in t) and ("活動時間" not in t):
+                title = t
+                break
+
+        # 抓期間：找第一個含兩個日期的句子
+        period = ""
+        for t in texts:
+            dates = date_re.findall(t)
+            if len(dates) >= 2:
+                # 可能是 "活動期間2025-..-.. - 2026-..-.."
+                period = re.sub(r"\s+", " ", t).strip()
+                break
+
+        if not title:
+            continue
+
+        line = f"{title}｜{period}" if period else title
+        if len(line) > 100:
+            line = line[:97] + "…"
+
+        if line not in seen:
+            seen.add(line)
+            results.append(line)
+
+    return pick_unique_texts(results, limit=12)
+
 def load_prev_signature() -> Dict[str, Any]:
     if not os.path.exists(OUT_JSON):
         return {"parser_version": None, "sig": {}}
@@ -368,6 +431,8 @@ def main():
                 card_titles = extract_hyread_cards(html)
             elif x.get("extra") == "books":
                 card_titles = extract_books_cards(html)
+            elif x.get("extra") == "pubu":
+                card_titles = extract_pubu_cards(html)
 
         except requests.HTTPError as e:
             # 例如 403
