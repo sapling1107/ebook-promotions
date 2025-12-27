@@ -165,7 +165,7 @@ def extract_bw_cards(html: str) -> List[str]:
         # 導覽/系統字先踢掉（第一層）
         if any(bad in t for bad in [
             "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多", "下載APP",
-            "搜尋", "購物車", "我的書櫃", "點數", "序號", "儲值"
+            "搜尋", "購物車", "我的書櫃", "點數兌換", "序號", "儲值"
         ]):
             return
 
@@ -188,6 +188,9 @@ def extract_bw_cards(html: str) -> List[str]:
         if len(texts) >= 2:
             joined = " ".join(texts)
             joined = re.sub(r"\s+", " ", joined).strip()
+
+        if "99元" in joined or "年度閱讀報告" in joined:
+            print("BW_H4_JOINED:", joined)    
             add_candidate(joined)   # ← 🔴 關鍵：走同一條管線
 
     for a in soup.select("a"):
