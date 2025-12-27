@@ -144,6 +144,44 @@ def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
 
     return kept
 
+def strip_new_prefix(t: str) -> str:
+    t = (t or "").strip()
+    if t.startswith("🆕"):
+        t = t.replace("🆕", "", 1).strip()
+    return t
+
+def mark_new_for_platform(platform: str, card_titles: list[str], out_json_path: str) -> tuple[list[str], list[str]]:
+    """
+    回傳： (raw_titles_for_save, display_titles_for_html)
+    - raw_titles_for_save：乾淨版（不含🆕）
+    - display_titles_for_html：顯示版（新活動加🆕）
+    """
+    if not card_titles:
+        return [], []
+
+    # 乾淨化今日抓到的
+    raw_today = [strip_new_prefix(t) for t in card_titles if (t or "").strip()]
+
+    # 讀昨天的
+    prev_titles = set()
+    try:
+        with open(out_json_path, "r", encoding="utf-8") as f:
+            prev = json.load(f)
+        for it0 in prev.get("items", []):
+            if it0.get("platform") == platform:
+                prev_titles = set(strip_new_prefix(x) for x in (it0.get("card_titles") or []))
+                break
+    except Exception:
+        prev_titles = set()
+
+    # 新舊判定
+    new_items = [t for t in raw_today if t not in prev_titles]
+    old_items = [t for t in raw_today if t in prev_titles]
+
+    raw_reordered = new_items + old_items
+    display = [("🆕 " + t) if t in new_items else t for t in raw_reordered]
+    return raw_reordered, display
+
 def extract_bw_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
 
@@ -488,39 +526,6 @@ def main():
             elif x.get("extra") == "pubu":
                 card_titles = extract_pubu_cards(html)
 
-            # ===== BookWalker：新活動排前（只 reorder，不 filter）=====
-
-            # 從昨天的資料撈出舊的 BW 標題
-                try:
-                    with open(OUT_JSON, "r", encoding="utf-8") as f:
-                        prev = json.load(f)
-                    for it in prev.get("items", []):
-                        if it.get("platform") == "BookWalker":
-                            prev_titles = set(it.get("card_titles", []))
-                            break
-                except Exception:
-                    prev_titles = set()
-
-            # 新活動：今天有、昨天沒有
-                new_items = [t for t in card_titles if t not in prev_titles]
-
-            # 舊活動
-                old_items = [t for t in card_titles if t in prev_titles]
-
-            # 新的放前面（只換順序）
-                card_titles = new_items + old_items
-
-            # 顯示用：幫新活動加 🆕
-                display_titles = []
-                for t in card_titles:
-                    if t in new_items:
-                        display_titles.append("🆕 " + t)
-                    else:
-                        display_titles.append(t)
-
-                card_titles = display_titles
-            # ===== BookWalker 排序結束 =====
-
         except requests.HTTPError as e:
             # 例如 403
             error = str(e)
@@ -577,13 +582,19 @@ def main():
             blocked = True
             blocked_reason = "入口模式：博客來活動頁資訊流雜訊高，v1 先只保留入口連結"
 
+        if platform in ("BookWalker", "HyRead", "Pubu") and card_titles:
+            card_titles, card_titles_for_html = mark_new_for_platform(platform, card_titles, OUT_JSON)
+        else:
+            card_titles_for_html = card_titles
+
         items.append(
             {
                 "platform": x["platform"],
                 "url": x["url"],
                 "note": x["note"],
                 "page_title": title,
-                "card_titles": card_titles,
+                "card_titles": card_titles,  # ✅ 乾淨版（不含🆕）
+                "card_titles_for_html": card_titles_for_html,  # ✅ 顯示版（含🆕）
                 "http_status": status,
                 "error": error,
                 "signature": signature,
@@ -653,7 +664,8 @@ def main():
                 }
                 limit = display_limits.get(it["platform"], 20)
 
-                for t in it["card_titles"][:limit]:
+                titles = it.get("card_titles_for_html") or it.get("card_titles") or []
+                for t in titles[:limit]:
                     html_lines.append(f"<li>{t}</li>")
                 html_lines.append("</ul>")
 
