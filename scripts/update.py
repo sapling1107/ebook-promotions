@@ -226,10 +226,10 @@ def extract_bw_cards(html: str) -> List[str]:
         else:
             promo_like.append(t)
 
-    # 組裝輸出：促銷先 12，活動任務補 6（你要「一定有東西」所以給得夠）
+    # 組裝輸出：促銷先 20，活動任務補 10（你要「一定有東西」所以給得夠）
     out = []
-    out.extend(promo_like[:12])
-    out.extend(activity_like[:6])
+    out.extend(promo_like[:20])
+    out.extend(activity_like[:10])
 
     # 最終保底：如果上面不小心變空（理論上不會），直接回 candidates 前 15
     if not out:
