@@ -254,7 +254,7 @@ def extract_bw_cards(html: str) -> List[str]:
 
         # 低品質噪音略扣，但不致死
         if any(k in t for k in ["限制級", "連載"]): s -= 2
-        return s
+            return s
 
     scored = [(score(t), t) for t in candidates]
     scored.sort(key=lambda x: x[0], reverse=True)
