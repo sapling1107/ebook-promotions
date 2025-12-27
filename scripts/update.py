@@ -83,6 +83,29 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
             continue
         cleaned.append(t)
 
+    def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
+    kept: List[str] = []
+    seen = set()
+
+    for t in texts:
+        t = re.sub(r"\s+", " ", (t or "")).strip()
+        if not t:
+            continue
+
+        if t in seen:
+            continue
+
+        # 子字串去重：避免同活動拆兩行時塞滿名額（保留先出現者＝新活動）
+        if any(t in k for k in kept):
+            continue
+
+        seen.add(t)
+        kept.append(t)
+        if len(kept) >= limit:
+            break
+
+    return kept
+
     # 2) 先用長度排序：長的在前（資訊量通常比較高）
     cleaned = sorted(set(cleaned), key=len, reverse=True)
 
@@ -94,6 +117,31 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
         kept.append(t)
 
     return kept[:limit]
+
+def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
+    kept = []
+    seen = set()
+
+    for t in texts:
+        t = re.sub(r"\s+", " ", (t or "")).strip()
+        if not t or len(t) < 4:
+            continue
+
+        # 完全重複就跳過（保留第一個＝新活動）
+        if t in seen:
+            continue
+
+        # 子字串去重（可選，但我建議保留：避免「同活動拆兩行」）
+        if any(t in k for k in kept):
+            continue
+
+        seen.add(t)
+        kept.append(t)
+
+        if len(kept) >= limit:
+            break
+
+    return kept
 
 
 def extract_bw_cards(html: str) -> List[str]:
@@ -280,7 +328,7 @@ def extract_hyread_cards(html: str) -> List[str]:
             seen.add(line)
             results.append(line)
 
-    return pick_unique_texts(results, limit=12)
+    return pick_unique_texts_keep_order(results, limit=24)
 
 def extract_books_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
@@ -364,7 +412,7 @@ def extract_pubu_cards(html: str) -> List[str]:
             seen.add(line)
             results.append(line)
 
-    return pick_unique_texts(results, limit=12)
+    return pick_unique_texts_keep_order(results, limit=36)
 
 def load_prev_signature() -> Dict[str, Any]:
     if not os.path.exists(OUT_JSON):
