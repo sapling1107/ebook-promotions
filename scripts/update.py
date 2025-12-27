@@ -215,9 +215,10 @@ def extract_bw_cards(html: str) -> List[str]:
                 "優惠券",
                 "點數",
             ]):
-            # 避免整段太長
-            joined = joined[:120] if len(joined) > 120 else joined
-            add_candidate(joined)
+                # 避免整段太長
+                if len(joined) > 120:
+                    joined = joined[:120] + "…"
+                add_candidate(joined)
 
     # ---- 打分排序：分數只用來「排前面」，絕對不做生死線 ----
     def score(t: str) -> int:
