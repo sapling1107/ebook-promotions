@@ -641,6 +641,11 @@ def main():
     html_lines.append(f"<p style='margin:0 0 16px;'>今天是否有新增活動：<b>{payload['has_new_changes']}</b>"
                       + (f"（變動：{', '.join(payload['changed_platforms'])}）" if payload["changed_platforms"] else "")
                       + "</p>")
+    html_lines.append(f"<p style='font-size: 0.85em; color: #666; margin: 4px 0 10px;'>"
+                       "※ 本頁僅提供活動標題彙整與新增標示，<br>"
+                       "不保證資訊完整性、即時性或實際優惠內容，請以各平台官方說明為準。"
+                       "</p>"
+)
     html_lines.append("<hr style='opacity:.35'/>")
 
     for it in items:
