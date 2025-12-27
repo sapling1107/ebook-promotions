@@ -293,6 +293,27 @@ def main():
             ):
                 error = "Readmoo 疑似反機器人/JS 驗證，Actions 抓到的不是活動頁內容"
 
+        blocked = False
+        blocked_reason = ""
+
+        if x["platform"] == "Readmoo":
+            # 只要抓到的不是活動頁本體，就視為 blocked
+            if error and ("robot" in error.lower() or "javascript" in error.lower() or "js" in error.lower()):
+            blocked = True
+            blocked_reason = "需要 JavaScript 驗證，Actions 無法取得活動清單"
+        else:
+            # 沒有 error 也可能拿到驗證頁（200 OK）
+            h = (html or "").lower() if "html" in locals() else ""
+            if "verify that you're not a robot" in h or "enable javascript" in h:
+                blocked = True
+                blocked_reason = "需要 JavaScript 驗證，Actions 無法取得活動清單"
+            # 或是根本沒有 READMOO_CAMPAIGNS（你走 JS 變數抽取那條路時很有用）
+            if (not blocked) and ("readmoo_campaigns" not in h):
+            # 這條比較保守：只有當 card_titles 也空才判定
+                if not card_titles:
+                    blocked = True
+                    blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
+
         items.append(
             {
                 "platform": x["platform"],
@@ -303,6 +324,8 @@ def main():
                 "http_status": status,
                 "error": error,
                 "signature": signature,
+                "blocked": blocked,
+                "blocked_reason": blocked_reason,
             }
         )
 
@@ -337,6 +360,7 @@ def main():
     html_lines.append("<hr style='opacity:.35'/>")
 
     for it in items:
+        is_blocked = bool(it.get("blocked"))
         is_403 = (it.get("http_status") == 403) or ("403" in (it.get("error") or ""))
         # 弱化：403 變灰 + 降低透明度
         wrap_style = "opacity:.45; filter: grayscale(1);" if is_403 else "opacity:1;"
@@ -351,16 +375,21 @@ def main():
             html_lines.append(f"<p style='margin:4px 0;'>備註：{it['note']}</p>")
 
         # 額外抓卡片標題（只在 BW/Readmoo 有）
-        if it.get("card_titles"):
-            html_lines.append("<div style='margin:8px 0 6px;'><b>活動卡片（擷取）</b></div>")
-            html_lines.append("<ul style='margin:6px 0 10px 18px;'>")
-            for t in it["card_titles"][:10]:
-                html_lines.append(f"<li>{t}</li>")
-            html_lines.append("</ul>")
+        # 模式 3：Readmoo 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
+        if it["platform"] == "Readmoo" and is_blocked:
+            reason = it.get("blocked_reason") or "需要 JavaScript 驗證，無法取得活動清單"
+            html_lines.append(f"<p style='margin:6px 0; color:#666;'>（{reason}）</p>")
+        else:
+            if it.get("card_titles"):
+                html_lines.append("<div style='margin:8px 0 6px;'><b>活動卡片（擷取）</b></div>")
+                html_lines.append("<ul style='margin:6px 0 10px 18px;'>")
+                for t in it["card_titles"][:10]:
+                    html_lines.append(f"<li>{t}</li>")
+                html_lines.append("</ul>")
 
         html_lines.append(f"<p style='margin:6px 0;'><a href='{it['url']}' target='_blank' rel='noopener noreferrer'>→ 點我查看活動</a></p>")
 
-        if it["error"]:
+        if it["error"] and not (it["platform"] == "Readmoo" and is_blocked):
             html_lines.append(f"<p style='margin:6px 0; color:#b00020;'>（抓取失敗：{it['error']}）</p>")
 
         html_lines.append("</section>")
