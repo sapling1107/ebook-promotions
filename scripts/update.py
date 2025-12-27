@@ -101,10 +101,10 @@ def extract_bw_cards(html: str) -> List[str]:
         t = re.sub(r"\s+", " ", (t or "")).strip()
         if not t:
             continue
-        if len(t) < 6 or len(t) > 80:
+        if len(t) < 6 or len(t) > 90:
             continue
 
-        # 踢掉明顯導覽/系統字
+        # 導覽/系統字踢掉
         if any(bad in t for bad in [
             "會員資料", "會員通知", "登入", "註冊", "推薦主題", "活動列表", "查看更多", "下載APP"
         ]):
@@ -112,27 +112,43 @@ def extract_bw_cards(html: str) -> List[str]:
 
         candidates.append(t)
 
-    # 只在 BW 做「像活動」的排序，而不是硬過濾（避免抓不到）
     def score(t: str) -> int:
         s = 0
-        if re.search(r"\d+\s*折", t): s += 6          # 63折、7折
-        if re.search(r"\d+\s*(%|％)", t): s += 5      # 79%
-        if re.search(r"滿\s*\d+", t): s += 5          # 滿1500
-        if re.search(r"\d{1,2}[./]\d{1,2}", t): s += 4  # 12/24、12.24
-        if re.search(r"\d{4}[./]\d{1,2}[./]\d{1,2}", t): s += 4  # 2025/12/26
+        # 折扣/價格/門檻/日期：強訊號
+        if re.search(r"\d+\s*折", t): s += 6
+        if re.search(r"\d+\s*(%|％)", t): s += 5
+        if re.search(r"滿\s*\d+", t): s += 5
+        if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5  # 99元、2000元
+        if re.search(r"\d{1,2}[./]\d{1,2}", t): s += 4
+        if re.search(r"\d{4}[./]\d{1,2}[./]\d{1,2}", t): s += 4
         if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼", "特價"]): s += 3
-        if any(k in t for k in ["限制級", "聲音作品", "連載"]): s -= 5  # 這類很容易洗版
+
+        # 活動型（你剛剛點名的閱讀報告/點數券）：加分讓它不會被擠掉
+        if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]): s += 6
+
+        # 不要再用「日文書」扣分（它有時就是正常活動標題的一部分）
+        # 但仍然保留對「限制級/連載」的負分以避免洗版
+        if any(k in t for k in ["限制級", "連載"]): s -= 6
+
         return s
 
-    # 先去掉太弱的（分數<=0 多半是雜訊）
     scored = [(score(t), t) for t in candidates]
-    scored = [t for (sc, t) in scored if sc > 0]
+    scored = [(sc, t) for (sc, t) in scored if sc > 0]
+    scored.sort(key=lambda x: x[0], reverse=True)
 
-    # 分數高的優先
-    scored.sort(key=lambda x: score(x), reverse=True)
+    # 分兩類：促銷型 vs 活動型
+    promo_like = []
+    activity_like = []
+    for sc, t in scored:
+        if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]):
+            activity_like.append(t)
+        else:
+            promo_like.append(t)
 
-    # 最後交給 pick_unique_texts 做子字串去重
-    return pick_unique_texts(scored, limit=8)
+    # 促銷型先取 6，活動型補 2（避免漏掉你在意的活動）
+    picked = promo_like[:12] + activity_like[:3]
+
+    return pick_unique_texts(picked, limit=15)
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
