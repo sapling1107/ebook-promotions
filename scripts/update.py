@@ -188,10 +188,7 @@ def extract_bw_cards(html: str) -> List[str]:
         if len(texts) >= 2:
             joined = " ".join(texts)
             joined = re.sub(r"\s+", " ", joined).strip()
-
-            # 基本過濾，避免抓到垃圾
-            if 6 <= len(joined) <= 200:
-                candidates.append(joined)
+            add_candidate(joined)   # ← 🔴 關鍵：走同一條管線
 
     for a in soup.select("a"):
         add_candidate(a.get_text(" ", strip=True))
@@ -240,21 +237,21 @@ def extract_bw_cards(html: str) -> List[str]:
 
     # ---- 打分排序：分數只用來「排前面」，絕對不做生死線 ----
      def score(t: str) -> int:
-        s = 0
-        if re.search(r"\d+\s*折", t): s += 6
-        if re.search(r"\d+\s*(%|％)", t): s += 5
-        if re.search(r"滿\s*\d+", t): s += 5
-        if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5
-        if re.search(r"\d{1,2}[./-]\d{1,2}", t): s += 4
-        if re.search(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}", t): s += 4
-        if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]): s += 3
+            s = 0
+            if re.search(r"\d+\s*折", t): s += 6
+            if re.search(r"\d+\s*(%|％)", t): s += 5
+            if re.search(r"滿\s*\d+", t): s += 5
+            if re.search(r"特價\s*\d+|優惠價\s*\d+|\d+\s*元", t): s += 5
+            if re.search(r"\d{1,2}[./-]\d{1,2}", t): s += 4
+            if re.search(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}", t): s += 4
+            if any(k in t for k in ["限時", "優惠", "折價券", "回饋", "書展", "再折", "加碼"]): s += 3
 
-        # 你在意的活動型：加分，避免被折扣型擠掉
-        if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]): s += 6
+            # 你在意的活動型：加分，避免被折扣型擠掉
+            if any(k in t for k in ["閱讀報告", "點數", "領券", "優惠券", "抽獎", "任務"]): s += 6
 
-        # 低品質噪音略扣，但不致死
-        if any(k in t for k in ["限制級", "連載"]): s -= 2
-            return s
+            # 低品質噪音略扣，但不致死
+            if any(k in t for k in ["限制級", "連載"]): s -= 2
+                return s
 
     scored = [(score(t), t) for t in candidates]
     scored.sort(key=lambda x: x[0], reverse=True)
