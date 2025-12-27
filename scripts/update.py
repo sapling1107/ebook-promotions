@@ -168,22 +168,71 @@ def extract_bw_cards(html: str) -> List[str]:
 
 def extract_readmoo_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
+
     candidates = []
 
-    # Readmoo 活動頁通常有活動卡片標題，直接抓所有 <a>/<h*> 的短文字
-    for tag in soup.select("h1, h2, h3, h4, a"):
-        txt = tag.get_text(" ", strip=True)
+    # 1) Readmoo 活動頁的重點：抓所有指向「活動內頁」的連結
+    #    通常會是 /campaign/xxxx 這種，且不是 /campaign/activities 本身
+    for a in soup.select('a[href*="/campaign/"]'):
+        href = a.get("href", "") or ""
+        if "/campaign/activities" in href:
+            continue
+
+        # 先試可見文字
+        txt = a.get_text(" ", strip=True)
+        txt = re.sub(r"\s+", " ", (txt or "")).strip()
+
+        # 如果連結本身沒文字（很多是圖片卡），改抓 aria-label / title
+        if not txt:
+            txt = (a.get("aria-label") or a.get("title") or "").strip()
+
+        # 還是沒有，就抓卡片內圖片的 alt
+        if not txt:
+            img = a.select_one("img[alt]")
+            if img:
+                txt = (img.get("alt") or "").strip()
+
+        # 最後再補一層：抓卡片內常見標題元素（有些會放在 div/span）
+        if not txt:
+            tnode = a.select_one("h1,h2,h3,h4,.title,.name,.campaign-title,.card-title")
+            if tnode:
+                txt = tnode.get_text(" ", strip=True).strip()
+
+        txt = re.sub(r"\s+", " ", (txt or "")).strip()
         if not txt:
             continue
-        if txt in {"點我查看活動", "更多", "返回", "登入", "註冊"}:
+        if len(txt) < 4 or len(txt) > 80:
             continue
-        if len(txt) > 60:
+
+        # 排除明顯不是活動的字
+        if any(bad in txt for bad in ["登入", "註冊", "我的", "搜尋", "更多", "返回"]):
             continue
+
         candidates.append(txt)
 
-    boosted = [t for t in candidates if any(k in t for k in ["折", "滿", "會員", "優惠", "活動", "書展", "回饋", "限時"])]
-    merged = boosted + candidates
-    return pick_unique_texts(merged, limit=10)
+    # 2) 如果上面抓不到，再用備援：抓整頁短標題（但避免把導覽抓進來）
+    if not candidates:
+        for tag in soup.select("h1, h2, h3, a"):
+            txt = tag.get_text(" ", strip=True).strip()
+            txt = re.sub(r"\s+", " ", txt)
+            if not txt or len(txt) < 4 or len(txt) > 80:
+                continue
+            if any(bad in txt for bad in ["登入", "註冊", "我的", "搜尋", "更多", "返回", "活動"]):
+                continue
+            candidates.append(txt)
+
+    # 3) 去重＋子字串去重（用你已經強化過的 pick_unique_texts）
+    #    先把明顯像促銷的放前面
+    promo_like = []
+    other = []
+    for t in candidates:
+        if any(k in t for k in ["折", "%", "％", "滿", "再折", "限時", "回饋", "優惠", "特價"]):
+            promo_like.append(t)
+        else:
+            other.append(t)
+
+    picked = promo_like + other
+    return pick_unique_texts(picked, limit=12)
 
 
 def load_prev_signature() -> Dict[str, Any]:
