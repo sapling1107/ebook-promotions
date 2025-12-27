@@ -189,8 +189,8 @@ def extract_bw_cards(html: str) -> List[str]:
             joined = " ".join(texts)
             joined = re.sub(r"\s+", " ", joined).strip()
 
-        if "99元" in joined or "年度閱讀報告" in joined:
-            print("BW_H4_JOINED:", joined)    
+            if "99元" in joined or "年度閱讀報告" in joined:
+                print("BW_H4_JOINED:", joined)    
             add_candidate(joined)   # ← 🔴 關鍵：走同一條管線
 
     for a in soup.select("a"):
