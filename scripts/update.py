@@ -204,6 +204,18 @@ def extract_bw_cards(html: str) -> List[str]:
         seen.add(text)
         results.append(text)
 
+        # ✅ 第二層去重：移除「被更長句子包含」的短句（保留完整那條）
+        filtered = []
+        for t in results:
+            if any(
+                (t != u) and (len(u) > len(t)) and (t in u)
+                for u in results
+            ):
+                continue
+            filtered.append(t)
+
+    results = filtered
+
     # 什麼都不管，只限制最多顯示幾筆
     return results[:30]
 
