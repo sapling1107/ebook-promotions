@@ -61,7 +61,11 @@ def extract_title(html: str) -> str:
 
 def fetch_html(url: str) -> Dict[str, Any]:
     headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; ebook-promotions-bot/1.0)"
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.6",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
     }
     r = requests.get(url, headers=headers, timeout=25)
     status = r.status_code
@@ -167,25 +171,24 @@ def extract_bw_cards(html: str) -> List[str]:
 
 
 def extract_readmoo_cards(html: str) -> List[str]:
-    """
-    Readmoo 的活動資料在 HTML 內的 JS 變數：
-    const READMOO_CAMPAIGNS = [...]
-    不用 BeautifulSoup，直接抽 JSON。
-    """
     import re
     import json
 
-    # 1) 抓 JS 變數
-    m = re.search(
-        r"const\s+READMOO_CAMPAIGNS\s*=\s*(\[\{.*?\}\]);",
-        html,
-        re.S
-    )
+    # Readmoo 常見兩種狀態：
+    # A) 有 READMOO_CAMPAIGNS（可抽）
+    # B) 被擋（只有驗證/JS 提示頁） -> 抽不到
+    h_lower = (html or "").lower()
+    if "verify that you're not a robot" in h_lower or "enable javascript" in h_lower:
+        return []
+
+    # 放寬：抓到第一個 ]; 為止，不要求一定是 [{...}];
+    m = re.search(r"const\s+READMOO_CAMPAIGNS\s*=\s*(\[[\s\S]*?\]);", html)
     if not m:
         return []
 
+    raw = m.group(1)
     try:
-        data = json.loads(m.group(1))
+        data = json.loads(raw)
     except Exception:
         return []
 
@@ -195,9 +198,7 @@ def extract_readmoo_cards(html: str) -> List[str]:
         desc = (item.get("description") or "").strip()
         start = (item.get("start_date") or "").strip()
         end = (item.get("end_date") or "").strip()
-        link = (item.get("link") or "").strip()
 
-        # 組成一行，避免被拆成多行
         line = " ".join(x for x in [
             name,
             desc,
@@ -208,7 +209,6 @@ def extract_readmoo_cards(html: str) -> List[str]:
             cards.append(line)
 
     return cards
-
 
 def load_prev_signature() -> Dict[str, Any]:
     if not os.path.exists(OUT_JSON):
@@ -284,6 +284,14 @@ def main():
             and prev_sig.get(x["platform"]) != signature
         ):
             changed_platforms.append(x["platform"])
+
+        if x["platform"] == "Readmoo":
+            # 如果抽不到活動，順便判斷是不是被擋
+            if ("READMOO_CAMPAIGNS" not in html) and (
+                "verify that you're not a robot" in html.lower()
+                or "enable javascript" in html.lower()
+            ):
+                error = "Readmoo 疑似反機器人/JS 驗證，Actions 抓到的不是活動頁內容"
 
         items.append(
             {
