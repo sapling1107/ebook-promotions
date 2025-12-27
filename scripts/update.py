@@ -631,6 +631,13 @@ def main():
        
 
         html_lines.append(f"<p style='margin:6px 0;'><a href='{it['url']}' target='_blank' rel='noopener noreferrer'>→ 點我查看活動</a></p>")
+        if it["platform"] == "Readmoo":
+            html_lines.append(
+                "<p style='margin:6px 0;'>"
+                "<a href='https://readmoo.com/campaign/specialoffer/index' target='_blank' rel='noopener noreferrer'>"
+                "→ 每日優惠"
+                "</a></p>"
+            )
 
 
 
