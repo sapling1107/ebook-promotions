@@ -26,7 +26,7 @@ URLS = [
         "platform": "HyRead",
         "url": "https://ebook.hyread.com.tw/Template/store/event_list.jsp",
         "note": "熱門活動",
-        "extra": None,
+        "extra": "hyread",
     },
     {
         "platform": "Pubu",
@@ -44,7 +44,7 @@ URLS = [
         "platform": "博客來",
         "url": "https://activity.books.com.tw/crosscat/show/A00000062854?loc=mood_001",
         "note": "電子書活動入口（可能會調整）",
-        "extra": None,
+        "extra": "books"
     },
 ]
 
@@ -309,6 +309,12 @@ def main():
             status = res["status"]
             title = extract_title(html)
 
+            # 🔎 DEBUG：HTML 太短時存檔（判斷是否被擋）
+            if html and len(html) < 2000:
+                from pathlib import Path
+                slug = x["platform"].lower()
+                Path(f"debug_{slug}.html").write_text(html, encoding="utf-8")
+
             if x.get("extra") == "bw":
                 card_titles = extract_bw_cards(html)
             elif x.get("extra") == "readmoo":
@@ -366,7 +372,8 @@ def main():
                     blocked = True
                     blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
 
-
+if x.get("extra") is None and x["platform"] not in ("Kobo", "Pubu"):  # 你自己想例外邊個都得
+    cards = ["（未設定解析器 extra，暫時不會解析出活動）"]
 
         items.append(
             {
