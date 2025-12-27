@@ -347,8 +347,8 @@ def main():
         if x["platform"] == "Readmoo":
             # 只要抓到的不是活動頁本體，就視為 blocked
             if error and ("robot" in error.lower() or "javascript" in error.lower() or "js" in error.lower()):
-            blocked = True
-            blocked_reason = "需要 JavaScript 驗證，Actions 無法取得活動清單"
+                blocked = True
+                blocked_reason = "需要 JavaScript 驗證，Actions 無法取得活動清單"
         else:
             # 沒有 error 也可能拿到驗證頁（200 OK）
             h = (html or "").lower() if "html" in locals() else ""
