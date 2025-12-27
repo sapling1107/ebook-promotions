@@ -294,7 +294,7 @@ def extract_hyread_cards(html: str) -> List[str]:
         # 主標：挑「比較不像日期/折扣」且字數合理的句子
         # 副標：挑「含折/元/%/滿/日期符號」的句子
         def looks_like_meta(s: str) -> bool:
-            return bool(re.search(r"(折|元|%|％|滿|再折|限時|週末|限定|\d{1,2}[./-]\d{1,2}|/)", s))
+            return bool(re.search(r"(折|元|%|％|滿|再折|限時|週末|限定|\d{1,2}[./-]\d{1,2})", s))
 
         title = ""
         subtitle = ""
@@ -318,6 +318,10 @@ def extract_hyread_cards(html: str) -> List[str]:
         subtitle = re.sub(r"\s+", " ", subtitle).strip()
 
         if not title:
+            continue
+
+        # ✅ 過濾掉非活動入口：HyRead 真正的活動卡片幾乎一定有「日期/折扣」副標
+        if not subtitle:
             continue
 
         line = f"{title}｜{subtitle}" if subtitle else title
@@ -608,7 +612,14 @@ def main():
             if it.get("card_titles"):
                 html_lines.append("<div style='margin:8px 0 6px;'><b>活動卡片（擷取）</b></div>")
                 html_lines.append("<ul style='margin:6px 0 10px 18px;'>")
-                for t in it["card_titles"][:10]:
+
+                display_limits = {
+                    "HyRead": 24,
+                    "Pubu": 36,
+                }
+                limit = display_limits.get(it["platform"], 10)
+
+                for t in it["card_titles"][:limit]:
                     html_lines.append(f"<li>{t}</li>")
                 html_lines.append("</ul>")
 
