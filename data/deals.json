@@ -1,10 +1,8 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2025-12-27 21:03",
-  "has_new_changes": "是",
-  "changed_platforms": [
-    "HyRead"
-  ],
+  "updated_at_taipei": "2025-12-27 21:22",
+  "has_new_changes": "否",
+  "changed_platforms": [],
   "items": [
     {
       "platform": "BookWalker",
