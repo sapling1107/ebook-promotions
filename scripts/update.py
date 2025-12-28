@@ -692,6 +692,17 @@ def main():
        
 
         html_lines.append(f"<p style='margin:6px 0;'><a href='{it['url']}' target='_blank' rel='noopener noreferrer'>→ 點我查看活動</a></p>")
+
+        # 📌 Pubu 補充入口：每日 99 元（不是同一頁的活動）
+        if it.get("platform") == "Pubu":
+            html_lines.append(
+                "<p style='margin:4px 0;'>"
+                "📌 補充入口："
+                "<a href='https://www.pubu.com.tw/campaign/event/pubu99select' "
+                "target='_blank'>Pubu 每日 99 元專區</a>"
+                "</p>"
+            )
+        
         if it["platform"] == "Readmoo":
             html_lines.append(
                 "<p style='margin:6px 0;'>"
