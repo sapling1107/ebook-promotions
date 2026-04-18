@@ -1,8 +1,10 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2026-04-18 22:45",
+  "updated_at_taipei": "2026-04-18 22:56",
   "has_new_changes": "否",
-  "changed_platforms": [],
+  "changed_platforms": [
+    "HyRead"
+  ],
   "items": [
     {
       "platform": "BookWalker",
@@ -270,12 +272,12 @@
       "platform": "HyRead",
       "url": "https://ebook.hyread.com.tw/Template/store/event_list.jsp",
       "note": "熱門活動",
-      "page_title": "",
+      "page_title": "HTTP Status 400 – Bad Request",
       "card_titles": [],
       "card_titles_for_html": [],
       "http_status": 400,
-      "error": "400 Client Error:  for url: https://ebook.hyread.com.tw/Template/store/event_list.jsp",
-      "signature": "{\"cards\": [], \"error\": \"400 Client Error:  for url: https://ebook.hyread.com.tw/Template/store/event_list.jsp\", \"status\": 400, \"title\": \"\"}",
+      "error": "",
+      "signature": "{\"cards\": [], \"error\": \"\", \"status\": 400, \"title\": \"HTTP Status 400 – Bad Request\"}",
       "blocked": true,
       "blocked_reason": "疑似反機器人/JS 驗證，無法取得活動清單"
     },
