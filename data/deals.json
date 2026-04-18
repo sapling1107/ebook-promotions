@@ -1,10 +1,8 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2026-04-18 22:56",
+  "updated_at_taipei": "2026-04-18 23:07",
   "has_new_changes": "否",
-  "changed_platforms": [
-    "HyRead"
-  ],
+  "changed_platforms": [],
   "items": [
     {
       "platform": "BookWalker",
@@ -279,7 +277,7 @@
       "error": "",
       "signature": "{\"cards\": [], \"error\": \"\", \"status\": 400, \"title\": \"HTTP Status 400 – Bad Request\"}",
       "blocked": true,
-      "blocked_reason": "疑似反機器人/JS 驗證，無法取得活動清單"
+      "blocked_reason": "入口模式：目前僅提供官方活動頁入口"
     },
     {
       "platform": "Pubu",
