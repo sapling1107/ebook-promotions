@@ -1,6 +1,6 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2026-04-18 23:47",
+  "updated_at_taipei": "2026-04-19 00:18",
   "has_new_changes": "否",
   "changed_platforms": [
     "Kobo"
@@ -379,9 +379,9 @@
       "page_title": "",
       "card_titles": [],
       "card_titles_for_html": [],
-      "http_status": 0,
+      "http_status": 403,
       "error": "",
-      "signature": "{\"cards\": [], \"error\": \"\", \"status\": 0, \"title\": \"\"}",
+      "signature": "{\"cards\": [], \"error\": \"403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale\", \"status\": 403, \"title\": \"\"}",
       "blocked": true,
       "blocked_reason": "入口模式：目前僅提供官方活動頁入口",
       "sub_links": [
