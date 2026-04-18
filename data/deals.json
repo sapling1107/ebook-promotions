@@ -1,10 +1,8 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2026-04-19 00:37",
+  "updated_at_taipei": "2026-04-19 00:54",
   "has_new_changes": "否",
-  "changed_platforms": [
-    "Kobo"
-  ],
+  "changed_platforms": [],
   "items": [
     {
       "platform": "BookWalker",
