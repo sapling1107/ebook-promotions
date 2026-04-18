@@ -122,6 +122,30 @@ def fetch_html_hyread(url: str) -> Dict[str, Any]:
     return {"text": r.text, "status": status}
 
 
+def fetch_html_hyread_playwright(url: str) -> Dict[str, Any]:
+    timeout_ms = 30000
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+            locale="zh-TW",
+        )
+        page = context.new_page()
+
+        try:
+            response = page.goto(url, wait_until="networkidle", timeout=timeout_ms)
+        except PlaywrightTimeoutError as e:
+            raise RuntimeError(f"HyRead Playwright timeout after {timeout_ms}ms for url: {url}") from e
+
+        html = page.content()
+        status = response.status if response is not None else 200
+
+        context.close()
+        browser.close()
+
+    return {"text": html, "status": status}
+
+
 def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
     # 1) 基礎清理
     cleaned = []
@@ -526,7 +550,7 @@ def main():
             if x.get("extra") == "readmoo":
                 res = fetch_html_playwright(x["url"])
             elif x.get("extra") == "hyread":
-                res = fetch_html_hyread(x["url"])
+                res = fetch_html_hyread_playwright(x["url"])
             else:
                 res = fetch_html(x["url"])
             html = res["text"]
