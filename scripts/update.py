@@ -638,6 +638,13 @@ def main():
                     blocked = True
                     blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
 
+        if x["platform"] == "HyRead":
+            blocked = True
+            blocked_reason = "入口模式：目前僅提供官方活動頁入口"
+            error = ""
+            card_titles = []
+            card_titles_for_html = []
+
         # 博客來：入口模式（不顯示擷取卡片，避免被商品/套組洗版）
         if x["platform"] == "博客來":
             blocked = True
@@ -711,8 +718,8 @@ def main():
 
         is_blocked = bool(it.get("blocked"))
 
-        # 模式 3：Readmoo / 博客來 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
-        if it["platform"] in ("Readmoo", "博客來") and is_blocked:
+        # 模式 3：Readmoo / HyRead / 博客來 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
+        if it["platform"] in ("Readmoo", "HyRead", "博客來") and is_blocked:
             reason = it.get("blocked_reason") or "入口模式"
             html_lines.append(f"<p style='margin:6px 0; color:#666;'>（{reason}）</p>")
         else:
@@ -731,8 +738,8 @@ def main():
                     html_lines.append(f"<li>{t}</li>")
                 html_lines.append("</ul>")
 
-        # error：若是 Readmoo/博客來入口模式，就不要用紅字嚇人（原因已經顯示）
-        if it.get("error") and not (it["platform"] in ("Readmoo", "博客來") and is_blocked):
+        # error：若是 Readmoo/HyRead/博客來入口模式，就不要用紅字嚇人（原因已經顯示）
+        if it.get("error") and not (it["platform"] in ("Readmoo", "HyRead", "博客來") and is_blocked):
             html_lines.append(
                 f"<p style='margin:6px 0; color:#b00020;'>（抓取失敗：{it['error']}）</p>"
             )
