@@ -450,6 +450,46 @@ def extract_books_cards(html: str) -> List[str]:
 
     return pick_unique_texts(candidates, limit=12)
 
+def extract_kobo_section_titles(html: str) -> List[str]:
+    soup = BeautifulSoup(html, "html.parser")
+    candidates = []
+
+    # Kobo v1 只抓像「書展/折扣/日期」這種活動區塊主題，寧可抓少，不抓髒。
+    reject_patterns = [
+        r"^NT\$",
+        r"新增至購物車",
+        r"檢視全部",
+        r"加入購物車",
+        r"立即購買",
+        r"本月出版精選$",
+        r"全站活動$",
+        r"漫畫/輕小說$",
+        r"18禁$",
+        r"電子書$",
+    ]
+    promo_re = re.compile(r"(書展|折|特價|優惠|限時|精選|出版|主題|活動|至\d{1,2}/\d{1,2}|至\d{1,2}月\d{1,2}日)")
+
+    for tag in soup.select("h1, h2, h3, h4, p, div, span, a"):
+        txt = tag.get_text(" ", strip=True)
+        txt = re.sub(r"\s+", " ", (txt or "")).strip()
+        if not txt:
+            continue
+        if len(txt) < 10 or len(txt) > 80:
+            continue
+        if any(re.search(p, txt) for p in reject_patterns):
+            continue
+        if any(bad in txt for bad in ["作者", "出版社", "系列", "評分", "星", "則評論"]):
+            continue
+        if "NT$" in txt or "新增至購物車" in txt:
+            continue
+        if not promo_re.search(txt):
+            continue
+        if not any(mark in txt for mark in ["【", "】", "折", "至", "書展", "優惠", "限時", "精選"]):
+            continue
+        candidates.append(txt)
+
+    return pick_unique_texts_keep_order(candidates, limit=8)
+
 def extract_pubu_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
     results = []
@@ -561,21 +601,18 @@ def main():
         card_titles_for_html: List[str] = []
 
         try:
-            if x["platform"] == "Kobo":
-                pass
-            elif x.get("extra") == "readmoo":
+            if x.get("extra") == "readmoo":
                 res = fetch_html_playwright(x["url"])
             elif x.get("extra") == "hyread":
                 res = fetch_html_hyread_playwright(x["url"])
             else:
                 res = fetch_html(x["url"])
-            if x["platform"] != "Kobo":
-                html = res["text"]
-                status = res["status"]
-                title = extract_title(html)
+            html = res["text"]
+            status = res["status"]
+            title = extract_title(html)
 
             # 🔎 DEBUG：HTML 太短時存檔（判斷是否被擋）
-            if x["platform"] != "Kobo" and html and len(html) < 2000:
+            if html and len(html) < 2000:
                 from pathlib import Path
                 slug = x["platform"].lower()
                 Path(f"debug_{slug}.html").write_text(html, encoding="utf-8")
@@ -594,6 +631,8 @@ def main():
                 card_titles = extract_books_cards(html)
             elif x.get("extra") == "pubu":
                 card_titles = extract_pubu_cards(html)
+            elif x["platform"] == "Kobo":
+                card_titles = extract_kobo_section_titles(html)
 
             platform = x["platform"]
 
@@ -666,8 +705,6 @@ def main():
             blocked = True
             blocked_reason = "入口模式：目前僅提供官方活動頁入口"
             error = ""
-            card_titles = []
-            card_titles_for_html = []
 
         # 博客來：入口模式（不顯示擷取卡片，避免被商品/套組洗版）
         if x["platform"] == "博客來":
@@ -743,18 +780,20 @@ def main():
 
         is_blocked = bool(it.get("blocked"))
 
-        # 模式 3：Readmoo / HyRead / Kobo / 博客來 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
+        # 模式 3：Readmoo / HyRead / Kobo / 博客來 若 blocked，就顯示原因；Kobo 仍可顯示摘要。
         if it["platform"] in ("Readmoo", "HyRead", "Kobo", "博客來") and is_blocked:
             reason = it.get("blocked_reason") or "入口模式"
             html_lines.append(f"<p style='margin:6px 0; color:#666;'>（{reason}）</p>")
-        else:
+        if (not is_blocked) or (it["platform"] == "Kobo" and it.get("card_titles")):
             if it.get("card_titles"):
-                html_lines.append("<div style='margin:8px 0 6px;'><b>活動卡片（擷取）</b></div>")
+                block_label = "活動標題摘要" if it["platform"] == "Kobo" else "活動卡片（擷取）"
+                html_lines.append(f"<div style='margin:8px 0 6px;'><b>{block_label}</b></div>")
                 html_lines.append("<ul style='margin:6px 0 10px 18px;'>")
 
                 display_limits = {
                     "HyRead": 24,
                     "Pubu": 36,
+                    "Kobo": 8,
                 }
                 limit = display_limits.get(it["platform"], 20)
 
@@ -773,7 +812,7 @@ def main():
         html_lines.append(f"<p style='margin:6px 0;'><a href='{it['url']}' target='_blank' rel='noopener noreferrer'>→ 點我查看活動</a></p>")
 
         if it.get("platform") == "Kobo" and it.get("sub_links"):
-            links = " / ".join(
+            links = " | ".join(
                 f"<a href='{link['url']}' target='_blank' rel='noopener noreferrer'>{link['label']}</a>"
                 for link in it["sub_links"]
             )
