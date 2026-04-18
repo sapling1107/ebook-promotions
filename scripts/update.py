@@ -7,6 +7,7 @@ from typing import List, Dict, Any
 
 import requests
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 PARSER_VERSION = 2
 URLS = [
@@ -72,6 +73,35 @@ def fetch_html(url: str) -> Dict[str, Any]:
     r.raise_for_status()
     r.encoding = r.apparent_encoding or "utf-8"
     return {"text": r.text, "status": status}
+
+
+def fetch_html_playwright(url: str) -> Dict[str, Any]:
+    timeout_ms = 30000
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+            locale="zh-TW",
+        )
+        page = context.new_page()
+
+        try:
+            response = page.goto(url, wait_until="networkidle", timeout=timeout_ms)
+        except PlaywrightTimeoutError as e:
+            raise RuntimeError(f"Playwright timeout after {timeout_ms}ms for url: {url}") from e
+
+        html = page.content()
+        status = response.status if response is not None else 200
+        title = page.title().strip()
+        has_campaigns = "READMOO_CAMPAIGNS" in html
+
+        print(f"[Readmoo] Playwright title: {title or '(empty)'}")
+        print(f"[Readmoo] READMOO_CAMPAIGNS found: {'yes' if has_campaigns else 'no'}")
+
+        context.close()
+        browser.close()
+
+    return {"text": html, "status": status}
 
 
 def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
@@ -475,7 +505,10 @@ def main():
         card_titles_for_html: List[str] = []
 
         try:
-            res = fetch_html(x["url"])
+            if x.get("extra") == "readmoo":
+                res = fetch_html_playwright(x["url"])
+            else:
+                res = fetch_html(x["url"])
             html = res["text"]
             status = res["status"]
             title = extract_title(html)
