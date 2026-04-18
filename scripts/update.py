@@ -104,6 +104,24 @@ def fetch_html_playwright(url: str) -> Dict[str, Any]:
     return {"text": html, "status": status}
 
 
+def fetch_html_hyread(url: str) -> Dict[str, Any]:
+    headers = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.6",
+    "Referer": "https://ebook.hyread.com.tw/",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+    }
+    session = requests.Session()
+    session.get("https://ebook.hyread.com.tw/", headers=headers, timeout=25)
+    r = session.get(url, headers=headers, timeout=25)
+    status = r.status_code
+    r.raise_for_status()
+    r.encoding = r.apparent_encoding or "utf-8"
+    return {"text": r.text, "status": status}
+
+
 def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
     # 1) 基礎清理
     cleaned = []
@@ -507,6 +525,8 @@ def main():
         try:
             if x.get("extra") == "readmoo":
                 res = fetch_html_playwright(x["url"])
+            elif x.get("extra") == "hyread":
+                res = fetch_html_hyread(x["url"])
             else:
                 res = fetch_html(x["url"])
             html = res["text"]
@@ -525,6 +545,10 @@ def main():
                 card_titles = extract_readmoo_cards(html)
             elif x.get("extra") == "hyread":
                 card_titles = extract_hyread_cards(html)
+                print(f"[HyRead] status: {status}")
+                print(f"[HyRead] title: {title or '(empty)'}")
+                print(f"[HyRead] html length: {len(html)}")
+                print(f"[HyRead] parser cards: {len(card_titles)}")
             elif x.get("extra") == "books":
                 card_titles = extract_books_cards(html)
             elif x.get("extra") == "pubu":
