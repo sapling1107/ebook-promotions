@@ -1,8 +1,10 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2026-04-18 23:07",
+  "updated_at_taipei": "2026-04-18 23:47",
   "has_new_changes": "否",
-  "changed_platforms": [],
+  "changed_platforms": [
+    "Kobo"
+  ],
   "items": [
     {
       "platform": "BookWalker",
@@ -77,7 +79,8 @@
       "error": "",
       "signature": "{\"cards\": [\"日本聖地巡禮～抽卡決定旅程！ 4/1-4/30 完成送優惠券&書架\", \"4.1-4.23 新番開追！春季新番 精選商品79折起！\", \"聲級體驗▸▸邂逅你的耳邊驚喜 4.17-5.7 聲音作品主題書展79折起\", \"《轉生史萊姆》電影特別企劃 小說單本9折，書架免費領\", \"4.17-5.17 奇幻基地恐怖驚悚書展 單書9折，雙書85折\", \"4.16-5.4 重溫安達充經典！ 精選套書優惠中、買套書再送書架\", \"4.16-5.4 長鴻女性向書展75折起 ♥ 滿額699元再贈獨家書架 ♥\", \"大塊X大辣 台漫大集結 每天都有套書一日限時超低價\"], \"error\": \"\", \"status\": 200, \"title\": \"推薦主題&amp;活動 BOOK☆WALKER 台灣漫讀 / 電子書平台\"}",
       "blocked": false,
-      "blocked_reason": ""
+      "blocked_reason": "",
+      "sub_links": []
     },
     {
       "platform": "Readmoo",
@@ -264,7 +267,8 @@
       "error": "",
       "signature": "{\"cards\": [\"《H2》《四葉遊戲》上架──重溫安達充棒球經典・看你了解安達充多少 5/4前參與互動答題，即可獲得「參展書籍：安達充作品」滿額優惠券 2026-04-16–2026-05-04\", \"《直通莫斯科》：德國為何在俄烏戰爭爆發後處處受制？一部調查縝密、控訴有力的紀實報導！ 5/17前，《直通莫斯科》 X 春山精選書展，兩本以上85折 2026-04-15–2026-05-17\", \"陷入瓶頸的推理作家Ｘ外表輕浮的帥氣編輯！說出拚盡全力的告白，讓我動心吧—— 4/28前，《推理作家討厭戀愛小說》獨家首賣95折 2026-04-15–2026-04-28\", \"現今流行的低碳水飲食，你確定吃對了嗎？臨床營養權威分享，適合華人的飲食指南！ 4/28前，《低碳水，吃出不發炎的修復力！》獨家首賣85折 2026-04-15–2026-04-28\", \"美少女．美女．美魔女完全網羅超大型綜合寫真展 5/16前，PAD書籍，三本6折，五本5折 2026-04-15–2026-05-16\", \"Readmoo × PressPlay｜2026 世界閱讀日跨界補給 5/9 前，立即領取 PPA Plus 7 天權限 2026-04-15–2026-05-09\", \"從荒野走進文明，再回歸大自然，傑克・倫敦動物文學經典！ 4/15上市首日，套書限定優惠99元；5/14前，單本85折，套書77折 2026-04-15–2026-05-14\", \"《如何愛你的負面情感》：一本邀你與「不完美」握手言和的指南 5/11前，新書優惠88折 2026-04-14–2026-05-11\"], \"error\": \"\", \"status\": 202, \"title\": \"進行中活動 | Readmoo 讀墨電子書\"}",
       "blocked": false,
-      "blocked_reason": ""
+      "blocked_reason": "",
+      "sub_links": []
     },
     {
       "platform": "HyRead",
@@ -277,7 +281,8 @@
       "error": "",
       "signature": "{\"cards\": [], \"error\": \"\", \"status\": 400, \"title\": \"HTTP Status 400 – Bad Request\"}",
       "blocked": true,
-      "blocked_reason": "入口模式：目前僅提供官方活動頁入口"
+      "blocked_reason": "入口模式：目前僅提供官方活動頁入口",
+      "sub_links": []
     },
     {
       "platform": "Pubu",
@@ -364,20 +369,35 @@
       "error": "",
       "signature": "{\"cards\": [\"異界探訪 | 揭開日本精神風土最深層的祕密交界｜有效期限2026-04-17 ~ 2026-05-16\", \"大廟埕 | 暖暖新小說．不只是「關於北港媽祖的故事」｜有效期限2026-04-17 ~ 2026-05-10\", \"健忘，是大腦在求救？| 麥田新書延伸書展88折｜有效期限2026-04-17 ~ 2026-05-09\", \"傑克．倫敦動物文學（全新中譯本） | 本事新書套書77折｜有效期限2026-04-16 ~ 2026-05-14\", \"從未 | 商周出版．歷經9次死刑判決到無罪重生的真實故事｜有效期限2026-04-16 ~ 2026-05-02\", \"主題精選三本79折 | 禾馬文化｜有效期限2026-04-16 ~ 2026-04-30\", \"美少女．美女．美魔女 完全網羅| 超大型綜合寫真展66折｜有效期限2026-04-15 ~ 2026-05-16\", \"英國建築手繪解剖圖鑑 | 原點建築新書85折｜有效期限2026-04-15 ~ 2026-05-14\"], \"error\": \"\", \"status\": 200, \"title\": \"全站活動 | Pubu - 電子書自由閱讀、自由出版\"}",
       "blocked": false,
-      "blocked_reason": ""
+      "blocked_reason": "",
+      "sub_links": []
     },
     {
       "platform": "Kobo",
-      "url": "https://www.kobo.com/tw/zh",
-      "note": "主頁（弱來源）",
+      "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
+      "note": "主題入口",
       "page_title": "",
       "card_titles": [],
       "card_titles_for_html": [],
-      "http_status": 403,
-      "error": "403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh",
-      "signature": "{\"cards\": [], \"error\": \"403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh\", \"status\": 403, \"title\": \"\"}",
+      "http_status": 0,
+      "error": "",
+      "signature": "{\"cards\": [], \"error\": \"\", \"status\": 0, \"title\": \"\"}",
       "blocked": true,
-      "blocked_reason": "疑似反機器人/JS 驗證，無法取得活動清單"
+      "blocked_reason": "入口模式：目前僅提供官方活動頁入口",
+      "sub_links": [
+        {
+          "label": "全站活動",
+          "url": "https://www.kobo.com/tw/zh/p/tw-activities-wkdsale"
+        },
+        {
+          "label": "漫畫/輕小說",
+          "url": "https://www.kobo.com/tw/zh/p/tw-comiclightnovel-wkdsale"
+        },
+        {
+          "label": "18禁",
+          "url": "https://www.kobo.com/tw/zh/p/tw-R18-wkdsale"
+        }
+      ]
     },
     {
       "platform": "博客來",
@@ -390,7 +410,8 @@
       "error": "403 Client Error: Forbidden for url: https://activity.books.com.tw/crosscat/show/A00000062854?loc=mood_001",
       "signature": "{\"cards\": [], \"error\": \"403 Client Error: Forbidden for url: https://activity.books.com.tw/crosscat/show/A00000062854?loc=mood_001\", \"status\": 403, \"title\": \"\"}",
       "blocked": true,
-      "blocked_reason": "入口模式：博客來活動頁資訊流雜訊高，v1 先只保留入口連結"
+      "blocked_reason": "入口模式：博客來活動頁資訊流雜訊高，v1 先只保留入口連結",
+      "sub_links": []
     }
   ]
 }
