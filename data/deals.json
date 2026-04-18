@@ -1,10 +1,8 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2026-04-18 22:11",
+  "updated_at_taipei": "2026-04-18 22:43",
   "has_new_changes": "否",
-  "changed_platforms": [
-    "Readmoo"
-  ],
+  "changed_platforms": [],
   "items": [
     {
       "platform": "BookWalker",
