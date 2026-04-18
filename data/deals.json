@@ -1,11 +1,8 @@
 {
   "parser_version": 2,
-  "updated_at_taipei": "2026-04-18 01:03",
-  "has_new_changes": "是",
-  "changed_platforms": [
-    "BookWalker",
-    "Pubu"
-  ],
+  "updated_at_taipei": "2026-04-18 21:04",
+  "has_new_changes": "否",
+  "changed_platforms": [],
   "items": [
     {
       "platform": "BookWalker",
@@ -106,7 +103,7 @@
       "error": "400 Client Error:  for url: https://ebook.hyread.com.tw/Template/store/event_list.jsp",
       "signature": "{\"cards\": [], \"error\": \"400 Client Error:  for url: https://ebook.hyread.com.tw/Template/store/event_list.jsp\", \"status\": 400, \"title\": \"\"}",
       "blocked": true,
-      "blocked_reason": "需要 JavaScript 驗證，Actions 無法取得活動清單"
+      "blocked_reason": "疑似反機器人/JS 驗證，無法取得活動清單"
     },
     {
       "platform": "Pubu",
@@ -152,9 +149,9 @@
         "古人的決策，你的對策 | 圓神新書9折｜有效期限2026-04-02 ~ 2026-04-30"
       ],
       "card_titles_for_html": [
-        "🆕 異界探訪 | 揭開日本精神風土最深層的祕密交界｜有效期限2026-04-17 ~ 2026-05-16",
-        "🆕 大廟埕 | 暖暖新小說．不只是「關於北港媽祖的故事」｜有效期限2026-04-17 ~ 2026-05-10",
-        "🆕 健忘，是大腦在求救？| 麥田新書延伸書展88折｜有效期限2026-04-17 ~ 2026-05-09",
+        "異界探訪 | 揭開日本精神風土最深層的祕密交界｜有效期限2026-04-17 ~ 2026-05-16",
+        "大廟埕 | 暖暖新小說．不只是「關於北港媽祖的故事」｜有效期限2026-04-17 ~ 2026-05-10",
+        "健忘，是大腦在求救？| 麥田新書延伸書展88折｜有效期限2026-04-17 ~ 2026-05-09",
         "傑克．倫敦動物文學（全新中譯本） | 本事新書套書77折｜有效期限2026-04-16 ~ 2026-05-14",
         "從未 | 商周出版．歷經9次死刑判決到無罪重生的真實故事｜有效期限2026-04-16 ~ 2026-05-02",
         "主題精選三本79折 | 禾馬文化｜有效期限2026-04-16 ~ 2026-04-30",
