@@ -37,9 +37,23 @@ URLS = [
     },
     {
         "platform": "Kobo",
-        "url": "https://www.kobo.com/tw/zh",
-        "note": "主頁（弱來源）",
+        "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
+        "note": "主題入口",
         "extra": None,
+        "sub_links": [
+            {
+                "label": "全站活動",
+                "url": "https://www.kobo.com/tw/zh/p/tw-activities-wkdsale",
+            },
+            {
+                "label": "漫畫/輕小說",
+                "url": "https://www.kobo.com/tw/zh/p/tw-comiclightnovel-wkdsale",
+            },
+            {
+                "label": "18禁",
+                "url": "https://www.kobo.com/tw/zh/p/tw-R18-wkdsale",
+            },
+        ],
     },
     {
         "platform": "博客來",
@@ -547,18 +561,21 @@ def main():
         card_titles_for_html: List[str] = []
 
         try:
-            if x.get("extra") == "readmoo":
+            if x["platform"] == "Kobo":
+                pass
+            elif x.get("extra") == "readmoo":
                 res = fetch_html_playwright(x["url"])
             elif x.get("extra") == "hyread":
                 res = fetch_html_hyread_playwright(x["url"])
             else:
                 res = fetch_html(x["url"])
-            html = res["text"]
-            status = res["status"]
-            title = extract_title(html)
+            if x["platform"] != "Kobo":
+                html = res["text"]
+                status = res["status"]
+                title = extract_title(html)
 
             # 🔎 DEBUG：HTML 太短時存檔（判斷是否被擋）
-            if html and len(html) < 2000:
+            if x["platform"] != "Kobo" and html and len(html) < 2000:
                 from pathlib import Path
                 slug = x["platform"].lower()
                 Path(f"debug_{slug}.html").write_text(html, encoding="utf-8")
@@ -645,6 +662,13 @@ def main():
             card_titles = []
             card_titles_for_html = []
 
+        if x["platform"] == "Kobo":
+            blocked = True
+            blocked_reason = "入口模式：目前僅提供官方活動頁入口"
+            error = ""
+            card_titles = []
+            card_titles_for_html = []
+
         # 博客來：入口模式（不顯示擷取卡片，避免被商品/套組洗版）
         if x["platform"] == "博客來":
             blocked = True
@@ -664,6 +688,7 @@ def main():
                 "signature": signature,
                 "blocked": blocked,
                 "blocked_reason": blocked_reason,
+                "sub_links": x.get("sub_links", []),
             }
         )
 
@@ -718,8 +743,8 @@ def main():
 
         is_blocked = bool(it.get("blocked"))
 
-        # 模式 3：Readmoo / HyRead / 博客來 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
-        if it["platform"] in ("Readmoo", "HyRead", "博客來") and is_blocked:
+        # 模式 3：Readmoo / HyRead / Kobo / 博客來 若 blocked，就不顯示卡片區塊，只顯示原因＋連結
+        if it["platform"] in ("Readmoo", "HyRead", "Kobo", "博客來") and is_blocked:
             reason = it.get("blocked_reason") or "入口模式"
             html_lines.append(f"<p style='margin:6px 0; color:#666;'>（{reason}）</p>")
         else:
@@ -738,14 +763,21 @@ def main():
                     html_lines.append(f"<li>{t}</li>")
                 html_lines.append("</ul>")
 
-        # error：若是 Readmoo/HyRead/博客來入口模式，就不要用紅字嚇人（原因已經顯示）
-        if it.get("error") and not (it["platform"] in ("Readmoo", "HyRead", "博客來") and is_blocked):
+        # error：若是 Readmoo/HyRead/Kobo/博客來入口模式，就不要用紅字嚇人（原因已經顯示）
+        if it.get("error") and not (it["platform"] in ("Readmoo", "HyRead", "Kobo", "博客來") and is_blocked):
             html_lines.append(
                 f"<p style='margin:6px 0; color:#b00020;'>（抓取失敗：{it['error']}）</p>"
             )
        
 
         html_lines.append(f"<p style='margin:6px 0;'><a href='{it['url']}' target='_blank' rel='noopener noreferrer'>→ 點我查看活動</a></p>")
+
+        if it.get("platform") == "Kobo" and it.get("sub_links"):
+            links = " / ".join(
+                f"<a href='{link['url']}' target='_blank' rel='noopener noreferrer'>{link['label']}</a>"
+                for link in it["sub_links"]
+            )
+            html_lines.append(f"<p style='margin:4px 0;'>補充入口：{links}</p>")
 
         # 📌 Pubu 補充入口：每日 99 元（不是同一頁的活動）
         if it.get("platform") == "Pubu":
