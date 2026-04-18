@@ -495,6 +495,10 @@ def extract_kobo_section_titles(html: str) -> List[str]:
         r"漫畫/輕小說$",
         r"18禁$",
         r"電子書$",
+        r"瀏覽所有類別",
+        r"暢銷排行榜",
+        r"有聲書優惠",
+        r"瀏覽所有有聲書",
     ]
     promo_re = re.compile(r"(書展|折|特價|優惠|限時|精選|出版|主題|活動|至\d{1,2}/\d{1,2}|至\d{1,2}月\d{1,2}日)")
 
@@ -517,7 +521,7 @@ def extract_kobo_section_titles(html: str) -> List[str]:
             continue
         candidates.append(txt)
 
-    return pick_unique_texts_keep_order(candidates, limit=8)
+    return pick_unique_texts_keep_order(candidates, limit=15)
 
 def extract_pubu_cards(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
@@ -824,7 +828,7 @@ def main():
                 display_limits = {
                     "HyRead": 24,
                     "Pubu": 36,
-                    "Kobo": 8,
+                    "Kobo": 15,
                 }
                 limit = display_limits.get(it["platform"], 20)
 
