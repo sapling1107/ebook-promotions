@@ -84,42 +84,6 @@ def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
         cleaned.append(t)
 
 def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
-    kept: List[str] = []
-    seen = set()
-
-    for t in texts:
-        t = re.sub(r"\s+", " ", (t or "")).strip()
-        if not t:
-            continue
-
-        if t in seen:
-            continue
-
-        # 子字串去重：避免同活動拆兩行時塞滿名額（保留先出現者＝新活動）
-        if any(t in k for k in kept):
-            continue
-
-        seen.add(t)
-        kept.append(t)
-
-        if len(kept) >= limit:
-            break
-
-    return kept
-
-    # 2) 先用長度排序：長的在前（資訊量通常比較高）
-    cleaned = sorted(set(cleaned), key=len, reverse=True)
-
-    # 3) 子字串去重：如果 t 完全包含在已保留的某一條裡，就丟掉
-    kept = []
-    for t in cleaned:
-        if any(t in k for k in kept):
-            continue
-        kept.append(t)
-
-    return kept[:limit]
-
-def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
     kept = []
     seen = set()
 
@@ -500,8 +464,10 @@ def main():
 
     items = []
     changed_platforms = []
+    platforms_with_new_items = []
 
     for x in URLS:
+        html = ""
         title = ""
         error = ""
         status = 0
@@ -536,6 +502,9 @@ def main():
             # BW / HyRead / Pubu：新活動排前 + 顯示🆕（但 JSON 存乾淨版）
             if platform in ("BookWalker", "HyRead", "Pubu") and card_titles:
                 card_titles, card_titles_for_html = mark_new_for_platform(platform, card_titles, OUT_JSON)
+                has_new_items = any(t.startswith("🆕 ") for t in card_titles_for_html)
+                if has_new_items and platform not in platforms_with_new_items:
+                    platforms_with_new_items.append(platform)
             else:
                 # 其他平台：顯示版就等於原本
                 card_titles_for_html = card_titles
@@ -588,9 +557,6 @@ def main():
                     blocked = True
                     blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
 
-        if x.get("extra") is None and x["platform"] not in ("Kobo", "Pubu"):  
-            cards = ["（未設定解析器 extra，暫時不會解析出活動）"]
-
         # 博客來：入口模式（不顯示擷取卡片，避免被商品/套組洗版）
         if x["platform"] == "博客來":
             blocked = True
@@ -618,7 +584,7 @@ def main():
     payload = {
         "parser_version": PARSER_VERSION,
         "updated_at_taipei": now,
-        "has_new_changes": "是" if len(changed_platforms) > 0 else "否",
+        "has_new_changes": "是" if len(platforms_with_new_items) > 0 else "否",
         "changed_platforms": changed_platforms,
         "items": items,
     }
@@ -639,7 +605,7 @@ def main():
     html_lines.append("<h1 style='margin:0 0 8px;'>📚 電子書平台活動快照</h1>")
     html_lines.append(f"<p style='margin:0 0 8px;'>更新時間（台灣）：<b>{payload['updated_at_taipei']}</b></p>")
     html_lines.append(f"<p style='margin:0 0 16px;'>今天是否有新增活動：<b>{payload['has_new_changes']}</b>"
-                      + (f"（變動：{', '.join(payload['changed_platforms'])}）" if payload["changed_platforms"] else "")
+                      + (f"（新增活動平台：{', '.join(platforms_with_new_items)}）" if platforms_with_new_items else "")
                       + "</p>")
     html_lines.append(f"<p style='font-size: 0.85em; color: #666; margin: 4px 0 10px;'>"
                        "※ 本頁僅提供活動標題彙整與新增標示，<br>"
