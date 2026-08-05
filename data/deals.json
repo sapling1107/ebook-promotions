@@ -1,9 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-05T20:27+08:00",
-  "has_new_items": false,
-  "new_platforms": [],
+  "updated_at": "2026-08-06T01:50+08:00",
+  "has_new_items": true,
+  "new_platforms": [
+    "BookWalker",
+    "Kobo"
+  ],
   "platforms": [
     {
       "platform": "Pubu",
@@ -280,13 +283,6 @@
       "error": null,
       "items": [
         {
-          "title": "全館79折起！滿額再88折",
-          "subtitle": "【會員日】精選作品首集5折！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260804_member8ygn",
-          "is_new": false
-        },
-        {
           "title": "微不幸退散！微疼鬼月生存指南！",
           "subtitle": "完成漫畫填空送好禮！",
           "period_text": null,
@@ -306,6 +302,34 @@
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260723_exhibition",
           "is_new": false
+        },
+        {
+          "title": "8.6-9.5《壞習慣》新書上市85折",
+          "subtitle": "西班牙跨性別作家，半自傳話題作",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/303686",
+          "is_new": true
+        },
+        {
+          "title": "《北歐式的自由生活提案》",
+          "subtitle": "工作在都市，生活在鄉間",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/303685",
+          "is_new": true
+        },
+        {
+          "title": "上海角川青羽《重生之掃墓》",
+          "subtitle": "全新BL廣播劇｜現正熱播中",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?series=42515",
+          "is_new": true
+        },
+        {
+          "title": "《缺席的父愛，迷失的兒子》",
+          "subtitle": "新書首月，單書85折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/303709",
+          "is_new": true
         },
         {
           "title": "尖端每月精選推薦！",
@@ -560,13 +584,6 @@
           "is_new": false
         },
         {
-          "title": "閱讀不間斷★連載作品10元起",
-          "subtitle": "期間限定0元把握下載！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260716_serialsummer",
-          "is_new": false
-        },
-        {
           "title": "2026 尖端出版線上漫博會",
           "subtitle": "參展作品79折起！",
           "period_text": null,
@@ -742,13 +759,6 @@
           "is_new": false
         },
         {
-          "title": "台灣角川7月輕小說主打星",
-          "subtitle": "領券77折",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260715_starcv7k",
-          "is_new": false
-        },
-        {
           "title": "製藥惡女時間有限",
           "subtitle": "✩ 連載中：每週一更新 ✩",
           "period_text": null,
@@ -874,10 +884,10 @@
           "is_new": false
         },
         {
-          "title": "【啟動文化】翻轉思維的練習－《利他》延伸書展，單本85折，至8/14止",
+          "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/RQLmtYvp08cqTwje4JV9Iw",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/F-GKNLDPlcSJ8wje7uX2wQ",
           "is_new": false
         },
         {
@@ -916,11 +926,11 @@
           "is_new": false
         },
         {
-          "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
+          "title": "【高寶書版】暢銷書展，單本85折起，至9/30止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/F-GKNLDPlcSJ8wje7uX2wQ",
-          "is_new": false
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/eCBxjvWm-cLVbwje8RUmtQ",
+          "is_new": true
         },
         {
           "title": "【臉譜出版】出版社推薦，單本85折，至8/8止",
@@ -935,6 +945,13 @@
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/BRsQxU2bjM1utAje7STBxw",
           "is_new": false
+        },
+        {
+          "title": "【聯經出版】北歐式的自由生活提案，單本85折，至9/5止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/USCdaJAfZsvPzwje8RK5MQ",
+          "is_new": true
         },
         {
           "title": "【天下文化】理解今天，才能預見明天。世界變局展，單本88折，至8/31止",
