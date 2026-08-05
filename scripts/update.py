@@ -1,886 +1,850 @@
-# scripts/update.py
+"""Build the v2 ebook promotion snapshot JSON and static HTML page."""
+
+from __future__ import annotations
+
+import html as html_module
 import json
-import os
 import re
-from datetime import datetime, timezone, timedelta
-from typing import List, Dict, Any
+import unicodedata
+from collections import OrderedDict
+from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
+from typing import Any, Callable
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 import requests
-from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+from bs4 import BeautifulSoup, Tag
 
-PARSER_VERSION = 2
-URLS = [
-    {
-        "platform": "BookWalker", #BW
-        "url": "https://www.bookwalker.com.tw/event",
-        "note": "主題&活動列表",
-        "extra": "bw",
-    },
-    {
-        "platform": "Readmoo",
-        "url": "https://readmoo.com/campaign/activities",
-        "note": "進行中活動",
-        "extra": "readmoo",
-    },
-    {
-        "platform": "HyRead",
-        "url": "https://ebook.hyread.com.tw/Template/store/event_list.jsp",
-        "note": "熱門活動",
-        "extra": "hyread",
-    },
+
+SCHEMA_VERSION = 2
+PARSER_VERSION = 3
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+OUT_JSON = PROJECT_ROOT / "data" / "deals.json"
+OUT_HTML = PROJECT_ROOT / "index.html"
+
+PUBU_DAILY_99_URL = "https://www.pubu.com.tw/campaign/event/pubu99select"
+REQUEST_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.6",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+}
+
+PLATFORMS: list[dict[str, Any]] = [
     {
         "platform": "Pubu",
         "url": "https://www.pubu.com.tw/activity/ongoing",
-        "note": "全站活動",
-        "extra": "pubu",
+        "mode": "full",
+        "note": "完整擷取本次活動頁回應中的全部卡片（不含每日 99 元專區）",
+        "parser": "pubu",
+        "extra_links": [
+            {
+                "label": "Pubu 每日 99 元專區",
+                "url": PUBU_DAILY_99_URL,
+                "note": "補充入口，不納入活動清單、新活動判定或活動數量",
+            }
+        ],
+    },
+    {
+        "platform": "BookWalker",
+        "url": "https://www.bookwalker.com.tw/event",
+        "mode": "partial",
+        "note": "部分擷取活動卡片；同一 href 合併為同一筆活動",
+        "parser": "bookwalker",
+        "extra_links": [],
     },
     {
         "platform": "Kobo",
         "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
-        "note": "主題入口",
-        "extra": None,
-        "sub_links": [
+        "mode": "partial",
+        "note": "指定活動頁摘要，只擷取明確的活動標題連結",
+        "parser": "kobo",
+        "extra_links": [],
+    },
+    {
+        "platform": "Readmoo",
+        "url": "https://readmoo.com/campaign/activities",
+        "mode": "entry",
+        "note": "入口模式，不嘗試繞過 403 或反機器人機制",
+        "parser": None,
+        "extra_links": [
             {
-                "label": "全站活動",
-                "url": "https://www.kobo.com/tw/zh/p/tw-activities-wkdsale",
-            },
-            {
-                "label": "漫畫/輕小說",
-                "url": "https://www.kobo.com/tw/zh/p/tw-comiclightnovel-wkdsale",
-            },
-            {
-                "label": "18禁",
-                "url": "https://www.kobo.com/tw/zh/p/tw-R18-wkdsale",
-            },
+                "label": "Readmoo 每日優惠",
+                "url": "https://readmoo.com/campaign/specialoffer/index",
+                "note": "補充入口，不納入活動清單、新活動判定或活動數量",
+            }
         ],
+    },
+    {
+        "platform": "HyRead",
+        "url": "https://ebook.hyread.com.tw/Template/store/event_list.jsp",
+        "mode": "entry",
+        "note": "入口模式，不使用猜測式 parser",
+        "parser": None,
+        "extra_links": [],
     },
     {
         "platform": "博客來",
         "url": "https://activity.books.com.tw/crosscat/show/A00000062854?loc=mood_001",
-        "note": "電子書活動入口（可能會調整）",
-        "extra": "books"
+        "mode": "entry",
+        "note": "入口模式，不解析商品、榜單或預告",
+        "parser": None,
+        "extra_links": [],
     },
 ]
 
-OUT_JSON = "data/deals.json"
-OUT_HTML = "index.html"
+
+def clean_text(value: Any) -> str:
+    return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
-def extract_title(html: str) -> str:
-    m = re.search(r"<title[^>]*>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
-    if not m:
-        return ""
-    return re.sub(r"\s+", " ", m.group(1)).strip()
+def normalize_title(value: str) -> str:
+    return clean_text(unicodedata.normalize("NFKC", value)).casefold()
 
 
-def fetch_html(url: str) -> Dict[str, Any]:
-    headers = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.6",
-    "Cache-Control": "no-cache",
-    "Pragma": "no-cache",
+def normalize_url(value: str | None, base_url: str) -> str | None:
+    if not value:
+        return None
+
+    absolute = urljoin(base_url, clean_text(value))
+    parts = urlsplit(absolute)
+    if parts.scheme.lower() not in {"http", "https"} or not parts.netloc:
+        return None
+
+    filtered_query = []
+    for query_part in parts.query.split("&") if parts.query else []:
+        key = query_part.split("=", 1)[0]
+        lowered = key.casefold()
+        if lowered.startswith("utm_") or lowered in {"fbclid", "gclid", "loc"}:
+            continue
+        filtered_query.append(query_part)
+
+    path = parts.path or "/"
+    if path != "/":
+        path = path.rstrip("/")
+
+    return urlunsplit(
+        (
+            parts.scheme.lower(),
+            parts.netloc.lower(),
+            path,
+            "&".join(filtered_query),
+            "",
+        )
+    )
+
+
+def make_item(
+    title: str,
+    url: str | None,
+    *,
+    subtitle: str | None = None,
+    period_text: str | None = None,
+) -> dict[str, Any]:
+    return {
+        "title": clean_text(title),
+        "subtitle": clean_text(subtitle) or None,
+        "period_text": clean_text(period_text) or None,
+        "url": url,
+        "is_new": False,
     }
-    r = requests.get(url, headers=headers, timeout=25)
-    status = r.status_code
-    r.raise_for_status()
-    r.encoding = r.apparent_encoding or "utf-8"
-    return {"text": r.text, "status": status}
 
 
-def fetch_html_playwright(url: str) -> Dict[str, Any]:
-    timeout_ms = 30000
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-            locale="zh-TW",
-        )
-        page = context.new_page()
-
-        try:
-            response = page.goto(url, wait_until="networkidle", timeout=timeout_ms)
-        except PlaywrightTimeoutError as e:
-            raise RuntimeError(f"Playwright timeout after {timeout_ms}ms for url: {url}") from e
-
-        html = page.content()
-        status = response.status if response is not None else 200
-        title = page.title().strip()
-        has_campaigns = "READMOO_CAMPAIGNS" in html
-
-        print(f"[Readmoo] Playwright title: {title or '(empty)'}")
-        print(f"[Readmoo] READMOO_CAMPAIGNS found: {'yes' if has_campaigns else 'no'}")
-
-        context.close()
-        browser.close()
-
-    return {"text": html, "status": status}
+def extract_page_title(raw_html: str) -> str | None:
+    soup = BeautifulSoup(raw_html, "html.parser")
+    if not soup.title:
+        return None
+    return clean_text(soup.title.get_text(" ", strip=True)) or None
 
 
-def fetch_html_hyread(url: str) -> Dict[str, Any]:
-    headers = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.6",
-    "Referer": "https://ebook.hyread.com.tw/",
-    "Cache-Control": "no-cache",
-    "Pragma": "no-cache",
-    }
-    session = requests.Session()
-    session.get("https://ebook.hyread.com.tw/", headers=headers, timeout=25)
-    r = session.get(url, headers=headers, timeout=25)
-    status = r.status_code
-    r.raise_for_status()
-    r.encoding = r.apparent_encoding or "utf-8"
-    return {"text": r.text, "status": status}
+def fetch_html_requests(url: str) -> dict[str, Any]:
+    response = requests.get(url, headers=REQUEST_HEADERS, timeout=25)
+    status = response.status_code
+    response.raise_for_status()
+    response.encoding = response.apparent_encoding or "utf-8"
+    return {"text": response.text, "status": status, "fetcher": "requests"}
 
 
-def fetch_html_hyread_playwright(url: str) -> Dict[str, Any]:
-    timeout_ms = 30000
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-            locale="zh-TW",
-        )
-        page = context.new_page()
-
-        try:
-            response = page.goto(url, wait_until="networkidle", timeout=timeout_ms)
-        except PlaywrightTimeoutError as e:
-            raise RuntimeError(f"HyRead Playwright timeout after {timeout_ms}ms for url: {url}") from e
-
-        html = page.content()
-        status = response.status if response is not None else 200
-
-        context.close()
-        browser.close()
-
-    return {"text": html, "status": status}
-
-
-def fetch_html_kobo_playwright(url: str) -> Dict[str, Any]:
-    timeout_ms = 30000
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-            locale="zh-TW",
-        )
-        page = context.new_page()
-
-        try:
-            response = page.goto(url, wait_until="networkidle", timeout=timeout_ms)
-        except PlaywrightTimeoutError as e:
-            raise RuntimeError(f"Kobo Playwright timeout after {timeout_ms}ms for url: {url}") from e
-
-        html = page.content()
-        status = response.status if response is not None else 200
-        title = page.title().strip()
-
-        print(f"[Kobo] status: {status}")
-        print(f"[Kobo] title: {title or '(empty)'}")
-        print(f"[Kobo] html length: {len(html)}")
-
-        context.close()
-        browser.close()
-
-    return {"text": html, "status": status}
-
-
-def pick_unique_texts(texts: List[str], limit: int = 8) -> List[str]:
-    # 1) 基礎清理
-    cleaned = []
-    for t in texts:
-        t = re.sub(r"\s+", " ", (t or "")).strip()
-        if not t or len(t) < 4:
-            continue
-        cleaned.append(t)
-
-def pick_unique_texts_keep_order(texts: List[str], limit: int) -> List[str]:
-    kept = []
-    seen = set()
-
-    for t in texts:
-        t = re.sub(r"\s+", " ", (t or "")).strip()
-        if not t or len(t) < 4:
-            continue
-
-        # 完全重複就跳過（保留第一個＝新活動）
-        if t in seen:
-            continue
-
-        # 子字串去重（可選，但我建議保留：避免「同活動拆兩行」）
-        if any(t in k for k in kept):
-            continue
-
-        seen.add(t)
-        kept.append(t)
-
-        if len(kept) >= limit:
-            break
-
-    return kept
-
-def strip_new_prefix(t: str) -> str:
-    t = (t or "").strip()
-    if t.startswith("🆕"):
-        t = t.replace("🆕", "", 1).strip()
-    return t
-
-def mark_new_for_platform(platform: str, card_titles, out_json_path: str):
-    """
-    回傳： (raw_titles_for_save, display_titles_for_html)
-    - raw_titles_for_save：乾淨版（不含🆕）→ 寫入 JSON / 做 signature 用
-    - display_titles_for_html：顯示版（新活動加🆕）→ 只用在 HTML
-    """
-    if not card_titles:
-        return [], []
-
-    # 今日（乾淨化）
-    raw_today = []
-    for t in (card_titles or []):
-        t2 = strip_new_prefix(t)
-        if t2:
-            raw_today.append(t2)
-
-    # 昨日
-    prev_titles = set()
+def fetch_html_kobo_playwright(url: str) -> dict[str, Any]:
+    """Kobo-only fallback. Playwright is intentionally imported lazily."""
     try:
-        with open(out_json_path, "r", encoding="utf-8") as f:
-            prev = json.load(f)
-        for it0 in prev.get("items", []):
-            if it0.get("platform") == platform:
-                prev_titles = set(strip_new_prefix(x) for x in (it0.get("card_titles") or []))
-                break
-    except Exception:
-        prev_titles = set()
+        from playwright.sync_api import (
+            TimeoutError as PlaywrightTimeoutError,
+            sync_playwright,
+        )
+    except ImportError as exc:
+        raise RuntimeError("Playwright fallback unavailable: package is not installed") from exc
 
-    # 新舊判定 + 排序
-    new_items = [t for t in raw_today if t not in prev_titles]
-    old_items = [t for t in raw_today if t in prev_titles]
+    timeout_ms = 30_000
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        context = browser.new_context(
+            user_agent=REQUEST_HEADERS["User-Agent"],
+            locale="zh-TW",
+        )
+        page = context.new_page()
+        try:
+            response = page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+            page.wait_for_selector("a.primary-heading", timeout=10_000)
+            raw_html = page.content()
+            status = response.status if response is not None else 200
+        except PlaywrightTimeoutError as exc:
+            raise RuntimeError(f"Kobo Playwright timeout after {timeout_ms}ms") from exc
+        finally:
+            context.close()
+            browser.close()
 
-    raw_reordered = new_items + old_items
-    display = [("🆕 " + t) if t in new_items else t for t in raw_reordered]
-    return raw_reordered, display
+    return {"text": raw_html, "status": status, "fetcher": "playwright"}
 
-def extract_bw_cards(html: str) -> List[str]:
-    soup = BeautifulSoup(html, "html.parser")
 
-    results = []
-    seen = set()
+def extract_pubu_items(raw_html: str, base_url: str) -> dict[str, Any]:
+    soup = BeautifulSoup(raw_html, "html.parser")
+    cards = soup.select("main a.card-shadow[href], a.card-shadow[href]")
+    daily_99_key = normalize_url(PUBU_DAILY_99_URL, base_url)
+    items: list[dict[str, Any]] = []
+    seen: set[str] = set()
 
-    NAV_WORDS = [
-        "會員資料", "會員通知", "登入", "註冊",
-        "搜尋", "購物車", "我的書櫃",
-        "下載APP", "推薦主題", "活動列表",
-    ]
-
-    for a in soup.select("a[href]"):
-        href = (a.get("href") or "").strip()
-        if not href:
+    for card in cards:
+        url = normalize_url(card.get("href"), base_url)
+        if not url or url == daily_99_key or url in seen:
             continue
 
-        # 只抓 BookWalker 活動頁
-        if "bookwalker.com.tw/event/" not in href:
-            continue
-
-        parts = []
-
-        # a 內文字
-        txt = a.get_text(" ", strip=True)
-        if txt:
-            parts.append(txt)
-
-        # title / alt
-        if a.get("title"):
-            parts.append(a["title"])
-        if a.get("alt"):
-            parts.append(a["alt"])
-
-        # 圖片 alt（BW 很常把文案放在這）
-        img = a.find("img")
-        if img and img.get("alt"):
-            parts.append(img["alt"])
-
-        # 合併、去重、正規化
-        text = " ".join(dict.fromkeys(p.strip() for p in parts if p.strip()))
-        text = re.sub(r"\s+", " ", text).strip()
-        # 🧹 去掉「整句重複」（BW 常見：主標+副標 出現兩次）
-        half = len(text) // 2
-        if text[:half].strip() == text[half:].strip():
-            text = text[:half].strip()
-
-        if not text:
-            continue
-
-        # 最後才擋導覽字（不早殺）
-        if any(w in text for w in NAV_WORDS):
-            continue
-
-        if text in seen:
-            continue
-
-        seen.add(text)
-        results.append(text)
-
-        # ✅ 第二層去重：移除「被更長句子包含」的短句（保留完整那條）
-        filtered = []
-        for t in results:
-            if any(
-                (t != u) and (len(u) > len(t)) and (t in u)
-                for u in results
-            ):
-                continue
-            filtered.append(t)
-
-    results = filtered
-
-    # 什麼都不管，只限制最多顯示幾筆
-    return results[:30]
-
-
-
-def extract_readmoo_cards(html: str) -> List[str]:
-    import re
-    import json
-
-    # Readmoo 常見兩種狀態：
-    # A) 有 READMOO_CAMPAIGNS（可抽）
-    # B) 被擋（只有驗證/JS 提示頁） -> 抽不到
-    h_lower = (html or "").lower()
-    if "verify that you're not a robot" in h_lower or "enable javascript" in h_lower:
-        return []
-
-    # 放寬：抓到第一個 ]; 為止，不要求一定是 [{...}];
-    m = re.search(r"const\s+READMOO_CAMPAIGNS\s*=\s*(\[[\s\S]*?\]);", html)
-    if not m:
-        return []
-
-    raw = m.group(1)
-    try:
-        data = json.loads(raw)
-    except Exception:
-        return []
-
-    cards = []
-    for item in data:
-        name = (item.get("name") or "").strip()
-        desc = (item.get("description") or "").strip()
-        start = (item.get("start_date") or "").strip()
-        end = (item.get("end_date") or "").strip()
-
-        line = " ".join(x for x in [
-            name,
-            desc,
-            f"{start}–{end}" if start or end else ""
-        ] if x)
-
-        if line:
-            cards.append(line)
-
-    return cards
-
-def extract_hyread_cards(html: str) -> List[str]:
-    soup = BeautifulSoup(html, "html.parser")
-
-    results = []
-    seen = set()
-
-    # HyRead 活動頁通常是一張張卡片，每張卡片內有「主標題」+「紅字副標(日期/折扣)」
-    # 我們做法：從每個 <a> 往上找卡片容器，抽「最像主標」與「最像折扣/日期」的兩段。
-    for a in soup.select("a[href]"):
-        href = (a.get("href") or "").strip()
-        if not href:
-            continue
-
-        # 這條規則用來避免抓到導覽連結；若你發現抓太少，可把這行註解掉
-        if "event" not in href.lower():
-            continue
-
-        # 往上找容器（最多爬 5 層），抓一整張卡片的文字
-        node = a
-        container_texts = None
-        for _ in range(5):
-            if node and node.name in ("div", "li", "article", "section"):
-                texts = [t.strip() for t in node.stripped_strings if t.strip()]
-                # 卡片通常至少會有 2 段文字
-                if len(texts) >= 2:
-                    container_texts = texts
-                    break
-            node = node.parent
-
-        if not container_texts:
-            continue
-
-        # 主標：挑「比較不像日期/折扣」且字數合理的句子
-        # 副標：挑「含折/元/%/滿/日期符號」的句子
-        def looks_like_meta(s: str) -> bool:
-            return bool(re.search(r"(折|元|%|％|滿|再折|限時|週末|限定|\d{1,2}[./-]\d{1,2})", s))
-
-        title = ""
-        subtitle = ""
-
-        # 先找副標（通常紅字那行）
-        meta_candidates = [t for t in container_texts if looks_like_meta(t) and len(t) <= 60]
-        if meta_candidates:
-            # 通常第一個就很像日期/折扣
-            subtitle = meta_candidates[0]
-
-        # 再找主標
-        title_candidates = [t for t in container_texts if (not looks_like_meta(t)) and 4 <= len(t) <= 30]
-        if title_candidates:
-            title = title_candidates[0]
-        else:
-            # 找不到就退而求其次：取第一個短句當主標
-            short = [t for t in container_texts if 4 <= len(t) <= 30]
-            title = short[0] if short else ""
-
-        title = re.sub(r"\s+", " ", title).strip()
-        subtitle = re.sub(r"\s+", " ", subtitle).strip()
-
+        heading = card.select_one("h1, h2, h3, h4")
+        title = clean_text(heading.get_text(" ", strip=True) if heading else "")
+        if not title:
+            image = card.find("img", alt=True)
+            title = clean_text(image.get("alt") if image else "")
         if not title:
             continue
 
-        # ✅ 過濾掉非活動入口：HyRead 真正的活動卡片幾乎一定有「日期/折扣」副標
-        if not subtitle:
-            continue
-
-        line = f"{title}｜{subtitle}" if subtitle else title
-        # 避免超長
-        if len(line) > 90:
-            line = line[:87] + "…"
-
-        if line not in seen:
-            seen.add(line)
-            results.append(line)
-
-    return pick_unique_texts_keep_order(results, limit=24)
-
-def extract_books_cards(html: str) -> List[str]:
-    soup = BeautifulSoup(html, "html.parser")
-    candidates = []
-
-    for a in soup.select("a"):
-        txt = a.get_text(" ", strip=True)
-        txt = re.sub(r"\s+", " ", (txt or "")).strip()
-        if not txt:
-            continue
-        if len(txt) < 6 or len(txt) > 80:
-            continue
-
-        if any(bad in txt for bad in ["登入", "註冊", "會員", "購物車", "客服", "更多", "返回"]):
-            continue
-
-        # 只保留比較像活動的
-        if any(k in txt for k in ["折", "優惠", "活動", "書展", "特價", "回饋", "滿", "限時"]):
-            candidates.append(txt)
-
-    return pick_unique_texts(candidates, limit=12)
-
-def extract_kobo_section_titles(html: str) -> List[str]:
-    soup = BeautifulSoup(html, "html.parser")
-    candidates = []
-
-    # Kobo v1 只抓像「書展/折扣/日期」這種活動區塊主題，寧可抓少，不抓髒。
-    reject_patterns = [
-        r"^NT\$",
-        r"新增至購物車",
-        r"檢視全部",
-        r"加入購物車",
-        r"立即購買",
-        r"本月出版精選$",
-        r"全站活動$",
-        r"漫畫/輕小說$",
-        r"18禁$",
-        r"電子書$",
-        r"瀏覽所有類別",
-        r"暢銷排行榜",
-        r"有聲書優惠",
-        r"瀏覽所有有聲書",
-    ]
-    promo_re = re.compile(r"(書展|折|特價|優惠|限時|精選|出版|主題|活動|至\d{1,2}/\d{1,2}|至\d{1,2}月\d{1,2}日)")
-
-    for tag in soup.select("h1, h2, h3, h4, p, div, span, a"):
-        txt = tag.get_text(" ", strip=True)
-        txt = re.sub(r"\s+", " ", (txt or "")).strip()
-        if not txt:
-            continue
-        if len(txt) < 10 or len(txt) > 80:
-            continue
-        if any(re.search(p, txt) for p in reject_patterns):
-            continue
-        if any(bad in txt for bad in ["作者", "出版社", "系列", "評分", "星", "則評論"]):
-            continue
-        if "NT$" in txt or "新增至購物車" in txt:
-            continue
-        if not promo_re.search(txt):
-            continue
-        if not any(mark in txt for mark in ["【", "】", "折", "至", "書展", "優惠", "限時", "精選"]):
-            continue
-        candidates.append(txt)
-
-    return pick_unique_texts_keep_order(candidates, limit=15)
-
-def extract_pubu_cards(html: str) -> List[str]:
-    soup = BeautifulSoup(html, "html.parser")
-    results = []
-    seen = set()
-
-    # Pubu 卡片常見有「活動期間 2025-xx-xx - 2026-xx-xx」
-    date_re = re.compile(r"\d{4}-\d{2}-\d{2}")
-
-    # 做法：找出包含日期的文字區塊，往上找卡片容器，再抽出標題
-    for el in soup.find_all(string=lambda s: s and date_re.search(s)):
-        txt = re.sub(r"\s+", " ", str(el)).strip()
-        # 只處理看起來像「活動期間」那種
-        if "活動期間" not in txt and "活動時間" not in txt and len(date_re.findall(txt)) < 2:
-            continue
-
-        # 往上找卡片容器
-        node = el.parent
-        container = None
-        for _ in range(6):
-            if not node:
-                break
-            if node.name in ("div", "li", "article", "section"):
-                texts = [t.strip() for t in node.stripped_strings if t.strip()]
-                # 卡片應該會有標題 + 期間，至少 2 段
-                if len(texts) >= 2:
-                    container = node
-                    break
-            node = node.parent
-
-        if not container:
-            continue
-
-        texts = [t.strip() for t in container.stripped_strings if t.strip()]
-
-        # 嘗試找標題：通常是第一個比較短、且不包含日期/活動期間的句子
-        title = ""
-        for t in texts:
-            if len(t) <= 40 and (not date_re.search(t)) and ("活動期間" not in t) and ("活動時間" not in t):
-                title = t
-                break
-
-        # 抓期間：找第一個含兩個日期的句子
-        period = ""
-        for t in texts:
-            dates = date_re.findall(t)
-            if len(dates) >= 2:
-                # 可能是 "活動期間2025-..-.. - 2026-..-.."
-                period = re.sub(r"\s+", " ", t).strip()
-                break
-
-        if not title:
-            continue
-
-        line = f"{title}｜{period}" if period else title
-        if len(line) > 100:
-            line = line[:97] + "…"
-
-        if line not in seen:
-            seen.add(line)
-            results.append(line)
-
-    return pick_unique_texts_keep_order(results, limit=36)
-
-def load_prev_signature() -> Dict[str, Any]:
-    if not os.path.exists(OUT_JSON):
-        return {"parser_version": None, "sig": {}}
-    try:
-        with open(OUT_JSON, "r", encoding="utf-8") as f:
-            prev = json.load(f)
-        sig = {}
-        for it in prev.get("items", []):
-            platform = it.get("platform", "")
-            signature = it.get("signature", "")
-            if platform:
-                sig[platform] = signature
-        return {"parser_version": prev.get("parser_version"), "sig": sig}
-    except Exception:
-        return {"parser_version": None, "sig": {}}
-
-def make_signature(platform: str, page_title: str, card_titles: List[str], status: int, error: str) -> str:
-    base = {
-        "status": status,
-        "title": page_title or "",
-        "cards": (card_titles or [])[:8],
-        "error": (error or "")[:120],
-    }
-
-    return json.dumps(base, ensure_ascii=False, sort_keys=True)
-
-
-def main():
-    tz = timezone(timedelta(hours=8))  # 台灣時間
-    now = datetime.now(tz).strftime("%Y-%m-%d %H:%M")
-
-    prev = load_prev_signature()
-    prev_sig = prev["sig"]
-    prev_ver = prev["parser_version"]
-
-    items = []
-    changed_platforms = []
-    platforms_with_new_items = []
-
-    for x in URLS:
-        html = ""
-        title = ""
-        error = ""
-        status = 0
-        card_titles: List[str] = []
-        card_titles_for_html: List[str] = []
-
-        try:
-            if x.get("extra") == "readmoo":
-                res = fetch_html_playwright(x["url"])
-            elif x.get("extra") == "hyread":
-                res = fetch_html_hyread_playwright(x["url"])
-            elif x["platform"] == "Kobo":
-                res = fetch_html_kobo_playwright(x["url"])
-            else:
-                res = fetch_html(x["url"])
-            html = res["text"]
-            status = res["status"]
-            title = extract_title(html)
-
-            # 🔎 DEBUG：HTML 太短時存檔（判斷是否被擋）
-            if html and len(html) < 2000:
-                from pathlib import Path
-                slug = x["platform"].lower()
-                Path(f"debug_{slug}.html").write_text(html, encoding="utf-8")
-
-            if x.get("extra") == "bw":
-                card_titles = extract_bw_cards(html)
-            elif x.get("extra") == "readmoo":
-                card_titles = extract_readmoo_cards(html)
-            elif x.get("extra") == "hyread":
-                card_titles = extract_hyread_cards(html)
-                print(f"[HyRead] status: {status}")
-                print(f"[HyRead] title: {title or '(empty)'}")
-                print(f"[HyRead] html length: {len(html)}")
-                print(f"[HyRead] parser cards: {len(card_titles)}")
-            elif x.get("extra") == "books":
-                card_titles = extract_books_cards(html)
-            elif x.get("extra") == "pubu":
-                card_titles = extract_pubu_cards(html)
-            elif x["platform"] == "Kobo":
-                card_titles = extract_kobo_section_titles(html)
-
-            platform = x["platform"]
-
-            # BW / HyRead / Pubu：新活動排前 + 顯示🆕（但 JSON 存乾淨版）
-            if platform in ("BookWalker", "HyRead", "Pubu") and card_titles:
-                card_titles, card_titles_for_html = mark_new_for_platform(platform, card_titles, OUT_JSON)
-                has_new_items = any(t.startswith("🆕 ") for t in card_titles_for_html)
-                if has_new_items and platform not in platforms_with_new_items:
-                    platforms_with_new_items.append(platform)
-            else:
-                # 其他平台：顯示版就等於原本
-                card_titles_for_html = card_titles
-
-        except requests.HTTPError as e:
-            # 例如 403
-            error = str(e)
-            try:
-                status = e.response.status_code if e.response is not None else 0
-            except Exception:
-                status = 0
-        except Exception as e:
-            error = str(e)
-
-        signature = make_signature(x["platform"], title, card_titles, status, error)
-
-        if (
-            prev_ver == PARSER_VERSION
-            and prev_sig.get(x["platform"])
-            and prev_sig.get(x["platform"]) != signature
-        ):
-            changed_platforms.append(x["platform"])
-
-        if x["platform"] == "Readmoo":
-            # 如果抽不到活動，順便判斷是不是被擋
-            if ("READMOO_CAMPAIGNS" not in html) and (
-                "verify that you're not a robot" in html.lower()
-                or "enable javascript" in html.lower()
-            ):
-                error = "Readmoo 疑似反機器人/JS 驗證，Actions 抓到的不是活動頁內容"
-
-        blocked = False
-        blocked_reason = ""
-
-        if x["platform"] == "Readmoo":
-            # 只要抓到的不是活動頁本體，就視為 blocked
-            if error and ("robot" in error.lower() or "javascript" in error.lower() or "js" in error.lower()):
-                blocked = True
-                blocked_reason = "需要 JavaScript 驗證，Actions 無法取得活動清單"
-        else:
-            # 沒有 error 也可能拿到驗證頁（200 OK）
-            h = (html or "").lower() if "html" in locals() else ""
-            if "verify that you're not a robot" in h or "enable javascript" in h:
-                blocked = True
-                blocked_reason = "需要 JavaScript 驗證，Actions 無法取得活動清單"
-            # 或是根本沒有 READMOO_CAMPAIGNS（你走 JS 變數抽取那條路時很有用）
-            if (not blocked) and ("readmoo_campaigns" not in h):
-            # 這條比較保守：只有當 card_titles 也空才判定
-                if not card_titles:
-                    blocked = True
-                    blocked_reason = "疑似反機器人/JS 驗證，無法取得活動清單"
-
-        if x["platform"] == "HyRead":
-            blocked = True
-            blocked_reason = "入口模式：目前僅提供官方活動頁入口"
-            error = ""
-            card_titles = []
-            card_titles_for_html = []
-
-        if x["platform"] == "Kobo":
-            blocked = True
-            blocked_reason = "入口模式：目前僅提供官方活動頁入口"
-            error = ""
-
-        # 博客來：入口模式（不顯示擷取卡片，避免被商品/套組洗版）
-        if x["platform"] == "博客來":
-            blocked = True
-            blocked_reason = "入口模式：博客來活動頁資訊流雜訊高，v1 先只保留入口連結"
-
-
-        items.append(
-            {
-                "platform": x["platform"],
-                "url": x["url"],
-                "note": x["note"],
-                "page_title": title,
-                "card_titles": card_titles,  # ✅ 乾淨版（不含🆕）
-                "card_titles_for_html": card_titles_for_html,  # ✅ 顯示版（含🆕）
-                "http_status": status,
-                "error": error,
-                "signature": signature,
-                "blocked": blocked,
-                "blocked_reason": blocked_reason,
-                "sub_links": x.get("sub_links", []),
-            }
+        period_node = card.select_one(".time")
+        period_text = clean_text(
+            period_node.get_text(" ", strip=True) if period_node else ""
         )
+        seen.add(url)
+        items.append(make_item(title, url, period_text=period_text))
 
-    os.makedirs("data", exist_ok=True)
+    return {"items": items, "found_container": bool(cards)}
 
-    payload = {
-        "parser_version": PARSER_VERSION,
-        "updated_at_taipei": now,
-        "has_new_changes": "是" if len(platforms_with_new_items) > 0 else "否",
-        "changed_platforms": changed_platforms,
-        "items": items,
-    }
 
-    with open(OUT_JSON, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+def collect_tag_signals(tag: Tag) -> list[str]:
+    # BookWalker commonly puts the main title in ``title`` and the subtitle in
+    # ``alt``. Visible text is considered after those explicit signals because
+    # malformed nesting can otherwise concatenate title and subtitle.
+    signals = [tag.get("title"), tag.get("alt"), tag.get_text(" ", strip=True)]
+    signals.extend(image.get("alt") for image in tag.select("img[alt]"))
+    return [text for value in signals if (text := clean_text(value))]
 
-    # HTML 一頁清單（含弱化 403）
-    html_lines = []
-    html_lines.append("<!doctype html>")
-    html_lines.append('<html lang="zh-Hant">')
-    html_lines.append("<head>")
-    html_lines.append('<meta charset="utf-8" />')
-    html_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1" />')
-    html_lines.append("<title>電子書平台活動快照</title>")
-    html_lines.append("</head>")
-    html_lines.append("<body style='font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans TC,Helvetica,Arial;line-height:1.65;padding:16px;max-width:980px;margin:0 auto;'>")
-    html_lines.append("<h1 style='margin:0 0 8px;'>📚 電子書平台活動快照</h1>")
-    html_lines.append(f"<p style='margin:0 0 8px;'>更新時間（台灣）：<b>{payload['updated_at_taipei']}</b></p>")
-    html_lines.append(f"<p style='margin:0 0 16px;'>今天是否有新增活動：<b>{payload['has_new_changes']}</b>"
-                      + (f"（新增活動平台：{', '.join(platforms_with_new_items)}）" if platforms_with_new_items else "")
-                      + "</p>")
-    html_lines.append(f"<p style='font-size: 0.85em; color: #666; margin: 4px 0 10px;'>"
-                       "※ 本頁僅提供活動標題彙整與新增標示，<br>"
-                       "不保證資訊完整性、即時性或實際優惠內容，請以各平台官方說明為準。"
-                       "</p>"
+
+def merge_unique_signals(target: list[str], signals: list[str]) -> None:
+    normalized = {normalize_title(value) for value in target}
+    for signal in signals:
+        key = normalize_title(signal)
+        if key and key not in normalized:
+            target.append(signal)
+            normalized.add(key)
+
+
+_BOOKWALKER_EVERGREEN_PATH_TITLES = {
+    "/pointshop/help": {"點數商店上線囉!"},
+    "/selfapply": {"免費上架!流程便利!"},
+    "/block/14": {"期間限定免費書籍"},
+    "/block/13": {"附電子書獨家特別內容或贈品"},
+    "/user/register": {"首次消費享結帳金額79折"},
+    "/block/47": {"預購優惠活動"},
+}
+_BOOKWALKER_REPORT_RE = re.compile(
+    r"(?P<year>20\d{2}).*(?:年度閱讀報告|b\s*☆\s*w\s*觀察報告)", re.IGNORECASE
 )
-    html_lines.append("<hr style='opacity:.35'/>")
+_BOOKWALKER_DATE_TOKEN = (
+    r"(?:20\d{2}[/-]\d{1,2}[/-]\d{1,2}|\d{1,2}[/.]\d{1,2})"
+)
+_BOOKWALKER_DATE_RANGE_RE = re.compile(
+    rf"(?P<start>{_BOOKWALKER_DATE_TOKEN})\s*"
+    rf"(?:至|到|[-~～—–－])\s*(?P<end>{_BOOKWALKER_DATE_TOKEN})"
+)
+_BOOKWALKER_PREFIX_END_RE = re.compile(
+    rf"(?:至|到|截止(?:至)?)\s*(?P<end>{_BOOKWALKER_DATE_TOKEN})(?:\s*止)?"
+)
+_BOOKWALKER_SUFFIX_END_RE = re.compile(
+    rf"(?P<end>{_BOOKWALKER_DATE_TOKEN})\s*(?:前|止|截止)"
+)
 
-    for it in items:
-        is_403 = (it.get("http_status") == 403) or ("403" in (it.get("error") or ""))
-        # 弱化：403 變灰 + 降低透明度
-        wrap_style = "opacity:.45; filter: grayscale(1);" if is_403 else "opacity:1;"
-        title_style = "color:#555;" if is_403 else "color:#111;"
 
-        html_lines.append(f"<section style='{wrap_style} padding:8px 0;'>")
-        html_lines.append(f"<h2 style='margin:6px 0; {title_style}'>{it['platform']}</h2>")
+def _bookwalker_url_parts(url: str) -> tuple[str, str]:
+    parts = urlsplit(url)
+    path = parts.path.rstrip("/") or "/"
+    return parts.netloc.casefold(), path.casefold()
 
-        if it["page_title"]:
-            html_lines.append(f"<p style='margin:4px 0;'>頁面標題：{it['page_title']}</p>")
-        if it["note"]:
-            html_lines.append(f"<p style='margin:4px 0;'>備註：{it['note']}</p>")
 
-        is_blocked = bool(it.get("blocked"))
+def is_bookwalker_evergreen_entry(title: str, url: str) -> bool:
+    normalized_title = normalize_title(title)
+    hostname, path = _bookwalker_url_parts(url)
 
-        # 模式 3：Readmoo / HyRead / Kobo / 博客來 若 blocked，就顯示原因；Kobo 仍可顯示摘要。
-        if it["platform"] in ("Readmoo", "HyRead", "Kobo", "博客來") and is_blocked:
-            reason = it.get("blocked_reason") or "入口模式"
-            html_lines.append(f"<p style='margin:6px 0; color:#666;'>（{reason}）</p>")
-        if (not is_blocked) or (it["platform"] == "Kobo" and it.get("card_titles")):
-            if it.get("card_titles"):
-                block_label = "活動標題摘要" if it["platform"] == "Kobo" else "活動卡片（擷取）"
-                html_lines.append(f"<div style='margin:8px 0 6px;'><b>{block_label}</b></div>")
-                html_lines.append("<ul style='margin:6px 0 10px 18px;'>")
+    expected_titles = _BOOKWALKER_EVERGREEN_PATH_TITLES.get(path)
+    if (
+        hostname in {"bookwalker.com.tw", "www.bookwalker.com.tw"}
+        and expected_titles
+        and normalized_title in expected_titles
+    ):
+        return True
+    if hostname == "lin.ee" and normalized_title == "line好友限定9折優惠券":
+        return True
+    if (
+        hostname == "cp.bookwalker.com.tw"
+        and path == "/event/2023/20230407"
+        and normalized_title == "快來追蹤這些社群"
+    ):
+        return True
+    return (
+        hostname in {"bookwalker.com.tw", "www.bookwalker.com.tw"}
+        and path == "/search"
+        and normalized_title == "動畫化書籍一覽"
+    )
 
-                display_limits = {
-                    "HyRead": 24,
-                    "Pubu": 36,
-                    "Kobo": 15,
-                }
-                limit = display_limits.get(it["platform"], 20)
 
-                show_list = it.get("card_titles_for_html") or it.get("card_titles") or []
-                for t in show_list[:limit]:
-                    html_lines.append(f"<li>{t}</li>")
-                html_lines.append("</ul>")
+def is_bookwalker_historical_report(title: str, today: date) -> bool:
+    match = _BOOKWALKER_REPORT_RE.search(normalize_title(title))
+    return bool(match and int(match.group("year")) < today.year)
 
-        # error：若是 Readmoo/HyRead/Kobo/博客來入口模式，就不要用紅字嚇人（原因已經顯示）
-        if it.get("error") and not (it["platform"] in ("Readmoo", "HyRead", "Kobo", "博客來") and is_blocked):
-            html_lines.append(
-                f"<p style='margin:6px 0; color:#b00020;'>（抓取失敗：{it['error']}）</p>"
+
+def _parse_bookwalker_date_token(token: str) -> tuple[int | None, int, int] | None:
+    values = [int(value) for value in re.split(r"[./-]", token)]
+    if len(values) == 3:
+        return values[0], values[1], values[2]
+    if len(values) == 2:
+        return None, values[0], values[1]
+    return None
+
+
+def _make_bookwalker_date(year: int, month: int, day: int) -> date | None:
+    try:
+        return date(year, month, day)
+    except ValueError:
+        return None
+
+
+def _bookwalker_range_end(start_token: str, end_token: str, today: date) -> date | None:
+    start_parts = _parse_bookwalker_date_token(start_token)
+    end_parts = _parse_bookwalker_date_token(end_token)
+    if not start_parts or not end_parts:
+        return None
+
+    start_year, start_month, start_day = start_parts
+    end_year, end_month, end_day = end_parts
+    if end_year is not None:
+        return _make_bookwalker_date(end_year, end_month, end_day)
+
+    if start_year is not None:
+        inferred_year = start_year + (
+            (end_month, end_day) < (start_month, start_day)
+        )
+        return _make_bookwalker_date(inferred_year, end_month, end_day)
+
+    intervals: list[tuple[int, date]] = []
+    for inferred_start_year in range(today.year - 1, today.year + 2):
+        inferred_end_year = inferred_start_year + (
+            (end_month, end_day) < (start_month, start_day)
+        )
+        start_date = _make_bookwalker_date(
+            inferred_start_year, start_month, start_day
+        )
+        end_date = _make_bookwalker_date(inferred_end_year, end_month, end_day)
+        if not start_date or not end_date:
+            continue
+        if start_date <= today <= end_date:
+            distance = 0
+        else:
+            distance = min(
+                abs((today - start_date).days), abs((today - end_date).days)
             )
-       
+        intervals.append((distance, end_date))
 
-        html_lines.append(f"<p style='margin:6px 0;'><a href='{it['url']}' target='_blank' rel='noopener noreferrer'>→ 點我查看活動</a></p>")
+    return min(intervals, key=lambda value: value[0])[1] if intervals else None
 
-        if it.get("platform") == "Kobo" and it.get("sub_links"):
-            links = " | ".join(
-                f"<a href='{link['url']}' target='_blank' rel='noopener noreferrer'>{link['label']}</a>"
-                for link in it["sub_links"]
+
+def _bookwalker_deadline(token: str, today: date) -> date | None:
+    parts = _parse_bookwalker_date_token(token)
+    if not parts:
+        return None
+    year, month, day = parts
+    if year is not None:
+        return _make_bookwalker_date(year, month, day)
+
+    candidates = [
+        candidate
+        for candidate_year in range(today.year - 1, today.year + 2)
+        if (candidate := _make_bookwalker_date(candidate_year, month, day))
+    ]
+    return min(candidates, key=lambda value: abs((value - today).days), default=None)
+
+
+def extract_bookwalker_end_date(
+    title: str, subtitle: str | None, today: date
+) -> date | None:
+    text = " ".join(value for value in (title, subtitle) if value)
+    candidates: list[date] = []
+
+    for match in _BOOKWALKER_DATE_RANGE_RE.finditer(text):
+        end_date = _bookwalker_range_end(
+            match.group("start"), match.group("end"), today
+        )
+        if end_date:
+            candidates.append(end_date)
+
+    for pattern in (_BOOKWALKER_PREFIX_END_RE, _BOOKWALKER_SUFFIX_END_RE):
+        for match in pattern.finditer(text):
+            end_date = _bookwalker_deadline(match.group("end"), today)
+            if end_date:
+                candidates.append(end_date)
+
+    # If multiple explicit deadlines are present, use the latest one. This is
+    # deliberately conservative and avoids dropping an activity too early.
+    return max(candidates, default=None)
+
+
+def should_exclude_bookwalker_item(
+    title: str, subtitle: str | None, url: str, today: date
+) -> bool:
+    if is_bookwalker_evergreen_entry(title, url):
+        return True
+    if is_bookwalker_historical_report(title, today):
+        return True
+    end_date = extract_bookwalker_end_date(title, subtitle, today)
+    return bool(end_date and end_date < today - timedelta(days=1))
+
+
+def extract_bookwalker_items(raw_html: str, base_url: str) -> dict[str, Any]:
+    soup = BeautifulSoup(raw_html, "html.parser")
+    cards = soup.select(".listbox_bwmain .banner_package")
+    grouped: OrderedDict[str, list[str]] = OrderedDict()
+
+    for card in cards:
+        card_groups: OrderedDict[str, list[str]] = OrderedDict()
+        for anchor in card.select("a[href]"):
+            url = normalize_url(anchor.get("href"), base_url)
+            if not url:
+                continue
+            signals = collect_tag_signals(anchor)
+            if url not in card_groups:
+                card_groups[url] = []
+            merge_unique_signals(card_groups[url], signals)
+
+        for url, signals in card_groups.items():
+            if not signals:
+                continue
+            if url not in grouped:
+                grouped[url] = []
+            merge_unique_signals(grouped[url], signals)
+
+    items: list[dict[str, Any]] = []
+    today = datetime.now(timezone(timedelta(hours=8))).date()
+    for url, signals in grouped.items():
+        if not signals:
+            continue
+        title = signals[0]
+        subtitle = next(
+            (
+                value
+                for value in signals[1:]
+                if normalize_title(value) != normalize_title(title)
+                and normalize_title(value) not in normalize_title(title)
+                and normalize_title(title) not in normalize_title(value)
+            ),
+            None,
+        )
+        if should_exclude_bookwalker_item(title, subtitle, url, today):
+            continue
+        items.append(make_item(title, url, subtitle=subtitle))
+
+    return {"items": items, "found_container": bool(cards)}
+
+
+def extract_kobo_items(raw_html: str, base_url: str) -> dict[str, Any]:
+    soup = BeautifulSoup(raw_html, "html.parser")
+    headings = soup.select("a.primary-heading[href]")
+    items: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    for heading in headings:
+        title = clean_text(heading.get_text(" ", strip=True))
+        url = normalize_url(heading.get("href"), base_url)
+        if not title or not url or url in seen:
+            continue
+        seen.add(url)
+        items.append(make_item(title, url))
+
+    return {"items": items, "found_container": bool(headings)}
+
+
+PARSERS: dict[str, Callable[[str, str], dict[str, Any]]] = {
+    "pubu": extract_pubu_items,
+    "bookwalker": extract_bookwalker_items,
+    "kobo": extract_kobo_items,
+}
+
+
+def entry_platform_result(config: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "platform": config["platform"],
+        "url": config["url"],
+        "mode": config["mode"],
+        "note": config["note"],
+        "page_title": None,
+        "status": "entry_only",
+        "http_status": None,
+        "error": None,
+        "items": [],
+        "extra_links": config["extra_links"],
+    }
+
+
+def status_from_parse(parse_result: dict[str, Any]) -> str:
+    if parse_result["items"]:
+        return "ok"
+    if parse_result["found_container"]:
+        return "empty"
+    return "parse_error"
+
+
+def get_http_status(exc: Exception) -> int | None:
+    if isinstance(exc, requests.HTTPError) and exc.response is not None:
+        return exc.response.status_code
+    return None
+
+
+def short_error(exc: Exception) -> str:
+    return clean_text(str(exc))[:500] or exc.__class__.__name__
+
+
+def scraped_platform_result(config: dict[str, Any]) -> dict[str, Any]:
+    parser = PARSERS[config["parser"]]
+    raw_html = ""
+    http_status: int | None = None
+    request_error: Exception | None = None
+
+    try:
+        response = fetch_html_requests(config["url"])
+        raw_html = response["text"]
+        http_status = response["status"]
+        parse_result = parser(raw_html, config["url"])
+    except Exception as exc:
+        request_error = exc
+        http_status = get_http_status(exc)
+        parse_result = {"items": [], "found_container": False}
+
+    # Kobo alone may use the existing Playwright scope as a fallback. The fallback
+    # is used only when requests failed or yielded no structured activity items.
+    if config["platform"] == "Kobo" and not parse_result["items"]:
+        try:
+            response = fetch_html_kobo_playwright(config["url"])
+            raw_html = response["text"]
+            http_status = response["status"]
+            parse_result = parser(raw_html, config["url"])
+            request_error = None
+        except Exception as fallback_error:
+            errors = []
+            if request_error is not None:
+                errors.append(f"requests: {short_error(request_error)}")
+            errors.append(f"Playwright fallback: {short_error(fallback_error)}")
+            return {
+                "platform": config["platform"],
+                "url": config["url"],
+                "mode": config["mode"],
+                "note": config["note"],
+                "page_title": extract_page_title(raw_html) if raw_html else None,
+                "status": "http_error" if http_status else "fetch_error",
+                "http_status": http_status,
+                "error": "; ".join(errors),
+                "items": [],
+                "extra_links": config["extra_links"],
+            }
+
+    if request_error is not None:
+        return {
+            "platform": config["platform"],
+            "url": config["url"],
+            "mode": config["mode"],
+            "note": config["note"],
+            "page_title": None,
+            "status": "http_error" if http_status else "fetch_error",
+            "http_status": http_status,
+            "error": short_error(request_error),
+            "items": [],
+            "extra_links": config["extra_links"],
+        }
+
+    status = status_from_parse(parse_result)
+    error = None
+    if status == "parse_error":
+        error = "HTTP 回應成功，但找不到預期的活動卡片結構"
+
+    return {
+        "platform": config["platform"],
+        "url": config["url"],
+        "mode": config["mode"],
+        "note": config["note"],
+        "page_title": extract_page_title(raw_html),
+        "status": status,
+        "http_status": http_status,
+        "error": error,
+        "items": parse_result["items"],
+        "extra_links": config["extra_links"],
+    }
+
+
+def load_previous_payload() -> dict[str, Any] | None:
+    try:
+        with OUT_JSON.open("r", encoding="utf-8") as file:
+            data = json.load(file)
+        return data if isinstance(data, dict) else None
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def item_identity(item: dict[str, Any], platform_url: str) -> str | None:
+    item_url = normalize_url(item.get("url"), platform_url)
+    source_url = normalize_url(platform_url, platform_url)
+    if item_url and item_url != source_url:
+        return f"url:{item_url}"
+    title = normalize_title(item.get("title") or "")
+    return f"title:{title}" if title else None
+
+
+def mark_new_items(
+    platforms: list[dict[str, Any]], previous: dict[str, Any] | None
+) -> list[str]:
+    for platform in platforms:
+        for item in platform.get("items", []):
+            item["is_new"] = False
+
+    # A v1 file has no reliable activity URLs, so the first v2 run deliberately
+    # establishes a baseline without marking any existing activity as new.
+    if not previous or previous.get("schema_version") != SCHEMA_VERSION:
+        return []
+
+    previous_by_platform = {
+        value.get("platform"): value
+        for value in previous.get("platforms", [])
+        if isinstance(value, dict) and value.get("platform")
+    }
+    new_platforms: list[str] = []
+
+    for platform in platforms:
+        previous_platform = previous_by_platform.get(platform["platform"])
+        if (
+            platform["status"] != "ok"
+            or not previous_platform
+            or previous_platform.get("status") != "ok"
+        ):
+            continue
+
+        previous_keys = {
+            key
+            for item in previous_platform.get("items", [])
+            if isinstance(item, dict)
+            if (key := item_identity(item, previous_platform.get("url") or platform["url"]))
+        }
+        for item in platform["items"]:
+            key = item_identity(item, platform["url"])
+            item["is_new"] = bool(key and key not in previous_keys)
+
+        if any(item["is_new"] for item in platform["items"]):
+            new_platforms.append(platform["platform"])
+
+    return new_platforms
+
+
+def escape_text(value: Any) -> str:
+    return html_module.escape(str(value or ""), quote=True)
+
+
+def render_header() -> str:
+    return """<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電子書平台活動快照</title>
+<style>
+:root { color-scheme: light; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", Helvetica, Arial, sans-serif; line-height: 1.65; padding: 16px; max-width: 980px; margin: 0 auto; color: #111; }
+h1 { margin: 0 0 8px; }
+h2 { margin: 6px 0; }
+p { margin: 4px 0; }
+.summary { margin-bottom: 16px; }
+.notice { font-size: .85rem; color: #666; margin: 8px 0 10px; }
+.platform { padding: 12px 0; }
+.meta, .status, .item-detail, .extra-note { color: #666; }
+.status-error { color: #b00020; }
+.items { margin: 8px 0 10px 20px; padding: 0; }
+.items li { margin: 7px 0; }
+.new-badge { margin-right: .3em; }
+.extra-links { margin: 8px 0; padding: 10px 14px; background: #f6f7f8; border-radius: 8px; }
+hr { border: 0; border-top: 1px solid #ddd; }
+footer { font-size: .8rem; color: #666; margin-top: 14px; }
+</style>
+</head>
+<body>"""
+
+
+def render_summary(payload: dict[str, Any]) -> str:
+    has_new = payload["has_new_items"]
+    new_platforms = payload["new_platforms"]
+    platform_text = "、".join(escape_text(value) for value in new_platforms)
+    platform_suffix = f"（新增活動平台：{platform_text}）" if platform_text else ""
+    return (
+        "<header>"
+        "<h1>📚 電子書平台活動快照</h1>"
+        f"<p>更新時間（台灣）：<strong>{escape_text(payload['updated_at'])}</strong></p>"
+        f"<p class=\"summary\">今天是否有新增活動：<strong>{'是' if has_new else '否'}</strong>"
+        f"{platform_suffix}</p>"
+        "<p class=\"notice\">※ 本頁僅彙整活動標題與官方入口；不保證資訊完整性、即時性或實際優惠內容，請以各平台官方說明為準。</p>"
+        "</header><hr>"
+    )
+
+
+def render_status(platform: dict[str, Any]) -> str:
+    status = platform["status"]
+    if status == "entry_only":
+        return '<p class="status">入口模式：僅提供官方頁面連結。</p>'
+    if status == "ok":
+        return f'<p class="status">活動數量：{len(platform["items"])}</p>'
+    if status == "empty":
+        return '<p class="status">本次未找到可顯示的活動。</p>'
+
+    error = escape_text(platform.get("error") or "未知錯誤")
+    http_status = platform.get("http_status")
+    http_text = f"（HTTP {http_status}）" if http_status is not None else ""
+    return f'<p class="status status-error">擷取失敗{http_text}：{error}</p>'
+
+
+def render_items(items: list[dict[str, Any]]) -> str:
+    if not items:
+        return ""
+
+    lines = ['<div class="item-block"><strong>活動清單</strong><ul class="items">']
+    for item in items:
+        badge = '<span class="new-badge" aria-label="新活動">🆕</span>' if item["is_new"] else ""
+        title = escape_text(item["title"])
+        if item.get("url"):
+            title_html = (
+                f'<a href="{escape_text(item["url"])}" target="_blank" '
+                f'rel="noopener noreferrer">{title}</a>'
             )
-            html_lines.append(f"<p style='margin:4px 0;'>補充入口：{links}</p>")
+        else:
+            title_html = title
 
-        # 📌 Pubu 補充入口：每日 99 元（不是同一頁的活動）
-        if it.get("platform") == "Pubu":
-            html_lines.append(
-                "<p style='margin:4px 0;'>"
-                "📌 補充入口："
-                "<a href='https://www.pubu.com.tw/campaign/event/pubu99select' "
-                "target='_blank'>Pubu 每日 99 元專區</a>"
-                "</p>"
-            )
-        
-        if it["platform"] == "Readmoo":
-            html_lines.append(
-                "<p style='margin:6px 0;'>"
-                "<a href='https://readmoo.com/campaign/specialoffer/index' target='_blank' rel='noopener noreferrer'>"
-                "→ 每日優惠"
-                "</a></p>"
-            )
+        details = [item.get("subtitle"), item.get("period_text")]
+        detail_html = "".join(
+            f'<div class="item-detail">{escape_text(value)}</div>'
+            for value in details
+            if value
+        )
+        lines.append(f"<li>{badge}{title_html}{detail_html}</li>")
+    lines.append("</ul></div>")
+    return "\n".join(lines)
 
 
+def render_extra_links(extra_links: list[dict[str, Any]]) -> str:
+    if not extra_links:
+        return ""
 
-        html_lines.append("</section>")
-        html_lines.append("<hr style='opacity:.25'/>")
+    lines = ['<div class="extra-links"><strong>補充入口</strong><ul>']
+    for link in extra_links:
+        note = (
+            f'<div class="extra-note">{escape_text(link["note"])}</div>'
+            if link.get("note")
+            else ""
+        )
+        lines.append(
+            f'<li><a href="{escape_text(link["url"])}" target="_blank" '
+            f'rel="noopener noreferrer">{escape_text(link["label"])}</a>{note}</li>'
+        )
+    lines.append("</ul></div>")
+    return "\n".join(lines)
 
-    html_lines.append("<p style='font-size:12px;opacity:.7;margin-top:14px;'>v1 只彙整官方活動入口；不計券後價與單書特價。403 平台已自動弱化顯示。</p>")
-    html_lines.append("</body></html>")
 
-    with open(OUT_HTML, "w", encoding="utf-8") as f:
-        f.write("\n".join(html_lines))
+def render_platform_section(platform: dict[str, Any]) -> str:
+    mode_labels = {"full": "完整擷取", "partial": "部分擷取", "entry": "入口模式"}
+    page_title = (
+        f'<p class="meta">頁面標題：{escape_text(platform["page_title"])}</p>'
+        if platform.get("page_title")
+        else ""
+    )
+    source_link = (
+        f'<p><a href="{escape_text(platform["url"])}" target="_blank" '
+        'rel="noopener noreferrer">→ 前往官方活動頁</a></p>'
+    )
+    return "\n".join(
+        [
+            '<section class="platform">',
+            f'<h2>{escape_text(platform["platform"])}</h2>',
+            f'<p class="meta">模式：{escape_text(mode_labels[platform["mode"]])}</p>',
+            f'<p class="meta">備註：{escape_text(platform["note"])}</p>',
+            page_title,
+            render_status(platform),
+            render_items(platform["items"]),
+            source_link,
+            render_extra_links(platform["extra_links"]),
+            "</section><hr>",
+        ]
+    )
+
+
+def render_footer() -> str:
+    return (
+        "<footer>v2 僅整理指定官方活動頁及入口；不計券後價、單書比價或推薦。"
+        "補充入口不列入活動數量及新增判定。</footer></body></html>"
+    )
+
+
+def render_document(payload: dict[str, Any]) -> str:
+    sections = "\n".join(render_platform_section(value) for value in payload["platforms"])
+    return "\n".join(
+        [render_header(), render_summary(payload), "<main>", sections, "</main>", render_footer()]
+    )
+
+
+def build_payload(previous: dict[str, Any] | None) -> dict[str, Any]:
+    platforms = [
+        entry_platform_result(config)
+        if config["mode"] == "entry"
+        else scraped_platform_result(config)
+        for config in PLATFORMS
+    ]
+    new_platforms = mark_new_items(platforms, previous)
+    now = datetime.now(timezone(timedelta(hours=8))).isoformat(timespec="minutes")
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "parser_version": PARSER_VERSION,
+        "updated_at": now,
+        "has_new_items": bool(new_platforms),
+        "new_platforms": new_platforms,
+        "platforms": platforms,
+    }
+
+
+def main() -> None:
+    previous = load_previous_payload()
+    payload = build_payload(previous)
+
+    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    OUT_JSON.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    OUT_HTML.write_text(render_document(payload) + "\n", encoding="utf-8")
+
+    for platform in payload["platforms"]:
+        print(
+            f"[{platform['platform']}] mode={platform['mode']} "
+            f"status={platform['status']} items={len(platform['items'])}"
+        )
 
 
 if __name__ == "__main__":
