@@ -695,12 +695,15 @@ footer { font-size: .8rem; color: #666; margin-top: 14px; }
 def render_summary(payload: dict[str, Any]) -> str:
     has_new = payload["has_new_items"]
     new_platforms = payload["new_platforms"]
+    updated_at_text = datetime.fromisoformat(payload["updated_at"]).strftime(
+        "%Y/%m/%d %H:%M"
+    )
     platform_text = "、".join(escape_text(value) for value in new_platforms)
     platform_suffix = f"（新增活動平台：{platform_text}）" if platform_text else ""
     return (
         "<header>"
         "<h1>📚 電子書平台活動快照</h1>"
-        f"<p>更新時間（台灣）：<strong>{escape_text(payload['updated_at'])}</strong></p>"
+        f"<p>更新時間（台灣）：<strong>{escape_text(updated_at_text)}</strong></p>"
         f"<p class=\"summary\">今天是否有新增活動：<strong>{'是' if has_new else '否'}</strong>"
         f"{platform_suffix}</p>"
         "<p class=\"notice\">※ 本頁僅彙整活動標題與官方入口；不保證資訊完整性、即時性或實際優惠內容，請以各平台官方說明為準。</p>"
