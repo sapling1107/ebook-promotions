@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-06T01:50+08:00",
+  "updated_at": "2026-08-07T14:25+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "BookWalker",
-    "Kobo"
+    "Pubu",
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -18,6 +18,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "父親節全館3本75折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-07 ~ 2026-08-09",
+          "url": "https://www.pubu.com.tw/",
+          "is_new": true
+        },
+        {
+          "title": "懷念高希均教授紀念書展｜天下文化88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-07 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/CWGV0807",
+          "is_new": true
+        },
         {
           "title": "Pubook Mobile 父親節優惠",
           "subtitle": null,
@@ -52,6 +66,13 @@
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_mobile.html",
           "is_new": false
+        },
+        {
+          "title": "父職關係主題書展｜心靈工坊新書85折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-03 ~ 2026-09-03",
+          "url": "https://www.pubu.com.tw/campaign/event/psygarden0803",
+          "is_new": true
         },
         {
           "title": "如果是戀是愛是溫柔｜一穗ミチ新書展88折",
@@ -241,27 +262,6 @@
           "period_text": "有效期限2026-07-24 ~ 2026-08-20",
           "url": "https://www.pubu.com.tw/campaign/event/ccpa-Kadokawa-0724",
           "is_new": false
-        },
-        {
-          "title": "轉生史萊姆完結紀念｜套書75折單書85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-24 ~ 2026-08-20",
-          "url": "https://www.pubu.com.tw/campaign/event/Kadokawa0724",
-          "is_new": false
-        },
-        {
-          "title": "東立2026線上漫博│85折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-23 ~ 2026-08-12",
-          "url": "https://www.pubu.com.tw/campaign/event/ccpa-tongli0723",
-          "is_new": false
-        },
-        {
-          "title": "長鴻2026電子書漫畫博覽會│75折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-23 ~ 2026-08-15",
-          "url": "https://www.pubu.com.tw/campaign/event/ccpa-egmanga-0723",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -297,6 +297,13 @@
           "is_new": false
         },
         {
+          "title": "《BLUE LOCK 藍色監獄》套書8折",
+          "subtitle": "8/7-8/20 搶先真人版電影開踢",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/303680",
+          "is_new": true
+        },
+        {
           "title": "2026 線上漫博會79折起！",
           "subtitle": "領券結帳滿額再折50元",
           "period_text": null,
@@ -304,32 +311,39 @@
           "is_new": false
         },
         {
+          "title": "ღ 講談社夏季寫真展 (第4彈) ღ",
+          "subtitle": "限時一週參展作品6折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kodansha2026807/9179",
+          "is_new": true
+        },
+        {
           "title": "8.6-9.5《壞習慣》新書上市85折",
           "subtitle": "西班牙跨性別作家，半自傳話題作",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303686",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《北歐式的自由生活提案》",
           "subtitle": "工作在都市，生活在鄉間",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303685",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "上海角川青羽《重生之掃墓》",
           "subtitle": "全新BL廣播劇｜現正熱播中",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=42515",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《缺席的父愛，迷失的兒子》",
           "subtitle": "新書首月，單書85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303709",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端每月精選推薦！",
@@ -370,8 +384,8 @@
           "title": "《我立於讀者之上 vol.2》",
           "subtitle": "關於命運、迷失與自我探索的冒險",
           "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/303296",
-          "is_new": false
+          "url": "https://www.bookwalker.com.tw/search?series=34707",
+          "is_new": true
         },
         {
           "title": "尖端45週年特別我推：高橋留美子",
@@ -455,13 +469,6 @@
           "subtitle": "7.31-8.13 參展作品7折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/KADOKAWA260731/9280",
-          "is_new": false
-        },
-        {
-          "title": "🔥講談社夏季寫真展 (第3彈)🔥",
-          "subtitle": "限時一週參展作品6折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kodansha20260731/9178",
           "is_new": false
         },
         {
@@ -787,24 +794,10 @@
           "is_new": false
         },
         {
-          "title": "今天也想和你慢慢戀愛",
-          "subtitle": "女性向主題書展85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kadokawa20260710",
-          "is_new": false
-        },
-        {
           "title": "《今夜，她在懸崖上起舞》",
           "subtitle": "7.8 - 8.8 新書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/301135",
-          "is_new": false
-        },
-        {
-          "title": "超自然系戀愛事件簿！",
-          "subtitle": "✩ 連載中：每週一更新 ✩",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?w=%E8%B6%85%E8%87%AA%E7%84%B6%E7%B3%BB%E6%88%80%E6%84%9B%E4%BA%",
           "is_new": false
         },
         {
@@ -930,7 +923,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/eCBxjvWm-cLVbwje8RUmtQ",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【臉譜出版】出版社推薦，單本85折，至8/8止",
@@ -951,7 +944,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/USCdaJAfZsvPzwje8RK5MQ",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【天下文化】理解今天，才能預見明天。世界變局展，單本88折，至8/31止",
