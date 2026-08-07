@@ -1,9 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-07T14:30+08:00",
-  "has_new_items": false,
-  "new_platforms": [],
+  "updated_at": "2026-08-08T01:02+08:00",
+  "has_new_items": true,
+  "new_platforms": [
+    "Pubu",
+    "BookWalker"
+  ],
   "platforms": [
     {
       "platform": "Pubu",
@@ -15,6 +18,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "紐約時報21世紀｜驚悚小說｜Top 50",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-07 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/nyttop50thrillers",
+          "is_new": true
+        },
+        {
+          "title": "Pubook Pro 即將完售",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-07 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/ebook/594118",
+          "is_new": true
+        },
         {
           "title": "父親節全館3本75折",
           "subtitle": null,
@@ -245,20 +262,6 @@
           "period_text": "有效期限2026-07-25 ~ 2026-09-13",
           "url": "https://www.pubu.com.tw/campaign/event/delightpress0725",
           "is_new": false
-        },
-        {
-          "title": "高寶全書系書展｜限定狂推79折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-25 ~ 2026-09-13",
-          "url": "https://www.pubu.com.tw/campaign/event/gobooks0725",
-          "is_new": false
-        },
-        {
-          "title": "角川2026線上漫畫博覽會│85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-24 ~ 2026-08-20",
-          "url": "https://www.pubu.com.tw/campaign/event/ccpa-Kadokawa-0724",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -292,6 +295,13 @@
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260720_chiikawamovie_mermaidisland",
           "is_new": false
+        },
+        {
+          "title": "8.8-9.7《烈愛對決》新書上市",
+          "subtitle": "延伸書展單書88折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/ryefield_260808",
+          "is_new": true
         },
         {
           "title": "《BLUE LOCK 藍色監獄》套書8折",
@@ -846,13 +856,6 @@
       "error": null,
       "items": [
         {
-          "title": "【方舟文化】初級大人必備！精選書展，單本85折，至9/4止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yDN-k3MtjskcLgje7ueaYg",
-          "is_new": false
-        },
-        {
           "title": "【先覺出版】全書系，單本85折，至8/31止",
           "subtitle": null,
           "period_text": null,
@@ -888,10 +891,10 @@
           "is_new": false
         },
         {
-          "title": "【幸福文化】召喚錢錢來我家，理財精選，單本85折，至8/7止",
+          "title": "【方舟文化】初級大人必備！精選書展，單本85折，至9/4止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/riBqpsCTsM5CRAje2NctRA",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yDN-k3MtjskcLgje7ueaYg",
           "is_new": false
         },
         {
