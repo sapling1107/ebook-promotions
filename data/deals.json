@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-08T01:02+08:00",
+  "updated_at": "2026-08-09T00:47+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,18 +19,25 @@
       "error": null,
       "items": [
         {
+          "title": "Pubook Mobile 軍公教、學生 | 專屬優惠",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-08 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/content/452762",
+          "is_new": true
+        },
+        {
           "title": "紐約時報21世紀｜驚悚小說｜Top 50",
           "subtitle": null,
           "period_text": "有效期限2026-08-07 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/event/nyttop50thrillers",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook Pro 即將完售",
           "subtitle": null,
           "period_text": "有效期限2026-08-07 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/ebook/594118",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "父親節全館3本75折",
@@ -44,13 +51,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-08-07 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/CWGV0807",
-          "is_new": false
-        },
-        {
-          "title": "Pubook Mobile 父親節優惠",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-05 ~ 2026-08-09",
-          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
           "is_new": false
         },
         {
@@ -283,6 +283,13 @@
       "error": null,
       "items": [
         {
+          "title": "B☆W 生日快樂～最低63折！",
+          "subtitle": "全館7折起，滿額輸入優惠碼再9折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BWHBD_20260809",
+          "is_new": true
+        },
+        {
           "title": "微不幸退散！微疼鬼月生存指南！",
           "subtitle": "完成漫畫填空送好禮！",
           "period_text": null,
@@ -301,7 +308,7 @@
           "subtitle": "延伸書展單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ryefield_260808",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《BLUE LOCK 藍色監獄》套書8折",
@@ -787,27 +794,6 @@
           "is_new": false
         },
         {
-          "title": "7.9-8.8 《戀之星塵》新書88折",
-          "subtitle": "日本BL科幻選集臺灣獨家雙封面",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/301437",
-          "is_new": false
-        },
-        {
-          "title": "7.9-8.8 墨刻全書系展",
-          "subtitle": "這個夏天，來去海邊！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/mook_260709",
-          "is_new": false
-        },
-        {
-          "title": "《今夜，她在懸崖上起舞》",
-          "subtitle": "7.8 - 8.8 新書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/301135",
-          "is_new": false
-        },
-        {
           "title": "《桃花源沒事兒》馬伯庸見微系列",
           "subtitle": "7.1-8.25 單本88折，二本85折",
           "period_text": null,
@@ -923,13 +909,6 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/eCBxjvWm-cLVbwje8RUmtQ",
-          "is_new": false
-        },
-        {
-          "title": "【臉譜出版】出版社推薦，單本85折，至8/8止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/lUVdca1oE822Fwje0a_5Vg",
           "is_new": false
         },
         {
