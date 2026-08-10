@@ -1,11 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-10T00:48+08:00",
+  "updated_at": "2026-08-11T01:03+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -23,21 +22,21 @@
           "subtitle": null,
           "period_text": "有效期限2026-08-10 ~ 2026-08-30",
           "url": "https://www.pubu.com.tw/campaign/event/kadokawa0810",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "老闆不是人｜護玄全新神作單本88折",
           "subtitle": null,
           "period_text": "有效期限2026-08-10 ~ 2026-09-15",
           "url": "https://www.pubu.com.tw/campaign/event/crown0810-C",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "通靈藥師的處方籤，大是×任性書展82折",
           "subtitle": null,
           "period_text": "有效期限2026-08-10 ~ 2026-09-13",
           "url": "https://www.pubu.com.tw/campaign/event/domainpub0701",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook Mobile 軍公教、學生 | 專屬優惠",
@@ -180,13 +179,6 @@
           "is_new": false
         },
         {
-          "title": "本月作者精選優惠｜禾馬",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-08-10",
-          "url": "https://www.pubu.com.tw/campaign/event/869",
-          "is_new": false
-        },
-        {
           "title": "哈利波特全系列｜單書88折、套書82折起",
           "subtitle": null,
           "period_text": "有效期限2026-07-31 ~ 2026-08-31",
@@ -269,6 +261,13 @@
           "period_text": "有效期限2026-07-25 ~ 2026-08-19",
           "url": "https://www.pubu.com.tw/campaign/event/tohan0725",
           "is_new": false
+        },
+        {
+          "title": "悅知文化全書系書展｜單本88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-07-25 ~ 2026-09-13",
+          "url": "https://www.pubu.com.tw/campaign/event/delightpress0725",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -322,7 +321,7 @@
           "subtitle": "\\ 上市首月雙書85折 /",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/aquarius260810/9323?detail=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《BLUE LOCK 藍色監獄》套書8折",
@@ -364,14 +363,14 @@
           "subtitle": "20點立即兌換！限量500組",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/gift/3753",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Zanla繪製11週年賀圖",
           "subtitle": "書架&書卡免費領、限時收藏！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW11Zanla_20260810",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "上海角川青羽《重生之掃墓》",
@@ -640,13 +639,6 @@
           "is_new": false
         },
         {
-          "title": "《課金派戀愛》8/9前獨家85折",
-          "subtitle": "購買套書送數位書卡及書架",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/peenky456",
-          "is_new": false
-        },
-        {
           "title": "2026 紳士出版線上漫博會",
           "subtitle": "參展作品79折起！",
           "period_text": null,
@@ -798,13 +790,6 @@
           "subtitle": "✦ 連載中：每週二更新 ✦",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/serial/41897",
-          "is_new": false
-        },
-        {
-          "title": "d/art活動最低68折起！",
-          "subtitle": "買再送活動限定贈品",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/2026d!100",
           "is_new": false
         },
         {
