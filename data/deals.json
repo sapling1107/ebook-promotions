@@ -1,10 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-11T01:03+08:00",
+  "updated_at": "2026-08-12T01:07+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu"
+    "Pubu",
+    "BookWalker",
+    "Kobo"
   ],
   "platforms": [
     {
@@ -17,6 +19,34 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "新作《植物妻子》上市｜韓江全作品85折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-12 ~ 2026-09-11",
+          "url": "https://www.pubu.com.tw/campaign/event/AzothBooks0812A",
+          "is_new": true
+        },
+        {
+          "title": "新書全球首發！文科生到異世界全系列82折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-12 ~ 2026-09-11",
+          "url": "https://www.pubu.com.tw/campaign/event/AzothBooks0812B",
+          "is_new": true
+        },
+        {
+          "title": "繽紛盛夏 尖端數位寫真展｜79折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-12 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/spp0812",
+          "is_new": true
+        },
+        {
+          "title": "Re:Zero奪還篇開播展｜系列73折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-12 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/chin-wen0812",
+          "is_new": true
+        },
         {
           "title": "悠閒慢活主題書展│角川參展單書85折",
           "subtitle": null,
@@ -240,34 +270,6 @@
           "period_text": "有效期限2026-07-25 ~ 2026-09-06",
           "url": "https://www.pubu.com.tw/campaign/event/Marcopolo0725",
           "is_new": false
-        },
-        {
-          "title": "貓頭鷹全書系書展｜單書85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-25 ~ 2026-09-13",
-          "url": "https://www.pubu.com.tw/campaign/event/Owl0725",
-          "is_new": false
-        },
-        {
-          "title": "橡樹林全書系書展｜85折+99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-25 ~ 2026-09-13",
-          "url": "https://www.pubu.com.tw/campaign/event/OakTree0725",
-          "is_new": false
-        },
-        {
-          "title": "東販漫畫輕小說展｜套書77折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-25 ~ 2026-08-19",
-          "url": "https://www.pubu.com.tw/campaign/event/tohan0725",
-          "is_new": false
-        },
-        {
-          "title": "悅知文化全書系書展｜單本88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-25 ~ 2026-09-13",
-          "url": "https://www.pubu.com.tw/campaign/event/delightpress0725",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -289,13 +291,6 @@
       "error": null,
       "items": [
         {
-          "title": "B☆W 生日快樂～最低63折！",
-          "subtitle": "全館7折起，滿額輸入優惠碼再9折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BWHBD_20260809",
-          "is_new": false
-        },
-        {
           "title": "微不幸退散！微疼鬼月生存指南！",
           "subtitle": "完成漫畫填空送好禮！",
           "period_text": null,
@@ -308,6 +303,20 @@
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260720_chiikawamovie_mermaidisland",
           "is_new": false
+        },
+        {
+          "title": "8.12-8.31 《Re:Zero》特展",
+          "subtitle": "參展作品73折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/20260812re0",
+          "is_new": true
+        },
+        {
+          "title": "8.12-8.31 尖端出版數位寫真展",
+          "subtitle": "限時優惠79折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/20260812_spp/9325?series_display=1",
+          "is_new": true
         },
         {
           "title": "8.8-9.7《烈愛對決》新書上市",
@@ -765,13 +774,6 @@
           "is_new": false
         },
         {
-          "title": "2026夏日青悅祭79折！",
-          "subtitle": "7.15-8.11 限時優惠中",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/20260715",
-          "is_new": false
-        },
-        {
           "title": "守護甜心愛藏版 ♥ Unlock",
           "subtitle": "獨家手機桌布等你來蒐藏！",
           "period_text": null,
@@ -911,11 +913,11 @@
           "is_new": false
         },
         {
-          "title": "【高寶書版】暢銷書展，單本85折起，至9/30止",
+          "title": "【高寶書版】健康生活書展，單本85折起，至9/30止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/eCBxjvWm-cLVbwje8RUmtQ",
-          "is_new": false
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TIpWBkXFDsWoSwje9DOpPQ",
+          "is_new": true
         },
         {
           "title": "【天下生活 x 康健出版】享受自己喜歡的生活，單本85折，三本再折$99，至9/15止",
