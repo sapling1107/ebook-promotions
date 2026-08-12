@@ -1,12 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-12T01:07+08:00",
+  "updated_at": "2026-08-13T01:06+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
-    "BookWalker",
-    "Kobo"
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -20,32 +19,46 @@
       "error": null,
       "items": [
         {
+          "title": "笭菁領軍鬼月特展｜單本85折、2本79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-13 ~ 2026-09-10",
+          "url": "https://www.pubu.com.tw/campaign/event/crescent0813",
+          "is_new": true
+        },
+        {
+          "title": "青瓷×恍惚之人│有吉佐和子經典書展",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-12 ~ 2026-09-11",
+          "url": "https://www.pubu.com.tw/campaign/event/booklife0812",
+          "is_new": true
+        },
+        {
           "title": "新作《植物妻子》上市｜韓江全作品85折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-12 ~ 2026-09-11",
           "url": "https://www.pubu.com.tw/campaign/event/AzothBooks0812A",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "新書全球首發！文科生到異世界全系列82折",
           "subtitle": null,
           "period_text": "有效期限2026-08-12 ~ 2026-09-11",
           "url": "https://www.pubu.com.tw/campaign/event/AzothBooks0812B",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "繽紛盛夏 尖端數位寫真展｜79折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-12 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/spp0812",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Re:Zero奪還篇開播展｜系列73折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-12 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/chin-wen0812",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "悠閒慢活主題書展│角川參展單書85折",
@@ -249,27 +262,6 @@
           "period_text": "有效期限2026-07-27 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/crown0727-A",
           "is_new": false
-        },
-        {
-          "title": "日本插畫鬼才新作｜アボガド6書展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-27 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/crown0727-C",
-          "is_new": false
-        },
-        {
-          "title": "花錢的藝術：打造富足人生的金錢心理學",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-27 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/ebook/683441",
-          "is_new": false
-        },
-        {
-          "title": "馬可孛羅旅行與勵志書展｜85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-25 ~ 2026-09-06",
-          "url": "https://www.pubu.com.tw/campaign/event/Marcopolo0725",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -291,6 +283,13 @@
       "error": null,
       "items": [
         {
+          "title": "微涼之境｜鬼月書展79折起",
+          "subtitle": "50元優惠券 奇幻基地專屬書架",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20260813_summerghost",
+          "is_new": true
+        },
+        {
           "title": "微不幸退散！微疼鬼月生存指南！",
           "subtitle": "完成漫畫填空送好禮！",
           "period_text": null,
@@ -305,18 +304,32 @@
           "is_new": false
         },
         {
+          "title": "尖端出版《無法以你的臉哭泣》",
+          "subtitle": "8.13-8.19 限時99元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/263539",
+          "is_new": true
+        },
+        {
+          "title": "《夢幻外傳（2）》新書上市",
+          "subtitle": "8.13-9.12 單書88折，套書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/apexpress_260813",
+          "is_new": true
+        },
+        {
           "title": "8.12-8.31 《Re:Zero》特展",
           "subtitle": "參展作品73折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260812re0",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.12-8.31 尖端出版數位寫真展",
           "subtitle": "限時優惠79折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260812_spp/9325?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.8-9.7《烈愛對決》新書上市",
@@ -337,13 +350,6 @@
           "subtitle": "8/7-8/20 搶先真人版電影開踢",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303680",
-          "is_new": false
-        },
-        {
-          "title": "2026 線上漫博會79折起！",
-          "subtitle": "領券結帳滿額再折50元",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260723_exhibition",
           "is_new": false
         },
         {
@@ -641,31 +647,10 @@
           "is_new": false
         },
         {
-          "title": "2026 尖端出版線上漫博會",
-          "subtitle": "參展作品79折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/spp20260723",
-          "is_new": false
-        },
-        {
-          "title": "2026 紳士出版線上漫博會",
-          "subtitle": "參展作品79折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/gentlemen20260723",
-          "is_new": false
-        },
-        {
           "title": "7.23-8.15 長鴻漫畫博覽會",
           "subtitle": "＼ 全系列75折起 ／",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/egmanga260723",
-          "is_new": false
-        },
-        {
-          "title": "台灣東販 線上漫博會",
-          "subtitle": "選書79折起",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/tohan20260723",
           "is_new": false
         },
         {
@@ -680,13 +665,6 @@
           "subtitle": "7.23-8.22 新書優惠88折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302510",
-          "is_new": false
-        },
-        {
-          "title": "台灣角川 2026線上漫博會",
-          "subtitle": "單本85折、雙書79折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kadokawa20260723",
           "is_new": false
         },
         {
@@ -828,13 +806,6 @@
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=37&series_display=1&order=sell_desc",
           "is_new": false
-        },
-        {
-          "title": "被迫重生在雷作續篇",
-          "subtitle": "✦ 連載中：每週日更新 ✦",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/serial/41940",
-          "is_new": false
         }
       ],
       "extra_links": []
@@ -917,7 +888,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TIpWBkXFDsWoSwje9DOpPQ",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【天下生活 x 康健出版】享受自己喜歡的生活，單本85折，三本再折$99，至9/15止",
