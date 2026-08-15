@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-15T01:03+08:00",
+  "updated_at": "2026-08-16T00:35+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,18 +19,25 @@
       "error": null,
       "items": [
         {
+          "title": "「想和你談戀愛」主題展3本79折｜禾馬",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-16 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/861",
+          "is_new": true
+        },
+        {
           "title": "Misa個展-我們的十五年│套書69折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-15 ~ 2026-09-15",
           "url": "https://www.pubu.com.tw/campaign/event/lineanovel0815",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook 2 限時優惠 $12,500",
           "subtitle": null,
           "period_text": "有效期限2026-08-14 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/ebook/673474",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "從生命的車窗眺望｜星野源散文集82折起",
@@ -255,13 +262,6 @@
           "period_text": "有效期限2026-07-31 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/hp-crown-0724",
           "is_new": false
-        },
-        {
-          "title": "解憂雜貨店50萬冊紀念版│東野圭吾88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-30 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/crown0706-C",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -282,6 +282,13 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "✩ 全館82折、點數15~20倍 ✩",
+          "subtitle": "滿額輸入優惠碼現折50元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BW260816",
+          "is_new": true
+        },
         {
           "title": "微涼之境｜鬼月書展79折起",
           "subtitle": "50元優惠券 奇幻基地專屬書架",
@@ -308,21 +315,21 @@
           "subtitle": "延伸書展單書85折，套書69折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/misa_260815",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《刺客教條：王朝 卷一 花都刺客》",
           "subtitle": "延伸書展單書88折，雙書8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ffoundation_260815",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "第七屆店長創作祭人氣票選開跑",
           "subtitle": "8/15～9/15 投票再拿限定好禮",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260620_create/vote_ckj.php",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《BLPT耽美日語聽解對策》",
@@ -350,7 +357,7 @@
           "subtitle": "領券77折",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260815_starqa8j",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "B☆W線上原創同人漫畫展79折起",
@@ -703,13 +710,6 @@
           "is_new": false
         },
         {
-          "title": "7.23-8.15 長鴻漫畫博覽會",
-          "subtitle": "＼ 全系列75折起 ／",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/egmanga260723",
-          "is_new": false
-        },
-        {
           "title": "《一百萬次的揮棒》原著彭政閔",
           "subtitle": "7.23-8.22 新書優惠88折",
           "period_text": null,
@@ -763,13 +763,6 @@
           "subtitle": "絕版多年夢幻逸品，終於回歸！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302183",
-          "is_new": false
-        },
-        {
-          "title": "《我真的不想和你待在這裡》",
-          "subtitle": "7.16-8.15 新書上市85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/301535",
           "is_new": false
         },
         {
@@ -828,10 +821,17 @@
           "is_new": false
         },
         {
-          "title": "【先覺出版】全書系，單本85折，至8/31止",
+          "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/qgd1-TyFk8GndAje7SWT2w",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/F-GKNLDPlcSJ8wje7uX2wQ",
+          "is_new": false
+        },
+        {
+          "title": "【天下文化】理解今天，才能預見明天。世界變局展，單本88折，至8/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/oKL_2Q9VZcBKMAje7H3pLQ",
           "is_new": false
         },
         {
@@ -842,59 +842,10 @@
           "is_new": false
         },
         {
-          "title": "【麥田出版】人文社科展，單本85折，至8/29止",
+          "title": "【先覺出版】全書系，單本85折，至8/31止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yN6U9yR4c8NJoQje65ezDA",
-          "is_new": false
-        },
-        {
-          "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/F-GKNLDPlcSJ8wje7uX2wQ",
-          "is_new": false
-        },
-        {
-          "title": "【臺灣商務】解碼歷史書展~穿梭時空的閱讀冒險，單本85折，三本再折$99，至8/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/7_G9umUqrc8bUAje7eny8g",
-          "is_new": false
-        },
-        {
-          "title": "【方舟文化】初級大人必備！精選書展，單本85折，至9/4止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yDN-k3MtjskcLgje7ueaYg",
-          "is_new": false
-        },
-        {
-          "title": "【大雁文化 x 日出出版】陪你找到情緒出口，心理勵志書展，單本85折，至9/10止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/_cEexnleBcMrvwje7ednwA",
-          "is_new": false
-        },
-        {
-          "title": "【天下文化】重新定義你的價值，職場升級展，單本88折，至8/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/79vV5lakdMZTqAje7HynfA",
-          "is_new": false
-        },
-        {
-          "title": "【高寶書版】健康生活書展，單本85折起，至9/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TIpWBkXFDsWoSwje9DOpPQ",
-          "is_new": false
-        },
-        {
-          "title": "【天下生活 x 康健出版】享受自己喜歡的生活，單本85折，三本再折$99，至9/15止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/BRsQxU2bjM1utAje7STBxw",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/qgd1-TyFk8GndAje7SWT2w",
           "is_new": false
         },
         {
@@ -905,10 +856,52 @@
           "is_new": false
         },
         {
-          "title": "【天下文化】理解今天，才能預見明天。世界變局展，單本88折，至8/31止",
+          "title": "【大雁文化 x 日出出版】陪你找到情緒出口，心理勵志書展，單本85折，至9/10止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/oKL_2Q9VZcBKMAje7H3pLQ",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/_cEexnleBcMrvwje7ednwA",
+          "is_new": false
+        },
+        {
+          "title": "【麥田出版】人文社科展，單本85折，至8/29止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yN6U9yR4c8NJoQje65ezDA",
+          "is_new": false
+        },
+        {
+          "title": "【方舟文化】初級大人必備！精選書展，單本85折，至9/4止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yDN-k3MtjskcLgje7ueaYg",
+          "is_new": false
+        },
+        {
+          "title": "【天下生活 x 康健出版】享受自己喜歡的生活，單本85折，三本再折$99，至9/15止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/BRsQxU2bjM1utAje7STBxw",
+          "is_new": false
+        },
+        {
+          "title": "【高寶書版】健康生活書展，單本85折起，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TIpWBkXFDsWoSwje9DOpPQ",
+          "is_new": false
+        },
+        {
+          "title": "【天下文化】重新定義你的價值，職場升級展，單本88折，至8/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/79vV5lakdMZTqAje7HynfA",
+          "is_new": false
+        },
+        {
+          "title": "【臺灣商務】解碼歷史書展~穿梭時空的閱讀冒險，單本85折，三本再折$99，至8/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/7_G9umUqrc8bUAje7eny8g",
           "is_new": false
         }
       ],
