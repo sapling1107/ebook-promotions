@@ -1,11 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-16T00:35+08:00",
+  "updated_at": "2026-08-17T00:36+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -19,11 +18,18 @@
       "error": null,
       "items": [
         {
+          "title": "馬克．吐溫經典名作｜首日套書99元",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-17 ~ 2026-08-17",
+          "url": "https://www.pubu.com.tw/campaign/event/ANDbooks0817",
+          "is_new": true
+        },
+        {
           "title": "「想和你談戀愛」主題展3本79折｜禾馬",
           "subtitle": null,
           "period_text": "有效期限2026-08-16 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/861",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Misa個展-我們的十五年│套書69折起",
@@ -287,7 +293,7 @@
           "subtitle": "滿額輸入優惠碼現折50元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW260816",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "微涼之境｜鬼月書展79折起",
@@ -784,13 +790,6 @@
           "subtitle": "特價最低99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_202608",
-          "is_new": false
-        },
-        {
-          "title": "《溫熱的銀蓮花》系列新書上市",
-          "subtitle": "6.25-8.16 系列單本95折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/mikazuki3_260625",
           "is_new": false
         },
         {
