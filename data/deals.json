@@ -1,10 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-17T00:36+08:00",
+  "updated_at": "2026-08-18T00:38+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu"
+    "Pubu",
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -18,11 +19,18 @@
       "error": null,
       "items": [
         {
-          "title": "馬克．吐溫經典名作｜首日套書99元",
+          "title": "馬克．吐溫經典名作｜套書77折單書85折",
           "subtitle": null,
-          "period_text": "有效期限2026-08-17 ~ 2026-08-17",
+          "period_text": "有效期限2026-08-18 ~ 2026-09-16",
           "url": "https://www.pubu.com.tw/campaign/event/ANDbooks0817",
-          "is_new": true
+          "is_new": false
+        },
+        {
+          "title": "紐約時報21世紀｜驚悚小說｜Top 50",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-17 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/nyttop50thrillers",
+          "is_new": false
         },
         {
           "title": "「想和你談戀愛」主題展3本79折｜禾馬",
@@ -30,6 +38,13 @@
           "period_text": "有效期限2026-08-16 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/861",
           "is_new": false
+        },
+        {
+          "title": "黃易8/31版權到期 套書 75 折 單書 85 折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-15 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/content/685699",
+          "is_new": true
         },
         {
           "title": "Misa個展-我們的十五年│套書69折起",
@@ -127,13 +142,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-08-08 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/content/452762",
-          "is_new": false
-        },
-        {
-          "title": "紐約時報21世紀｜驚悚小說｜Top 50",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-07 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/nyttop50thrillers",
           "is_new": false
         },
         {
@@ -261,13 +269,6 @@
           "period_text": "有效期限2026-08-01 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/sppArtist0801",
           "is_new": false
-        },
-        {
-          "title": "哈利波特全系列｜單書88折、套書82折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-07-31 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/hp-crown-0724",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -289,13 +290,6 @@
       "error": null,
       "items": [
         {
-          "title": "✩ 全館82折、點數15~20倍 ✩",
-          "subtitle": "滿額輸入優惠碼現折50元！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BW260816",
-          "is_new": false
-        },
-        {
           "title": "微涼之境｜鬼月書展79折起",
           "subtitle": "50元優惠券 奇幻基地專屬書架",
           "period_text": null,
@@ -310,11 +304,11 @@
           "is_new": false
         },
         {
-          "title": "《吉伊卡哇》電影特別企劃",
-          "subtitle": "免費領電影書架、原作優惠券",
+          "title": "8.18-9.7 魔幻漂流指南",
+          "subtitle": "魔法、奇幻主題書展79折起",
           "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260720_chiikawamovie_mermaidisland",
-          "is_new": false
+          "url": "https://www.bookwalker.com.tw/event/bwmagic_20260818",
+          "is_new": true
         },
         {
           "title": "8.15-9.15 《我們的十五年》",
@@ -748,27 +742,6 @@
           "subtitle": "單書88折、雙書85折、全套79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/booklife_260718",
-          "is_new": false
-        },
-        {
-          "title": "《重力小丑》新書延伸書展",
-          "subtitle": "7.17-8.17 單書88折、雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/apexpress_260717",
-          "is_new": false
-        },
-        {
-          "title": "《本命偶像圈住我的心！？(全)》",
-          "subtitle": "大學生偶像宅 X 天然美型偶像",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/302151",
-          "is_new": false
-        },
-        {
-          "title": "7.17-8.17《夢幻外傳Ⅰ》新書上市",
-          "subtitle": "絕版多年夢幻逸品，終於回歸！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/302183",
           "is_new": false
         },
         {
