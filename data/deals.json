@@ -1,12 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-19T00:42+08:00",
+  "updated_at": "2026-08-20T00:41+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
-    "BookWalker",
-    "Kobo"
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -20,11 +19,60 @@
       "error": null,
       "items": [
         {
+          "title": "圓滾滾！療癒系迷你插畫手冊｜單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-20 ~ 2026-09-20",
+          "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B4",
+          "is_new": true
+        },
+        {
+          "title": "心理．精神健康主題延伸展｜單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-20 ~ 2026-09-20",
+          "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B2B3",
+          "is_new": true
+        },
+        {
+          "title": "《新富裕階層》延伸書展｜單書85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-20 ~ 2026-09-20",
+          "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B1",
+          "is_new": true
+        },
+        {
+          "title": "初級大人進化中！高級大人養成營單書85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-20 ~ 2026-09-20",
+          "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-A",
+          "is_new": true
+        },
+        {
+          "title": "東販一般書社方展｜套書77折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-20 ~ 2026-09-13",
+          "url": "https://www.pubu.com.tw/campaign/event/tohan0820",
+          "is_new": true
+        },
+        {
+          "title": "鬼月禁忌檔案祭｜角川書展85折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-20 ~ 2026-09-09",
+          "url": "https://www.pubu.com.tw/campaign/event/Kadokawa0820",
+          "is_new": true
+        },
+        {
+          "title": "陳昭淵詩集首次電子書上市｜單本85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-20 ~ 2026-09-20",
+          "url": "https://www.pubu.com.tw/campaign/event/wondapie0820",
+          "is_new": true
+        },
+        {
           "title": "富爸爸新作書展｜創造財富相關系列85折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-19 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/gobooks0819",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "馬克．吐溫經典名作｜套書77折單書85折",
@@ -67,6 +115,20 @@
           "period_text": "有效期限2026-08-14 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/ebook/673474",
           "is_new": false
+        },
+        {
+          "title": "玄幻武俠先河黃易｜版權到期套書75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-14 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0814",
+          "is_new": true
+        },
+        {
+          "title": "《無線人生》改編影集｜原作書展單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-14 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/mirrorfiction0814",
+          "is_new": true
         },
         {
           "title": "從生命的車窗眺望｜星野源散文集82折起",
@@ -200,69 +262,6 @@
           "period_text": "有效期限2026-08-03 ~ 2026-09-03",
           "url": "https://www.pubu.com.tw/campaign/event/psygarden0803",
           "is_new": false
-        },
-        {
-          "title": "如果是戀是愛是溫柔｜一穗ミチ新書展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-03 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/crown0803-A",
-          "is_new": false
-        },
-        {
-          "title": "讓焦慮隨風而去｜枡野俊明禪學單本88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-03 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/crown0803-B",
-          "is_new": false
-        },
-        {
-          "title": "因與聿．案簿錄漫畫｜AKRU×護玄85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-09-01",
-          "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0801",
-          "is_new": false
-        },
-        {
-          "title": "金牌業務商務英語表達",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/bookbuffet/ebook/668170",
-          "is_new": false
-        },
-        {
-          "title": "大腦喜歡你這樣快樂",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/bookbuffet/ebook/668168",
-          "is_new": false
-        },
-        {
-          "title": "早安健康2026.8月號",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/bookbuffet/magazine/683810",
-          "is_new": false
-        },
-        {
-          "title": "202608飽讀新書",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/content/145022",
-          "is_new": false
-        },
-        {
-          "title": "致富心態有聲書上市書展｜新書限時79折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/CWGV0801-B",
-          "is_new": false
-        },
-        {
-          "title": "升級你的護城河｜天下文化暢銷展單本88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/CWGV0801-A",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -278,626 +277,528 @@
       "url": "https://www.bookwalker.com.tw/event",
       "mode": "partial",
       "note": "部分擷取活動卡片；同一 href 合併為同一筆活動",
-      "page_title": "жҺЁи–Ұдё»йЎҢ&жҙ»еӢ• BOOKвҳҶWALKER еҸ°зҒЈжј«и®Җ / йӣ»еӯҗжӣёе№іеҸ°",
+      "page_title": "推薦主題&活動 BOOK☆WALKER 台灣漫讀 / 電子書平台",
       "status": "ok",
       "http_status": 200,
       "error": null,
       "items": [
         {
-          "title": "еҫ®ж¶јд№ӢеўғпҪңй¬јжңҲжӣёеұ•79жҠҳиө·",
-          "subtitle": "50е…ғе„Әжғ еҲё еҘҮе№»еҹәең°е°Ҳеұ¬жӣёжһ¶",
+          "title": "微涼之境｜鬼月書展79折起",
+          "subtitle": "50元優惠券 奇幻基地專屬書架",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260813_summerghost",
           "is_new": false
         },
         {
-          "title": "еҫ®дёҚе№ёйҖҖж•ЈпјҒеҫ®з–јй¬јжңҲз”ҹеӯҳжҢҮеҚ—пјҒ",
-          "subtitle": "е®ҢжҲҗжј«з•«еЎ«з©әйҖҒеҘҪзҰ®пјҒ",
+          "title": "《諾提里森：於黎明之前》復刻企劃",
+          "subtitle": "限定好禮免費領，再抽珍藏版序號！",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2024/20241218_blsunrise/time2_ra.php",
+          "is_new": true
+        },
+        {
+          "title": "8.20-9.20 陳昭淵詩集",
+          "subtitle": "單書85折、雙書82折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/poem260820",
+          "is_new": true
+        },
+        {
+          "title": "微不幸退散！微疼鬼月生存指南！",
+          "subtitle": "完成漫畫填空送好禮！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260801_weitengcollab",
           "is_new": false
         },
         {
-          "title": "8.13-8.31 жӯҰдҝ еӨ§её«й»ғжҳ“дҪңе“Ғеұ•",
-          "subtitle": "е–®жӣё85жҠҳгҖҒдёүжӣё79жҠҳгҖҒеҘ—жӣё75жҠҳ",
+          "title": "8.13-8.31 武俠大師黃易作品展",
+          "subtitle": "單書85折、三書79折、套書75折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260813",
-          "is_new": true
+          "is_new": false
         },
         {
-          "title": "жӮ…ж–ҮзӨҫзІҫйҒёе–®и©ұйҷҗжҷӮе…ҚиІ»пјҒ",
-          "subtitle": "8.19-8.25 жҢҮе®ҡBLдҪңе“Ғ7жҠҳ",
+          "title": "悅文社精選單話限時免費！",
+          "subtitle": "8.19-8.25 指定BL作品7折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260819BL/9349?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
-          "title": "гҖҠд№қе‘Ӯзҡ„з”·еҸӢе°Қе…§иӨІжғ…жңүзҚЁйҚҫпјҒпјҹгҖӢ",
-          "subtitle": "е…§иӨІзҷ–жә«жҹ”дёҠзҸӯж—ҸXеҖ”еј·еӮІе¬ҢеӨ§еӯёз”ҹ",
+          "title": "《九呂的男友對內褲情有獨鍾！？》",
+          "subtitle": "內褲癖溫柔上班族X倔強傲嬌大學生",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305089",
+          "is_new": false
+        },
+        {
+          "title": "Penqoo《Our Promised Day》",
+          "subtitle": "《難掩之癮》性轉番外！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=1053&series_display=1",
           "is_new": true
         },
         {
-          "title": "еҺҹеүөBLгҖҠд»–зңӢеҲ°зҡ„д»–гҖӢ",
-          "subtitle": "MNж–°еҲҠиІ©е”®дёӯпјҒ",
+          "title": "原創BL《他看到的他》",
+          "subtitle": "MN新刊販售中！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=699&series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
-          "title": "8.18-9.7 йӯ”е№»жјӮжөҒжҢҮеҚ—",
-          "subtitle": "йӯ”жі•гҖҒеҘҮе№»дё»йЎҢжӣёеұ•79жҠҳиө·",
+          "title": "8.18-9.7 魔幻漂流指南",
+          "subtitle": "魔法、奇幻主題書展79折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/bwmagic_20260818",
           "is_new": false
         },
         {
-          "title": "8.15-9.15 гҖҠжҲ‘еҖ‘зҡ„еҚҒдә”е№ҙгҖӢ",
-          "subtitle": "е»¶дјёжӣёеұ•е–®жӣё85жҠҳпјҢеҘ—жӣё69жҠҳиө·",
+          "title": "8.15-9.15 《我們的十五年》",
+          "subtitle": "延伸書展單書85折，套書69折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/misa_260815",
           "is_new": false
         },
         {
-          "title": "гҖҠеҲәе®ўж•ҷжўқпјҡзҺӢжңқ еҚ·дёҖ иҠұйғҪеҲәе®ўгҖӢ",
-          "subtitle": "е»¶дјёжӣёеұ•е–®жӣё88жҠҳпјҢйӣҷжӣё8жҠҳ",
+          "title": "《刺客教條：王朝 卷一 花都刺客》",
+          "subtitle": "延伸書展單書88折，雙書8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ffoundation_260815",
           "is_new": false
         },
         {
-          "title": "з¬¬дёғеұҶеә—й•·еүөдҪңзҘӯдәәж°ЈзҘЁйҒёй–Ӣи·‘",
-          "subtitle": "8/15пҪһ9/15 жҠ•зҘЁеҶҚжӢҝйҷҗе®ҡеҘҪзҰ®",
+          "title": "第七屆店長創作祭人氣票選開跑",
+          "subtitle": "8/15～9/15 投票再拿限定好禮",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260620_create/vote_ckj.php",
           "is_new": false
         },
         {
-          "title": "гҖҠBLPTиҖҪзҫҺж—ҘиӘһиҒҪи§Је°Қзӯ–гҖӢ",
-          "subtitle": "з”·еӯҗCPгҒ®30зө„з§ҒеҜҶе°Қи©ұпјҒ",
+          "title": "《BLPT耽美日語聽解對策》",
+          "subtitle": "男子CPの30組私密對話！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/304313",
           "is_new": false
         },
         {
-          "title": "гҖҠеӨ§дәәзі»еҘіеӯҗдёҚеҝ…е®ҢзҫҺгҖӢ",
-          "subtitle": "жүҫеӣһгҖҢеҒҡиҮӘе·ұгҖҚзҡ„еә•ж°Ј",
+          "title": "《大人系女子不必完美》",
+          "subtitle": "找回「做自己」的底氣",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/304309",
           "is_new": false
         },
         {
-          "title": "е°–з«ҜеҮәзүҲ ж„ӣжғ…е°ҸиӘӘеұ•",
-          "subtitle": "8.14-9.6 еҸғеұ•дҪңе“Ғ79жҠҳиө·",
+          "title": "尖端出版 愛情小說展",
+          "subtitle": "8.14-9.6 參展作品79折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/spp20260814/9345?series_display=1",
           "is_new": false
         },
         {
-          "title": "еҸ°зҒЈи§’е·қ8жңҲиј•е°ҸиӘӘдё»жү“жҳҹ",
-          "subtitle": "й ҳеҲё77жҠҳ",
+          "title": "台灣角川8月輕小說主打星",
+          "subtitle": "領券77折",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260815_starqa8j",
           "is_new": false
         },
         {
-          "title": "BвҳҶWз·ҡдёҠеҺҹеүөеҗҢдәәжј«з•«еұ•79жҠҳиө·",
-          "subtitle": "еӨҡжң¬йҰ–иіЈжӣёиІ·еҶҚйҖҒжҙ»еӢ•йҷҗе®ҡиҙҲе“ҒпјҒ",
+          "title": "B☆W線上原創同人漫畫展79折起",
+          "subtitle": "多本首賣書買再送活動限定贈品！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260814_original",
           "is_new": false
         },
         {
-          "title": "8.14-8.27 йӣҶиӢұзӨҫдәәж°ЈеҜ«зңҹеұ•",
-          "subtitle": "еҸғеұ•дҪңе“Ғ7жҠҳвҳӣз«ӢеҚіж”¶и—Ҹ",
+          "title": "8.14-8.27 集英社人氣寫真展",
+          "subtitle": "參展作品7折☛立即收藏",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Shueisha20260814/9342",
           "is_new": false
         },
         {
-          "title": "бғҰ и¬ӣи«ҮзӨҫеӨҸеӯЈеҜ«зңҹеұ• (з¬¬5еҪҲ) бғҰ",
-          "subtitle": "дәәж°ЈеҜ«зңҹдёӢж®ә6жҠҳиө·пјҒ",
+          "title": "ღ 講談社夏季寫真展 (第5彈) ღ",
+          "subtitle": "人氣寫真下殺6折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kodansha20260814/9328",
           "is_new": false
         },
         {
-          "title": "дёҠжө·и§’е·қйқ’зҫҪгҖҠж»ҝеҹҺиЎЈеҶ гҖӢ",
-          "subtitle": "е…Ёж–°BLе»Јж’ӯеҠҮпҪңзҸҫжӯЈзҶұж’ӯдёӯ",
+          "title": "上海角川青羽《滿城衣冠》",
+          "subtitle": "全新BL廣播劇｜現正熱播中",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=42573",
           "is_new": false
         },
         {
-          "title": "е°–з«ҜеҮәзүҲгҖҠз„Ўжі•д»ҘдҪ зҡ„иҮүе“ӯжіЈгҖӢ",
-          "subtitle": "8.13-8.19 йҷҗжҷӮ99е…ғпјҒ",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/263539",
-          "is_new": false
-        },
-        {
-          "title": "гҖҠеӨўе№»еӨ–еӮіпјҲ2пјүгҖӢж–°жӣёдёҠеёӮ",
-          "subtitle": "8.13-9.12 е–®жӣё88жҠҳпјҢеҘ—жӣё85жҠҳ",
+          "title": "《夢幻外傳（2）》新書上市",
+          "subtitle": "8.13-9.12 單書88折，套書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/apexpress_260813",
           "is_new": false
         },
         {
-          "title": "8.12-8.31 гҖҠRe:ZeroгҖӢзү№еұ•",
-          "subtitle": "еҸғеұ•дҪңе“Ғ73жҠҳиө·пјҒ",
+          "title": "8.12-8.31 《Re:Zero》特展",
+          "subtitle": "參展作品73折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260812re0",
           "is_new": false
         },
         {
-          "title": "8.12-8.31 е°–з«ҜеҮәзүҲж•ёдҪҚеҜ«зңҹеұ•",
-          "subtitle": "йҷҗжҷӮе„Әжғ 79жҠҳиө·пјҒ",
+          "title": "8.12-8.31 尖端出版數位寫真展",
+          "subtitle": "限時優惠79折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260812_spp/9325?series_display=1",
           "is_new": false
         },
         {
-          "title": "8.8-9.7гҖҠзғҲж„ӣе°ҚжұәгҖӢж–°жӣёдёҠеёӮ",
-          "subtitle": "е»¶дјёжӣёеұ•е–®жӣё88жҠҳпјҢйӣҷжӣё85жҠҳ",
+          "title": "8.8-9.7《烈愛對決》新書上市",
+          "subtitle": "延伸書展單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ryefield_260808",
           "is_new": false
         },
         {
-          "title": "8.10 еҜ¶з“¶гҖҠиӘ°дҫҶжҺҘдҪҸиҖҒеё«пјҹгҖӢ",
-          "subtitle": "\\ дёҠеёӮйҰ–жңҲйӣҷжӣё85жҠҳ /",
+          "title": "8.10 寶瓶《誰來接住老師？》",
+          "subtitle": "\\ 上市首月雙書85折 /",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/aquarius260810/9323?detail=1",
           "is_new": false
         },
         {
-          "title": "гҖҠBLUE LOCK и—ҚиүІзӣЈзҚ„гҖӢеҘ—жӣё8жҠҳ",
-          "subtitle": "8/7-8/20 жҗ¶е…ҲзңҹдәәзүҲйӣ»еҪұй–Ӣиёў",
+          "title": "《BLUE LOCK 藍色監獄》套書8折",
+          "subtitle": "8/7-8/20 搶先真人版電影開踢",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303680",
           "is_new": false
         },
         {
-          "title": "8.6-9.5гҖҠеЈһзҝ’ж…ЈгҖӢж–°жӣёдёҠеёӮ85жҠҳ",
-          "subtitle": "иҘҝзҸӯзүҷи·ЁжҖ§еҲҘдҪңе®¶пјҢеҚҠиҮӘеӮіи©ұйЎҢдҪң",
+          "title": "8.6-9.5《壞習慣》新書上市85折",
+          "subtitle": "西班牙跨性別作家，半自傳話題作",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303686",
           "is_new": false
         },
         {
-          "title": "гҖҠеҢ—жӯҗејҸзҡ„иҮӘз”ұз”ҹжҙ»жҸҗжЎҲгҖӢ",
-          "subtitle": "е·ҘдҪңеңЁйғҪеёӮпјҢз”ҹжҙ»еңЁй„үй–“",
+          "title": "《北歐式的自由生活提案》",
+          "subtitle": "工作在都市，生活在鄉間",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303685",
           "is_new": false
         },
         {
-          "title": "Zanlaйҷҗе®ҡиіҖең– ibonеҲ—еҚ°",
-          "subtitle": "20й»һз«ӢеҚіе…ҢжҸӣпјҒйҷҗйҮҸ500зө„",
+          "title": "Zanla限定賀圖 ibon列印",
+          "subtitle": "20點立即兌換！限量500組",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/gift/3753",
           "is_new": false
         },
         {
-          "title": "Zanlaз№ӘиЈҪ11йҖұе№ҙиіҖең–",
-          "subtitle": "жӣёжһ¶&жӣёеҚЎе…ҚиІ»й ҳгҖҒйҷҗжҷӮж”¶и—ҸпјҒ",
+          "title": "Zanla繪製11週年賀圖",
+          "subtitle": "書架&書卡免費領、限時收藏！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW11Zanla_20260810",
           "is_new": false
         },
         {
-          "title": "дёҠжө·и§’е·қйқ’зҫҪгҖҠйҮҚз”ҹд№ӢжҺғеў“гҖӢ",
-          "subtitle": "е…Ёж–°BLе»Јж’ӯеҠҮпҪңзҸҫжӯЈзҶұж’ӯдёӯ",
+          "title": "上海角川青羽《重生之掃墓》",
+          "subtitle": "全新BL廣播劇｜現正熱播中",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=42515",
           "is_new": false
         },
         {
-          "title": "гҖҠзјәеёӯзҡ„зҲ¶ж„ӣпјҢиҝ·еӨұзҡ„е…’еӯҗгҖӢ",
-          "subtitle": "ж–°жӣёйҰ–жңҲпјҢе–®жӣё85жҠҳпјҒ",
+          "title": "《缺席的父愛，迷失的兒子》",
+          "subtitle": "新書首月，單書85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303709",
           "is_new": false
         },
         {
-          "title": "е°–з«ҜжҜҸжңҲзІҫйҒёжҺЁи–ҰпјҒ",
-          "subtitle": "гҖҠйіҙйіҘдёҚйЈӣгҖӢзі»еҲ—дҪңе“Ғ75жҠҳиө·",
+          "title": "尖端每月精選推薦！",
+          "subtitle": "《鳴鳥不飛》系列作品75折起",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260805_spp_birds",
           "is_new": false
         },
         {
-          "title": "з”·иүІз ”з©¶жүҖ еӨҸеӯЈе„Әжғ ~",
-          "subtitle": "жңҖдҪҺ45жҠҳиө·пјҒиІ·еҶҚйҖҒжӣёжһ¶",
+          "title": "男色研究所 夏季優惠~",
+          "subtitle": "最低45折起！買再送書架",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/946_20260805",
           "is_new": false
         },
         {
-          "title": "DLsiteзү№еҲҘеҗҲдҪң е…ҢжҸӣи¶…еҖјжҠҳеғ№еҲёпјҒ",
-          "subtitle": "8/5-9/3 жңҖй«ҳдёҖеҚғе„Әжғ пјҒ",
+          "title": "DLsite特別合作 兌換超值折價券！",
+          "subtitle": "8/5-9/3 最高一千優惠！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2023/20230110_dlsiteasmr",
           "is_new": false
         },
         {
-          "title": "гҖҠиҢ¶йӨЁиЈЎзҡ„еҗҚеҒөжҺўгҖӢйҰ–жңҲ88жҠҳ",
-          "subtitle": "жӯҗжҷ®жӢүд№ҹж„ӣи§Ји¬Һж–ҮеӯёзәҢдҪң",
+          "title": "《茶館裡的名偵探》首月88折",
+          "subtitle": "歐普拉也愛解謎文學續作",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303603",
           "is_new": false
         },
         {
-          "title": "8.4гҖҠзү№ж®Ҡе…’зҡ„иҰӘеё«жәқйҖҡгҖӢ",
-          "subtitle": "дёҠеёӮйҰ–жңҲпјҢжҺЁи–ҰйӣҷжӣёеҗҲиіј85жҠҳпјҒ",
+          "title": "8.4《特殊兒的親師溝通》",
+          "subtitle": "上市首月，推薦雙書合購85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/aquarius20260804/9304",
           "is_new": false
         },
         {
-          "title": "гҖҠжҲ‘з«Ӣж–ји®ҖиҖ…д№ӢдёҠ vol.2гҖӢ",
-          "subtitle": "й—ңж–је‘ҪйҒӢгҖҒиҝ·еӨұиҲҮиҮӘжҲ‘жҺўзҙўзҡ„еҶ’йҡӘ",
+          "title": "《我立於讀者之上 vol.2》",
+          "subtitle": "關於命運、迷失與自我探索的冒險",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=34707",
           "is_new": false
         },
         {
-          "title": "е°–з«Ҝ45йҖұе№ҙзү№еҲҘжҲ‘жҺЁпјҡй«ҳж©Ӣз•ҷзҫҺеӯҗ",
-          "subtitle": "йҷҗжҷӮ75жҠҳиө·пјҢиІ·еҘ—жӣёеҶҚйҖҒзІҫзҫҺиҙҲе“Ғ",
+          "title": "尖端45週年特別我推：高橋留美子",
+          "subtitle": "限時75折起，買套書再送精美贈品",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260801_spp_takahashi",
           "is_new": false
         },
         {
-          "title": "8.1-9.1 amiдәһжө·е…Ёжӣёзі»еұ•2жң¬75жҠҳ",
-          "subtitle": "ж–°еҲҠ8жҠҳгҖҒиІ·ж–°еҲҠеҶҚйҖҒжӣёжһ¶пјҒ",
+          "title": "8.1-9.1 ami亞海全書系展2本75折",
+          "subtitle": "新刊8折、買新刊再送書架！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ami260801",
           "is_new": false
         },
         {
-          "title": "BOOKжҖқиӯ°дәӢд»¶з°ҝпјҡи“Ӣдәһе…Ёжӣёзі»",
-          "subtitle": "8.1-8.31 е–®жң¬85жҠҳгҖҒдёүжң¬79жҠҳ",
+          "title": "BOOK思議事件簿：蓋亞全書系",
+          "subtitle": "8.1-8.31 單本85折、三本79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260801",
           "is_new": false
         },
         {
-          "title": "еҘҮе№»еҹәең° x жҳҘе…үе…Ёжӣёзі»еұ•",
-          "subtitle": "8.1-9.15 е–®жң¬88жҠҳпјҢе…©жң¬8жҠҳ",
+          "title": "奇幻基地 x 春光全書系展",
+          "subtitle": "8.1-9.15 單本88折，兩本8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_260801",
           "is_new": false
         },
         {
-          "title": "Hibiki-йҹҝгҖҠзӢ—д»”е’ҢеҪұеёқзҡ„йӮЈдәӣдәӢгҖӢ",
-          "subtitle": "иӢҰжғ…зӢ—д»”ж”»XжӮ¶йЁ·еҪұеёқеҸ—",
+          "title": "Hibiki-響《狗仔和影帝的那些事》",
+          "subtitle": "苦情狗仔攻X悶騷影帝受",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=887&series_display=1",
           "is_new": false
         },
         {
-          "title": "еҚғзҰ§дёүйғЁжӣІеҘ—жӣёз¶“е…ёдёҠеёӮ",
-          "subtitle": "8.1-8.31 е–®жӣё85жҠҳпјҢеҘ—жӣё77жҠҳ",
+          "title": "千禧三部曲套書經典上市",
+          "subtitle": "8.1-8.31 單書85折，套書77折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Millennium",
           "is_new": false
         },
         {
-          "title": "8/31еүҚгҖҠйқ’з“·гҖӢж–°жӣёдёҠеёӮ85жҠҳ",
-          "subtitle": "жүҚеҘізҘһдҪңпјҒз©әйҷҚж—Ҙжң¬жӣёеә—дёғеҶ зҺӢ",
+          "title": "8/31前《青瓷》新書上市85折",
+          "subtitle": "才女神作！空降日本書店七冠王",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303230",
           "is_new": false
         },
         {
-          "title": "гҖҠжҙӢи”ҘзӮ’иӣӢеҲ°е°ҸиӢұдҫҝз•¶гҖӢ",
-          "subtitle": "8/31еүҚж–°жӣёдёҠеёӮ85жҠҳ",
+          "title": "《洋蔥炒蛋到小英便當》",
+          "subtitle": "8/31前新書上市85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303228",
           "is_new": false
         },
         {
-          "title": "гҖҠиө°еҮәйҮ‘йҢўз„Ұж…®гҖӢж–°жӣёдёҠеёӮ9жҠҳ",
-          "subtitle": "зҗҶи§ЈзҸҫеҜҰзңҹзӣёпјҢзңҹжӯЈж¶ҲйҷӨдёҚе®ү",
+          "title": "《走出金錢焦慮》新書上市9折",
+          "subtitle": "理解現實真相，真正消除不安",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303235",
           "is_new": false
         },
         {
-          "title": "гҖҠдёҚеҸҚжҮүзҡ„з·ҙзҝ’гҖӢж–°жӣёдёҠеёӮ9жҠҳ",
-          "subtitle": "и®“з…©жғұйғҪж¶ҲеӨұпјҢеҝғзҗҶиЁ“з·ҙе…Ҙй–Җ",
+          "title": "《不反應的練習》新書上市9折",
+          "subtitle": "讓煩惱都消失，心理訓練入門",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303236",
           "is_new": false
         },
         {
-          "title": "7.31гҖҠ47еҖӢжөҒжөӘжјўзЁ®гҖӢж–°жӣёдёҠеёӮ",
-          "subtitle": "йӣ»еӯҗжӣёе„Әжғ еғ№250е…ғ",
+          "title": "7.31《47個流浪漢種》新書上市",
+          "subtitle": "電子書優惠價250元",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302881",
           "is_new": false
         },
         {
-          "title": "зҘһдҪҝеҠҮе ҙеҚҒе‘Ёе№ҙеұ•пјҢиіјжӣёеҶҚйҖҒжӣёжһ¶",
-          "subtitle": "е–®жң¬85жҠҳгҖҒдёүжң¬79жҠҳгҖҒеҘ—жӣё77жҠҳ",
+          "title": "神使劇場十周年展，購書再送書架",
+          "subtitle": "單本85折、三本79折、套書77折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260729",
           "is_new": false
         },
         {
-          "title": "гҖҠзұӨзҡ„жң—иӘҰиҖ… дёӢгҖӢзі»еҲ—е®Ңзөҗ",
-          "subtitle": "7.29-8.29 е–®жӣё85жҠҳгҖҒеҘ—жӣё82жҠҳ",
+          "title": "《籤的朗誦者 下》系列完結",
+          "subtitle": "7.29-8.29 單書85折、套書82折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_260729",
           "is_new": false
         },
         {
-          "title": "зҫ…жӣјеҸІеҗҚе®¶е…ёеҝғеүөдҪң30е‘Ёе№ҙжӣёеұ•",
-          "subtitle": "8/31еүҚе–®жӣё85жҠҳпјҢйӣҷжӣё8жҠҳ",
+          "title": "羅曼史名家典心創作30周年書展",
+          "subtitle": "8/31前單書85折，雙書8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/heartnovel",
           "is_new": false
         },
         {
-          "title": "7.29 еӨңйҖҸзҙ«гҖҠе№Җз ҙгҖӢзәҢйӣҶдёҠеёӮпјҒ",
-          "subtitle": "ж–°жӣё85жҠҳгҖҒзі»еҲ—йӣҷжӣё8жҠҳ",
+          "title": "7.29 夜透紫《幀破》續集上市！",
+          "subtitle": "新書85折、系列雙書8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Links260729/9249?detail=1",
           "is_new": false
         },
         {
-          "title": "7.29гҖҠзӘҒз„¶д№Ӣй–“гҖӢйҰ–жңҲе–®жӣё88жҠҳ",
-          "subtitle": "еқҺеҹҺеҪұеұ•з«¶иіҪзүҮгҖҠдёҖзһ¬й–“гҖӢеҺҹи‘—",
+          "title": "7.29《突然之間》首月單書88折",
+          "subtitle": "坎城影展競賽片《一瞬間》原著",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/303041",
           "is_new": false
         },
         {
-          "title": "й–ұи®ҖжқұйҮҺеңӯеҗҫ",
-          "subtitle": "8/28еүҚе–®жӣё88жҠҳпјҢйӣҷжӣё85жҠҳ",
+          "title": "閱讀東野圭吾",
+          "subtitle": "8/28前單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Higashino_Keigo/9271",
           "is_new": false
         },
         {
-          "title": "гҖҠжқұе‘ЁиӢұйӣ„вҖ•йқҲйӯӮеә•зЁҝгҖӢж–°жӣёдёҠеёӮ",
-          "subtitle": "й„ӯе•ҸзӯҶдёӢзҡ„еҸҰдёҖеҖӢдё–з•Ң",
+          "title": "《東周英雄―靈魂底稿》新書上市",
+          "subtitle": "鄭問筆下的另一個世界",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302680",
           "is_new": false
         },
         {
-          "title": "7.28гҖҠе…©еҖӢдәәжӣҙеӯӨе–®гҖӢдёҠеёӮ",
-          "subtitle": "йҰ–жңҲжҺЁи–ҰйӣҷжӣёеҗҲиіј85жҠҳпјҒ",
+          "title": "7.28《兩個人更孤單》上市",
+          "subtitle": "首月推薦雙書合購85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/aquarius260728/9248?detail=1",
           "is_new": false
         },
         {
-          "title": "иҸҜжҳҹеЁӣжЁӮ жҡ‘еҒҮеҘҮе№»жӣёеұ•",
-          "subtitle": "е–®жң¬88жҠҳгҖҒдёүжң¬79жҠҳпјҒ",
+          "title": "華星娛樂 暑假奇幻書展",
+          "subtitle": "單本88折、三本79折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/star260727",
           "is_new": false
         },
         {
-          "title": "BLе»Јж’ӯеҠҮгҖҠзҷҪеёҪй§ӯе®ўзҡ„жәәж„ӣзӣЈзҰҒгҖӢ",
-          "subtitle": "и…№й»‘зҷҪеёҪй§ӯе®ўxеҖ’жҘЈзҡ„йӮҠз·ЈеҲ‘иӯҰ",
+          "title": "BL廣播劇《白帽駭客的溺愛監禁》",
+          "subtitle": "腹黑白帽駭客x倒楣的邊緣刑警",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302330",
           "is_new": false
         },
         {
-          "title": "дё–з•ҢеҫҲеӨ§пјҢе…¶еҜҰдҪ йӮ„жІ’зңӢе®ҢпјҒ",
-          "subtitle": "ж—…иЎҢиҲҮеӢөеҝ—дё»йЎҢжӣёеұ•85жҠҳ",
+          "title": "世界很大，其實你還沒看完！",
+          "subtitle": "旅行與勵志主題書展85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/marcopolo_260725",
           "is_new": false
         },
         {
-          "title": "гҖҠVTuberеӯёгҖӢж–°жӣёдёҠеёӮ88жҠҳ",
-          "subtitle": "е…Ёйқўи§ЈжһҗеёӯжҚІз¶Іи·Ҝдё–д»Јзҡ„ж–ҮеҢ–зҸҫиұЎ",
+          "title": "《VTuber學》新書上市88折",
+          "subtitle": "全面解析席捲網路世代的文化現象",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302916",
           "is_new": false
         },
         {
-          "title": "еҹҺйӮҰ9жңҲзүҲж¬ҠеҲ°жңҹжӣёеұ•",
-          "subtitle": "зү№еғ№жңҖдҪҺ99е…ғпјҒ",
+          "title": "城邦9月版權到期書展",
+          "subtitle": "特價最低99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_202609",
           "is_new": false
         },
         {
-          "title": "гҖҠеӨңе·ЎиІ“9+10гҖӢж–°жӣёдёҠеёӮ",
-          "subtitle": "8.31еүҚж–°жӣёе„Әжғ 86жҠҳ",
+          "title": "《夜巡貓9+10》新書上市",
+          "subtitle": "8.31前新書優惠86折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/locus_260725",
           "is_new": false
         },
         {
-          "title": "е“ҲеҲ©жіўзү№е…Ёзі»еҲ—жӣёеұ•",
-          "subtitle": "е–®жӣё88жҠҳгҖҒеҘ—жӣё82жҠҳиө·",
+          "title": "哈利波特全系列書展",
+          "subtitle": "單書88折、套書82折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/crown20260724",
           "is_new": false
         },
         {
-          "title": "гҖҠиӘІйҮ‘жҙҫжҲҖж„ӣгҖӢ8/9еүҚзҚЁе®¶85жҠҳ",
-          "subtitle": "иіјиІ·еҘ—жӣёйҖҒж•ёдҪҚжӣёеҚЎеҸҠжӣёжһ¶",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/peenky456",
-          "is_new": true
-        },
-        {
-          "title": "гҖҠдёҖзҷҫиҗ¬ж¬Ўзҡ„жҸ®жЈ’гҖӢеҺҹи‘—еҪӯж”ҝй–”",
-          "subtitle": "7.23-8.22 ж–°жӣёе„Әжғ 88жҠҳ",
+          "title": "《一百萬次的揮棒》原著彭政閔",
+          "subtitle": "7.23-8.22 新書優惠88折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302510",
           "is_new": false
         },
         {
-          "title": "дёҠжө·и§’е·қйқ’зҫҪгҖҠи—Ҹйқ’гҖӢ",
-          "subtitle": "е…Ёж–°BLе»Јж’ӯеҠҮпҪңзҸҫжӯЈзҶұж’ӯдёӯ",
+          "title": "上海角川青羽《藏青》",
+          "subtitle": "全新BL廣播劇｜現正熱播中",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=42403",
           "is_new": false
         },
         {
-          "title": "гҖҠеҸ°зҒЈзҡ„жқҺзҷ»ијқжҷӮд»ЈгҖӢ",
-          "subtitle": "7.22-8.31 ж–°жӣёдёҠеёӮ85жҠҳ",
+          "title": "《台灣的李登輝時代》",
+          "subtitle": "7.22-8.31 新書上市85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302420",
           "is_new": false
         },
         {
-          "title": "еёҢе°ҸжғҹгҖҠеҫһзқЎиҰәй–Ӣе§Ӣзҡ„й—ңдҝӮгҖӢ",
-          "subtitle": "зү№еҲҘж”¶йҢ„е…Ёж–°з•ӘеӨ–пјҒ",
+          "title": "希小惟《從睡覺開始的關係》",
+          "subtitle": "特別收錄全新番外！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302334",
           "is_new": false
         },
         {
-          "title": "гҖҢйҒәеҝҳжӣёд№Ӣеў“гҖҚеӣӣйғЁжӣІйҮҚж–°дёҠеёӮ",
-          "subtitle": "е–®жӣё88жҠҳгҖҒйӣҷжӣё85жҠҳгҖҒе…ЁеҘ—79жҠҳ",
+          "title": "「遺忘書之墓」四部曲重新上市",
+          "subtitle": "單書88折、雙書85折、全套79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/booklife_260718",
           "is_new": false
         },
         {
-          "title": "е®Ҳиӯ·з”ңеҝғж„ӣи—ҸзүҲ вҷҘ Unlock",
-          "subtitle": "зҚЁе®¶жүӢж©ҹжЎҢеёғзӯүдҪ дҫҶи’җи—ҸпјҒ",
+          "title": "守護甜心愛藏版 ♥ Unlock",
+          "subtitle": "獨家手機桌布等你來蒐藏！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ShugoChara260715",
           "is_new": false
         },
         {
-          "title": "гҖҠжЎғиҠұжәҗжІ’дәӢе…’гҖӢйҰ¬дјҜеәёиҰӢеҫ®зі»еҲ—",
-          "subtitle": "7.1-8.25 е–®жң¬88жҠҳпјҢдәҢжң¬85жҠҳ",
+          "title": "《桃花源沒事兒》馬伯庸見微系列",
+          "subtitle": "7.1-8.25 單本88折，二本85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gobooks_20260701",
           "is_new": false
         },
         {
-          "title": "еҹҺйӮҰ8жңҲзүҲж¬ҠеҲ°жңҹжӣёеұ•",
-          "subtitle": "зү№еғ№жңҖдҪҺ99е…ғпјҒ",
+          "title": "城邦8月版權到期書展",
+          "subtitle": "特價最低99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_202608",
           "is_new": false
         },
         {
-          "title": "2025е№ҙеәҰй–ұи®Җе ұе‘Ҡ",
-          "subtitle": "еҸғеҠ жҙ»еӢ•зҚІеҫ—е„Әжғ еҲёиҲҮй»һж•ё",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2025/20251224_report",
-          "is_new": true
-        },
-        {
-          "title": "еёғе…Ӣе…Ёжӣёзі»66жҠҳ",
-          "subtitle": "1/1иҮі12/31",
+          "title": "布克全書系66折",
+          "subtitle": "1/1至12/31",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=37&series_display=1&order=sell_desc",
           "is_new": false
-        },
-        {
-          "title": "й»һж•ёе•Ҷеә—дёҠз·ҡеӣүпјҒ",
-          "subtitle": "жҠҠеә—ж•ёжҸӣжҲҗй…·жқұжқұ",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/pointshop/help",
-          "is_new": true
-        },
-        {
-          "title": "LineеҘҪеҸӢйҷҗе®ҡ9жҠҳе„Әжғ еҲё",
-          "subtitle": "еҠ е…ҘLineеҘҪеҸӢпјҢ9жҠҳе„Әжғ еҲёйҰ¬дёҠй ҳеҸ–",
-          "period_text": null,
-          "url": "https://lin.ee/d1AeK3h",
-          "is_new": true
-        },
-        {
-          "title": "еҝ«дҫҶиҝҪи№ӨйҖҷдәӣзӨҫзҫӨ",
-          "subtitle": "жҙ»еӢ•е„Әжғ гҖҒж–°жӣёиЁҠжҒҜдёҚжјҸжҺҘпјҒ",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2023/20230407",
-          "is_new": true
-        },
-        {
-          "title": "е…ҚиІ»дёҠжһ¶пјҒжөҒзЁӢдҫҝеҲ©пјҒ",
-          "subtitle": "еҖӢдәәдҪңиҖ…иҮӘеҠ©жңҚеӢҷдёҠз·ҡпјҒ",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/selfapply",
-          "is_new": true
-        },
-        {
-          "title": "2024е№ҙеәҰй–ұи®Җе ұе‘Ҡ",
-          "subtitle": "2025/1/26еүҚ еҸғеҠ жҙ»еӢ•жҠҪй»һж•ё",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2024/20241227_report",
-          "is_new": true
-        },
-        {
-          "title": "2023 BвҳҶW и§ҖеҜҹе ұе‘Ҡ",
-          "subtitle": "еҲҶдә«йҖҒ50е…ғеҲёеҶҚжҠҪ100й»һ",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2023/20231226_report",
-          "is_new": true
-        },
-        {
-          "title": "2022е№ҙеәҰй–ұи®Җе ұе‘Ҡ",
-          "subtitle": "еҝ«дҫҶзңӢзңӢиҮӘе·ұжҳҜд»Җйәјзӯүзҙҡ",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2022/20221230_report",
-          "is_new": true
-        },
-        {
-          "title": "2021е№ҙеәҰй–ұи®Җе ұе‘ҠдҫҶе•ҰпјҒ",
-          "subtitle": "е…§жңүйҡұи—ҸеҘҪзҰ®",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2021/20211223",
-          "is_new": true
-        },
-        {
-          "title": "2020е№ҙеәҰй–ұи®Җе ұе‘Ҡ",
-          "subtitle": "и®ҖиҖ…й–ұи®ҖиҲҮж¶ҲиІ»зҝ’ж…ЈйҰ–еәҰеӨ§жҸӯеҜҶ",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2020/20201203_c",
-          "is_new": true
-        },
-        {
-          "title": "жңҹй–“йҷҗе®ҡе…ҚиІ»жӣёзұҚ",
-          "subtitle": "дёҚе®ҡжңҹжӣҙжҸӣпјҢеҝ«дҫҶж’ҝеҘҪеә·пјҒ",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/block/14",
-          "is_new": true
-        },
-        {
-          "title": "йҷ„йӣ»еӯҗжӣёзҚЁе®¶зү№еҲҘе…§е®№жҲ–иҙҲе“Ғ",
-          "subtitle": "иІ·жӣёеҚіеҸҜзҚІеҫ—зҚЁе®¶иҙҲе“ҒжҲ–зү№еҲҘе…§е®№",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/block/13",
-          "is_new": true
-        },
-        {
-          "title": "еӢ•з•«еҢ–жӣёзұҚдёҖиҰҪ",
-          "subtitle": "жғіжүҫеӢ•з•«еҢ–жӣёзұҚдҫҶйҖҷе°ұе°ҚдәҶпјҒ",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?w=%E5%8B%95%E7%95%AB%E5%8C%96&series_display=1",
-          "is_new": true
-        },
-        {
-          "title": "йҰ–ж¬Ўж¶ҲиІ»дә«зөҗеёійҮ‘йЎҚ79жҠҳ",
-          "subtitle": "еҸҜиҲҮе…¶д»–е„Әжғ дёҖиө·дҪҝз”Ё",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/user/register",
-          "is_new": true
-        },
-        {
-          "title": "й җиіје„Әжғ жҙ»еӢ•",
-          "subtitle": "й»һж•ё10еҖҚ",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/block/47",
-          "is_new": true
         }
       ],
       "extra_links": []
@@ -912,13 +813,6 @@
       "http_status": 200,
       "error": null,
       "items": [
-        {
-          "title": "【三采文化】夏日文學季，單本85折，至8/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ggj6x6KUx8_xtwje93_xKw",
-          "is_new": false
-        },
         {
           "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
           "subtitle": null,
@@ -987,7 +881,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【天下文化】重新定義你的價值，職場升級展，單本88折，至8/31止",
@@ -1001,6 +895,13 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/7_G9umUqrc8bUAje7eny8g",
+          "is_new": false
+        },
+        {
+          "title": "【三采文化】夏日文學季，單本85折，至8/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ggj6x6KUx8_xtwje93_xKw",
           "is_new": false
         }
       ],
