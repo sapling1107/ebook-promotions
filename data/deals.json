@@ -1,11 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-20T00:41+08:00",
+  "updated_at": "2026-08-21T00:46+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
-    "BookWalker"
+    "BookWalker",
+    "Kobo"
   ],
   "platforms": [
     {
@@ -19,53 +20,60 @@
       "error": null,
       "items": [
         {
+          "title": "語意錯誤5新書上市｜延伸書展88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-21 ~ 2026-09-10",
+          "url": "https://www.pubu.com.tw/campaign/event/Kadokawa0821",
+          "is_new": true
+        },
+        {
           "title": "圓滾滾！療癒系迷你插畫手冊｜單書88折",
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B4",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "心理．精神健康主題延伸展｜單書88折",
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B2B3",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《新富裕階層》延伸書展｜單書85折",
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "初級大人進化中！高級大人養成營單書85折",
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-A",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "東販一般書社方展｜套書77折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-13",
           "url": "https://www.pubu.com.tw/campaign/event/tohan0820",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "鬼月禁忌檔案祭｜角川書展85折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-09",
           "url": "https://www.pubu.com.tw/campaign/event/Kadokawa0820",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "陳昭淵詩集首次電子書上市｜單本85折",
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/wondapie0820",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "富爸爸新作書展｜創造財富相關系列85折起",
@@ -121,14 +129,14 @@
           "subtitle": null,
           "period_text": "有效期限2026-08-14 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0814",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《無線人生》改編影集｜原作書展單書88折",
           "subtitle": null,
           "period_text": "有效期限2026-08-14 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/mirrorfiction0814",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "從生命的車窗眺望｜星野源散文集82折起",
@@ -255,13 +263,6 @@
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_mobile.html",
           "is_new": false
-        },
-        {
-          "title": "父職關係主題書展｜心靈工坊新書85折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-03 ~ 2026-09-03",
-          "url": "https://www.pubu.com.tw/campaign/event/psygarden0803",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -290,18 +291,32 @@
           "is_new": false
         },
         {
+          "title": "《富爸爸的金錢啟蒙課》新書上市",
+          "subtitle": "單本88折，二本85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gobooks_260819",
+          "is_new": true
+        },
+        {
+          "title": "ღ 講談社夏季寫真展 (第6彈) ღ",
+          "subtitle": "人氣寫真下殺6折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kodansha20260821/9329",
+          "is_new": true
+        },
+        {
           "title": "《諾提里森：於黎明之前》復刻企劃",
           "subtitle": "限定好禮免費領，再抽珍藏版序號！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2024/20241218_blsunrise/time2_ra.php",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.20-9.20 陳昭淵詩集",
           "subtitle": "單書85折、雙書82折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/poem260820",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "微不幸退散！微疼鬼月生存指南！",
@@ -336,7 +351,7 @@
           "subtitle": "《難掩之癮》性轉番外！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=1053&series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "原創BL《他看到的他》",
@@ -416,13 +431,6 @@
           "is_new": false
         },
         {
-          "title": "ღ 講談社夏季寫真展 (第5彈) ღ",
-          "subtitle": "人氣寫真下殺6折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kodansha20260814/9328",
-          "is_new": false
-        },
-        {
           "title": "上海角川青羽《滿城衣冠》",
           "subtitle": "全新BL廣播劇｜現正熱播中",
           "period_text": null,
@@ -462,13 +470,6 @@
           "subtitle": "\\ 上市首月雙書85折 /",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/aquarius260810/9323?detail=1",
-          "is_new": false
-        },
-        {
-          "title": "《BLUE LOCK 藍色監獄》套書8折",
-          "subtitle": "8/7-8/20 搶先真人版電影開踢",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/303680",
           "is_new": false
         },
         {
@@ -813,6 +814,13 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "【商業周刊】設計你的富足人生，自我升級主題書展，單本85折，至9/19止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ny8qAfjVvsXQkwje_aWaRA",
+          "is_new": true
+        },
         {
           "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
           "subtitle": null,
