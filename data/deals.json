@@ -1,12 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-21T00:46+08:00",
+  "updated_at": "2026-08-22T00:46+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
-    "BookWalker",
-    "Kobo"
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -20,11 +19,18 @@
       "error": null,
       "items": [
         {
+          "title": "限時優惠 儲值金加碼送",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-21 ~ 2026-08-23",
+          "url": "https://www.pubu.com.tw/storedValue/checkout",
+          "is_new": true
+        },
+        {
           "title": "語意錯誤5新書上市｜延伸書展88折",
           "subtitle": null,
           "period_text": "有效期限2026-08-21 ~ 2026-09-10",
           "url": "https://www.pubu.com.tw/campaign/event/Kadokawa0821",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "圓滾滾！療癒系迷你插畫手冊｜單書88折",
@@ -256,13 +262,6 @@
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_2_pro.html",
           "is_new": false
-        },
-        {
-          "title": "Pubook Mobile x 飽讀Lifetime",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-12-31",
-          "url": "https://www.pubu.com.tw/campaign/ebook/pubook_mobile.html",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -284,6 +283,20 @@
       "error": null,
       "items": [
         {
+          "title": "8.22-8.24最低65折！",
+          "subtitle": "消費滿700元再打9折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/leaderboard",
+          "is_new": true
+        },
+        {
+          "title": "8.19 《是為自己》",
+          "subtitle": "上市首月，單本79折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/304972",
+          "is_new": true
+        },
+        {
           "title": "微涼之境｜鬼月書展79折起",
           "subtitle": "50元優惠券 奇幻基地專屬書架",
           "period_text": null,
@@ -291,24 +304,24 @@
           "is_new": false
         },
         {
+          "title": "《諾提里森：於黎明之前》復刻企劃",
+          "subtitle": "限定好禮免費領，再抽珍藏版序號！",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2024/20241218_blsunrise/time2_ra.php",
+          "is_new": false
+        },
+        {
           "title": "《富爸爸的金錢啟蒙課》新書上市",
           "subtitle": "單本88折，二本85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gobooks_260819",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "ღ 講談社夏季寫真展 (第6彈) ღ",
           "subtitle": "人氣寫真下殺6折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kodansha20260821/9329",
-          "is_new": true
-        },
-        {
-          "title": "《諾提里森：於黎明之前》復刻企劃",
-          "subtitle": "限定好禮免費領，再抽珍藏版序號！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2024/20241218_blsunrise/time2_ra.php",
           "is_new": false
         },
         {
@@ -366,6 +379,13 @@
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/bwmagic_20260818",
           "is_new": false
+        },
+        {
+          "title": "買動漫8月新刊上架",
+          "subtitle": "買就送特製書架、書卡",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/myacg20260822/9375",
+          "is_new": true
         },
         {
           "title": "8.15-9.15 《我們的十五年》",
@@ -760,13 +780,6 @@
           "is_new": false
         },
         {
-          "title": "希小惟《從睡覺開始的關係》",
-          "subtitle": "特別收錄全新番外！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/302334",
-          "is_new": false
-        },
-        {
           "title": "「遺忘書之墓」四部曲重新上市",
           "subtitle": "單書88折、雙書85折、全套79折",
           "period_text": null,
@@ -819,7 +832,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ny8qAfjVvsXQkwje_aWaRA",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
