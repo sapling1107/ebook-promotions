@@ -1,10 +1,9 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-22T00:46+08:00",
+  "updated_at": "2026-08-23T00:35+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -23,7 +22,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-08-21 ~ 2026-08-23",
           "url": "https://www.pubu.com.tw/storedValue/checkout",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "語意錯誤5新書上市｜延伸書展88折",
@@ -287,13 +286,20 @@
           "subtitle": "消費滿700元再打9折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/leaderboard",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.19 《是為自己》",
           "subtitle": "上市首月，單本79折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/304972",
+          "is_new": false
+        },
+        {
+          "title": "桂《深秋入冬-IDOL-》",
+          "subtitle": "偶像paro！忠犬忙內╳美人隊長",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=583",
           "is_new": true
         },
         {
@@ -385,7 +391,7 @@
           "subtitle": "買就送特製書架、書卡",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/myacg20260822/9375",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.15-9.15 《我們的十五年》",
@@ -756,13 +762,6 @@
           "subtitle": "單書88折、套書82折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/crown20260724",
-          "is_new": false
-        },
-        {
-          "title": "《一百萬次的揮棒》原著彭政閔",
-          "subtitle": "7.23-8.22 新書優惠88折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/302510",
           "is_new": false
         },
         {
