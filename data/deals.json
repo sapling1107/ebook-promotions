@@ -1,10 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-23T00:35+08:00",
+  "updated_at": "2026-08-24T00:36+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "BookWalker"
+    "Pubu",
+    "BookWalker",
+    "Kobo"
   ],
   "platforms": [
     {
@@ -17,13 +19,6 @@
       "http_status": 200,
       "error": null,
       "items": [
-        {
-          "title": "限時優惠 儲值金加碼送",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-21 ~ 2026-08-23",
-          "url": "https://www.pubu.com.tw/storedValue/checkout",
-          "is_new": false
-        },
         {
           "title": "語意錯誤5新書上市｜延伸書展88折",
           "subtitle": null,
@@ -261,6 +256,20 @@
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_2_pro.html",
           "is_new": false
+        },
+        {
+          "title": "Pubook Mobile x 飽讀Lifetime",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-01 ~ 2026-12-31",
+          "url": "https://www.pubu.com.tw/campaign/ebook/pubook_mobile.html",
+          "is_new": true
+        },
+        {
+          "title": "父職關係主題書展｜心靈工坊新書85折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-03 ~ 2026-09-03",
+          "url": "https://www.pubu.com.tw/campaign/event/psygarden0803",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -300,6 +309,13 @@
           "subtitle": "偶像paro！忠犬忙內╳美人隊長",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=583",
+          "is_new": false
+        },
+        {
+          "title": "台灣角川 遊戲改編作品書展",
+          "subtitle": "參展作品85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kadokawa20260824/9430?series_display=1",
           "is_new": true
         },
         {
@@ -765,13 +781,6 @@
           "is_new": false
         },
         {
-          "title": "上海角川青羽《藏青》",
-          "subtitle": "全新BL廣播劇｜現正熱播中",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?series=42403",
-          "is_new": false
-        },
-        {
           "title": "《台灣的李登輝時代》",
           "subtitle": "7.22-8.31 新書上市85折",
           "period_text": null,
@@ -897,11 +906,11 @@
           "is_new": false
         },
         {
-          "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
+          "title": "【明白文化】暢銷展，單本85折，至9/23止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
-          "is_new": false
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/H8wFSm8wSsRrRAje_wCFow",
+          "is_new": true
         },
         {
           "title": "【天下文化】重新定義你的價值，職場升級展，單本88折，至8/31止",
