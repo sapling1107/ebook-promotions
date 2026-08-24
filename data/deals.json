@@ -1,12 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-24T00:36+08:00",
+  "updated_at": "2026-08-25T00:50+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
-    "BookWalker",
-    "Kobo"
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -19,6 +18,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "夜喵．天天優惠 | 夜喵．周二、三、四 優惠",
+          "subtitle": null,
+          "period_text": "有效期限2026-06-23 ~ 2026-12-31",
+          "url": "https://www.pubu.com.tw/ebook-category/mangas-69",
+          "is_new": true
+        },
+        {
+          "title": "週年慶 全館不限本數 75 折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-24 ~ 2026-08-31",
+          "url": "https://www.pubu.com.tw/campaign/ebook/happy16th.html",
+          "is_new": true
+        },
         {
           "title": "語意錯誤5新書上市｜延伸書展88折",
           "subtitle": null,
@@ -256,20 +269,6 @@
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_2_pro.html",
           "is_new": false
-        },
-        {
-          "title": "Pubook Mobile x 飽讀Lifetime",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-12-31",
-          "url": "https://www.pubu.com.tw/campaign/ebook/pubook_mobile.html",
-          "is_new": true
-        },
-        {
-          "title": "父職關係主題書展｜心靈工坊新書85折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-03 ~ 2026-09-03",
-          "url": "https://www.pubu.com.tw/campaign/event/psygarden0803",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -291,11 +290,11 @@
       "error": null,
       "items": [
         {
-          "title": "8.22-8.24最低65折！",
-          "subtitle": "消費滿700元再打9折！",
+          "title": "城邦10月版權到期書展",
+          "subtitle": "特價最低99元！",
           "period_text": null,
-          "url": "https://www.bookwalker.com.tw/leaderboard",
-          "is_new": false
+          "url": "https://www.bookwalker.com.tw/event/cite_202610",
+          "is_new": true
         },
         {
           "title": "8.19 《是為自己》",
@@ -316,7 +315,7 @@
           "subtitle": "參展作品85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawa20260824/9430?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "微涼之境｜鬼月書展79折起",
@@ -753,13 +752,6 @@
           "is_new": false
         },
         {
-          "title": "《VTuber學》新書上市88折",
-          "subtitle": "全面解析席捲網路世代的文化現象",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/302916",
-          "is_new": false
-        },
-        {
           "title": "城邦9月版權到期書展",
           "subtitle": "特價最低99元！",
           "period_text": null,
@@ -910,7 +902,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/H8wFSm8wSsRrRAje_wCFow",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【天下文化】重新定義你的價值，職場升級展，單本88折，至8/31止",
