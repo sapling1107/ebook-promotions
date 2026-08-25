@@ -1,11 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-25T00:50+08:00",
+  "updated_at": "2026-08-26T00:49+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
-    "BookWalker"
+    "BookWalker",
+    "Kobo"
   ],
   "platforms": [
     {
@@ -19,18 +20,39 @@
       "error": null,
       "items": [
         {
+          "title": "惡魔來了2│《乩身》原著作者新作85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-26 ~ 2026-09-26",
+          "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0826",
+          "is_new": true
+        },
+        {
+          "title": "青山美智子ｘ田中達也新作｜書展88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-26 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/crown0826-A-2",
+          "is_new": true
+        },
+        {
+          "title": "那些散落在人間的答案｜不朽新書展88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-26 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/crown0826-A-1",
+          "is_new": true
+        },
+        {
           "title": "夜喵．天天優惠 | 夜喵．周二、三、四 優惠",
           "subtitle": null,
           "period_text": "有效期限2026-06-23 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/ebook-category/mangas-69",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "週年慶 全館不限本數 75 折起",
           "subtitle": null,
           "period_text": "有效期限2026-08-24 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/happy16th.html",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "語意錯誤5新書上市｜延伸書展88折",
@@ -248,27 +270,6 @@
           "period_text": "有效期限2026-08-07 ~ 2026-08-31",
           "url": "https://www.pubu.com.tw/campaign/event/CWGV0807",
           "is_new": false
-        },
-        {
-          "title": "《霧裡仍有路》｜游擊新書延伸書展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-05 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/guepub0805",
-          "is_new": false
-        },
-        {
-          "title": "8月精選《鳴鳥不飛》│尖端每月推薦",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-05 ~ 2026-08-31",
-          "url": "https://www.pubu.com.tw/campaign/event/SppCollection0805",
-          "is_new": false
-        },
-        {
-          "title": "Pubook 2 Pro x 飽讀Lifetime",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-12-31",
-          "url": "https://www.pubu.com.tw/campaign/ebook/pubook_2_pro.html",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -290,11 +291,25 @@
       "error": null,
       "items": [
         {
+          "title": "《少年陰陽師(02)》上架！",
+          "subtitle": "買就送手機桌布",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305399",
+          "is_new": true
+        },
+        {
+          "title": "《惡魔來了2：惡夢博物館》",
+          "subtitle": "8.26-9.26 單書88折、雙書82折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?series=36708",
+          "is_new": true
+        },
+        {
           "title": "城邦10月版權到期書展",
           "subtitle": "特價最低99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_202610",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.19 《是為自己》",
@@ -368,10 +383,10 @@
         },
         {
           "title": "悅文社精選單話限時免費！",
-          "subtitle": "8.19-8.25 指定BL作品7折",
+          "subtitle": "8.26-9.1 指定少女&少年作品7折",
           "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/20260819BL/9349?series_display=1",
-          "is_new": false
+          "url": "https://www.bookwalker.com.tw/event/20260826GirlandBoy/9350?series_display=1",
+          "is_new": true
         },
         {
           "title": "《九呂的男友對內褲情有獨鍾！？》",
@@ -794,13 +809,6 @@
           "is_new": false
         },
         {
-          "title": "《桃花源沒事兒》馬伯庸見微系列",
-          "subtitle": "7.1-8.25 單本88折，二本85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/gobooks_20260701",
-          "is_new": false
-        },
-        {
           "title": "城邦8月版權到期書展",
           "subtitle": "特價最低99元！",
           "period_text": null,
@@ -924,6 +932,13 @@
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ggj6x6KUx8_xtwje93_xKw",
           "is_new": false
+        },
+        {
+          "title": "【麥田出版】出版社推薦，單本85折，至9/24止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ClF_ZZEJ1sEqjAjfAZReZQ",
+          "is_new": true
         }
       ],
       "extra_links": []
