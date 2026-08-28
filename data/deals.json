@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-27T00:54+08:00",
+  "updated_at": "2026-08-28T08:50+08:00",
   "has_new_items": true,
   "new_platforms": [
     "BookWalker"
@@ -282,25 +282,53 @@
       "error": null,
       "items": [
         {
+          "title": "《你好我吃一點：台灣小說盛宴》",
+          "subtitle": "9/30前新書上市86折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305635",
+          "is_new": true
+        },
+        {
+          "title": "9/28前《犬之書》新書上市88折",
+          "subtitle": "從A到Z探索狗生百態",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305556",
+          "is_new": true
+        },
+        {
+          "title": "《推理的時間到了》新書上市",
+          "subtitle": "8.28-9.27 單書88折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/apexpress_260828",
+          "is_new": true
+        },
+        {
+          "title": "ღ 講談社夏季寫真展 (最終彈) ღ",
+          "subtitle": "人氣寫真下殺5折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kodansha20260828/9330",
+          "is_new": true
+        },
+        {
           "title": "8.26~9.25 楓書坊全書系暢銷書展",
           "subtitle": "單本85折、3本75折，指定作品99元",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/maplebook0826",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《1661臺島開戰》新書上市",
           "subtitle": "8.27-9.30 新書優惠85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305577",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "小河少年 Kawa《巢》",
           "subtitle": "《16647》ABO平行世界！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=870&series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《少年陰陽師(02)》上架！",
@@ -363,13 +391,6 @@
           "subtitle": "單本88折，二本85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gobooks_260819",
-          "is_new": false
-        },
-        {
-          "title": "ღ 講談社夏季寫真展 (第6彈) ღ",
-          "subtitle": "人氣寫真下殺6折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kodansha20260821/9329",
           "is_new": false
         },
         {
@@ -489,13 +510,6 @@
           "subtitle": "多本首賣書買再送活動限定贈品！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260814_original",
-          "is_new": false
-        },
-        {
-          "title": "8.14-8.27 集英社人氣寫真展",
-          "subtitle": "參展作品7折☛立即收藏",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/Shueisha20260814/9342",
           "is_new": false
         },
         {
@@ -758,13 +772,6 @@
           "is_new": false
         },
         {
-          "title": "BL廣播劇《白帽駭客的溺愛監禁》",
-          "subtitle": "腹黑白帽駭客x倒楣的邊緣刑警",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/302330",
-          "is_new": false
-        },
-        {
           "title": "世界很大，其實你還沒看完！",
           "subtitle": "旅行與勵志主題書展85折",
           "period_text": null,
@@ -840,13 +847,6 @@
       "http_status": 200,
       "error": null,
       "items": [
-        {
-          "title": "【商業周刊】設計你的富足人生，自我升級主題書展，單本85折，至9/19止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ny8qAfjVvsXQkwje_aWaRA",
-          "is_new": false
-        },
         {
           "title": "【天下雜誌】 AI 全面賦能時代！掌握能力躍升新路徑，單本85折，至8/31止",
           "subtitle": null,
