@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-29T08:31+08:00",
+  "updated_at": "2026-08-30T03:22+08:00",
   "has_new_items": true,
   "new_platforms": [
     "BookWalker"
@@ -286,27 +286,34 @@
           "subtitle": "優惠券最高再折250元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW_20260829",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《我是如此幸運》新書上市85折",
           "subtitle": "那些事都沒能如願，我是如此幸運",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305937",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《寫信的人》新書上市85折",
           "subtitle": "台灣獨家：主角西碧兒致讀者郵簡",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305943",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《喵的，好想放鬆》新書上市9折",
           "subtitle": "50個貓系減壓靜心練習",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305939",
+          "is_new": false
+        },
+        {
+          "title": "尖端出版《微澀．微瑟》",
+          "subtitle": "買就送側拍花絮影音！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305610",
           "is_new": true
         },
         {
@@ -744,24 +751,10 @@
           "is_new": false
         },
         {
-          "title": "《籤的朗誦者 下》系列完結",
-          "subtitle": "7.29-8.29 單書85折、套書82折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/gaeabooks_260729",
-          "is_new": false
-        },
-        {
           "title": "羅曼史名家典心創作30周年書展",
           "subtitle": "8/31前單書85折，雙書8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/heartnovel",
-          "is_new": false
-        },
-        {
-          "title": "7.29《突然之間》首月單書88折",
-          "subtitle": "坎城影展競賽片《一瞬間》原著",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/303041",
           "is_new": false
         },
         {
@@ -894,13 +887,6 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/_cEexnleBcMrvwje7ednwA",
-          "is_new": false
-        },
-        {
-          "title": "【麥田出版】人文社科展，單本85折，至8/29止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yN6U9yR4c8NJoQje65ezDA",
           "is_new": false
         },
         {
