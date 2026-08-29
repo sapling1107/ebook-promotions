@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-28T08:50+08:00",
+  "updated_at": "2026-08-29T08:31+08:00",
   "has_new_items": true,
   "new_platforms": [
     "BookWalker"
@@ -282,32 +282,60 @@
       "error": null,
       "items": [
         {
+          "title": "【領券最低63折】全館75折起",
+          "subtitle": "優惠券最高再折250元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BW_20260829",
+          "is_new": true
+        },
+        {
+          "title": "《我是如此幸運》新書上市85折",
+          "subtitle": "那些事都沒能如願，我是如此幸運",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305937",
+          "is_new": true
+        },
+        {
+          "title": "《寫信的人》新書上市85折",
+          "subtitle": "台灣獨家：主角西碧兒致讀者郵簡",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305943",
+          "is_new": true
+        },
+        {
+          "title": "《喵的，好想放鬆》新書上市9折",
+          "subtitle": "50個貓系減壓靜心練習",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305939",
+          "is_new": true
+        },
+        {
           "title": "《你好我吃一點：台灣小說盛宴》",
           "subtitle": "9/30前新書上市86折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305635",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9/28前《犬之書》新書上市88折",
           "subtitle": "從A到Z探索狗生百態",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305556",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《推理的時間到了》新書上市",
           "subtitle": "8.28-9.27 單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/apexpress_260828",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "ღ 講談社夏季寫真展 (最終彈) ღ",
           "subtitle": "人氣寫真下殺5折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kodansha20260828/9330",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.26~9.25 楓書坊全書系暢銷書展",
@@ -730,13 +758,6 @@
           "is_new": false
         },
         {
-          "title": "7.29 夜透紫《幀破》續集上市！",
-          "subtitle": "新書85折、系列雙書8折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/Links260729/9249?detail=1",
-          "is_new": false
-        },
-        {
           "title": "7.29《突然之間》首月單書88折",
           "subtitle": "坎城影展競賽片《一瞬間》原著",
           "period_text": null,
@@ -744,24 +765,10 @@
           "is_new": false
         },
         {
-          "title": "閱讀東野圭吾",
-          "subtitle": "8/28前單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/Higashino_Keigo/9271",
-          "is_new": false
-        },
-        {
           "title": "《東周英雄―靈魂底稿》新書上市",
           "subtitle": "鄭問筆下的另一個世界",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302680",
-          "is_new": false
-        },
-        {
-          "title": "7.28《兩個人更孤單》上市",
-          "subtitle": "首月推薦雙書合購85折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/aquarius260728/9248?detail=1",
           "is_new": false
         },
         {
