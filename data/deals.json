@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-08-30T03:22+08:00",
+  "updated_at": "2026-08-31T03:17+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -17,6 +17,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "我們的悲傷練習冊｜伊芙新書展88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-31 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/crown0831",
+          "is_new": true
+        },
+        {
+          "title": "因為愛你，我也開始愛自己｜有光新書85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-31 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/belight0831",
+          "is_new": true
+        },
         {
           "title": "惡魔來了2│《乩身》原著作者新作85折",
           "subtitle": null,
@@ -228,13 +242,6 @@
           "is_new": false
         },
         {
-          "title": "悠閒慢活主題書展│角川參展單書85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-10 ~ 2026-08-30",
-          "url": "https://www.pubu.com.tw/campaign/event/kadokawa0810",
-          "is_new": false
-        },
-        {
           "title": "老闆不是人｜護玄全新神作單本88折",
           "subtitle": null,
           "period_text": "有效期限2026-08-10 ~ 2026-09-15",
@@ -314,7 +321,7 @@
           "subtitle": "買就送側拍花絮影音！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305610",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《你好我吃一點：台灣小說盛宴》",
