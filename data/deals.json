@@ -1,10 +1,9 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-02T03:21+08:00",
+  "updated_at": "2026-09-03T03:21+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -23,7 +22,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-02 ~ 2026-10-01",
           "url": "https://www.pubu.com.tw/campaign/event/ThinKingDom0902",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "週年慶全館3本75折 + 3%回饋",
@@ -37,21 +36,21 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/bookbuffet/ebook/675339",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "為什麼你每天都很忙，工作卻做不完？",
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/bookbuffet/ebook/675338",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "202609飽讀新書",
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/content/145022",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "圓神出版書展｜精選66折+全書系88折",
@@ -290,39 +289,53 @@
           "is_new": false
         },
         {
+          "title": "《懷中檸檬》新書上市88折",
+          "subtitle": "我在你心裡，究竟占了多少位置？",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/306221",
+          "is_new": true
+        },
+        {
+          "title": "9.3-9.21 未來數位青春不設限書展",
+          "subtitle": "參展作品單書85折、雙書82折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/Futuredigi260903/9417",
+          "is_new": true
+        },
+        {
           "title": "《怪島奇譚 2》新書上市",
           "subtitle": "9.2-10.2 單書88折、雙書82折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260902",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《最強配角傳說 4》新書上市",
           "subtitle": "9.2-10.2 單書85折、雙書79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_260902",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "悅文社精選單話限時免費！",
           "subtitle": "9/2-9/8 指定TL作品75折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260902TL/9351?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "8.27-9.27 《情殺的臺灣史》",
           "subtitle": "首月優惠，單本85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305437",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "張嘉佳新作：穿過昨天的那場雪",
           "subtitle": "首月精選單書88折、雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ThinKingDom260902/9455?detail=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端45週年特別我推：春田菜菜",
@@ -455,13 +468,6 @@
           "subtitle": "參展作品85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawa20260824/9430?series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "微涼之境｜鬼月書展79折起",
-          "subtitle": "50元優惠券 奇幻基地專屬書架",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260813_summerghost",
           "is_new": false
         },
         {
@@ -730,59 +736,10 @@
       "error": null,
       "items": [
         {
-          "title": "【悅知文化】精選書展，單本88折，至9/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/2v_icTyx18CNlAjfAyjS9g",
-          "is_new": false
-        },
-        {
-          "title": "【商業周刊】設計你的富足人生，自我升級主題書展，單本85折，至9/19止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ny8qAfjVvsXQkwje_aWaRA",
-          "is_new": false
-        },
-        {
-          "title": "【聯經出版】北歐式的自由生活提案，單本85折，至9/5止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/USCdaJAfZsvPzwje8RK5MQ",
-          "is_new": false
-        },
-        {
-          "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
-          "is_new": false
-        },
-        {
-          "title": "【麥田出版】出版社推薦，單本85折，至9/24止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ClF_ZZEJ1sEqjAjfAZReZQ",
-          "is_new": false
-        },
-        {
           "title": "【方舟文化】初級大人必備！精選書展，單本85折，至9/4止",
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/yDN-k3MtjskcLgje7ueaYg",
-          "is_new": false
-        },
-        {
-          "title": "【臉譜出版】推薦好書，單本85折，至9/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Uuv8C0bVAMfuAgjfAyesRA",
-          "is_new": false
-        },
-        {
-          "title": "【遠流出版】你無法阻擋海浪，但能學會衝浪。療癒系書展，單本85折，三本再折$99，至9/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Wryjji5BE86pQQjfAzWTRA",
           "is_new": false
         },
         {
@@ -793,24 +750,17 @@
           "is_new": false
         },
         {
-          "title": "【明白文化】暢銷展，單本85折，至9/23止",
+          "title": "【遠流出版】你無法阻擋海浪，但能學會衝浪。療癒系書展，單本85折，三本再折$99，至9/30止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/H8wFSm8wSsRrRAje_wCFow",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Wryjji5BE86pQQjfAzWTRA",
           "is_new": false
         },
         {
-          "title": "【大塊文化】出版社推薦，單本85折，至9/30止",
+          "title": "【悅知文化】精選書展，單本88折，至9/30止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/U1Be4vWn8cCOMgjfAzaSLw",
-          "is_new": false
-        },
-        {
-          "title": "【聯經出版】精選書展，單本85折，至9/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/4zJQ2hCkKsCZBQjfAzifNg",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/2v_icTyx18CNlAjfAyjS9g",
           "is_new": false
         },
         {
@@ -818,6 +768,34 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/eCBxjvWm-cLVbwje8RUmtQ",
+          "is_new": false
+        },
+        {
+          "title": "【聯經出版】北歐式的自由生活提案，單本85折，至9/5止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/USCdaJAfZsvPzwje8RK5MQ",
+          "is_new": false
+        },
+        {
+          "title": "【麥田出版】出版社推薦，單本85折，至9/24止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ClF_ZZEJ1sEqjAjfAZReZQ",
+          "is_new": false
+        },
+        {
+          "title": "【臉譜出版】推薦好書，單本85折，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Uuv8C0bVAMfuAgjfAyesRA",
+          "is_new": false
+        },
+        {
+          "title": "【聯經出版】精選書展，單本85折，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/4zJQ2hCkKsCZBQjfAzifNg",
           "is_new": false
         },
         {
@@ -832,6 +810,27 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/BRsQxU2bjM1utAje7STBxw",
+          "is_new": false
+        },
+        {
+          "title": "【大塊文化】出版社推薦，單本85折，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/U1Be4vWn8cCOMgjfAzaSLw",
+          "is_new": false
+        },
+        {
+          "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
+          "is_new": false
+        },
+        {
+          "title": "【明白文化】暢銷展，單本85折，至9/23止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/H8wFSm8wSsRrRAje_wCFow",
           "is_new": false
         }
       ],
