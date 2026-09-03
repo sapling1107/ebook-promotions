@@ -1,9 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-03T03:21+08:00",
+  "updated_at": "2026-09-04T03:15+08:00",
   "has_new_items": true,
   "new_platforms": [
+    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -22,13 +23,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-02 ~ 2026-10-01",
           "url": "https://www.pubu.com.tw/campaign/event/ThinKingDom0902",
-          "is_new": false
-        },
-        {
-          "title": "週年慶全館3本75折 + 3%回饋",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-09-03",
-          "url": "https://www.pubu.com.tw/campaign/ebook/happy16th.html",
           "is_new": false
         },
         {
@@ -261,6 +255,13 @@
           "period_text": "有效期限2026-08-14 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/ebook/673474",
           "is_new": false
+        },
+        {
+          "title": "《無線人生》改編影集｜原作書展單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-08-14 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/mirrorfiction0814",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -282,6 +283,13 @@
       "error": null,
       "items": [
         {
+          "title": "全館79折起！滿額再88折",
+          "subtitle": "【會員日專屬】精選作品首集5折",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20260904_member9eyb",
+          "is_new": true
+        },
+        {
           "title": "陪我們長大的動畫好聲音！",
           "subtitle": "免費領優惠券&配音員獨家禮物！",
           "period_text": null,
@@ -289,18 +297,60 @@
           "is_new": false
         },
         {
+          "title": "英初/中單字就藏在格子裡",
+          "subtitle": "9.3-10.3 單書85折、雙書82折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/udneng260903/9466?detail=1",
+          "is_new": true
+        },
+        {
+          "title": "《二等武神 2》新書上市",
+          "subtitle": "9.4-10.4 單書88折、雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?series=41801",
+          "is_new": true
+        },
+        {
+          "title": "9.3-10.3 《EMDR與悲傷療癒》",
+          "subtitle": "上市首月單書85折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/306376",
+          "is_new": true
+        },
+        {
+          "title": "《100天後不會死的老鼠》",
+          "subtitle": "9.4-9.26 新書上市88折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/305944",
+          "is_new": true
+        },
+        {
+          "title": "☆ フタスペ！雙葉社特別企劃 ☆",
+          "subtitle": "9.4-9.17 參展作品5折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/Futabasha260904/9418",
+          "is_new": true
+        },
+        {
+          "title": "開學實用書79折起 勇闖人生航道",
+          "subtitle": "各式暢銷、多樣折扣、50元優惠券",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/bw_20260904",
+          "is_new": true
+        },
+        {
           "title": "《懷中檸檬》新書上市88折",
           "subtitle": "我在你心裡，究竟占了多少位置？",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/306221",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.3-9.21 未來數位青春不設限書展",
           "subtitle": "參展作品單書85折、雙書82折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Futuredigi260903/9417",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《怪島奇譚 2》新書上市",
@@ -398,13 +448,6 @@
           "subtitle": "8.28-9.27 單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/apexpress_260828",
-          "is_new": false
-        },
-        {
-          "title": "ღ 講談社夏季寫真展 (最終彈) ღ",
-          "subtitle": "人氣寫真下殺5折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kodansha20260828/9330",
           "is_new": false
         },
         {
@@ -576,13 +619,6 @@
           "is_new": false
         },
         {
-          "title": "B☆W線上原創同人漫畫展79折起",
-          "subtitle": "多本首賣書買再送活動限定贈品！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260814_original",
-          "is_new": false
-        },
-        {
           "title": "上海角川青羽《滿城衣冠》",
           "subtitle": "全新BL廣播劇｜現正熱播中",
           "period_text": null,
@@ -653,13 +689,6 @@
           "is_new": false
         },
         {
-          "title": "DLsite特別合作 兌換超值折價券！",
-          "subtitle": "8/5-9/3 最高一千優惠！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2023/20230110_dlsiteasmr",
-          "is_new": false
-        },
-        {
           "title": "《茶館裡的名偵探》首月88折",
           "subtitle": "歐普拉也愛解謎文學續作",
           "period_text": null,
@@ -678,13 +707,6 @@
           "subtitle": "8.1-9.15 單本88折，兩本8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_260801",
-          "is_new": false
-        },
-        {
-          "title": "Hibiki-響《狗仔和影帝的那些事》",
-          "subtitle": "苦情狗仔攻X悶騷影帝受",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=887&series_display=1",
           "is_new": false
         },
         {
