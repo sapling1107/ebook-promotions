@@ -1,11 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-07T02:13+08:00",
+  "updated_at": "2026-09-08T03:52+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -23,21 +22,21 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-07 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/crown0907",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook 2 Pro x 飽讀Lifetime",
           "subtitle": null,
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_2_pro.html",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook Mobile x 飽讀Lifetime",
           "subtitle": null,
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_mobile.html",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端9月精選《不會拿捏距離的阿波連同學》",
@@ -52,6 +51,13 @@
           "period_text": "有效期限2026-09-02 ~ 2026-10-01",
           "url": "https://www.pubu.com.tw/campaign/event/ThinKingDom0902",
           "is_new": false
+        },
+        {
+          "title": "Pubook 2 限時優惠 $12,500",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-01 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/ebook/673474",
+          "is_new": true
         },
         {
           "title": "IELTS雅思字彙致勝演練寶典",
@@ -262,13 +268,6 @@
           "period_text": "有效期限2026-08-19 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/gobooks0819",
           "is_new": false
-        },
-        {
-          "title": "馬克．吐溫經典名作｜套書77折單書85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-18 ~ 2026-09-16",
-          "url": "https://www.pubu.com.tw/campaign/event/ANDbooks0817",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -301,7 +300,7 @@
           "subtitle": "買指定作品滿額就送小冊子！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260907G-Lish",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.5-10.2 威向文化全面79折！",
@@ -591,13 +590,6 @@
           "is_new": false
         },
         {
-          "title": "8.18-9.7 魔幻漂流指南",
-          "subtitle": "魔法、奇幻主題書展79折起",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/bwmagic_20260818",
-          "is_new": false
-        },
-        {
           "title": "買動漫8月新刊上架",
           "subtitle": "買就送特製書架、書卡",
           "period_text": null,
@@ -651,13 +643,6 @@
           "subtitle": "8.13-9.12 單書88折，套書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/apexpress_260813",
-          "is_new": false
-        },
-        {
-          "title": "8.8-9.7《烈愛對決》新書上市",
-          "subtitle": "延伸書展單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/ryefield_260808",
           "is_new": false
         },
         {
