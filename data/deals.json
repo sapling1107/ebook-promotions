@@ -1,10 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-08T03:52+08:00",
+  "updated_at": "2026-09-09T03:24+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu"
+    "Pubu",
+    "BookWalker",
+    "Kobo"
   ],
   "platforms": [
     {
@@ -18,6 +20,13 @@
       "error": null,
       "items": [
         {
+          "title": "週年慶好評延長 Pubook Mobile $7690",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-08 ~ 2026-09-13",
+          "url": "https://www.pubu.com.tw/campaign/event/content/692400",
+          "is_new": true
+        },
+        {
           "title": "小貓料亭營業中4上市│高橋由太療癒作 88折",
           "subtitle": null,
           "period_text": "有效期限2026-09-07 ~ 2026-09-30",
@@ -29,13 +38,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-08-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/ebook/pubook_2_pro.html",
-          "is_new": false
-        },
-        {
-          "title": "Pubook Mobile x 飽讀Lifetime",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-01 ~ 2026-12-31",
-          "url": "https://www.pubu.com.tw/campaign/ebook/pubook_mobile.html",
           "is_new": false
         },
         {
@@ -57,7 +59,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/ebook/673474",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "IELTS雅思字彙致勝演練寶典",
@@ -261,13 +263,6 @@
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/wondapie0820",
           "is_new": false
-        },
-        {
-          "title": "富爸爸新作書展｜創造財富相關系列85折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-19 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/gobooks0819",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -294,6 +289,20 @@
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260901_voiceofmemories",
           "is_new": false
+        },
+        {
+          "title": "悅文社精選單話限時免費！",
+          "subtitle": "9/9~9/15 指定男性成人向作品75折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/20260909Mens/9352?series_display=1",
+          "is_new": true
+        },
+        {
+          "title": "9/9-10/9《女警艾拉3 靜水遺案》",
+          "subtitle": "單書88折、雙書82折、套書79折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260909",
+          "is_new": true
         },
         {
           "title": "＼2026 G-Lish 綺想祭／",
@@ -401,13 +410,6 @@
           "is_new": false
         },
         {
-          "title": "悅文社精選單話限時免費！",
-          "subtitle": "9/2-9/8 指定TL作品75折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/20260902TL/9351?series_display=1",
-          "is_new": false
-        },
-        {
           "title": "8.27-9.27 《情殺的臺灣史》",
           "subtitle": "首月優惠，單本85折！",
           "period_text": null,
@@ -503,13 +505,6 @@
           "subtitle": "《16647》ABO平行世界！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=870&series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "《少年陰陽師(02)》上架！",
-          "subtitle": "買就送手機桌布",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/305399",
           "is_new": false
         },
         {
@@ -715,45 +710,10 @@
       "error": null,
       "items": [
         {
-          "title": "【遠流出版】你無法阻擋海浪，但能學會衝浪。療癒系書展，單本85折，三本再折$99，至9/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Wryjji5BE86pQQjfAzWTRA",
-          "is_new": false
-        },
-        {
-          "title": "【聯經出版】精選書展，單本85折，至9/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/4zJQ2hCkKsCZBQjfAzifNg",
-          "is_new": false
-        },
-        {
-          "title": "【商業周刊】設計你的富足人生，自我升級主題書展，單本85折，至9/19止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ny8qAfjVvsXQkwje_aWaRA",
-          "is_new": false
-        },
-        {
-          "title": "【明白文化】暢銷展，單本85折，至9/23止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/H8wFSm8wSsRrRAje_wCFow",
-          "is_new": false
-        },
-        {
           "title": "【三采文化】精彩樂讀，人氣暢銷精選，單本85折，至9/15止",
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/RILX4jIjQcPffgjfAzbOEw",
-          "is_new": false
-        },
-        {
-          "title": "【天下生活 x 康健出版】享受自己喜歡的生活，單本85折，三本再折$99，至9/15止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/BRsQxU2bjM1utAje7STBxw",
           "is_new": false
         },
         {
@@ -771,17 +731,10 @@
           "is_new": false
         },
         {
-          "title": "【臉譜出版】推薦好書，單本85折，至9/30止",
+          "title": "【聯經出版】精選書展，單本85折，至9/30止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Uuv8C0bVAMfuAgjfAyesRA",
-          "is_new": false
-        },
-        {
-          "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/4zJQ2hCkKsCZBQjfAzifNg",
           "is_new": false
         },
         {
@@ -792,6 +745,27 @@
           "is_new": false
         },
         {
+          "title": "【商業周刊】設計你的富足人生，自我升級主題書展，單本85折，至9/19止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ny8qAfjVvsXQkwje_aWaRA",
+          "is_new": false
+        },
+        {
+          "title": "【臉譜出版】推薦好書，單本85折，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Uuv8C0bVAMfuAgjfAyesRA",
+          "is_new": false
+        },
+        {
+          "title": "【高寶書版】健康生活書展，單本85折起，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TIpWBkXFDsWoSwje9DOpPQ",
+          "is_new": true
+        },
+        {
           "title": "【大雁文化 x 日出出版】陪你找到情緒出口，心理勵志書展，單本85折，至9/10止",
           "subtitle": null,
           "period_text": null,
@@ -799,10 +773,31 @@
           "is_new": false
         },
         {
-          "title": "【高寶書版】暢銷書展，單本85折起，至9/30止",
+          "title": "【明白文化】暢銷展，單本85折，至9/23止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/eCBxjvWm-cLVbwje8RUmtQ",
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/H8wFSm8wSsRrRAje_wCFow",
+          "is_new": false
+        },
+        {
+          "title": "【遠流出版】你無法阻擋海浪，但能學會衝浪。療癒系書展，單本85折，三本再折$99，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Wryjji5BE86pQQjfAzWTRA",
+          "is_new": false
+        },
+        {
+          "title": "【天下生活 x 康健出版】享受自己喜歡的生活，單本85折，三本再折$99，至9/15止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/BRsQxU2bjM1utAje7STBxw",
+          "is_new": false
+        },
+        {
+          "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
           "is_new": false
         }
       ],
