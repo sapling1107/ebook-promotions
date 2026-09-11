@@ -1,12 +1,9 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-11T03:05+08:00",
-  "has_new_items": true,
-  "new_platforms": [
-    "Pubu",
-    "BookWalker"
-  ],
+  "updated_at": "2026-09-12T03:08+08:00",
+  "has_new_items": false,
+  "new_platforms": [],
   "platforms": [
     {
       "platform": "Pubu",
@@ -23,14 +20,14 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-11 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0911A-4",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "歷史文化ｘ民俗傳說│人文科普延伸展88折",
           "subtitle": null,
           "period_text": "有效期限2026-09-11 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0911A-2",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "轉生之後——命運從此改寫：異世界作品展",
@@ -283,13 +280,6 @@
       "error": null,
       "items": [
         {
-          "title": "9/11 只有一天！",
-          "subtitle": "全館69折起",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
-          "is_new": true
-        },
-        {
           "title": "陪我們長大的動畫好聲音！",
           "subtitle": "免費領優惠券&配音員獨家禮物！",
           "period_text": null,
@@ -301,21 +291,21 @@
           "subtitle": "鈍感防禦心理學",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/306976",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "我不是在拒絕你，我是在選擇自己",
           "subtitle": "說對這句話，人生站在自己這邊！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/306975",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.11-10.1 BL主題書展79折起",
           "subtitle": "指定作品滿額領券再折50元！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260911bl",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "悅文社精選單話限時免費！",
@@ -350,13 +340,6 @@
           "subtitle": "買再送活動限定書架",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/UEISHIANG2026",
-          "is_new": false
-        },
-        {
-          "title": "《盜墓筆記外傳 雨村筆記(01)》",
-          "subtitle": "9/5-9/11 限時特價99元！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/242091",
           "is_new": false
         },
         {
@@ -616,13 +599,6 @@
           "subtitle": "MN新刊販售中！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=699&series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "買動漫8月新刊上架",
-          "subtitle": "買就送特製書架、書卡",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/myacg20260822/9375",
           "is_new": false
         },
         {
