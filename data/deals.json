@@ -1,9 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-12T03:08+08:00",
-  "has_new_items": false,
-  "new_platforms": [],
+  "updated_at": "2026-09-13T02:18+08:00",
+  "has_new_items": true,
+  "new_platforms": [
+    "Pubu"
+  ],
   "platforms": [
     {
       "platform": "Pubu",
@@ -15,6 +17,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "《哆啦A夢》全 45 集 | 結帳再享 86 折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-12 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/store/14299/series/%E5%93%86%E5%95%A6A%E5%A4%A2",
+          "is_new": true
+        },
+        {
+          "title": "《新世紀福音戰士》1-14 完結篇，最後典藏機會",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-12 ~ 2026-09-29",
+          "url": "https://www.pubu.com.tw/store/2716386/series/%E6%96%B0%E4%B8%96%E7%B4%80%E7%A6%8F%E9%9F%B3%E6%88%B0%E5%A3%AB",
+          "is_new": true
+        },
         {
           "title": "建築開運ｘ建模手作│休閒生活延伸展88折",
           "subtitle": null,
@@ -244,20 +260,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B1",
-          "is_new": false
-        },
-        {
-          "title": "初級大人進化中！高級大人養成營單書85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-20 ~ 2026-09-20",
-          "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-A",
-          "is_new": false
-        },
-        {
-          "title": "東販一般書社方展｜套書77折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-20 ~ 2026-09-13",
-          "url": "https://www.pubu.com.tw/campaign/event/tohan0820",
           "is_new": false
         }
       ],
@@ -641,13 +643,6 @@
           "subtitle": "全新BL廣播劇｜現正熱播中",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=42573",
-          "is_new": false
-        },
-        {
-          "title": "《夢幻外傳（2）》新書上市",
-          "subtitle": "8.13-9.12 單書88折，套書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/apexpress_260813",
           "is_new": false
         },
         {
