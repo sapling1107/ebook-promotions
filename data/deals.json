@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-14T02:45+08:00",
+  "updated_at": "2026-09-15T04:16+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,11 +19,18 @@
       "error": null,
       "items": [
         {
+          "title": "推理×驚悚×小說│尖端電子書展79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-15 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/spp0915",
+          "is_new": true
+        },
+        {
           "title": "戀愛這門課│新月單本85折、2本79折",
           "subtitle": null,
           "period_text": "有效期限2026-09-14 ~ 2026-10-17",
           "url": "https://www.pubu.com.tw/campaign/event/crescent0914",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《哆啦A夢》全 45 集 | 結帳再享 86 折",
@@ -262,13 +269,6 @@
           "period_text": "有效期限2026-08-20 ~ 2026-09-20",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-B1",
           "is_new": false
-        },
-        {
-          "title": "初級大人進化中！高級大人養成營單書85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-20 ~ 2026-09-20",
-          "url": "https://www.pubu.com.tw/campaign/event/maplebook0820-A",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -290,11 +290,53 @@
       "error": null,
       "items": [
         {
+          "title": "9.15-9.17 全館8折起！",
+          "subtitle": "領券最低64折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BW_20260915",
+          "is_new": true
+        },
+        {
           "title": "陪我們長大的動畫好聲音！",
           "subtitle": "免費領優惠券&配音員獨家禮物！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260901_voiceofmemories",
           "is_new": false
+        },
+        {
+          "title": "尖端 推理×驚悚小說展",
+          "subtitle": "9.15-9.30 參展作品79折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/spp_20260915",
+          "is_new": true
+        },
+        {
+          "title": "怪獸公主 色色場景大賞",
+          "subtitle": "書卡免費領！完成投票送書架&優惠券",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20260915_KaijuPrincess",
+          "is_new": true
+        },
+        {
+          "title": "台灣角川 輕小說主打星",
+          "subtitle": "指定作品 領券77折",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20260915_star9e9w",
+          "is_new": true
+        },
+        {
+          "title": "9.10 小学館寫真新刊上架",
+          "subtitle": "最新寫真一次看，快來收藏💖",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=1007&order=sell_desc",
+          "is_new": true
+        },
+        {
+          "title": "9.10 集英社寫真新刊上架",
+          "subtitle": "人氣寫真新作登場，立即收藏✨",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=259&order=sell_desc",
+          "is_new": true
         },
         {
           "title": "《人際怪物退散！》",
@@ -319,10 +361,10 @@
         },
         {
           "title": "《鋼之鍊金術師》電影書架免費領",
-          "subtitle": null,
+          "subtitle": "原作漫畫限時折扣即將開跑",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260914_hagarenmovies",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "悅文社精選單話限時免費！",
@@ -637,13 +679,6 @@
           "subtitle": "8.1-9.15 單本88折，兩本8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_260801",
-          "is_new": false
-        },
-        {
-          "title": "華星娛樂 暑假奇幻書展",
-          "subtitle": "單本88折、三本79折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/star260727",
           "is_new": false
         },
         {
