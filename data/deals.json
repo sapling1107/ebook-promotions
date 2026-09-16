@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-16T03:40+08:00",
+  "updated_at": "2026-09-17T03:31+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,32 +19,39 @@
       "error": null,
       "items": [
         {
+          "title": "原創力覺醒│青文國人作品展72折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-17 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/chin-wen0917",
+          "is_new": true
+        },
+        {
+          "title": "Pubook Mobile 揪好友一起買 更划算！",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-16 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": false
+        },
+        {
           "title": "墨水與符印1上架│鋼鐵德魯伊系列85折",
           "subtitle": null,
           "period_text": "有效期限2026-09-16 ~ 2026-10-16",
           "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0916",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "漫食．漫飲│尖端飲食主題漫畫展79折",
           "subtitle": null,
           "period_text": "有效期限2026-09-16 ~ 2026-10-09",
           "url": "https://www.pubu.com.tw/campaign/event/spp0916",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "「共赴一場浪漫」主題展3本79折｜禾馬",
           "subtitle": null,
           "period_text": "有效期限2026-09-16 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/861",
-          "is_new": true
-        },
-        {
-          "title": "Pubook Mobile 兩台更優惠",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-15 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "推理×驚悚×小說│尖端電子書展79折",
@@ -255,20 +262,6 @@
           "period_text": "有效期限2026-08-26 ~ 2026-09-26",
           "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0826",
           "is_new": false
-        },
-        {
-          "title": "青山美智子ｘ田中達也新作｜書展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-26 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/crown0826-A-2",
-          "is_new": false
-        },
-        {
-          "title": "那些散落在人間的答案｜不朽新書展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-26 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/crown0826-A-1",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -304,25 +297,46 @@
           "is_new": false
         },
         {
+          "title": "砂藤シュガー老師親簽書抽獎活動！",
+          "subtitle": "點擊查看參加辦法",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/306747",
+          "is_new": true
+        },
+        {
+          "title": "青文 國人作品展72折起！",
+          "subtitle": "9.17-9.30 限時優惠中",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/20260917original/9487?series_display=1",
+          "is_new": true
+        },
+        {
+          "title": "9.17-9.30 被談聲聆週年慶中秋🎉",
+          "subtitle": "ASMR 限時下殺69折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/Bedtime20260917",
+          "is_new": true
+        },
+        {
           "title": "《墨水與符印1 詛咒與祝福》",
           "subtitle": "單書85折、雙書82折、套書79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260916",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端 飲食主題漫畫展",
           "subtitle": "9.16-10.9 參展作品79折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260916spp/9484?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.16 聽著雨聲告別【新修版】",
           "subtitle": "上市首月，單本85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/307346",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端 推理×驚悚小說展",
