@@ -1,10 +1,9 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-18T03:41+08:00",
+  "updated_at": "2026-09-19T03:00+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -19,45 +18,45 @@
       "error": null,
       "items": [
         {
+          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-18 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": false
+        },
+        {
           "title": "速成與維持生理機能│運動保健延伸展88折",
           "subtitle": null,
           "period_text": "有效期限2026-09-18 ~ 2026-10-18",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0918A-3",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "解讀與呵護心理平衡│自我成長延伸展88折",
           "subtitle": null,
           "period_text": "有效期限2026-09-18 ~ 2026-10-18",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0918A-1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "歌曲改編作品書展│台灣角川精選85折",
           "subtitle": null,
           "period_text": "有效期限2026-09-18 ~ 2026-10-08",
           "url": "https://www.pubu.com.tw/campaign/event/Kadokawa0918",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2026 第十屆台北國際媒體論壇",
           "subtitle": null,
           "period_text": "有效期限2026-09-17 ~ 2026-09-30",
           "url": "https://www.magazine.org.tw/sp/imct-10",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "原創力覺醒│青文國人作品展72折起",
           "subtitle": null,
           "period_text": "有效期限2026-09-17 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/chin-wen0917",
-          "is_new": false
-        },
-        {
-          "title": "Pubook Mobile 揪好友一起買 更划算！",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-16 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
           "is_new": false
         },
         {
@@ -290,39 +289,46 @@
           "is_new": false
         },
         {
+          "title": "《穹廬下的魔女》套書限時優惠75折！",
+          "subtitle": "9.19-9.28 趁機一次收藏1~5冊",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/306565",
+          "is_new": true
+        },
+        {
           "title": "《臺北故事》新書上市",
           "subtitle": "9.18-10.18 單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/facesread_260918",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《在書店等待櫻花盛開》",
           "subtitle": "9.18-10.18 單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/marcopolo_260918",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "「讀書之秋」嘗新贈券追後續！",
           "subtitle": "點數15倍、15張優惠券👈雙重優惠",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawaserial_20260918/9431?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.18-10.1 日文書 プレステージ",
           "subtitle": "✩ 人氣寫真展5折起 ✩",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/PRESTIGE260918/9494?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.18-10.8 男性向R18書展79折起",
           "subtitle": "指定作品滿額領券再折50元",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260918_r18",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "砂藤シュガー老師親簽書抽獎活動！",
