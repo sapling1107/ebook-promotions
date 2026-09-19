@@ -1,9 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-19T03:00+08:00",
+  "updated_at": "2026-09-20T02:33+08:00",
   "has_new_items": true,
   "new_platforms": [
+    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -165,6 +166,13 @@
           "is_new": false
         },
         {
+          "title": "Pubook Pro 即將完售",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/ebook/594118",
+          "is_new": true
+        },
+        {
           "title": "IELTS雅思字彙致勝演練寶典",
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-09-30",
@@ -254,13 +262,6 @@
           "period_text": "有效期限2026-09-01 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/UDN0901",
           "is_new": false
-        },
-        {
-          "title": "9月名家 春田菜菜 | 尖端每月推薦",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/sppArtist0901",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -282,6 +283,13 @@
       "error": null,
       "items": [
         {
+          "title": "全館82折 ✩ 點數15~20倍",
+          "subtitle": "滿額500元輸入優惠碼現折50元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BW260920",
+          "is_new": true
+        },
+        {
           "title": "陪我們長大的動畫好聲音！",
           "subtitle": "免費領優惠券&配音員獨家禮物！",
           "period_text": null,
@@ -293,7 +301,7 @@
           "subtitle": "9.19-9.28 趁機一次收藏1~5冊",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/306565",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《臺北故事》新書上市",
@@ -653,13 +661,6 @@
           "is_new": false
         },
         {
-          "title": "8.19 《是為自己》",
-          "subtitle": "上市首月，單本79折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/304972",
-          "is_new": false
-        },
-        {
           "title": "桂《深秋入冬-IDOL-》",
           "subtitle": "偶像paro！忠犬忙內╳美人隊長",
           "period_text": null,
@@ -688,24 +689,10 @@
           "is_new": false
         },
         {
-          "title": "《九呂的男友對內褲情有獨鍾！？》",
-          "subtitle": "內褲癖溫柔上班族X倔強傲嬌大學生",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/305089",
-          "is_new": false
-        },
-        {
           "title": "Penqoo《Our Promised Day》",
           "subtitle": "《難掩之癮》性轉番外！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=1053&series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "原創BL《他看到的他》",
-          "subtitle": "MN新刊販售中！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=699&series_display=1",
           "is_new": false
         },
         {
