@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-20T02:33+08:00",
+  "updated_at": "2026-09-21T02:43+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -18,6 +18,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "讀見故事之外・日韓小說展│新書延伸85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-21 ~ 2026-10-20",
+          "url": "https://www.pubu.com.tw/campaign/event/AzothBooks0921",
+          "is_new": true
+        },
+        {
+          "title": "Pubu精選推理展 | 日、歐、台推理名作鉅獻",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-20 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/ebook/BTS.html",
+          "is_new": true
+        },
         {
           "title": "Pubook Mobile 送清水殼、螢幕保護貼",
           "subtitle": null,
@@ -170,7 +184,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/ebook/594118",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "IELTS雅思字彙致勝演練寶典",
@@ -248,20 +262,6 @@
           "period_text": "有效期限2026-09-01 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/APEXPRESS0901",
           "is_new": false
-        },
-        {
-          "title": "你的下半年進修課表│精選書99元+88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-07",
-          "url": "https://www.pubu.com.tw/campaign/event/CMoney0901",
-          "is_new": false
-        },
-        {
-          "title": "第一屆琅琅原創大賞書展｜入圍書單79折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/UDN0901",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -287,7 +287,7 @@
           "subtitle": "滿額500元輸入優惠碼現折50元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW260920",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "陪我們長大的動畫好聲音！",
@@ -302,6 +302,13 @@
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/306565",
           "is_new": false
+        },
+        {
+          "title": "9.21-10.31《九柱神》咖啡廳活動延伸書展",
+          "subtitle": "條漫全系列單話10元；買第二季76話送書架",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/revebook20260921",
+          "is_new": true
         },
         {
           "title": "《臺北故事》新書上市",
@@ -351,6 +358,13 @@
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/20260917original/9487?series_display=1",
           "is_new": false
+        },
+        {
+          "title": "買動漫9月新刊上架",
+          "subtitle": "指定作品送書架、書卡",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/myacg20260921/9507",
+          "is_new": true
         },
         {
           "title": "9.17-9.30 被談聲聆週年慶中秋🎉",
@@ -679,20 +693,6 @@
           "subtitle": "單本88折，二本85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gobooks_260819",
-          "is_new": false
-        },
-        {
-          "title": "8.20-9.20 陳昭淵詩集",
-          "subtitle": "單書85折、雙書82折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/poem260820",
-          "is_new": false
-        },
-        {
-          "title": "Penqoo《Our Promised Day》",
-          "subtitle": "《難掩之癮》性轉番外！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=1053&series_display=1",
           "is_new": false
         },
         {
