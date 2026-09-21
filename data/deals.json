@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-21T02:43+08:00",
+  "updated_at": "2026-09-22T04:23+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,18 +19,25 @@
       "error": null,
       "items": [
         {
+          "title": "亂馬1/2動畫第三季紀念│全系列77折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-22 ~ 2026-10-10",
+          "url": "https://www.pubu.com.tw/campaign/event/spp0922",
+          "is_new": true
+        },
+        {
           "title": "讀見故事之外・日韓小說展│新書延伸85折",
           "subtitle": null,
           "period_text": "有效期限2026-09-21 ~ 2026-10-20",
           "url": "https://www.pubu.com.tw/campaign/event/AzothBooks0921",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubu精選推理展 | 日、歐、台推理名作鉅獻",
           "subtitle": null,
           "period_text": "有效期限2026-09-20 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/ebook/BTS.html",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook Mobile 送清水殼、螢幕保護貼",
@@ -255,13 +262,6 @@
           "period_text": "有效期限2026-09-01 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/arkplan0901",
           "is_new": false
-        },
-        {
-          "title": "獨步文化20週年全書系展｜精選88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/APEXPRESS0901",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -283,18 +283,32 @@
       "error": null,
       "items": [
         {
-          "title": "全館82折 ✩ 點數15~20倍",
-          "subtitle": "滿額500元輸入優惠碼現折50元！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BW260920",
-          "is_new": false
-        },
-        {
           "title": "陪我們長大的動畫好聲音！",
           "subtitle": "免費領優惠券&配音員獨家禮物！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260901_voiceofmemories",
           "is_new": false
+        },
+        {
+          "title": "《亂馬 1/2》系列限時77折！",
+          "subtitle": "9.22-10.10 歡慶動畫第三季播映",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/spp20260922/9516",
+          "is_new": true
+        },
+        {
+          "title": "《工作狂男友的特效藥是我》",
+          "subtitle": "CV/聲演：一介、出品社團：男色研究所",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/307544",
+          "is_new": true
+        },
+        {
+          "title": "《真正會讀書的人，都背得很少》",
+          "subtitle": "10/16 前新書優惠88折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/307759",
+          "is_new": true
         },
         {
           "title": "《穹廬下的魔女》套書限時優惠75折！",
@@ -308,7 +322,7 @@
           "subtitle": "條漫全系列單話10元；買第二季76話送書架",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/revebook20260921",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《臺北故事》新書上市",
@@ -364,7 +378,7 @@
           "subtitle": "指定作品送書架、書卡",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/myacg20260921/9507",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.17-9.30 被談聲聆週年慶中秋🎉",
@@ -539,13 +553,6 @@
           "subtitle": "我在你心裡，究竟占了多少位置？",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/306221",
-          "is_new": false
-        },
-        {
-          "title": "9.3-9.21 未來數位青春不設限書展",
-          "subtitle": "參展作品單書85折、雙書82折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/Futuredigi260903/9417",
           "is_new": false
         },
         {
