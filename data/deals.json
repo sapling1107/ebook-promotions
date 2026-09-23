@@ -1,9 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-23T03:42+08:00",
+  "updated_at": "2026-09-24T03:38+08:00",
   "has_new_items": true,
   "new_platforms": [
+    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -17,6 +18,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "第50屆金鼎獎│入圍．得獎作品展85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-23 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/GoldenTripodAwards50",
+          "is_new": true
+        },
+        {
+          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-18 ~ 2026-09-30",
+          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": false
+        },
         {
           "title": "亂馬1/2動畫第三季紀念│全系列77折",
           "subtitle": null,
@@ -36,13 +51,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-20 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/ebook/BTS.html",
-          "is_new": false
-        },
-        {
-          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-18 ~ 2026-09-30",
-          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
           "is_new": false
         },
         {
@@ -254,13 +262,6 @@
           "period_text": "有效期限2026-09-01 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/infortress0901",
           "is_new": false
-        },
-        {
-          "title": "方舟文化書展｜精選88折+每週99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/arkplan0901",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -289,18 +290,39 @@
           "is_new": false
         },
         {
+          "title": "聯經《人生縱情，需開喝》",
+          "subtitle": "9.24-10.24 新書上市85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/308286",
+          "is_new": true
+        },
+        {
+          "title": "9.24-9.30《怪島奇譚》連載第8回",
+          "subtitle": "上市首週限時0元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/308210",
+          "is_new": true
+        },
+        {
+          "title": "《鋼之鍊金術師》劇場版重映",
+          "subtitle": "9/24-10/7 期間限定單本85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?series=30027",
+          "is_new": true
+        },
+        {
           "title": "《魔法阿媽漫畫 3(完)》系列完結",
           "subtitle": "9.23-10.23 單書88折、雙書82折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260923",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《守護女主角哥哥的方法4（完）》",
           "subtitle": "9.23-10.6 獨家首賣85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/mikazuki3_260923",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《亂馬 1/2》系列限時77折！",
@@ -695,13 +717,6 @@
           "is_new": false
         },
         {
-          "title": "桂《深秋入冬-IDOL-》",
-          "subtitle": "偶像paro！忠犬忙內╳美人隊長",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=583",
-          "is_new": false
-        },
-        {
           "title": "《諾提里森：於黎明之前》復刻企劃",
           "subtitle": "限定好禮免費領，再抽珍藏版序號！",
           "period_text": null,
@@ -737,11 +752,89 @@
       "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
       "mode": "partial",
       "note": "指定活動頁摘要，只擷取明確的活動標題連結",
-      "page_title": null,
-      "status": "http_error",
-      "http_status": 403,
-      "error": "requests: 403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale; Playwright fallback: Kobo Playwright timeout after 30000ms",
-      "items": [],
+      "page_title": "[樂天Kobo]週末閱讀好時光，單筆滿$555 送樂天點數111點！詳情請見活動辦法 | Rakuten Kobo 台灣",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "items": [
+        {
+          "title": "【漫遊者文化】讀見故事之外・日韓小說系列書展，單本85折，至10/20止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TJRL-r4AxMLxhwjfE75cRg",
+          "is_new": false
+        },
+        {
+          "title": "【商業周刊】進化你的財富思維，投資升級主題書展，單本85折，至10/18止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/kfmF0hvzyc7S_gjfEjrVXw",
+          "is_new": false
+        },
+        {
+          "title": "【野人 x 行路】打開萬物連結的視野，單本85折，至10/10止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/OENTM9QGsMN1LQjfDWzC_w",
+          "is_new": false
+        },
+        {
+          "title": "【遠流出版】你無法阻擋海浪，但能學會衝浪。療癒系書展，單本85折，三本再折$99，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Wryjji5BE86pQQjfAzWTRA",
+          "is_new": false
+        },
+        {
+          "title": "【大塊文化】出版社推薦，單本85折，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/U1Be4vWn8cCOMgjfAzaSLw",
+          "is_new": false
+        },
+        {
+          "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
+          "is_new": false
+        },
+        {
+          "title": "【麥田出版】出版社推薦，單本85折，至9/24止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ClF_ZZEJ1sEqjAjfAZReZQ",
+          "is_new": false
+        },
+        {
+          "title": "【臉譜出版】推薦好書，單本85折，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Uuv8C0bVAMfuAgjfAyesRA",
+          "is_new": false
+        },
+        {
+          "title": "【聯經出版】精選書展，單本85折，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/4zJQ2hCkKsCZBQjfAzifNg",
+          "is_new": false
+        },
+        {
+          "title": "【柿子文化】勇敢前行！就算路上很多怪獸......全書系，單本88折，至12/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/OtAUeAu-l8lwbgjfFKvlQg",
+          "is_new": false
+        },
+        {
+          "title": "【高寶書版】健康生活書展，單本85折起，至9/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TIpWBkXFDsWoSwje9DOpPQ",
+          "is_new": false
+        }
+      ],
       "extra_links": []
     },
     {
