@@ -1,12 +1,9 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-26T03:59+08:00",
-  "has_new_items": true,
-  "new_platforms": [
-    "Pubu",
-    "BookWalker"
-  ],
+  "updated_at": "2026-09-27T03:11+08:00",
+  "has_new_items": false,
+  "new_platforms": [],
   "platforms": [
     {
       "platform": "Pubu",
@@ -23,7 +20,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-25 ~ 2026-09-28",
           "url": "https://www.pubu.com.tw/",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "第50屆金鼎獎│入圍．得獎作品展85折",
@@ -301,7 +298,7 @@
           "subtitle": "人氣寫真最低45折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/260926ab",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "城邦11月版權到期書展",
@@ -612,13 +609,6 @@
           "is_new": false
         },
         {
-          "title": "《100天後不會死的老鼠》",
-          "subtitle": "9.4-9.26 新書上市88折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/305944",
-          "is_new": false
-        },
-        {
           "title": "開學實用書79折起 勇闖人生航道",
           "subtitle": "各式暢銷、多樣折扣、50元優惠券",
           "period_text": null,
@@ -735,13 +725,6 @@
           "subtitle": "《16647》ABO平行世界！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=870&series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "《惡魔來了2：惡夢博物館》",
-          "subtitle": "8.26-9.26 單書88折、雙書82折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?series=36708",
           "is_new": false
         },
         {
