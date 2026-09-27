@@ -1,9 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-27T03:11+08:00",
-  "has_new_items": false,
-  "new_platforms": [],
+  "updated_at": "2026-09-28T03:43+08:00",
+  "has_new_items": true,
+  "new_platforms": [
+    "Pubu"
+  ],
   "platforms": [
     {
       "platform": "Pubu",
@@ -259,6 +261,13 @@
           "period_text": "有效期限2026-09-01 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/LiveABC0901",
           "is_new": false
+        },
+        {
+          "title": "臺灣商務印書館｜全書系展88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
+          "url": "https://www.pubu.com.tw/campaign/event/cptw0901",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -637,13 +646,6 @@
           "is_new": false
         },
         {
-          "title": "8.27-9.27 《情殺的臺灣史》",
-          "subtitle": "首月優惠，單本85折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/305437",
-          "is_new": false
-        },
-        {
           "title": "張嘉佳新作：穿過昨天的那場雪",
           "subtitle": "首月精選單書88折、雙書85折",
           "period_text": null,
@@ -707,24 +709,10 @@
           "is_new": false
         },
         {
-          "title": "《推理的時間到了》新書上市",
-          "subtitle": "8.28-9.27 單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/apexpress_260828",
-          "is_new": false
-        },
-        {
           "title": "《1661臺島開戰》新書上市",
           "subtitle": "8.27-9.30 新書優惠85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/305577",
-          "is_new": false
-        },
-        {
-          "title": "小河少年 Kawa《巢》",
-          "subtitle": "《16647》ABO平行世界！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=870&series_display=1",
           "is_new": false
         },
         {
