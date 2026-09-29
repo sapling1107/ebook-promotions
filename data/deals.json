@@ -1,11 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-09-29T05:51+08:00",
+  "updated_at": "2026-09-30T04:41+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
-    "BookWalker"
+    "BookWalker",
+    "Kobo"
   ],
   "platforms": [
     {
@@ -19,17 +20,24 @@
       "error": null,
       "items": [
         {
-          "title": "第50屆金鼎獎│入圍．得獎作品展85折",
+          "title": "Pubu $99 閱讀日曆",
           "subtitle": null,
-          "period_text": "有效期限2026-09-23 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/GoldenTripodAwards50",
-          "is_new": false
+          "period_text": "有效期限2026-09-29 ~ 2026-11-01",
+          "url": "https://pubu99select.my.canva.site/",
+          "is_new": true
         },
         {
           "title": "Pubook Mobile 送清水殼、螢幕保護貼",
           "subtitle": null,
-          "period_text": "有效期限2026-09-18 ~ 2026-09-30",
+          "period_text": "有效期限2026-09-29 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": false
+        },
+        {
+          "title": "第50屆金鼎獎│入圍．得獎作品展85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-23 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/GoldenTripodAwards50",
           "is_new": false
         },
         {
@@ -128,13 +136,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-12 ~ 2026-09-30",
           "url": "https://www.pubu.com.tw/store/14299/series/%E5%93%86%E5%95%A6A%E5%A4%A2",
-          "is_new": false
-        },
-        {
-          "title": "《新世紀福音戰士》1-14 完結篇，最後典藏機會",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-12 ~ 2026-09-29",
-          "url": "https://www.pubu.com.tw/store/2716386/series/%E6%96%B0%E4%B8%96%E7%B4%80%E7%A6%8F%E9%9F%B3%E6%88%B0%E5%A3%AB",
           "is_new": false
         },
         {
@@ -261,14 +262,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/infortress0901",
-          "is_new": true
-        },
-        {
-          "title": "方舟文化書展｜精選88折+每週99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/arkplan0901",
-          "is_new": true
+          "is_new": false
         }
       ],
       "extra_links": [
@@ -294,7 +288,7 @@
           "subtitle": "消費滿1200元再享9折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "陪我們長大的動畫好聲音！",
@@ -304,6 +298,20 @@
           "is_new": false
         },
         {
+          "title": "9.30-10.30 三浦紫苑著作",
+          "subtitle": "\\ 單書88折、雙書82折 /",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/260930MiuraShion/9587?detail=1",
+          "is_new": true
+        },
+        {
+          "title": "9.30-10.30 《無罪之聲9 (完)》",
+          "subtitle": "完結紀念書展，購買再送特製書架",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260930",
+          "is_new": true
+        },
+        {
           "title": "《為什麼我們一拍即合？》",
           "subtitle": "10/31 前新書上市優惠",
           "period_text": null,
@@ -311,7 +319,7 @@
           "is_new": false
         },
         {
-          "title": "A.B.ENTERTAINMENT CO.,LTD.寫真展",
+          "title": "A.B.ENTERTAINMENT CO.,LTD.",
           "subtitle": "人氣寫真最低45折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/260926ab",
@@ -337,6 +345,13 @@
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/KADOKAWAJP260925/9505",
           "is_new": false
+        },
+        {
+          "title": "《零罪惡感料理》食譜和運動瘦身書展",
+          "subtitle": "9.30-10.30 單書88折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/maplebook0930",
+          "is_new": true
         },
         {
           "title": "聯經《人生縱情，需開喝》",
@@ -758,11 +773,11 @@
       "error": null,
       "items": [
         {
-          "title": "【漫遊者文化】讀見故事之外・日韓小說系列書展，單本85折，至10/20止",
+          "title": "【天下文化】職場進化論，單本85折，至10/31止",
           "subtitle": null,
           "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TJRL-r4AxMLxhwjfE75cRg",
-          "is_new": false
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/_Wb8YESY_sP6EgjfGSNSow",
+          "is_new": true
         },
         {
           "title": "【商業周刊】進化你的財富思維，投資升級主題書展，單本85折，至10/18止",
