@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-01T04:45+08:00",
+  "updated_at": "2026-10-02T04:59+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -20,60 +20,123 @@
       "error": null,
       "items": [
         {
+          "title": "KadoKado百萬小說大賞│套書75折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-02 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/Kadokawa1002",
+          "is_new": true
+        },
+        {
+          "title": "尖端2026秋番原作展│精選書單79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-02 ~ 2026-10-23",
+          "url": "https://www.pubu.com.tw/campaign/event/spp1002-B",
+          "is_new": true
+        },
+        {
+          "title": "藏不住的少女心事│尖端少女漫畫79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-02 ~ 2026-10-22",
+          "url": "https://www.pubu.com.tw/campaign/event/spp1002-A",
+          "is_new": true
+        },
+        {
+          "title": "2026臺灣文學金典獎入圍書展│82折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/awardnmtl1001",
+          "is_new": true
+        },
+        {
+          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": true
+        },
+        {
+          "title": "GEPT新制全民英檢初級複試寫作口說10回試題+詳解",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/bookbuffet/ebook/680909",
+          "is_new": true
+        },
+        {
+          "title": "科特勒的卓越營運新戰略",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/bookbuffet/ebook/680908",
+          "is_new": true
+        },
+        {
+          "title": "我是說話高手！小學生的第一本環境素養啟蒙書",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/bookbuffet/ebook/680907",
+          "is_new": true
+        },
+        {
+          "title": "202610飽讀新書",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/content/145022",
+          "is_new": true
+        },
+        {
           "title": "靈修月刊《復興每一天》12期特價699元",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2027-01-31",
           "url": "https://www.pubu.com.tw/magazine-list/%E5%BE%A9%E8%88%88%E6%AF%8F%E4%B8%80%E5%A4%A9-1102",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10月作者精選優惠｜禾馬",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-10-10",
           "url": "https://www.pubu.com.tw/campaign/event/869",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "積木文化書展│精選85折+1日99元",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-11-15",
           "url": "https://www.pubu.com.tw/campaign/event/CubeZests1001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "商業周刊暢銷展│精選書單88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-11-15",
           "url": "https://www.pubu.com.tw/campaign/event/businessweekly1001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "好人出版書展｜精選書單88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-11-15",
           "url": "https://www.pubu.com.tw/campaign/event/atmanbooks1001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "大塊×大辣書展│精選書單85折",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-11-15",
           "url": "https://www.pubu.com.tw/campaign/event/locuspxdala1001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "浮移的疆界│馬可孛羅壯旅書展88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-11-15",
           "url": "https://www.pubu.com.tw/campaign/event/Marcopolo1001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10月名家 坂本真一 | 尖端每月推薦",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/event/sppArtist1001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubu $99 閱讀日曆",
@@ -174,13 +237,6 @@
           "is_new": false
         },
         {
-          "title": "《穿過昨天的那場雪》│張嘉佳全作品88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-02 ~ 2026-10-01",
-          "url": "https://www.pubu.com.tw/campaign/event/ThinKingDom0902",
-          "is_new": false
-        },
-        {
           "title": "Pubook Pro 即將完售",
           "subtitle": null,
           "period_text": "有效期限2026-09-01 ~ 2026-10-31",
@@ -200,69 +256,6 @@
           "period_text": "有效期限2026-09-01 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/heliopolis0901",
           "is_new": false
-        },
-        {
-          "title": "親子天下書展｜精選書單88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/parenting0901",
-          "is_new": false
-        },
-        {
-          "title": "LiveABC書展｜全書系85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/LiveABC0901",
-          "is_new": false
-        },
-        {
-          "title": "臺灣商務印書館｜全書系展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/cptw0901",
-          "is_new": false
-        },
-        {
-          "title": "堡壘文化書展｜精選書單88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/infortress0901",
-          "is_new": false
-        },
-        {
-          "title": "方舟文化書展｜精選88折+每週99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/arkplan0901",
-          "is_new": true
-        },
-        {
-          "title": "你的下半年進修課表│精選書99元+88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-07",
-          "url": "https://www.pubu.com.tw/campaign/event/CMoney0901",
-          "is_new": true
-        },
-        {
-          "title": "夜喵．天天優惠 | 夜喵．周二、三、四 優惠",
-          "subtitle": null,
-          "period_text": "有效期限2026-06-23 ~ 2026-12-31",
-          "url": "https://www.pubu.com.tw/ebook-category/mangas-69",
-          "is_new": true
-        },
-        {
-          "title": "富爸爸新作書展｜創造財富相關系列85折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-08-19 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/gobooks0819",
-          "is_new": true
-        },
-        {
-          "title": "股市小白也能學會3年賺5,000萬",
-          "subtitle": null,
-          "period_text": "有效期限2026-06-09 ~ 2026-12-31",
-          "url": "https://www.pubu.com.tw/bookbuffet/ebook/674033",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -284,31 +277,101 @@
       "error": null,
       "items": [
         {
+          "title": "台灣角川 精選作品",
+          "subtitle": "10.2 一日限定63折起",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kadokawa20261002_b",
+          "is_new": true
+        },
+        {
+          "title": "《鋼之鍊金術師》電影書架免費領",
+          "subtitle": "原作漫畫限時折扣即將開跑",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20260914_hagarenmovies",
+          "is_new": false
+        },
+        {
+          "title": "拿拿摳のBL香氣鑑定所",
+          "subtitle": "參加測驗就送優惠券&書架",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261001_perfumequiz",
+          "is_new": false
+        },
+        {
+          "title": "2026尖端秋季動畫原作書展",
+          "subtitle": "10.2-10.23 限時79折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/spp20261002anime/9552?series_display=1",
+          "is_new": true
+        },
+        {
+          "title": "《完全犯罪需要幾隻貓?》特價99元",
+          "subtitle": "10.2-10.8 限時優惠中！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/131824",
+          "is_new": true
+        },
+        {
+          "title": "10.2-10.22 尖端少女漫畫展",
+          "subtitle": "精選作品79折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/spp261002shojo",
+          "is_new": true
+        },
+        {
+          "title": "《易經問命三部曲》新書上市",
+          "subtitle": "10.2-11.2 單書88折、雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/suncolor_261002",
+          "is_new": true
+        },
+        {
+          "title": "ジーオーティー最新寫真登場📸",
+          "subtitle": "瀬戸環奈等人氣女優作品集結！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=1179&order=sell_desc",
+          "is_new": true
+        },
+        {
+          "title": "プレステージ寫真新刊上架",
+          "subtitle": "人氣寫真新作登場！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=986&order=sell_desc",
+          "is_new": true
+        },
+        {
           "title": "《然而，貓還是出去了》新書上市",
           "subtitle": "10.1-10.31 單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ryefield_261001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《初夏，完州》新書上市",
           "subtitle": "一場五感全開的故事體驗",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/booklife_261001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《向上流動》",
           "subtitle": "10.1-10.31 新書上市85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/309290",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《微小互動的驚人力量》",
           "subtitle": "10.1-10.31 新書上市9折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/309291",
+          "is_new": false
+        },
+        {
+          "title": "10.2-10.29 秋日主題書展",
+          "subtitle": "多樣折扣，領券折更多",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BW20261002",
           "is_new": true
         },
         {
@@ -316,42 +379,35 @@
           "subtitle": "精選作品第1話限時免費！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/chingwin261001",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端45週年特別我推：坂本真一",
           "subtitle": "限時75折起，買套書再送精美贈品",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261001_spp_sakamotoshinichi",
-          "is_new": true
-        },
-        {
-          "title": "拿拿摳のBL香氣鑑定所",
-          "subtitle": "參加測驗就送優惠券&拿拿摳專屬限定書架！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261001_perfumequiz",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "日文書 光文社新刊上架",
           "subtitle": "最新人氣寫真別錯過✨",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=875&order=sell_desc",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "日文書 双葉社新刊上架",
           "subtitle": "快來找到你的心動選擇💖",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=884&order=sell_desc",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "✩ 寶瓶文化25週年選書 ✩",
           "subtitle": "《年齡是一種感覺》",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/308440",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "9.30-10.30 三浦紫苑著作",
@@ -494,13 +550,6 @@
           "is_new": false
         },
         {
-          "title": "9.18-10.1 日文書 プレステージ",
-          "subtitle": "✩ 人氣寫真展5折起 ✩",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/PRESTIGE260918/9494?series_display=1",
-          "is_new": false
-        },
-        {
           "title": "9.18-10.8 男性向R18書展79折起",
           "subtitle": "指定作品滿額領券再折50元",
           "period_text": null,
@@ -585,20 +634,6 @@
           "is_new": false
         },
         {
-          "title": "9.11-10.1 BL主題書展79折起",
-          "subtitle": "指定作品滿額領券再折50元！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260911bl",
-          "is_new": false
-        },
-        {
-          "title": "《鋼之鍊金術師》電影書架免費領",
-          "subtitle": "原作漫畫限時折扣即將開跑",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260914_hagarenmovies",
-          "is_new": false
-        },
-        {
           "title": "9/9-10/9《女警艾拉3 靜水遺案》",
           "subtitle": "單書88折、雙書82折、套書79折",
           "period_text": null,
@@ -645,13 +680,6 @@
           "subtitle": "上市首月單書85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/306376",
-          "is_new": false
-        },
-        {
-          "title": "開學實用書79折起 勇闖人生航道",
-          "subtitle": "各式暢銷、多樣折扣、50元優惠券",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/bw_20260904",
           "is_new": false
         },
         {
@@ -728,7 +756,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/C6529oOvXMrpbAjfF5JvRA",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【天下文化】職場進化論，單本85折，至10/31止",
@@ -742,13 +770,20 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/vS2WrAxAkM7bewjfGTzOVQ",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【大塊文化】出版社推薦，單本85折，至10/31止",
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/rcDPMzXmZcOk7gjfGUCQdQ",
+          "is_new": false
+        },
+        {
+          "title": "【楓書坊文化】出版社推薦，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/vEFFQzKy6ci2ngjfHgDc-g",
           "is_new": true
         },
         {
@@ -763,7 +798,7 @@
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TJRL-r4AxMLxhwjfE75cRg",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
@@ -780,10 +815,24 @@
           "is_new": false
         },
         {
+          "title": "【天下雜誌】好好生活，從看見自己開始，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/CKimch4ZQ8TOZgjfHrRcNA",
+          "is_new": true
+        },
+        {
           "title": "【寂寞出版】精選小說展，單本85折，至10/31止",
           "subtitle": null,
           "period_text": null,
           "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/VYuN-40tx8NiWAjfGUdYRA",
+          "is_new": false
+        },
+        {
+          "title": "【野人出版 x 小樹文化】閱讀，是最高效的韌性投資，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/lzT3nNd8eM1zCwjfHq9Jmw",
           "is_new": true
         }
       ],
