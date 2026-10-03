@@ -1,11 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-03T04:39+08:00",
+  "updated_at": "2026-10-04T03:10+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -58,7 +57,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/event/UDN0901",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "GEPT新制全民英檢初級複試寫作口說10回試題+詳解",
@@ -255,6 +254,13 @@
           "period_text": "有效期限2026-09-01 ~ 2026-10-11",
           "url": "https://www.pubu.com.tw/campaign/event/booklife0901",
           "is_new": false
+        },
+        {
+          "title": "日月文化書展｜全書系88折+指定書99元",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
+          "url": "https://www.pubu.com.tw/campaign/event/heliopolis0901",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -294,7 +300,7 @@
           "subtitle": "10.3-11.2 單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/apexpress_261003",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2026尖端秋季動畫原作書展",
@@ -654,31 +660,10 @@
           "is_new": false
         },
         {
-          "title": "英初/中單字就藏在格子裡",
-          "subtitle": "9.3-10.3 單書85折、雙書82折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/udneng260903/9466?detail=1",
-          "is_new": false
-        },
-        {
           "title": "《二等武神 2》新書上市",
           "subtitle": "9.4-10.4 單書88折、雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=41801",
-          "is_new": false
-        },
-        {
-          "title": "9.3-10.3 《EMDR與悲傷療癒》",
-          "subtitle": "上市首月單書85折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/306376",
-          "is_new": false
-        },
-        {
-          "title": "《懷中檸檬》新書上市88折",
-          "subtitle": "我在你心裡，究竟占了多少位置？",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/306221",
           "is_new": false
         },
         {
