@@ -1,10 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-04T03:10+08:00",
+  "updated_at": "2026-10-05T03:32+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu"
+    "Pubu",
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -17,6 +18,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "《雨季不再來》50週年│三毛有聲書79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-05 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/crown1005",
+          "is_new": true
+        },
+        {
+          "title": "10月精選《北斗之拳》│尖端每月推薦",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-05 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/SppCollection1005",
+          "is_new": true
+        },
         {
           "title": "KadoKado百萬小說大賞│套書75折",
           "subtitle": null,
@@ -247,20 +262,6 @@
           "period_text": "有效期限2026-09-01 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/ebook/594118",
           "is_new": false
-        },
-        {
-          "title": "圓神出版書展｜精選66折+全書系88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/booklife0901",
-          "is_new": false
-        },
-        {
-          "title": "日月文化書展｜全書系88折+指定書99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-01 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/heliopolis0901",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -282,6 +283,13 @@
       "error": null,
       "items": [
         {
+          "title": "全館79折起，滿額再88折！",
+          "subtitle": "【會員日】精選作品首集領券5折",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261005_member10jsk",
+          "is_new": true
+        },
+        {
           "title": "《鋼之鍊金術師》電影書架免費領",
           "subtitle": "原作漫畫限時折扣即將開跑",
           "period_text": null,
@@ -296,10 +304,31 @@
           "is_new": false
         },
         {
+          "title": "尖端10月精選推薦",
+          "subtitle": "《北斗之拳 新裝完全版》75折！",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261005_spp_hokutonoken",
+          "is_new": true
+        },
+        {
+          "title": "《工作狂男友的特效藥是我》",
+          "subtitle": "全年齡版乙女向ASMR上架！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/309287",
+          "is_new": true
+        },
+        {
           "title": "《貓時參拜》新書上市",
           "subtitle": "10.3-11.2 單書88折，雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/apexpress_261003",
+          "is_new": false
+        },
+        {
+          "title": "DLsite特別合作！兌換超值折價券",
+          "subtitle": "10/5-11/3 最高一千優惠！",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2023/20230110_dlsiteasmr",
           "is_new": false
         },
         {
@@ -513,13 +542,6 @@
           "is_new": false
         },
         {
-          "title": "《工作狂男友的特效藥是我》",
-          "subtitle": "CV：一介、出品社團：男色研究所",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/307544",
-          "is_new": false
-        },
-        {
           "title": "《真正會讀書的人，都背得很少》",
           "subtitle": "10/16 前新書優惠88折",
           "period_text": null,
@@ -653,20 +675,6 @@
           "is_new": false
         },
         {
-          "title": "DLsite特別合作 兌換超值折價券！",
-          "subtitle": "9/5-10/4 最高一千元優惠！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2023/20230110_dlsiteasmr",
-          "is_new": false
-        },
-        {
-          "title": "《二等武神 2》新書上市",
-          "subtitle": "9.4-10.4 單書88折、雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?series=41801",
-          "is_new": false
-        },
-        {
           "title": "✩ 第一屆琅琅原創大賞 ✩",
           "subtitle": "單書79折、雙書75折",
           "period_text": null,
@@ -702,96 +710,11 @@
       "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
       "mode": "partial",
       "note": "指定活動頁摘要，只擷取明確的活動標題連結",
-      "page_title": "[樂天Kobo]週末閱讀好時光，單筆滿$555 送樂天點數111點！詳情請見活動辦法 | Rakuten Kobo 台灣",
-      "status": "ok",
-      "http_status": 200,
-      "error": null,
-      "items": [
-        {
-          "title": "【奇幻基地 x 春光】航向幽冥傳說之地，全書系，單本85折、套書8折，三本再折$99，至10/15止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/C6529oOvXMrpbAjfF5JvRA",
-          "is_new": false
-        },
-        {
-          "title": "【天下文化】職場進化論，單本85折，至10/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/_Wb8YESY_sP6EgjfGSNSow",
-          "is_new": false
-        },
-        {
-          "title": "【寶瓶文化】年齡是一種感覺。精選書展，單本85折，至10/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/vS2WrAxAkM7bewjfGTzOVQ",
-          "is_new": false
-        },
-        {
-          "title": "【大塊文化】出版社推薦，單本85折，至10/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/rcDPMzXmZcOk7gjfGUCQdQ",
-          "is_new": false
-        },
-        {
-          "title": "【楓書坊文化】出版社推薦，單本85折，至10/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/vEFFQzKy6ci2ngjfHgDc-g",
-          "is_new": false
-        },
-        {
-          "title": "【野人 x 行路】打開萬物連結的視野，單本85折，至10/10止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/OENTM9QGsMN1LQjfDWzC_w",
-          "is_new": false
-        },
-        {
-          "title": "【漫遊者文化】讀見故事之外・日韓小說系列書展，單本85折，至10/20止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TJRL-r4AxMLxhwjfE75cRg",
-          "is_new": false
-        },
-        {
-          "title": "【高寶書版】創造財富書展，單本85折起，至10/11止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/zbm-L-LH0Mk0egje-B5knA",
-          "is_new": false
-        },
-        {
-          "title": "【商業周刊】進化你的財富思維，投資升級主題書展，單本85折，至10/18止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/kfmF0hvzyc7S_gjfEjrVXw",
-          "is_new": false
-        },
-        {
-          "title": "【天下雜誌】好好生活，從看見自己開始，單本85折，至10/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/CKimch4ZQ8TOZgjfHrRcNA",
-          "is_new": false
-        },
-        {
-          "title": "【寂寞出版】精選小說展，單本85折，至10/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/VYuN-40tx8NiWAjfGUdYRA",
-          "is_new": false
-        },
-        {
-          "title": "【野人出版 x 小樹文化】閱讀，是最高效的韌性投資，單本85折，至10/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/lzT3nNd8eM1zCwjfHq9Jmw",
-          "is_new": false
-        }
-      ],
+      "page_title": null,
+      "status": "http_error",
+      "http_status": 403,
+      "error": "requests: 403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale; Playwright fallback: Kobo Playwright timeout after 30000ms",
+      "items": [],
       "extra_links": []
     },
     {
