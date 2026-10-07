@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-07T04:55+08:00",
+  "updated_at": "2026-10-08T05:13+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -23,21 +23,21 @@
           "subtitle": null,
           "period_text": "有效期限2026-10-07 ~ 2026-11-03",
           "url": "https://www.pubu.com.tw/campaign/event/chin-wen1007",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "長鴻電子書原創漫畫展│75折",
           "subtitle": null,
           "period_text": "有效期限2026-10-07 ~ 2026-10-27",
           "url": "https://www.pubu.com.tw/campaign/event/egmanga1007",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "殺人啦！梅洛斯先別跑│名作x推理作88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-06 ~ 2026-10-26",
           "url": "https://www.pubu.com.tw/campaign/event/Kadokawa1006",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "奇幻羅曼史新作：荊棘與玫瑰│書單85折",
@@ -255,6 +255,13 @@
           "period_text": "有效期限2026-09-16 ~ 2026-10-16",
           "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0916",
           "is_new": false
+        },
+        {
+          "title": "漫食．漫飲│尖端飲食主題漫畫展79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-16 ~ 2026-10-09",
+          "url": "https://www.pubu.com.tw/campaign/event/spp0916",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -279,7 +286,7 @@
           "title": "秋季新番＆上一季人氣作品79折起",
           "subtitle": "2張優惠券 搶先看本季原作",
           "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/bwanimation_2026100",
+          "url": "https://www.bookwalker.com.tw/event/bwanimation_20261007",
           "is_new": true
         },
         {
@@ -297,31 +304,66 @@
           "is_new": false
         },
         {
+          "title": "買《瑪格梅爾深海水族館》送桌布",
+          "subtitle": "10.8-11.8 精選書籍最低66折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/skyhighpress_20261008",
+          "is_new": true
+        },
+        {
+          "title": "10.8-10.26 未來數位秋季新刊特展",
+          "subtitle": "79折起，滿額再送電腦桌布！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/Futuredigi261008",
+          "is_new": true
+        },
+        {
+          "title": "10.3-11.1 水泉作品展",
+          "subtitle": "單書85折、雙書79折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kadokawa20261003/9648?series_display=1",
+          "is_new": true
+        },
+        {
           "title": "10.7-11.3 青文 X OVERLAP",
           "subtitle": "參展作品買3本75折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/202610_CHINGWINxOVERLAP",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "B☆W．朧月．三日月",
           "subtitle": "10.7-11.30 全書系79折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/globallight_20261007",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "遊戲結束之前 第三部：困獸之鬥",
           "subtitle": "獨家首賣單本88折，三本79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/309498",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.7-10.13《怪獸8號》套書7折",
           "subtitle": "★ 買再贈獨家電子書架 ★",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/302157",
+          "is_new": false
+        },
+        {
+          "title": "日文書 白夜書房新刊上架",
+          "subtitle": "💞 尋找你的心動寫真 💞",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=1275&order=sell_desc",
+          "is_new": true
+        },
+        {
+          "title": "日文書 扶桑社寫真新刊上架",
+          "subtitle": "立即收藏火辣新刊❤️‍🔥",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=690&order=sell_desc",
           "is_new": true
         },
         {
@@ -329,21 +371,21 @@
           "subtitle": "10/7-10/20 套書8折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/309489",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《青春之箱》期間限定",
           "subtitle": "10/7-10/20 套書8折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/309490",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.7-10.27長鴻電子書原創漫畫展",
           "subtitle": "購買指定作品再贈限定書卡！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/egmanga261007",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《漫畫世界史》系列單本85折",
@@ -567,13 +609,6 @@
           "subtitle": "單本75折、指定集數79元",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawa20260925",
-          "is_new": false
-        },
-        {
-          "title": "《鋼之鍊金術師》劇場版重映",
-          "subtitle": "9/24-10/7 期間限定單本85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?series=30027",
           "is_new": false
         },
         {
