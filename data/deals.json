@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-08T05:13+08:00",
+  "updated_at": "2026-10-09T05:15+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -18,6 +18,34 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": false
+        },
+        {
+          "title": "Pubook Pro 即將完售",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/ebook/594118",
+          "is_new": true
+        },
+        {
+          "title": "雙十快閃優惠 再送$500購書金",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-08 ~ 2026-10-11",
+          "url": "https://www.pubu.com.tw/campaign/event/pubook",
+          "is_new": true
+        },
+        {
+          "title": "歡慶雙十全館3本75折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-08 ~ 2026-10-11",
+          "url": "https://www.pubu.com.tw/",
+          "is_new": true
+        },
         {
           "title": "青文×OVERLAP│精選作品3本75折",
           "subtitle": null,
@@ -86,13 +114,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/event/awardnmtl1001",
-          "is_new": false
-        },
-        {
-          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
           "is_new": false
         },
         {
@@ -241,27 +262,6 @@
           "period_text": "有效期限2026-09-18 ~ 2026-10-18",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0918A-1",
           "is_new": false
-        },
-        {
-          "title": "歌曲改編作品書展│台灣角川精選85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-18 ~ 2026-10-08",
-          "url": "https://www.pubu.com.tw/campaign/event/Kadokawa0918",
-          "is_new": false
-        },
-        {
-          "title": "墨水與符印1上架│鋼鐵德魯伊系列85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-16 ~ 2026-10-16",
-          "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0916",
-          "is_new": false
-        },
-        {
-          "title": "漫食．漫飲│尖端飲食主題漫畫展79折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-16 ~ 2026-10-09",
-          "url": "https://www.pubu.com.tw/campaign/event/spp0916",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -283,11 +283,18 @@
       "error": null,
       "items": [
         {
+          "title": "10/9-10/11 全館77折起",
+          "subtitle": "消費滿1,200元再9折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
+          "is_new": true
+        },
+        {
           "title": "秋季新番＆上一季人氣作品79折起",
           "subtitle": "2張優惠券 搶先看本季原作",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/bwanimation_20261007",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《鋼之鍊金術師》電影書架免費領",
@@ -304,10 +311,73 @@
           "is_new": false
         },
         {
+          "title": "買指定新刊抽八月八老師親簽書！",
+          "subtitle": "詳細辦法點這邊看",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/308545",
+          "is_new": true
+        },
+        {
+          "title": "《我喜歡上弟弟的前女友-4-》上市！",
+          "subtitle": "買新刊送書卡，指定集數79折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/karas261009",
+          "is_new": true
+        },
+        {
+          "title": "《皇后之碧》新書上市",
+          "subtitle": "10.9-11.8 單書88折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/apexpress_20261009",
+          "is_new": true
+        },
+        {
+          "title": "《就算名偵探們告別了》",
+          "subtitle": "10.9-11.8 單書88折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/apexpress_261009",
+          "is_new": true
+        },
+        {
+          "title": "《貓又與大叔的幸福早餐4》",
+          "subtitle": "10.9-11.8 延伸書展85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/marcopolo_261009",
+          "is_new": true
+        },
+        {
+          "title": "JEAL阿柩《BAIT THE BETA》",
+          "subtitle": "ABO X 男鬼攻 X 不良受",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/search?v=1571&series_display=1",
+          "is_new": true
+        },
+        {
+          "title": "《和我同居的劍聖女師父…》",
+          "subtitle": "連載版1~8話 限時三天5折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/serial/40839",
+          "is_new": true
+        },
+        {
           "title": "買《瑪格梅爾深海水族館》送桌布",
           "subtitle": "10.8-11.8 精選書籍最低66折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/skyhighpress_20261008",
+          "is_new": false
+        },
+        {
+          "title": "10.9-10.22 日文書 講談社寫真展",
+          "subtitle": "❤️‍🔥精選作品5折起❤️‍🔥",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kodansha20261009",
+          "is_new": true
+        },
+        {
+          "title": "10.9-10.22 日文書 KADOKAWA",
+          "subtitle": "秋日心動寫真展5折 (第2彈)",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/KADOKAWA261009/9547",
           "is_new": true
         },
         {
@@ -315,14 +385,14 @@
           "subtitle": "79折起，滿額再送電腦桌布！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Futuredigi261008",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.3-11.1 水泉作品展",
           "subtitle": "單書85折、雙書79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawa20261003/9648?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.7-11.3 青文 X OVERLAP",
@@ -357,14 +427,14 @@
           "subtitle": "💞 尋找你的心動寫真 💞",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=1275&order=sell_desc",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "日文書 扶桑社寫真新刊上架",
           "subtitle": "立即收藏火辣新刊❤️‍🔥",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=690&order=sell_desc",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《藥師少女的獨語》期間限定",
@@ -434,13 +504,6 @@
           "subtitle": "10.2-10.23 限時79折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/spp20261002anime/9552?series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "《完全犯罪需要幾隻貓?》特價99元",
-          "subtitle": "10.2-10.8 限時優惠中！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/131824",
           "is_new": false
         },
         {
@@ -584,13 +647,6 @@
           "is_new": false
         },
         {
-          "title": "KADOKAWA 秋日心動寫真展 ➊",
-          "subtitle": "9.25-10.8 人氣寫真下殺5折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/KADOKAWAJP260925/9505",
-          "is_new": false
-        },
-        {
           "title": "《零罪惡感料理》食譜和運動瘦身書展",
           "subtitle": "9.30-10.30 單書88折，雙書85折",
           "period_text": null,
@@ -658,20 +714,6 @@
           "subtitle": "點數15倍、15張優惠券👈雙重優惠",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawaserial_20260918/9431?series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "9.18-10.8 男性向R18書展79折起",
-          "subtitle": "指定作品滿額領券再折50元",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260918_r18",
-          "is_new": false
-        },
-        {
-          "title": "砂藤シュガー老師親簽書抽獎活動！",
-          "subtitle": "點擊查看參加辦法",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/306747",
           "is_new": false
         },
         {
