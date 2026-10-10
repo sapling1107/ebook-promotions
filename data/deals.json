@@ -1,9 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-10T04:47+08:00",
-  "has_new_items": false,
-  "new_platforms": [],
+  "updated_at": "2026-10-11T04:00+08:00",
+  "has_new_items": true,
+  "new_platforms": [
+    "Pubu"
+  ],
   "platforms": [
     {
       "platform": "Pubu",
@@ -156,13 +158,6 @@
           "is_new": false
         },
         {
-          "title": "10月作者精選優惠｜禾馬",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-10",
-          "url": "https://www.pubu.com.tw/campaign/event/869",
-          "is_new": false
-        },
-        {
           "title": "積木文化書展│精選85折+1日99元",
           "subtitle": null,
           "period_text": "有效期限2026-10-01 ~ 2026-11-15",
@@ -233,13 +228,6 @@
           "is_new": false
         },
         {
-          "title": "亂馬1/2動畫第三季紀念│全系列77折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-22 ~ 2026-10-10",
-          "url": "https://www.pubu.com.tw/campaign/event/spp0922",
-          "is_new": false
-        },
-        {
           "title": "讀見故事之外・日韓小說展│新書延伸85折",
           "subtitle": null,
           "period_text": "有效期限2026-09-21 ~ 2026-10-20",
@@ -259,6 +247,20 @@
           "period_text": "有效期限2026-09-18 ~ 2026-10-18",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0918A-1",
           "is_new": false
+        },
+        {
+          "title": "墨水與符印1上架│鋼鐵德魯伊系列85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-16 ~ 2026-10-16",
+          "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0916",
+          "is_new": true
+        },
+        {
+          "title": "戀愛這門課│新月單本85折、2本79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-14 ~ 2026-10-17",
+          "url": "https://www.pubu.com.tw/campaign/event/crescent0914",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -672,13 +674,6 @@
           "is_new": false
         },
         {
-          "title": "《亂馬 1/2》系列限時77折！",
-          "subtitle": "9.22-10.10 歡慶動畫第三季播映",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/spp20260922/9516",
-          "is_new": false
-        },
-        {
           "title": "《真正會讀書的人，都背得很少》",
           "subtitle": "10/16 前新書優惠88折",
           "period_text": null,
@@ -739,20 +734,6 @@
           "subtitle": "書卡免費領！完成投票送書架&優惠券",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20260915_KaijuPrincess",
-          "is_new": false
-        },
-        {
-          "title": "9.10 小学館寫真新刊上架",
-          "subtitle": "最新寫真一次看，快來收藏💖",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=1007&order=sell_desc",
-          "is_new": false
-        },
-        {
-          "title": "9.10 集英社寫真新刊上架",
-          "subtitle": "人氣寫真新作登場，立即收藏✨",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=259&order=sell_desc",
           "is_new": false
         },
         {
