@@ -1,10 +1,11 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-11T04:00+08:00",
+  "updated_at": "2026-10-12T04:11+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu"
+    "Pubu",
+    "BookWalker"
   ],
   "platforms": [
     {
@@ -32,18 +33,25 @@
           "is_new": false
         },
         {
-          "title": "雙十快閃優惠 再送$500購書金",
+          "title": "馬伯庸新作《秦二世必須死》│系列85折起",
           "subtitle": null,
-          "period_text": "有效期限2026-10-08 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/campaign/event/pubook",
-          "is_new": false
+          "period_text": "有效期限2026-10-12 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/event/gobooks1012",
+          "is_new": true
         },
         {
-          "title": "歡慶雙十全館3本75折",
+          "title": "望月くらげ戀愛小說大賞│新作88折",
           "subtitle": null,
-          "period_text": "有效期限2026-10-08 ~ 2026-10-11",
-          "url": "https://www.pubu.com.tw/",
-          "is_new": false
+          "period_text": "有效期限2026-10-12 ~ 2026-11-13",
+          "url": "https://www.pubu.com.tw/campaign/event/crown1012-C",
+          "is_new": true
+        },
+        {
+          "title": "便利店兄弟4新作上架│町田苑香單本88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-12 ~ 2026-11-13",
+          "url": "https://www.pubu.com.tw/campaign/event/crown1012-A",
+          "is_new": true
         },
         {
           "title": "青文×OVERLAP│精選作品3本75折",
@@ -253,14 +261,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-09-16 ~ 2026-10-16",
           "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0916",
-          "is_new": true
-        },
-        {
-          "title": "戀愛這門課│新月單本85折、2本79折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-14 ~ 2026-10-17",
-          "url": "https://www.pubu.com.tw/campaign/event/crescent0914",
-          "is_new": true
+          "is_new": false
         }
       ],
       "extra_links": [
@@ -281,13 +282,6 @@
       "http_status": 200,
       "error": null,
       "items": [
-        {
-          "title": "10/9-10/11 全館77折起",
-          "subtitle": "消費滿1,200元再9折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
-          "is_new": false
-        },
         {
           "title": "秋季新番＆上一季人氣作品79折起",
           "subtitle": "2張優惠券 搶先看本季原作",
@@ -345,17 +339,17 @@
           "is_new": false
         },
         {
+          "title": "《秦二世必須死》新書上市",
+          "subtitle": "10.12-11.30 單本88折，二本85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gobooks_261012",
+          "is_new": true
+        },
+        {
           "title": "JEAL阿柩《BAIT THE BETA》",
           "subtitle": "ABO X 男鬼攻 X 不良受",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=1571&series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "《和我同居的劍聖女師父…》",
-          "subtitle": "連載版1~8話 限時三天5折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/serial/40839",
           "is_new": false
         },
         {
@@ -709,13 +703,6 @@
           "is_new": false
         },
         {
-          "title": "買動漫9月新刊上架",
-          "subtitle": "指定作品送書架、書卡",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/myacg20260921/9507",
-          "is_new": false
-        },
-        {
           "title": "《墨水與符印1 詛咒與祝福》",
           "subtitle": "單書85折、雙書82折、套書79折",
           "period_text": null,
@@ -737,20 +724,6 @@
           "is_new": false
         },
         {
-          "title": "《人際怪物退散！》",
-          "subtitle": "鈍感防禦心理學",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/306976",
-          "is_new": false
-        },
-        {
-          "title": "我不是在拒絕你，我是在選擇自己",
-          "subtitle": "說對這句話，人生站在自己這邊！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/306975",
-          "is_new": false
-        },
-        {
           "title": "✩ 第一屆琅琅原創大賞 ✩",
           "subtitle": "單書79折、雙書75折",
           "period_text": null,
@@ -762,13 +735,6 @@
           "subtitle": "特價最低99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_202610",
-          "is_new": false
-        },
-        {
-          "title": "《富爸爸的金錢啟蒙課》新書上市",
-          "subtitle": "單本88折，二本85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/gobooks_260819",
           "is_new": false
         },
         {
