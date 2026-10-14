@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-14T05:10+08:00",
+  "updated_at": "2026-10-15T04:09+08:00",
   "has_new_items": true,
   "new_platforms": [
     "BookWalker"
@@ -254,13 +254,6 @@
           "period_text": "有效期限2026-09-18 ~ 2026-10-18",
           "url": "https://www.pubu.com.tw/campaign/event/maplebook0918A-1",
           "is_new": false
-        },
-        {
-          "title": "墨水與符印1上架│鋼鐵德魯伊系列85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-16 ~ 2026-10-16",
-          "url": "https://www.pubu.com.tw/campaign/event/Gaeabooks0916",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -281,6 +274,13 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "10.15 限時一天！全館79折起！",
+          "subtitle": "指定BL作品輸入優惠碼再8折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BW261015",
+          "is_new": true
+        },
         {
           "title": "秋季新番＆上一季人氣作品79折起",
           "subtitle": "2張優惠券 搶先看本季原作",
@@ -303,10 +303,24 @@
           "is_new": false
         },
         {
+          "title": "《迷途俱樂部》新書上市88折",
+          "subtitle": "把壞天氣都寫成文字風景",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/311149",
+          "is_new": true
+        },
+        {
           "title": "漫畫版《少年陰陽師(03)》上市！",
           "subtitle": "買就送獨家手機桌布",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/310878",
+          "is_new": false
+        },
+        {
+          "title": "台灣角川10月輕小說主打星",
+          "subtitle": "領券指定書77折",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261015_starpc23",
           "is_new": true
         },
         {
@@ -720,13 +734,6 @@
           "subtitle": "上市首月，單本85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/307346",
-          "is_new": false
-        },
-        {
-          "title": "怪獸公主 色色場景大賞",
-          "subtitle": "書卡免費領！完成投票送書架&優惠券",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260915_KaijuPrincess",
           "is_new": false
         },
         {
