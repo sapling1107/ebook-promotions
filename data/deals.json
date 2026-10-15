@@ -1,9 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-15T04:09+08:00",
+  "updated_at": "2026-10-16T03:50+08:00",
   "has_new_items": true,
   "new_platforms": [
+    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -17,6 +18,34 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "遠離失智大腦排毒│保健瘦身主題單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-16 ~ 2026-11-16",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1016-3",
+          "is_new": true
+        },
+        {
+          "title": "團隊協作新思維│商業主題單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-16 ~ 2026-11-16",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1016",
+          "is_new": true
+        },
+        {
+          "title": "「還來得及愛」主題展3本79折｜禾馬",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-16 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/homer1016",
+          "is_new": true
+        },
+        {
+          "title": "第17屆金漫獎│入圍相關作品3本75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-15 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/golden-comic-awards17",
+          "is_new": true
+        },
         {
           "title": "Pubook Mobile 送清水殼、螢幕保護貼",
           "subtitle": null,
@@ -233,27 +262,6 @@
           "period_text": "有效期限2026-09-23 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/event/GoldenTripodAwards50",
           "is_new": false
-        },
-        {
-          "title": "讀見故事之外・日韓小說展│新書延伸85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-21 ~ 2026-10-20",
-          "url": "https://www.pubu.com.tw/campaign/event/AzothBooks0921",
-          "is_new": false
-        },
-        {
-          "title": "速成與維持生理機能│運動保健延伸展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-18 ~ 2026-10-18",
-          "url": "https://www.pubu.com.tw/campaign/event/maplebook0918A-3",
-          "is_new": false
-        },
-        {
-          "title": "解讀與呵護心理平衡│自我成長延伸展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-18 ~ 2026-10-18",
-          "url": "https://www.pubu.com.tw/campaign/event/maplebook0918A-1",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -274,13 +282,6 @@
       "http_status": 200,
       "error": null,
       "items": [
-        {
-          "title": "10.15 限時一天！全館79折起！",
-          "subtitle": "指定BL作品輸入優惠碼再8折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BW261015",
-          "is_new": true
-        },
         {
           "title": "秋季新番＆上一季人氣作品79折起",
           "subtitle": "2張優惠券 搶先看本季原作",
@@ -303,11 +304,18 @@
           "is_new": false
         },
         {
+          "title": "少淑女主題書展79折起",
+          "subtitle": "滿額領券再折50元+任務小贈品",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261016_josei",
+          "is_new": true
+        },
+        {
           "title": "《迷途俱樂部》新書上市88折",
           "subtitle": "把壞天氣都寫成文字風景",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/311149",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "漫畫版《少年陰陽師(03)》上市！",
@@ -321,7 +329,7 @@
           "subtitle": "領券指定書77折",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261015_starpc23",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "聲音作品主題書展79折起",
@@ -671,13 +679,6 @@
           "subtitle": "9.24-10.24 新書上市85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/308286",
-          "is_new": false
-        },
-        {
-          "title": "台灣角川：經典小說作品展",
-          "subtitle": "單本75折、指定集數79元",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kadokawa20260925",
           "is_new": false
         },
         {
