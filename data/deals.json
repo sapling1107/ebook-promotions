@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-16T03:50+08:00",
+  "updated_at": "2026-10-17T03:31+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,38 +19,45 @@
       "error": null,
       "items": [
         {
+          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-16 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": false
+        },
+        {
+          "title": "萬聖節",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-16 ~ 2026-10-31",
+          "url": "https://pubu99select.my.canva.site/halloween",
+          "is_new": true
+        },
+        {
           "title": "遠離失智大腦排毒│保健瘦身主題單書88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-16 ~ 2026-11-16",
           "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1016-3",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "團隊協作新思維│商業主題單書88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-16 ~ 2026-11-16",
           "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1016",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "「還來得及愛」主題展3本79折｜禾馬",
           "subtitle": null,
           "period_text": "有效期限2026-10-16 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/bookfair/homer1016",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "第17屆金漫獎│入圍相關作品3本75折起",
           "subtitle": null,
           "period_text": "有效期限2026-10-15 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/golden-comic-awards17",
-          "is_new": true
-        },
-        {
-          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
           "is_new": false
         },
         {
@@ -255,13 +262,6 @@
           "period_text": "有效期限2026-09-29 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/event/crown0929",
           "is_new": false
-        },
-        {
-          "title": "第50屆金鼎獎│入圍．得獎作品展85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-23 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/GoldenTripodAwards50",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -304,11 +304,39 @@
           "is_new": false
         },
         {
+          "title": "《今天雖然也有點軟爛》",
+          "subtitle": "但這是美好的一天",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/311405",
+          "is_new": true
+        },
+        {
+          "title": "《討人厭的同事圖鑑》",
+          "subtitle": "把難相處的人變成好合作的夥伴",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/311406",
+          "is_new": true
+        },
+        {
+          "title": "《僧侶與機器人》科幻大神書展",
+          "subtitle": "10.16-11.15 單書9折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/ffoundation_monkrobot",
+          "is_new": true
+        },
+        {
+          "title": "《餘燼冥之島》山德森延伸書展",
+          "subtitle": "10.16-11.15 單書9折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/ffoundation_emberdark",
+          "is_new": true
+        },
+        {
           "title": "少淑女主題書展79折起",
           "subtitle": "滿額領券再折50元+任務小贈品",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261016_josei",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《迷途俱樂部》新書上市88折",
@@ -689,13 +717,6 @@
           "is_new": false
         },
         {
-          "title": "《真正會讀書的人，都背得很少》",
-          "subtitle": "10/16 前新書優惠88折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/307759",
-          "is_new": false
-        },
-        {
           "title": "《九柱神》咖啡廳活動延伸書展",
           "subtitle": "9.21-10.31 BW限定活動✨",
           "period_text": null,
@@ -721,20 +742,6 @@
           "subtitle": "點數15倍、15張優惠券👈雙重優惠",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawaserial_20260918/9431?series_display=1",
-          "is_new": false
-        },
-        {
-          "title": "《墨水與符印1 詛咒與祝福》",
-          "subtitle": "單書85折、雙書82折、套書79折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/gaeabooks_20260916",
-          "is_new": false
-        },
-        {
-          "title": "9.16 聽著雨聲告別【新修版】",
-          "subtitle": "上市首月，單本85折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/307346",
           "is_new": false
         },
         {
