@@ -1,9 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-18T02:24+08:00",
-  "has_new_items": false,
-  "new_platforms": [],
+  "updated_at": "2026-10-19T02:34+08:00",
+  "has_new_items": true,
+  "new_platforms": [
+    "Pubu",
+    "BookWalker"
+  ],
   "platforms": [
     {
       "platform": "Pubu",
@@ -259,6 +262,13 @@
           "period_text": "有效期限2026-09-29 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/event/crown0929",
           "is_new": false
+        },
+        {
+          "title": "第50屆金鼎獎│入圍．得獎作品展85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-09-23 ~ 2026-10-31",
+          "url": "https://www.pubu.com.tw/campaign/event/GoldenTripodAwards50",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -280,17 +290,17 @@
       "error": null,
       "items": [
         {
+          "title": "全館82折 ✩ 點數15~20倍",
+          "subtitle": "滿額500元輸入優惠碼現折50元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/BW261019",
+          "is_new": true
+        },
+        {
           "title": "秋季新番＆上一季人氣作品79折起",
           "subtitle": "2張優惠券 搶先看本季原作",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/bwanimation_20261007",
-          "is_new": false
-        },
-        {
-          "title": "《鋼之鍊金術師》電影書架免費領",
-          "subtitle": "原作漫畫限時折扣即將開跑",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20260914_hagarenmovies",
           "is_new": false
         },
         {
@@ -718,20 +728,6 @@
           "subtitle": "9.21-10.31 BW限定活動✨",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/revebook20260921",
-          "is_new": false
-        },
-        {
-          "title": "《臺北故事》新書上市",
-          "subtitle": "9.18-10.18 單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/facesread_260918",
-          "is_new": false
-        },
-        {
-          "title": "《在書店等待櫻花盛開》",
-          "subtitle": "9.18-10.18 單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/marcopolo_260918",
           "is_new": false
         },
         {
