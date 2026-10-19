@@ -1,10 +1,9 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-19T02:34+08:00",
+  "updated_at": "2026-10-20T04:59+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
     "BookWalker"
   ],
   "platforms": [
@@ -262,13 +261,6 @@
           "period_text": "有效期限2026-09-29 ~ 2026-10-31",
           "url": "https://www.pubu.com.tw/campaign/event/crown0929",
           "is_new": false
-        },
-        {
-          "title": "第50屆金鼎獎│入圍．得獎作品展85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-09-23 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/GoldenTripodAwards50",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -294,7 +286,7 @@
           "subtitle": "滿額500元輸入優惠碼現折50元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW261019",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "秋季新番＆上一季人氣作品79折起",
@@ -309,6 +301,20 @@
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261001_perfumequiz",
           "is_new": false
+        },
+        {
+          "title": "fromRED 5週年紀念活動",
+          "subtitle": "滿390元就送小卡組！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/2026fromred",
+          "is_new": true
+        },
+        {
+          "title": "10.20-11.20 寶瓶《創傷成癮》",
+          "subtitle": "上市首月，推薦雙書合購85折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/aquarius_20261020/9712?detail=1",
+          "is_new": true
         },
         {
           "title": "《今天雖然也有點軟爛》",
