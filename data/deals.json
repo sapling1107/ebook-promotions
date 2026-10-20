@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-20T04:59+08:00",
+  "updated_at": "2026-10-21T03:58+08:00",
   "has_new_items": true,
   "new_platforms": [
     "BookWalker"
@@ -282,13 +282,6 @@
       "error": null,
       "items": [
         {
-          "title": "全館82折 ✩ 點數15~20倍",
-          "subtitle": "滿額500元輸入優惠碼現折50元！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BW261019",
-          "is_new": false
-        },
-        {
           "title": "秋季新番＆上一季人氣作品79折起",
           "subtitle": "2張優惠券 搶先看本季原作",
           "period_text": null,
@@ -303,18 +296,39 @@
           "is_new": false
         },
         {
+          "title": "《深夜食堂》重磅回歸！",
+          "subtitle": "點這看第31集",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/312028",
+          "is_new": true
+        },
+        {
+          "title": "10.21-11.21《為怪談點燈 4》",
+          "subtitle": "單書85折、三書79折、套書77折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gaeabooks_20261021",
+          "is_new": true
+        },
+        {
+          "title": "10.21-11.21《囚夢》新書上市",
+          "subtitle": "單書85折、雙書82折、套書79折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gaeabooks_261021",
+          "is_new": true
+        },
+        {
           "title": "fromRED 5週年紀念活動",
           "subtitle": "滿390元就送小卡組！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/2026fromred",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.20-11.20 寶瓶《創傷成癮》",
           "subtitle": "上市首月，推薦雙書合購85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/aquarius_20261020/9712?detail=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《今天雖然也有點軟爛》",
@@ -478,13 +492,6 @@
           "is_new": false
         },
         {
-          "title": "遊戲結束之前 第三部：困獸之鬥",
-          "subtitle": "獨家首賣單本88折，三本79折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/309498",
-          "is_new": false
-        },
-        {
           "title": "日文書 白夜書房新刊上架",
           "subtitle": "💞 尋找你的心動寫真 💞",
           "period_text": null,
@@ -496,20 +503,6 @@
           "subtitle": "立即收藏火辣新刊❤️‍🔥",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=690&order=sell_desc",
-          "is_new": false
-        },
-        {
-          "title": "《藥師少女的獨語》期間限定",
-          "subtitle": "10/7-10/20 套書8折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/309489",
-          "is_new": false
-        },
-        {
-          "title": "《青春之箱》期間限定",
-          "subtitle": "10/7-10/20 套書8折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/309490",
           "is_new": false
         },
         {
@@ -629,13 +622,6 @@
           "subtitle": "多樣折扣，領券折更多",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW20261002",
-          "is_new": false
-        },
-        {
-          "title": "2026下半期青文影展75折起",
-          "subtitle": "精選作品第1話限時免費！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/chingwin261001",
           "is_new": false
         },
         {
@@ -765,11 +751,96 @@
       "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
       "mode": "partial",
       "note": "指定活動頁摘要，只擷取明確的活動標題連結",
-      "page_title": null,
-      "status": "http_error",
-      "http_status": 403,
-      "error": "requests: 403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale; Playwright fallback: Kobo Playwright timeout after 30000ms",
-      "items": [],
+      "page_title": "[樂天Kobo]週末閱讀好時光，單筆滿$555 送樂天點數111點！詳情請見活動辦法 | Rakuten Kobo 台灣",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "items": [
+        {
+          "title": "【天下雜誌】好好生活，從看見自己開始，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/CKimch4ZQ8TOZgjfHrRcNA",
+          "is_new": false
+        },
+        {
+          "title": "【楓書坊文化】出版社推薦，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/vEFFQzKy6ci2ngjfHgDc-g",
+          "is_new": false
+        },
+        {
+          "title": "【寂寞出版】精選小說展，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/VYuN-40tx8NiWAjfGUdYRA",
+          "is_new": false
+        },
+        {
+          "title": "【大塊文化】出版社推薦，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/rcDPMzXmZcOk7gjfGUCQdQ",
+          "is_new": false
+        },
+        {
+          "title": "【野人出版 x 小樹文化】閱讀，是最高效的韌性投資，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/lzT3nNd8eM1zCwjfHq9Jmw",
+          "is_new": false
+        },
+        {
+          "title": "【聯經出版】從買房到投資布局：打造高房商，讓每筆資金更有價值展，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/W7RqpHSNSspwhQjfJDG9rw",
+          "is_new": false
+        },
+        {
+          "title": "【寶瓶文化】年齡是一種感覺。精選書展，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/vS2WrAxAkM7bewjfGTzOVQ",
+          "is_new": false
+        },
+        {
+          "title": "【麥田 x 臉譜 x 獨步】全書系，單本85折，三本再折$99，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/wyYDZDtLDMHEcAjfJCac3w",
+          "is_new": false
+        },
+        {
+          "title": "【天下文化】職場進化論，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/_Wb8YESY_sP6EgjfGSNSow",
+          "is_new": false
+        },
+        {
+          "title": "【三采文化】大人不知道的世界祕密，單本85折，至10/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/YrUIm7z3dMHaKAjfKAvDWA",
+          "is_new": false
+        },
+        {
+          "title": "【積木文化】翻開生活速寫本 - 今天是哪一種時刻？，單本85折，至11/15止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/fIJmvqHGysn2tAjfKA5EVg",
+          "is_new": false
+        },
+        {
+          "title": "【柿子文化】勇敢前行！就算路上很多怪獸......全書系，單本88折，至12/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/OtAUeAu-l8lwbgjfFKvlQg",
+          "is_new": false
+        }
+      ],
       "extra_links": []
     },
     {
