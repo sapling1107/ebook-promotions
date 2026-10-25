@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-25T02:44+08:00",
+  "updated_at": "2026-10-26T02:56+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -18,11 +18,11 @@
       "error": null,
       "items": [
         {
-          "title": "颱風快閃 儲值金加碼送",
+          "title": "村上龍 經典作品回顧",
           "subtitle": null,
-          "period_text": "有效期限2026-10-23 ~ 2026-10-25",
-          "url": "https://www.pubu.com.tw/storedValue/checkout",
-          "is_new": false
+          "period_text": "有效期限2026-10-26 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/search?condition=fl_ahr%3D%E6%9D%91%E4%B8%8A%E9%BE%8D",
+          "is_new": true
         },
         {
           "title": "次元交會⚔️：熱門動畫化原作展85折",
@@ -261,13 +261,6 @@
           "period_text": "有效期限2026-10-01 ~ 2026-11-15",
           "url": "https://www.pubu.com.tw/campaign/event/atmanbooks1001",
           "is_new": false
-        },
-        {
-          "title": "大塊×大辣書展│精選書單85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-11-15",
-          "url": "https://www.pubu.com.tw/campaign/event/locuspxdala1001",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -289,13 +282,6 @@
       "error": null,
       "items": [
         {
-          "title": "10.24-10.25 全館75折起",
-          "subtitle": "優惠再加碼！領券最低63折🔥",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BW261024",
-          "is_new": false
-        },
-        {
           "title": "《銀河英雄傳說》小說上市！",
           "subtitle": "經典長篇科幻歷史小說再現",
           "period_text": null,
@@ -307,7 +293,7 @@
           "subtitle": "特價最低99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_202612",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "今夜，鬼故事不散場",
