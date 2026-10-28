@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-28T04:36+08:00",
+  "updated_at": "2026-10-29T04:58+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,25 +19,32 @@
       "error": null,
       "items": [
         {
+          "title": "萬聖節快閃優惠 全館3本75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-28 ~ 2026-11-01",
+          "url": "https://www.pubu.com.tw/",
+          "is_new": true
+        },
+        {
           "title": "疑案辦：第二真相│新書85折+首日99元",
           "subtitle": null,
           "period_text": "有效期限2026-10-28 ~ 2026-11-28",
           "url": "https://www.pubu.com.tw/campaign/bookfair/linkspublishing1028",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《森林裡的好日子》│小川糸作品88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-27 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/crown1027",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《你可以選擇不承擔》│枡野俊明作品88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-27 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/crown1027b",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "村上龍 經典作品回顧",
@@ -248,20 +255,6 @@
           "period_text": "有效期限2026-10-01 ~ 2027-01-31",
           "url": "https://www.pubu.com.tw/magazine-list/%E5%BE%A9%E8%88%88%E6%AF%8F%E4%B8%80%E5%A4%A9-1102",
           "is_new": false
-        },
-        {
-          "title": "積木文化書展│精選85折+1日99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-11-15",
-          "url": "https://www.pubu.com.tw/campaign/event/CubeZests1001",
-          "is_new": false
-        },
-        {
-          "title": "商業周刊暢銷展│精選書單88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-11-15",
-          "url": "https://www.pubu.com.tw/campaign/event/businessweekly1001",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -283,32 +276,39 @@
       "error": null,
       "items": [
         {
+          "title": "10.29-11.15 長鴻輕小說7折起",
+          "subtitle": "結帳滿699元贈獨家手機桌布！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/egmanga261029",
+          "is_new": true
+        },
+        {
           "title": "10.28-11.28《1633烈焰料羅》",
           "subtitle": "單書85折、雙書82折、套書79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_261028",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《MARY JANE 01》獨家首賣",
           "subtitle": "10.28-11.10 單本88折，三本79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312344",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.28-11.28 疑案辦Deep Ocean",
           "subtitle": "續集上市！單書85折、雙書8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/deepocean261029/9755?detail=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《閻鐵花II-1》英雄漫畫全新篇章",
           "subtitle": "英雄究竟是力量，還是選擇？",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312442",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《銀河英雄傳說》小說上市！",
