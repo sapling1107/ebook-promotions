@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-29T04:58+08:00",
+  "updated_at": "2026-10-30T05:01+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,11 +19,46 @@
       "error": null,
       "items": [
         {
+          "title": "聯經出版電子書｜10/30 - 12/13 每日99推薦",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
+          "url": "https://www.pubu.com.tw/campaign/event/content/700662",
+          "is_new": true
+        },
+        {
+          "title": "大牌×一起來×新樂園全書系展│單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/streamer-lifecometogether-nutopia1030",
+          "is_new": true
+        },
+        {
+          "title": "寶瓶文化全書系展│單書85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/aquarius1030",
+          "is_new": true
+        },
+        {
+          "title": "時報出版精選書展│單書85折＋99元書單",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/readingtimes1030",
+          "is_new": true
+        },
+        {
+          "title": "三采文化暢銷書展│單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/suncolor1030",
+          "is_new": true
+        },
+        {
           "title": "萬聖節快閃優惠 全館3本75折起",
           "subtitle": null,
           "period_text": "有效期限2026-10-28 ~ 2026-11-01",
           "url": "https://www.pubu.com.tw/",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "疑案辦：第二真相│新書85折+首日99元",
@@ -31,6 +66,13 @@
           "period_text": "有效期限2026-10-28 ~ 2026-11-28",
           "url": "https://www.pubu.com.tw/campaign/bookfair/linkspublishing1028",
           "is_new": false
+        },
+        {
+          "title": "少女不祈禱│GL佳作88折、套書75折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-27 ~ 2026-11-16",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1027",
+          "is_new": true
         },
         {
           "title": "《森林裡的好日子》│小川糸作品88折",
@@ -220,41 +262,6 @@
           "period_text": "有效期限2026-10-01 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/event/UDN0901",
           "is_new": false
-        },
-        {
-          "title": "GEPT新制全民英檢初級複試寫作口說10回試題+詳解",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/bookbuffet/ebook/680909",
-          "is_new": false
-        },
-        {
-          "title": "科特勒的卓越營運新戰略",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/bookbuffet/ebook/680908",
-          "is_new": false
-        },
-        {
-          "title": "我是說話高手！小學生的第一本環境素養啟蒙書",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/bookbuffet/ebook/680907",
-          "is_new": false
-        },
-        {
-          "title": "202610飽讀新書",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/content/145022",
-          "is_new": false
-        },
-        {
-          "title": "靈修月刊《復興每一天》12期特價699元",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2027-01-31",
-          "url": "https://www.pubu.com.tw/magazine-list/%E5%BE%A9%E8%88%88%E6%AF%8F%E4%B8%80%E5%A4%A9-1102",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -276,11 +283,53 @@
       "error": null,
       "items": [
         {
+          "title": "10.30-10.31 全館7折起",
+          "subtitle": "好書不等人！月底最後折扣✨",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
+          "is_new": true
+        },
+        {
+          "title": "10.30-11.30 三采文化全書系",
+          "subtitle": "單書88折、雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/suncolor_20261030",
+          "is_new": true
+        },
+        {
+          "title": "《美味的理由：日本美味的誕生》",
+          "subtitle": "10.30-11.29 單書88折、雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/cubepress_261030",
+          "is_new": true
+        },
+        {
+          "title": "《用泡麵代替眼淚》新書88折",
+          "subtitle": "大哭前，先大口吃飯吧！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/312494",
+          "is_new": true
+        },
+        {
+          "title": "10.30 逗點文創《小王子》",
+          "subtitle": "首月限定，單本85折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/312490",
+          "is_new": true
+        },
+        {
+          "title": "10.30-11.12 日文書 光文社寫真展",
+          "subtitle": "參展作品7折➤立即選購",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kobunsha2026/9772",
+          "is_new": true
+        },
+        {
           "title": "10.29-11.15 長鴻輕小說7折起",
           "subtitle": "結帳滿699元贈獨家手機桌布！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/egmanga261029",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.28-11.28《1633烈焰料羅》",
@@ -500,13 +549,6 @@
           "is_new": false
         },
         {
-          "title": "《我喜歡上弟弟的前女友-4-》上市！",
-          "subtitle": "買新刊送書卡，指定集數79折！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/karas261009",
-          "is_new": false
-        },
-        {
           "title": "《皇后之碧》新書上市",
           "subtitle": "10.9-11.8 單書88折，雙書85折",
           "period_text": null,
@@ -665,13 +707,6 @@
           "subtitle": "10.1-10.31 新書上市9折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/309291",
-          "is_new": false
-        },
-        {
-          "title": "10.2-10.29 秋日主題書展",
-          "subtitle": "多樣折扣，領券折更多",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BW20261002",
           "is_new": false
         },
         {
