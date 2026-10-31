@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-10-31T04:41+08:00",
+  "updated_at": "2026-11-01T03:54+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,6 +19,62 @@
       "error": null,
       "items": [
         {
+          "title": "當快樂變成病毒？尼爾舒斯特曼作品95折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/omnibook1101",
+          "is_new": true
+        },
+        {
+          "title": "逆天改命的商王傳奇│聯合書展單本85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/udn1101",
+          "is_new": true
+        },
+        {
+          "title": "大塊文化30周年慶│全書系85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-12-31",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/locus1101",
+          "is_new": true
+        },
+        {
+          "title": "菁品文化20週年│全書系單本99元",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-12-01",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/jingpin1101",
+          "is_new": true
+        },
+        {
+          "title": "11月名家 若木民喜 | 尖端每月推薦",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/sppartist1101",
+          "is_new": true
+        },
+        {
+          "title": "獨步文化全書系展│單書88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-12-13",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/apexpress1101",
+          "is_new": true
+        },
+        {
+          "title": "本月作者精選優惠｜禾馬",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-11-10",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/homer1101",
+          "is_new": true
+        },
+        {
+          "title": "《直男系列》11/1 即將下架",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-31 ~ 2026-11-01",
+          "url": "https://www.pubu.com.tw/store/2716386/series/%E7%9B%B4%E7%94%B7%E7%B3%BB%E5%88%97",
+          "is_new": true
+        },
+        {
           "title": "聯經出版電子書｜10/30 - 12/13 每日99推薦",
           "subtitle": null,
           "period_text": "有效期限2026-10-30 ~ 2026-12-13",
@@ -26,25 +82,32 @@
           "is_new": false
         },
         {
+          "title": "《我培育的S級們 5、6》新書優惠88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-30 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/store/3662270/series/%E3%80%90%E5%B0%8F%E8%AA%AA%E3%80%91%E6%88%91%E5%9F%B9%E8%82%B2%E7%9A%84S%E7%B4%9A%E5%80%91",
+          "is_new": true
+        },
+        {
           "title": "洋流誌",
           "subtitle": null,
           "period_text": "有效期限2026-10-30 ~ 2026-11-27",
           "url": "https://www.pubu.com.tw/store/5612088",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "大雁文化全書系展│77折起+每週99元",
           "subtitle": null,
           "period_text": "有效期限2026-10-30 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/andbooks1030",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "聯經出版全書系展│單書85折＋每日99另推",
           "subtitle": null,
           "period_text": "有效期限2026-10-30 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/linking1030",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "寶瓶文化全書系展│單書85折",
@@ -166,20 +229,6 @@
           "is_new": false
         },
         {
-          "title": "Pubook Mobile 送清水殼、螢幕保護貼",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-16 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
-          "is_new": false
-        },
-        {
-          "title": "不給書就搗蛋！滿４本７９折起！",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-16 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/halloween-mystery",
-          "is_new": false
-        },
-        {
           "title": "遠離失智大腦排毒│保健瘦身主題單書88折",
           "subtitle": null,
           "period_text": "有效期限2026-10-16 ~ 2026-11-16",
@@ -194,24 +243,10 @@
           "is_new": false
         },
         {
-          "title": "「還來得及愛」主題展3本79折｜禾馬",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-16 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/homer1016",
-          "is_new": false
-        },
-        {
           "title": "第17屆金漫獎│入圍相關作品3本75折起",
           "subtitle": null,
           "period_text": "有效期限2026-10-15 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/golden-comic-awards17",
-          "is_new": false
-        },
-        {
-          "title": "Pubook Pro 即將完售",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-01 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/ebook/594118",
           "is_new": false
         },
         {
@@ -226,41 +261,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-10-12 ~ 2026-11-13",
           "url": "https://www.pubu.com.tw/campaign/event/crown1012-C",
-          "is_new": false
-        },
-        {
-          "title": "便利店兄弟4新作上架│町田苑香單本88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-12 ~ 2026-11-13",
-          "url": "https://www.pubu.com.tw/campaign/event/crown1012-A",
-          "is_new": false
-        },
-        {
-          "title": "青文×OVERLAP│精選作品3本75折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-07 ~ 2026-11-03",
-          "url": "https://www.pubu.com.tw/campaign/event/chin-wen1007",
-          "is_new": false
-        },
-        {
-          "title": "奇幻羅曼史新作：荊棘與玫瑰│書單85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-06 ~ 2026-11-05",
-          "url": "https://www.pubu.com.tw/campaign/event/AzothBooks1006",
-          "is_new": false
-        },
-        {
-          "title": "《雨季不再來》50週年│三毛有聲書79折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-05 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/crown1005",
-          "is_new": false
-        },
-        {
-          "title": "10月精選《北斗之拳》│尖端每月推薦",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-05 ~ 2026-10-31",
-          "url": "https://www.pubu.com.tw/campaign/event/SppCollection1005",
           "is_new": false
         }
       ],
@@ -283,31 +283,66 @@
       "error": null,
       "items": [
         {
-          "title": "10.30-10.31 全館7折起",
-          "subtitle": "好書不等人！月底最後折扣✨",
+          "title": "11.1-11.30 獨步文化全書系",
+          "subtitle": "單書88折，雙書85折",
           "period_text": null,
-          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
-          "is_new": false
+          "url": "https://www.bookwalker.com.tw/event/apexpress_202611",
+          "is_new": true
+        },
+        {
+          "title": "POPO原創全書系",
+          "subtitle": "11.1-11.30 單書88折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/popo_202611",
+          "is_new": true
+        },
+        {
+          "title": "大塊文化三十周年慶",
+          "subtitle": "11.1-12.31 全書系85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/locuspublishing_30",
+          "is_new": true
         },
         {
           "title": "《死了，就能好好休息了》85折",
           "subtitle": "「怎麼會是你？」",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312629",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《侵密關係》新書上市85折",
           "subtitle": "家弒女王最新懸疑力作！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312628",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《承認事實的練習》新書上市9折",
           "subtitle": "古道家心法的現代實踐",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312630",
+          "is_new": false
+        },
+        {
+          "title": "臺灣商務印書館全書系展",
+          "subtitle": "11.1-11.30 單本85折，兩本82折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/cptw_202611",
+          "is_new": true
+        },
+        {
+          "title": "六嘆×解婕翎漫畫口袋名單",
+          "subtitle": "馬上前往",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261101_comicpoll",
+          "is_new": true
+        },
+        {
+          "title": "11.1-12.1 菁品文化20週年",
+          "subtitle": "🔥全書系特價99元🔥",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/udnjp20y261101/9785",
           "is_new": true
         },
         {
@@ -315,7 +350,7 @@
           "subtitle": "10.31-11.30 單書88折、雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ryefield_261031",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "10.30-11.30 三采文化全書系",
@@ -330,6 +365,13 @@
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cubepress_261030",
           "is_new": false
+        },
+        {
+          "title": "11.1-11.30 果麥文化新書上市",
+          "subtitle": "單書85折、雙書79折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/goldmye20261101",
+          "is_new": true
         },
         {
           "title": "《用泡麵代替眼淚》新書88折",
@@ -413,13 +455,6 @@
           "subtitle": "10.23-12.20 新月文化愛情小說展",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/crescent_2026romance",
-          "is_new": false
-        },
-        {
-          "title": "拿拿摳のBL香氣鑑定所",
-          "subtitle": "參加測驗就送優惠券&書架",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261001_perfumequiz",
           "is_new": false
         },
         {
@@ -668,13 +703,6 @@
           "is_new": false
         },
         {
-          "title": "尖端10月精選推薦",
-          "subtitle": "《北斗之拳 新裝完全版》75折！",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261005_spp_hokutonoken",
-          "is_new": false
-        },
-        {
           "title": "《貓時參拜》新書上市",
           "subtitle": "10.3-11.2 單書88折，雙書85折",
           "period_text": null,
@@ -703,59 +731,10 @@
           "is_new": false
         },
         {
-          "title": "《然而，貓還是出去了》新書上市",
-          "subtitle": "10.1-10.31 單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/ryefield_261001",
-          "is_new": false
-        },
-        {
-          "title": "《初夏，完州》新書上市",
-          "subtitle": "一場五感全開的故事體驗",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/booklife_261001",
-          "is_new": false
-        },
-        {
-          "title": "《向上流動》",
-          "subtitle": "10.1-10.31 新書上市85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/309290",
-          "is_new": false
-        },
-        {
-          "title": "《微小互動的驚人力量》",
-          "subtitle": "10.1-10.31 新書上市9折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/309291",
-          "is_new": false
-        },
-        {
-          "title": "尖端45週年特別我推：坂本真一",
-          "subtitle": "限時75折起，買套書再送精美贈品",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261001_spp_sakamotoshinichi",
-          "is_new": false
-        },
-        {
           "title": "✩ 寶瓶文化25週年選書 ✩",
           "subtitle": "《年齡是一種感覺》",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/308440",
-          "is_new": false
-        },
-        {
-          "title": "《九柱神》咖啡廳活動延伸書展",
-          "subtitle": "9.21-10.31 BW限定活動✨",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/revebook20260921",
-          "is_new": false
-        },
-        {
-          "title": "《為什麼我們一拍即合？》",
-          "subtitle": "10/31 前新書上市優惠",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/308434",
           "is_new": false
         },
         {
@@ -770,13 +749,6 @@
           "subtitle": "單書79折、雙書75折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/udn260901/9442",
-          "is_new": false
-        },
-        {
-          "title": "城邦10月版權到期書展",
-          "subtitle": "特價最低99元！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/cite_202610",
           "is_new": false
         },
         {
