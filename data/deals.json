@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-05T05:48+08:00",
+  "updated_at": "2026-11-06T05:55+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,11 +19,25 @@
       "error": null,
       "items": [
         {
+          "title": "11月 每週一、二，指定兩本旅遊書 $99",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-05 ~ 2026-11-30",
+          "url": "https://pubu99select.my.canva.site/nov-travelflight",
+          "is_new": true
+        },
+        {
+          "title": "萬・卷・洋・溢｜公眾人物的私房書櫃",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-05 ~ 2026-11-30",
+          "url": "https://pubu99select.my.canva.site/wanyan-reading",
+          "is_new": true
+        },
+        {
           "title": "尖端11月精選《內衣女孩任你擺布》75折",
           "subtitle": null,
           "period_text": "有效期限2026-11-05 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/sppcollection1105",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "花開之時戀上妳│青文百合書展85折起",
@@ -248,20 +262,6 @@
           "period_text": "有效期限2026-10-23 ~ 2026-11-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1023-2",
           "is_new": false
-        },
-        {
-          "title": "絕命萬聖節│新月小說單本85折、2本8折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-23 ~ 2026-11-24",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/crescent1023",
-          "is_new": false
-        },
-        {
-          "title": "醉琉璃《為怪談點燈4》│作者輕小說85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-21 ~ 2026-11-21",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/gaeabooks1021-2",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -283,32 +283,74 @@
       "error": null,
       "items": [
         {
-          "title": "【會員日】全館79折起",
-          "subtitle": "滿1500元再88折",
+          "title": "青春豬頭少年不會夢到親愛好朋友",
+          "subtitle": "電影書架免費領，原作限時85折",
           "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261105_member5erc",
-          "is_new": false
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261106_seishunbutayaroumovies",
+          "is_new": true
+        },
+        {
+          "title": "《在山茶花盛開之前》新書上市",
+          "subtitle": "10.31-11.30 單書88折、雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/ryefield_261105",
+          "is_new": true
+        },
+        {
+          "title": "積木文化《哥吉拉制霸七十年》",
+          "subtitle": "11.6-12.5 單書88折、雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/godzilla",
+          "is_new": true
+        },
+        {
+          "title": "遠流11月精選新書",
+          "subtitle": "11.6-12.6 新書各享85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/YLib1106",
+          "is_new": true
+        },
+        {
+          "title": "11.6 逗點《化身博士》",
+          "subtitle": "首月優惠單書85折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/312909",
+          "is_new": true
+        },
+        {
+          "title": "11.6-12.6 中小學生讀物選介書展",
+          "subtitle": "消費滿299元，領卷現折20元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/udn261106/9830",
+          "is_new": true
+        },
+        {
+          "title": "11.6-11.19 日文書 講談社寫真展",
+          "subtitle": "人氣寫真下殺3折起🔥",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kodansha20261106/9780",
+          "is_new": true
         },
         {
           "title": "《我又不是外人》新書上市85折",
           "subtitle": "回到部落，真的就回到原鄉？",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312840",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端11月精選推薦",
           "subtitle": "《內衣女孩任你擺布》75折！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261105_spp_lingerie",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "創傷劇團．尼貝爾 2026生日慶",
           "subtitle": "優惠券、書架封面免費領",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/happybirthdaytonibel2026",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "異世界主題書展79折起！",
@@ -336,7 +378,7 @@
           "subtitle": "11/5-12/4 最高一千優惠！",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2023/20230110_dlsiteasmr",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.2-11.20 紳士節開跑！",
@@ -570,20 +612,6 @@
           "is_new": false
         },
         {
-          "title": "10.23-11.5 日文書 KADOKAWA",
-          "subtitle": "秋日心動寫真展5折 (第3彈)",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/KADOKAWA261023/9686",
-          "is_new": false
-        },
-        {
-          "title": "10.23-11.5 日文書 講談社寫真展",
-          "subtitle": "精選作品7折起 ➤ 立即選購",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kodansha20261023/9707",
-          "is_new": false
-        },
-        {
           "title": "🏆2026店長創作祭冠軍正式出爐！",
           "subtitle": "作品集、冠軍書架立即免費領取！",
           "period_text": null,
@@ -633,13 +661,6 @@
           "is_new": false
         },
         {
-          "title": "少淑女主題書展79折起",
-          "subtitle": "滿額領券再折50元+任務小贈品",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261016_josei",
-          "is_new": false
-        },
-        {
           "title": "《今天雖然也有點軟爛》",
           "subtitle": "但這是美好的一天",
           "period_text": null,
@@ -672,13 +693,6 @@
           "subtitle": "把壞天氣都寫成文字風景",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/311149",
-          "is_new": false
-        },
-        {
-          "title": "台灣角川10月輕小說主打星",
-          "subtitle": "領券指定書77折",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261015_starpc23",
           "is_new": false
         },
         {
@@ -752,20 +766,6 @@
           "is_new": false
         },
         {
-          "title": "《漫畫世界史》系列單本85折",
-          "subtitle": "10.6-11.5 限時優惠中",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/parenting261006",
-          "is_new": false
-        },
-        {
-          "title": "《工作狂男友的特效藥是我》",
-          "subtitle": "全年齡版乙女向ASMR上架！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/309287",
-          "is_new": false
-        },
-        {
           "title": "城邦11月版權到期書展",
           "subtitle": "特價最低99元！",
           "period_text": null,
@@ -794,82 +794,11 @@
       "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
       "mode": "partial",
       "note": "指定活動頁摘要，只擷取明確的活動標題連結",
-      "page_title": "[樂天Kobo]週末閱讀好時光，單筆滿$555 送樂天點數111點！詳情請見活動辦法 | Rakuten Kobo 台灣",
-      "status": "ok",
-      "http_status": 200,
-      "error": null,
-      "items": [
-        {
-          "title": "【天下雜誌】啟動職涯複利，投資自己，成就未來，單本85折，至12/3止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/wFJM4IJkdMfW-wjfKcZOWw",
-          "is_new": false
-        },
-        {
-          "title": "【漫遊者文化】告別以後，故事仍在繼續，單本85折，至12/1止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/P-KrBFKbscS0fgjfKPhxlw",
-          "is_new": false
-        },
-        {
-          "title": "【究竟出版】出版社推薦，單本85折，至11/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/3nVd2V38F8W39AjfKO_jNg",
-          "is_new": false
-        },
-        {
-          "title": "【天下文化】科學素養展，單本85折，至11/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/qfa0BFXLNcdAJAjfKBP3Gw",
-          "is_new": false
-        },
-        {
-          "title": "【積木文化】翻開生活速寫本 - 今天是哪一種時刻？，單本85折，至11/15止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/fIJmvqHGysn2tAjfKA5EVg",
-          "is_new": false
-        },
-        {
-          "title": "【一卷出版】你不知道的中國與世界—看見真相．守護台灣，單本85折，至12/3止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TxBnmbjA2cwEJQjfOMSOIg",
-          "is_new": false
-        },
-        {
-          "title": "【臉譜出版】出版社推薦，單本85折，至11/28止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/GD2MtIosBcdX7QjfKBEg6Q",
-          "is_new": false
-        },
-        {
-          "title": "【大塊文化】童書繪本展，單本85折，至11/30止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Qa4tUUCTnM3DBgjfKOuzQg",
-          "is_new": false
-        },
-        {
-          "title": "【天下文化】《頂尖投資人眼中的未來好公司》延伸書展，單本85折，至11/13止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/fqbub0hcpMLBAQjfOLAs6w",
-          "is_new": false
-        },
-        {
-          "title": "【柿子文化】勇敢前行！就算路上很多怪獸......全書系，單本88折，至12/31止",
-          "subtitle": null,
-          "period_text": null,
-          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/OtAUeAu-l8lwbgjfFKvlQg",
-          "is_new": false
-        }
-      ],
+      "page_title": null,
+      "status": "http_error",
+      "http_status": 403,
+      "error": "requests: 403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale; Playwright fallback: Kobo Playwright timeout after 30000ms",
+      "items": [],
       "extra_links": []
     },
     {
