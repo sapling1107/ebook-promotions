@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-06T05:55+08:00",
+  "updated_at": "2026-11-07T05:26+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,18 +19,39 @@
       "error": null,
       "items": [
         {
+          "title": "2026 Openbook 好書獎入圍書展",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-06 ~ 2027-02-28",
+          "url": "https://www.pubu.com.tw/campaign/event/Openbook2026",
+          "is_new": true
+        },
+        {
+          "title": "雙11超省優惠 不限本數75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-06 ~ 2026-11-11",
+          "url": "https://www.pubu.com.tw/",
+          "is_new": false
+        },
+        {
+          "title": "《fx戰士久留美》專區限時特價",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-06 ~ 2026-11-11",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/fx-fighter-kurumi-chan1105",
+          "is_new": true
+        },
+        {
           "title": "11月 每週一、二，指定兩本旅遊書 $99",
           "subtitle": null,
           "period_text": "有效期限2026-11-05 ~ 2026-11-30",
           "url": "https://pubu99select.my.canva.site/nov-travelflight",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "萬・卷・洋・溢｜公眾人物的私房書櫃",
           "subtitle": null,
           "period_text": "有效期限2026-11-05 ~ 2026-11-30",
           "url": "https://pubu99select.my.canva.site/wanyan-reading",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "尖端11月精選《內衣女孩任你擺布》75折",
@@ -44,13 +65,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-04 ~ 2026-11-17",
           "url": "https://www.pubu.com.tw/campaign/bookfair/chin-wen1104",
-          "is_new": false
-        },
-        {
-          "title": "秋閱祭 | 全館3本75折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-02 ~ 2026-11-30",
-          "url": "https://www.pubu.com.tw/",
           "is_new": false
         },
         {
@@ -248,20 +262,6 @@
           "period_text": "有效期限2026-10-23 ~ 2026-11-23",
           "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1023-4",
           "is_new": false
-        },
-        {
-          "title": "幸福選擇題│心靈．成長主題展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-23 ~ 2026-11-23",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1023",
-          "is_new": false
-        },
-        {
-          "title": "你的名字。十週年│新海誠相關作品88折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-23 ~ 2026-11-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1023-2",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -283,53 +283,74 @@
       "error": null,
       "items": [
         {
+          "title": "11.7 ★尖端日★ 只有一天！",
+          "subtitle": "精選作品限時6折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/spp20261107",
+          "is_new": true
+        },
+        {
+          "title": "《四疊半宿舍，青春迷走》",
+          "subtitle": "11.7-11.13 限時特價99元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/243325",
+          "is_new": true
+        },
+        {
+          "title": "《附身》新書上市",
+          "subtitle": "11.6-12.6 單書88折、雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/apexpress_261106",
+          "is_new": true
+        },
+        {
           "title": "青春豬頭少年不會夢到親愛好朋友",
           "subtitle": "電影書架免費領，原作限時85折",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261106_seishunbutayaroumovies",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《在山茶花盛開之前》新書上市",
           "subtitle": "10.31-11.30 單書88折、雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/ryefield_261105",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "積木文化《哥吉拉制霸七十年》",
           "subtitle": "11.6-12.5 單書88折、雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/godzilla",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "遠流11月精選新書",
           "subtitle": "11.6-12.6 新書各享85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/YLib1106",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.6 逗點《化身博士》",
           "subtitle": "首月優惠單書85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312909",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.6-12.6 中小學生讀物選介書展",
           "subtitle": "消費滿299元，領卷現折20元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/udn261106/9830",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.6-11.19 日文書 講談社寫真展",
           "subtitle": "人氣寫真下殺3折起🔥",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kodansha20261106/9780",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《我又不是外人》新書上市85折",
