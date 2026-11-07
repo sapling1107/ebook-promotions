@@ -1,12 +1,9 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-07T05:26+08:00",
-  "has_new_items": true,
-  "new_platforms": [
-    "Pubu",
-    "BookWalker"
-  ],
+  "updated_at": "2026-11-08T04:09+08:00",
+  "has_new_items": false,
+  "new_platforms": [],
   "platforms": [
     {
       "platform": "Pubu",
@@ -23,7 +20,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-06 ~ 2027-02-28",
           "url": "https://www.pubu.com.tw/campaign/event/Openbook2026",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "雙11超省優惠 不限本數75折起",
@@ -37,7 +34,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-06 ~ 2026-11-11",
           "url": "https://www.pubu.com.tw/campaign/bookfair/fx-fighter-kurumi-chan1105",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11月 每週一、二，指定兩本旅遊書 $99",
@@ -283,25 +280,18 @@
       "error": null,
       "items": [
         {
-          "title": "11.7 ★尖端日★ 只有一天！",
-          "subtitle": "精選作品限時6折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/spp20261107",
-          "is_new": true
-        },
-        {
           "title": "《四疊半宿舍，青春迷走》",
           "subtitle": "11.7-11.13 限時特價99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/243325",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《附身》新書上市",
           "subtitle": "11.6-12.6 單書88折、雙書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/apexpress_261106",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "青春豬頭少年不會夢到親愛好朋友",
