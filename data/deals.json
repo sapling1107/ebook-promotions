@@ -1,9 +1,12 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-08T04:09+08:00",
-  "has_new_items": false,
-  "new_platforms": [],
+  "updated_at": "2026-11-09T04:24+08:00",
+  "has_new_items": true,
+  "new_platforms": [
+    "Pubu",
+    "BookWalker"
+  ],
   "platforms": [
     {
       "platform": "Pubu",
@@ -15,6 +18,13 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "崔康祿的料理人生雙書│單本88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-09 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/crown1109",
+          "is_new": true
+        },
         {
           "title": "2026 Openbook 好書獎入圍書展",
           "subtitle": null,
@@ -280,11 +290,46 @@
       "error": null,
       "items": [
         {
+          "title": "全年最低！雙11領券最低59折！",
+          "subtitle": "全館69折起，領券最高現折750元",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261109_1112_bw",
+          "is_new": true
+        },
+        {
           "title": "《四疊半宿舍，青春迷走》",
           "subtitle": "11.7-11.13 限時特價99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/243325",
           "is_new": false
+        },
+        {
+          "title": "連載館週年慶 2張優惠券任選",
+          "subtitle": "首週雙十一加碼 精選作品9元",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261109_bwserial",
+          "is_new": true
+        },
+        {
+          "title": "11.9-11.22 集英社話題寫真展7折",
+          "subtitle": "超人氣聲優、演員、偶像集結",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/Shueisha261109/9784",
+          "is_new": true
+        },
+        {
+          "title": "11.9-11.22 收藏心動瞬間！",
+          "subtitle": "小學館日文寫真5折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/Shogakukan261109/9781",
+          "is_new": true
+        },
+        {
+          "title": "劇場版 來自深淵 覺醒的神祕",
+          "subtitle": "多項優惠立即前往",
+          "period_text": null,
+          "url": "https://cp.bookwalker.com.tw/event/2026/20261109_madeinabyssmovie",
+          "is_new": true
         },
         {
           "title": "《附身》新書上市",
@@ -714,27 +759,6 @@
           "is_new": false
         },
         {
-          "title": "《皇后之碧》新書上市",
-          "subtitle": "10.9-11.8 單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/apexpress_20261009",
-          "is_new": false
-        },
-        {
-          "title": "《就算名偵探們告別了》",
-          "subtitle": "10.9-11.8 單書88折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/apexpress_261009",
-          "is_new": false
-        },
-        {
-          "title": "《貓又與大叔的幸福早餐4》",
-          "subtitle": "10.9-11.8 延伸書展85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/marcopolo_261009",
-          "is_new": false
-        },
-        {
           "title": "JEAL阿柩《BAIT THE BETA》",
           "subtitle": "ABO X 男鬼攻 X 不良受",
           "period_text": null,
@@ -742,31 +766,10 @@
           "is_new": false
         },
         {
-          "title": "買《瑪格梅爾深海水族館》送桌布",
-          "subtitle": "10.8-11.8 精選書籍最低66折起！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/skyhighpress_20261008",
-          "is_new": false
-        },
-        {
           "title": "B☆W．朧月．三日月",
           "subtitle": "10.7-11.30 全書系79折起",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/globallight_20261007",
-          "is_new": false
-        },
-        {
-          "title": "日文書 白夜書房新刊上架",
-          "subtitle": "💞 尋找你的心動寫真 💞",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=1275&order=sell_desc",
-          "is_new": false
-        },
-        {
-          "title": "日文書 扶桑社寫真新刊上架",
-          "subtitle": "立即收藏火辣新刊❤️‍🔥",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=690&order=sell_desc",
           "is_new": false
         },
         {
