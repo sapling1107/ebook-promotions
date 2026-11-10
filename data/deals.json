@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-09T04:24+08:00",
+  "updated_at": "2026-11-10T08:09+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,11 +19,32 @@
       "error": null,
       "items": [
         {
+          "title": "雙11單日限定│圓神熱銷作有聲書69折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-10 ~ 2026-11-11",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/booklife1111",
+          "is_new": true
+        },
+        {
+          "title": "夢想拼盤圖文書展│台灣角川療癒作85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-10 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1110",
+          "is_new": true
+        },
+        {
+          "title": "微光人生：普立茲小說奬得主短篇小說集",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-09 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/ebook/707119",
+          "is_new": true
+        },
+        {
           "title": "崔康祿的料理人生雙書│單本88折",
           "subtitle": null,
           "period_text": "有效期限2026-11-09 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/crown1109",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "2026 Openbook 好書獎入圍書展",
@@ -248,27 +269,6 @@
           "period_text": "有效期限2026-10-27 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/crown1027b",
           "is_new": false
-        },
-        {
-          "title": "村上龍 經典作品回顧",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-26 ~ 2026-11-30",
-          "url": "https://www.pubu.com.tw/search?condition=fl_ahr%3D%E6%9D%91%E4%B8%8A%E9%BE%8D",
-          "is_new": false
-        },
-        {
-          "title": "次元交會⚔️：熱門動畫化原作展85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-23 ~ 2026-11-12",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1023-1",
-          "is_new": false
-        },
-        {
-          "title": "漫畫讀兵法│軍事．模型主題展88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-23 ~ 2026-11-23",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1023-4",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -294,6 +294,20 @@
           "subtitle": "全館69折起，領券最高現折750元",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261109_1112_bw",
+          "is_new": false
+        },
+        {
+          "title": "夢想拼盤 圖文書展",
+          "subtitle": "精選作品85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kadokawa20261110/9866",
+          "is_new": true
+        },
+        {
+          "title": "BookLive-シガリロ BL主題書展",
+          "subtitle": "最低5折起！滿額再送書架",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/2026BookLive/9837?series_display=1",
           "is_new": true
         },
         {
@@ -308,28 +322,28 @@
           "subtitle": "首週雙十一加碼 精選作品9元",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261109_bwserial",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.9-11.22 集英社話題寫真展7折",
           "subtitle": "超人氣聲優、演員、偶像集結",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Shueisha261109/9784",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.9-11.22 收藏心動瞬間！",
           "subtitle": "小學館日文寫真5折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Shogakukan261109/9781",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "劇場版 來自深淵 覺醒的神祕",
           "subtitle": "多項優惠立即前往",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261109_madeinabyssmovie",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《附身》新書上市",
@@ -756,13 +770,6 @@
           "subtitle": "10.12-11.30 單本88折，二本85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gobooks_261012",
-          "is_new": false
-        },
-        {
-          "title": "JEAL阿柩《BAIT THE BETA》",
-          "subtitle": "ABO X 男鬼攻 X 不良受",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/search?v=1571&series_display=1",
           "is_new": false
         },
         {
