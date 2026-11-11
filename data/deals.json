@@ -1,11 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-11T05:46+08:00",
+  "updated_at": "2026-11-12T06:37+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -19,18 +18,32 @@
       "error": null,
       "items": [
         {
+          "title": "秋閱祭 | 全館3本75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-12 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/",
+          "is_new": false
+        },
+        {
+          "title": "Pubook Mobile 送週邊配件",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-12 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/event/pubook",
+          "is_new": false
+        },
+        {
           "title": "貴志祐介《惡之教典》│30週年版85折起",
           "subtitle": null,
           "period_text": "有效期限2026-11-11 ~ 2026-12-11",
           "url": "https://www.pubu.com.tw/campaign/bookfair/lessonoftheevil",
-          "is_new": true
+          "is_new": false
         },
         {
-          "title": "雙11單日限定│圓神熱銷作有聲書69折",
+          "title": "Pubook Mobile 一日快閃",
           "subtitle": null,
-          "period_text": "有效期限2026-11-10 ~ 2026-11-11",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/booklife1111",
-          "is_new": false
+          "period_text": "有效期限2026-11-11 ~ 2026-11-12",
+          "url": "https://www.pubu.com.tw/campaign/event/content/629194",
+          "is_new": true
         },
         {
           "title": "夢想拼盤圖文書展│台灣角川療癒作85折",
@@ -61,20 +74,6 @@
           "is_new": false
         },
         {
-          "title": "雙11超省優惠 不限本數75折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-06 ~ 2026-11-11",
-          "url": "https://www.pubu.com.tw/",
-          "is_new": false
-        },
-        {
-          "title": "《fx戰士久留美》專區限時特價",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-06 ~ 2026-11-11",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/fx-fighter-kurumi-chan1105",
-          "is_new": false
-        },
-        {
           "title": "11月 每週一、二，指定兩本旅遊書 $99",
           "subtitle": null,
           "period_text": "有效期限2026-11-05 ~ 2026-11-30",
@@ -100,13 +99,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-04 ~ 2026-11-17",
           "url": "https://www.pubu.com.tw/campaign/bookfair/chin-wen1104",
-          "is_new": false
-        },
-        {
-          "title": "Pubook Mobile 雙11限時優惠",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-02 ~ 2026-11-11",
-          "url": "https://www.pubu.com.tw/campaign/event/pubook",
           "is_new": false
         },
         {
@@ -294,21 +286,14 @@
           "subtitle": "88折+活動限定贈品！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/linyo261111",
-          "is_new": true
-        },
-        {
-          "title": "雙11限定有聲書一日69折",
-          "subtitle": "只有一天！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/booklife_1111/9868",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.11 新經典文化《惡之教典》",
           "subtitle": "系列單書88折、套書85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Lessonoftheevil261111",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "夢想拼盤 圖文書展",
@@ -329,7 +314,7 @@
           "subtitle": "11/11-12/10 新書上市88折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312997",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《四疊半宿舍，青春迷走》",
