@@ -1,11 +1,10 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-13T06:11+08:00",
+  "updated_at": "2026-11-14T05:55+08:00",
   "has_new_items": true,
   "new_platforms": [
-    "Pubu",
-    "BookWalker"
+    "Pubu"
   ],
   "platforms": [
     {
@@ -19,25 +18,32 @@
       "error": null,
       "items": [
         {
+          "title": "被選中的故事，等你召喚│得獎輕小說85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-13 ~ 2026-12-03",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa-award1113",
+          "is_new": true
+        },
+        {
           "title": "探索生活的各種未知│生活靈感展88折",
           "subtitle": null,
           "period_text": "有效期限2026-11-13 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1113a-2",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "放飛煩惱，放鬆自己│療癒放鬆展88折",
           "subtitle": null,
           "period_text": "有效期限2026-11-13 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1113b",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "韓漫《代號：安娜塔西亞》1│購買即贈書卡",
           "subtitle": null,
           "period_text": "有效期限2026-11-13 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1113",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook Mobile 雙11限時優惠",
@@ -58,14 +64,14 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-12 ~ 2026-11-16",
           "url": "https://www.pubu.com.tw/ebook/645300",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook 2 Pro 雙11超省優惠！",
           "subtitle": null,
           "period_text": "有效期限2026-11-12 ~ 2026-11-16",
           "url": "https://www.pubu.com.tw/campaign/event/content/583943",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "貴志祐介《惡之教典》│30週年版85折起",
@@ -150,6 +156,20 @@
           "period_text": "有效期限2026-11-02 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/crown1102a",
           "is_new": false
+        },
+        {
+          "title": "時間不夠用？先減掉八成雜事：不加班也能升職的高效工作法",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/bookbuffet/ebook/687002",
+          "is_new": true
+        },
+        {
+          "title": "枡野俊明給小學生的39堂情緒素養課",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/bookbuffet/ebook/687000",
+          "is_new": true
         },
         {
           "title": "202611飽讀新書推薦",
@@ -241,27 +261,6 @@
           "period_text": "有效期限2026-10-30 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/aquarius1030",
           "is_new": false
-        },
-        {
-          "title": "大牌×一起來×新樂園全書系展│單書88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/streamer-lifecometogether-nutopia1030",
-          "is_new": false
-        },
-        {
-          "title": "時報出版精選書展│單書85折＋99元書單",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/readingtimes1030",
-          "is_new": false
-        },
-        {
-          "title": "三采文化暢銷書展│單書88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/suncolor1030",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -287,7 +286,7 @@
           "subtitle": "參展作品85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kadokawa20261113/9881?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《先交往，再戀愛》完結活動",
@@ -322,13 +321,6 @@
           "subtitle": "11/11-12/10 新書上市88折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/312997",
-          "is_new": false
-        },
-        {
-          "title": "《四疊半宿舍，青春迷走》",
-          "subtitle": "11.7-11.13 限時特價99元！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/243325",
           "is_new": false
         },
         {
@@ -794,11 +786,96 @@
       "url": "https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale",
       "mode": "partial",
       "note": "指定活動頁摘要，只擷取明確的活動標題連結",
-      "page_title": null,
-      "status": "http_error",
-      "http_status": 403,
-      "error": "requests: 403 Client Error: Forbidden for url: https://www.kobo.com/tw/zh/p/tw-publicationpicks-wkdsale; Playwright fallback: Kobo Playwright timeout after 30000ms",
-      "items": [],
+      "page_title": "[樂天Kobo]週末閱讀好時光，單筆滿$555 送樂天點數111點！詳情請見活動辦法 | Rakuten Kobo 台灣",
+      "status": "ok",
+      "http_status": 200,
+      "error": null,
+      "items": [
+        {
+          "title": "【天下雜誌】啟動職涯複利，投資自己，成就未來，單本85折，至12/3止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/wFJM4IJkdMfW-wjfKcZOWw",
+          "is_new": false
+        },
+        {
+          "title": "【漫遊者文化】告別以後，故事仍在繼續，單本85折，至12/1止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/P-KrBFKbscS0fgjfKPhxlw",
+          "is_new": false
+        },
+        {
+          "title": "【究竟出版】出版社推薦，單本85折，至11/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/3nVd2V38F8W39AjfKO_jNg",
+          "is_new": false
+        },
+        {
+          "title": "【天下文化】科學素養展，單本85折，至11/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/qfa0BFXLNcdAJAjfKBP3Gw",
+          "is_new": false
+        },
+        {
+          "title": "【積木文化】翻開生活速寫本 - 今天是哪一種時刻？，單本85折，至11/15止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/fIJmvqHGysn2tAjfKA5EVg",
+          "is_new": false
+        },
+        {
+          "title": "【商周出版】精選小說展，單本85折，至12/6止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/M0Gq1-JF0sYRuQjfKcb4Hw",
+          "is_new": false
+        },
+        {
+          "title": "【有理文化】誰正在製造臺灣及我們的記憶？單本85折，至11/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/ZAmII6G-mcU2bwjfOujEbw",
+          "is_new": false
+        },
+        {
+          "title": "【一卷出版】你不知道的中國與世界—看見真相．守護台灣，單本85折，至12/3止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/TxBnmbjA2cwEJQjfOMSOIg",
+          "is_new": false
+        },
+        {
+          "title": "【臉譜出版】出版社推薦，單本85折，至11/28止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/GD2MtIosBcdX7QjfKBEg6Q",
+          "is_new": false
+        },
+        {
+          "title": "【大塊文化】童書繪本展，單本85折，至11/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/Qa4tUUCTnM3DBgjfKOuzQg",
+          "is_new": false
+        },
+        {
+          "title": "【柿子文化】勇敢前行！就算路上很多怪獸......全書系，單本88折，至12/31止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/OtAUeAu-l8lwbgjfFKvlQg",
+          "is_new": false
+        },
+        {
+          "title": "【聯經出版】紅曦之下，歷史之間：讀懂國共勝敗、中共建國與權力的形成展，單本85折，至11/30止",
+          "subtitle": null,
+          "period_text": null,
+          "url": "https://www.kobo.com/tw/zh/list/publicationpicks-ebooks/-_GLrJI_m8tF0QjfPik1jQ",
+          "is_new": false
+        }
+      ],
       "extra_links": []
     },
     {
