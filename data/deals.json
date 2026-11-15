@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-15T04:38+08:00",
+  "updated_at": "2026-11-16T04:59+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,17 +19,24 @@
       "error": null,
       "items": [
         {
+          "title": "「真心不過期」主題展3本79折｜禾馬",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-16 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/homer1116",
+          "is_new": true
+        },
+        {
+          "title": "Pubook 翻頁筆 限時優惠",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-12 ~ 2026-11-16",
+          "url": "https://www.pubu.com.tw/ebook/645300",
+          "is_new": false
+        },
+        {
           "title": "娜歐米個展-華麗與腐朽│套書7折起",
           "subtitle": null,
           "period_text": "有效期限2026-11-15 ~ 2026-12-15",
           "url": "https://www.pubu.com.tw/campaign/event/lineanovel1115",
-          "is_new": true
-        },
-        {
-          "title": "Pubook 2 Pro 雙11超省優惠！",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-12 ~ 2026-11-16",
-          "url": "https://www.pubu.com.tw/campaign/event/content/583943",
           "is_new": false
         },
         {
@@ -72,13 +79,6 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-12 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/",
-          "is_new": false
-        },
-        {
-          "title": "Pubook 翻頁筆 限時優惠",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-12 ~ 2026-11-16",
-          "url": "https://www.pubu.com.tw/ebook/645300",
           "is_new": false
         },
         {
@@ -262,6 +262,13 @@
           "period_text": "有效期限2026-10-30 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/andbooks1030",
           "is_new": false
+        },
+        {
+          "title": "寶瓶文化全書系展│單書85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/aquarius1030",
+          "is_new": true
         }
       ],
       "extra_links": [
@@ -287,6 +294,13 @@
           "subtitle": "11/15-12/15 玩就送優惠券&獨家贈品",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261115_bwmangacafe",
+          "is_new": false
+        },
+        {
+          "title": "11.16-11.30 未來數位少年漫畫展",
+          "subtitle": "82折起，滿399元贈電腦桌布！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/Futuredigi261116/9867?series_display=1",
           "is_new": true
         },
         {
@@ -605,13 +619,6 @@
           "is_new": false
         },
         {
-          "title": "10.29-11.15 長鴻輕小說7折起",
-          "subtitle": "結帳滿699元贈獨家手機桌布！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/egmanga261029",
-          "is_new": false
-        },
-        {
           "title": "10.28-11.28《1633烈焰料羅》",
           "subtitle": "單書85折、雙書82折、套書79折",
           "period_text": null,
@@ -721,20 +728,6 @@
           "subtitle": "把難相處的人變成好合作的夥伴",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/311406",
-          "is_new": false
-        },
-        {
-          "title": "《僧侶與機器人》科幻大神書展",
-          "subtitle": "10.16-11.15 單書9折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/ffoundation_monkrobot",
-          "is_new": false
-        },
-        {
-          "title": "《餘燼冥之島》山德森延伸書展",
-          "subtitle": "10.16-11.15 單書9折，雙書85折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/ffoundation_emberdark",
           "is_new": false
         },
         {
