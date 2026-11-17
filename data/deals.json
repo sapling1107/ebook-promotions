@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-16T04:59+08:00",
+  "updated_at": "2026-11-17T08:09+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,17 +19,17 @@
       "error": null,
       "items": [
         {
+          "title": "水泉《第N次狙擊3》│完結書展75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-17 ~ 2026-12-07",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1117",
+          "is_new": true
+        },
+        {
           "title": "「真心不過期」主題展3本79折｜禾馬",
           "subtitle": null,
           "period_text": "有效期限2026-11-16 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/homer1116",
-          "is_new": true
-        },
-        {
-          "title": "Pubook 翻頁筆 限時優惠",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-12 ~ 2026-11-16",
-          "url": "https://www.pubu.com.tw/ebook/645300",
           "is_new": false
         },
         {
@@ -262,13 +262,6 @@
           "period_text": "有效期限2026-10-30 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/bookfair/andbooks1030",
           "is_new": false
-        },
-        {
-          "title": "寶瓶文化全書系展│單書85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/aquarius1030",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -290,6 +283,13 @@
       "error": null,
       "items": [
         {
+          "title": "11/17 一日全館75折起",
+          "subtitle": "快閃補書行動開始",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
+          "is_new": true
+        },
+        {
           "title": "歡迎來到B☆W漫畫喫茶店",
           "subtitle": "11/15-12/15 玩就送優惠券&獨家贈品",
           "period_text": null,
@@ -301,7 +301,7 @@
           "subtitle": "82折起，滿399元贈電腦桌布！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/Futuredigi261116/9867?series_display=1",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "台灣角川✡輕小說得獎作品展",
