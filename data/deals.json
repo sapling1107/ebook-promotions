@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-17T08:09+08:00",
+  "updated_at": "2026-11-18T07:27+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,11 +19,25 @@
       "error": null,
       "items": [
         {
+          "title": "《沙丘》電影書衣珍藏版│套書75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-18 ~ 2027-01-03",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/commonmasterpress1118",
+          "is_new": true
+        },
+        {
+          "title": "圖書館員｜雪麗．湯瑪斯推理書展85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-18 ~ 2026-12-18",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/gaeabooks1118",
+          "is_new": true
+        },
+        {
           "title": "水泉《第N次狙擊3》│完結書展75折起",
           "subtitle": null,
           "period_text": "有效期限2026-11-17 ~ 2026-12-07",
           "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1117",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "「真心不過期」主題展3本79折｜禾馬",
@@ -138,13 +152,6 @@
           "is_new": false
         },
         {
-          "title": "花開之時戀上妳│青文百合書展85折起",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-04 ~ 2026-11-17",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/chin-wen1104",
-          "is_new": false
-        },
-        {
           "title": "《我的完美葬禮》│漫遊者韓、日小說85折",
           "subtitle": null,
           "period_text": "有效期限2026-11-02 ~ 2026-12-01",
@@ -255,13 +262,6 @@
           "period_text": "有效期限2026-10-30 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/store/3662270/series/%E3%80%90%E5%B0%8F%E8%AA%AA%E3%80%91%E6%88%91%E5%9F%B9%E8%82%B2%E7%9A%84S%E7%B4%9A%E5%80%91",
           "is_new": false
-        },
-        {
-          "title": "大雁文化全書系展│77折起+每週99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/andbooks1030",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -283,10 +283,24 @@
       "error": null,
       "items": [
         {
-          "title": "11/17 一日全館75折起",
-          "subtitle": "快閃補書行動開始",
+          "title": "《音色穿透漫漶域》新書上市",
+          "subtitle": "11.18-12.18 單書85折、雙書82折",
           "period_text": null,
-          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
+          "url": "https://www.bookwalker.com.tw/event/gaeabooks_20261118",
+          "is_new": true
+        },
+        {
+          "title": "雪麗．湯瑪斯新書《圖書館員》",
+          "subtitle": "11.18-12.18 單書85折、雙書82折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gaeabooks_261118",
+          "is_new": true
+        },
+        {
+          "title": "《專致讀者》新書上市85折",
+          "subtitle": "異種科幻毒瘤30年評論與類型記憶",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/313512",
           "is_new": true
         },
         {
@@ -455,13 +469,6 @@
           "subtitle": "滿額領券再折50元+限時套書優惠",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261104_isekai",
-          "is_new": false
-        },
-        {
-          "title": "青文出版&悅文社 百合書展",
-          "subtitle": "11.4-11.17 85折起",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/20261104gl",
           "is_new": false
         },
         {
@@ -714,20 +721,6 @@
           "subtitle": "上市首月，推薦雙書合購85折！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/aquarius_20261020/9712?detail=1",
-          "is_new": false
-        },
-        {
-          "title": "《今天雖然也有點軟爛》",
-          "subtitle": "但這是美好的一天",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/311405",
-          "is_new": false
-        },
-        {
-          "title": "《討人厭的同事圖鑑》",
-          "subtitle": "把難相處的人變成好合作的夥伴",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/product/311406",
           "is_new": false
         },
         {
