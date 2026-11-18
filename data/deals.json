@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-18T07:27+08:00",
+  "updated_at": "2026-11-19T06:55+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,10 +19,24 @@
       "error": null,
       "items": [
         {
-          "title": "《沙丘》電影書衣珍藏版│套書75折起",
+          "title": "無所畏懼│高寶勵志書展單本85折起",
           "subtitle": null,
-          "period_text": "有效期限2026-11-18 ~ 2027-01-03",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/commonmasterpress1118",
+          "period_text": "有效期限2026-11-19 ~ 2026-12-31",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/gobooks1119",
+          "is_new": true
+        },
+        {
+          "title": "Pubook Mobile x 《飢餓遊戲》$8390",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-18 ~ 2026-12-15",
+          "url": "https://www.pubu.com.tw/campaign/event/content/657366",
+          "is_new": true
+        },
+        {
+          "title": "飢餓遊戲前傳：黎明收割 優惠中",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-18 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/store/35/series/%E9%A3%A2%E9%A4%93%E9%81%8A%E6%88%B2",
           "is_new": true
         },
         {
@@ -30,7 +44,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-18 ~ 2026-12-18",
           "url": "https://www.pubu.com.tw/campaign/bookfair/gaeabooks1118",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "水泉《第N次狙擊3》│完結書展75折起",
@@ -248,20 +262,6 @@
           "period_text": "有效期限2026-10-30 ~ 2026-12-13",
           "url": "https://www.pubu.com.tw/campaign/event/content/700662",
           "is_new": false
-        },
-        {
-          "title": "聯經出版全書系展│單書85折＋每日99另推",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/linking1030",
-          "is_new": false
-        },
-        {
-          "title": "我培育的S級們│全系列88折、4本再享8折",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-11-30",
-          "url": "https://www.pubu.com.tw/store/3662270/series/%E3%80%90%E5%B0%8F%E8%AA%AA%E3%80%91%E6%88%91%E5%9F%B9%E8%82%B2%E7%9A%84S%E7%B4%9A%E5%80%91",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -283,25 +283,32 @@
       "error": null,
       "items": [
         {
+          "title": "11.19-12.31《無所畏懼》",
+          "subtitle": "勵志書展單本88折、二本85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/gobooks_20261119",
+          "is_new": true
+        },
+        {
           "title": "《音色穿透漫漶域》新書上市",
           "subtitle": "11.18-12.18 單書85折、雙書82折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_20261118",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "雪麗．湯瑪斯新書《圖書館員》",
           "subtitle": "11.18-12.18 單書85折、雙書82折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_261118",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《專致讀者》新書上市85折",
           "subtitle": "異種科幻毒瘤30年評論與類型記憶",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/313512",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "歡迎來到B☆W漫畫喫茶店",
