@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-19T06:55+08:00",
+  "updated_at": "2026-11-20T07:00+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -19,25 +19,53 @@
       "error": null,
       "items": [
         {
+          "title": "11月次元交會⚔️：熱門動畫原作展85折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-20 ~ 2026-12-10",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/kadokawa1120",
+          "is_new": true
+        },
+        {
+          "title": "閱讀打造更好的自己│自我成長展88折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-20 ~ 2026-12-20",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/maplebook1120",
+          "is_new": true
+        },
+        {
+          "title": "愚者之夜｜動畫上映歡慶77折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-20 ~ 2026-12-11",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/spp1120-2",
+          "is_new": true
+        },
+        {
+          "title": "事業、感情、黃賭毒│尖端成人話題展79折",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-20 ~ 2026-12-09",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/spp1120-1",
+          "is_new": true
+        },
+        {
           "title": "無所畏懼│高寶勵志書展單本85折起",
           "subtitle": null,
           "period_text": "有效期限2026-11-19 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/bookfair/gobooks1119",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "Pubook Mobile x 《飢餓遊戲》$8390",
           "subtitle": null,
           "period_text": "有效期限2026-11-18 ~ 2026-12-15",
           "url": "https://www.pubu.com.tw/campaign/event/content/657366",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "飢餓遊戲前傳：黎明收割 優惠中",
           "subtitle": null,
           "period_text": "有效期限2026-11-18 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/store/35/series/%E9%A3%A2%E9%A4%93%E9%81%8A%E6%88%B2",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "圖書館員｜雪麗．湯瑪斯推理書展85折",
@@ -187,6 +215,13 @@
           "is_new": false
         },
         {
+          "title": "Pubook Pro 即將完售",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-01 ~ 2026-12-31",
+          "url": "https://www.pubu.com.tw/ebook/594118",
+          "is_new": true
+        },
+        {
           "title": "時間不夠用？先減掉八成雜事：不加班也能升職的高效工作法",
           "subtitle": null,
           "period_text": "有效期限2026-11-01 ~ 2026-11-30",
@@ -227,41 +262,6 @@
           "period_text": "有效期限2026-11-01 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/bookfair/locus1101",
           "is_new": false
-        },
-        {
-          "title": "菁品文化20週年│全書系單本99元",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-01 ~ 2026-12-01",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/jingpin1101",
-          "is_new": false
-        },
-        {
-          "title": "11月名家 若木民喜 | 尖端每月推薦",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/sppartist1101",
-          "is_new": false
-        },
-        {
-          "title": "獨步文化全書系展│單書88折",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-01 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/apexpress1101",
-          "is_new": false
-        },
-        {
-          "title": "洋流誌",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-11-27",
-          "url": "https://www.pubu.com.tw/store/5612088",
-          "is_new": false
-        },
-        {
-          "title": "聯經出版電子書｜10/30 - 12/13 每日99推薦",
-          "subtitle": null,
-          "period_text": "有效期限2026-10-30 ~ 2026-12-13",
-          "url": "https://www.pubu.com.tw/campaign/event/content/700662",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -283,11 +283,46 @@
       "error": null,
       "items": [
         {
+          "title": "歡慶《愚者之夜》動畫播映！",
+          "subtitle": "系列作品限時77折起",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/20261120_spp_foolinght/9889",
+          "is_new": true
+        },
+        {
+          "title": "尖端 成人話題展",
+          "subtitle": "精選漫畫79折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/20261120_spp_r18",
+          "is_new": true
+        },
+        {
+          "title": "《皎潔深宵之月》真人版電影上映",
+          "subtitle": "12/3前 期間限定套書8折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/311748",
+          "is_new": true
+        },
+        {
+          "title": "11.20-12.3 ジーオーティー",
+          "subtitle": "★ 超人氣寫真7折 ★",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/GOT261120/9882",
+          "is_new": true
+        },
+        {
+          "title": "台灣角川熱門動畫化原作展",
+          "subtitle": "參展作品85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/kadokawa20261120/9898?series_display=1",
+          "is_new": true
+        },
+        {
           "title": "11.19-12.31《無所畏懼》",
           "subtitle": "勵志書展單本88折、二本85折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gobooks_20261119",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《音色穿透漫漶域》新書上市",
@@ -441,13 +476,6 @@
           "subtitle": "消費滿299元，領卷現折20元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/udn261106/9830",
-          "is_new": false
-        },
-        {
-          "title": "11.6-11.19 日文書 講談社寫真展",
-          "subtitle": "人氣寫真下殺3折起🔥",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/kodansha20261106/9780",
           "is_new": false
         },
         {
@@ -714,13 +742,6 @@
           "subtitle": "單書85折、雙書82折、套書79折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/gaeabooks_261021",
-          "is_new": false
-        },
-        {
-          "title": "fromRED 5週年紀念活動",
-          "subtitle": "滿390元就送小卡組！",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/2026fromred",
           "is_new": false
         },
         {
