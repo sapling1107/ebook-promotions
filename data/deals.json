@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-23T05:41+08:00",
+  "updated_at": "2026-11-24T10:51+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -23,7 +23,7 @@
           "subtitle": null,
           "period_text": "有效期限2026-11-23 ~ 2026-12-31",
           "url": "https://www.pubu.com.tw/campaign/bookfair/ryoritaiwan1123",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11月次元交會⚔️：熱門動畫原作展85折",
@@ -73,6 +73,13 @@
           "period_text": "有效期限2026-11-18 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/store/35/series/%E9%A3%A2%E9%A4%93%E9%81%8A%E6%88%B2",
           "is_new": false
+        },
+        {
+          "title": "《沙丘》電影書衣珍藏版│套書75折起",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-18 ~ 2027-01-03",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/commonmasterpress1118",
+          "is_new": true
         },
         {
           "title": "圖書館員｜雪麗．湯瑪斯推理書展85折",
@@ -262,13 +269,6 @@
           "period_text": "有效期限2026-11-01 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/bookfair/udn1101",
           "is_new": false
-        },
-        {
-          "title": "大塊文化30周年慶│全書系85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-01 ~ 2026-12-31",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/locus1101",
-          "is_new": true
         }
       ],
       "extra_links": [
@@ -290,15 +290,22 @@
       "error": null,
       "items": [
         {
-          "title": "📣 全館82折、點數15~20倍",
-          "subtitle": "滿額輸入指定優惠碼現折50元",
+          "title": "《怪島奇譚》連載第9回",
+          "subtitle": "11.24-11.30 上市首週限時0元！",
           "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/BW261122",
-          "is_new": false
+          "url": "https://www.bookwalker.com.tw/product/314048",
+          "is_new": true
+        },
+        {
+          "title": "むじもり 老師BL新書上架！",
+          "subtitle": "天然呆後輩×傲嬌美男",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/314294",
+          "is_new": true
         },
         {
           "title": "楓書坊【擺脫負擔，放鬆身心靈！】",
-          "subtitle": "11.21-12.21 新書精選書展｜單書85折、雙書8折",
+          "subtitle": "11.21-12.21 單書85折、雙書8折",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/maplebook1121",
           "is_new": false
@@ -308,21 +315,21 @@
           "subtitle": "立即收藏最新寫真✨",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=1275&order=sell_desc",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "集英社：日文寫真新刊上架",
           "subtitle": "心動美圖不錯過，立即入手💕",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?v=259&order=sell_desc",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "療癒提案：給生活一點新靈感",
           "subtitle": "詩集散文 × 哲學心靈主題書展",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/BW261123heal",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "歡慶《愚者之夜》動畫播映！",
@@ -343,7 +350,7 @@
           "subtitle": "指定作品送書架、書卡",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/myacg20261123",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《皎潔深宵之月》真人版電影上映",
