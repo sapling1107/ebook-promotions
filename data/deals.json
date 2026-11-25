@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-24T10:51+08:00",
+  "updated_at": "2026-11-25T08:33+08:00",
   "has_new_items": true,
   "new_platforms": [
     "Pubu",
@@ -18,6 +18,20 @@
       "http_status": 200,
       "error": null,
       "items": [
+        {
+          "title": "文科生1–6集｜系列單書82折・套書上市首三日999元",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-25 ~ 2026-12-31",
+          "url": "https://www.pubu.com.tw/campaign/bookfair/azothbooks1125",
+          "is_new": true
+        },
+        {
+          "title": "飢餓遊戲前傳：黎明收割 優惠中",
+          "subtitle": null,
+          "period_text": "有效期限2026-11-18 ~ 2026-11-30",
+          "url": "https://www.pubu.com.tw/store/35/series/%E9%A3%A2%E9%A4%93%E9%81%8A%E6%88%B2",
+          "is_new": false
+        },
         {
           "title": "首屆食冊獎｜主廚推薦飲食書籍指南",
           "subtitle": null,
@@ -68,18 +82,11 @@
           "is_new": false
         },
         {
-          "title": "飢餓遊戲前傳：黎明收割 優惠中",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-18 ~ 2026-11-30",
-          "url": "https://www.pubu.com.tw/store/35/series/%E9%A3%A2%E9%A4%93%E9%81%8A%E6%88%B2",
-          "is_new": false
-        },
-        {
           "title": "《沙丘》電影書衣珍藏版│套書75折起",
           "subtitle": null,
           "period_text": "有效期限2026-11-18 ~ 2027-01-03",
           "url": "https://www.pubu.com.tw/campaign/bookfair/commonmasterpress1118",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "圖書館員｜雪麗．湯瑪斯推理書展85折",
@@ -255,20 +262,6 @@
           "period_text": "有效期限2026-11-01 ~ 2026-11-30",
           "url": "https://www.pubu.com.tw/campaign/event/content/145022",
           "is_new": false
-        },
-        {
-          "title": "當快樂變成病毒？尼爾舒斯特曼作品95折",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/omnibook1101",
-          "is_new": false
-        },
-        {
-          "title": "逆天改命的商王傳奇│聯合書展單本85折",
-          "subtitle": null,
-          "period_text": "有效期限2026-11-01 ~ 2026-11-30",
-          "url": "https://www.pubu.com.tw/campaign/bookfair/udn1101",
-          "is_new": false
         }
       ],
       "extra_links": [
@@ -290,18 +283,39 @@
       "error": null,
       "items": [
         {
+          "title": "城邦1月版權到期書展",
+          "subtitle": "1/31前特價最低99元！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/cite_202701",
+          "is_new": true
+        },
+        {
+          "title": "悅文社精選同人誌75折！",
+          "subtitle": "11.25-12.15 限時優惠中",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/20261125_doujinsi",
+          "is_new": true
+        },
+        {
+          "title": "11.25-12.23 MTEX AV寫真的寶庫",
+          "subtitle": "上架紀念寫真展69折起！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/MTEX261125/9890",
+          "is_new": true
+        },
+        {
           "title": "《怪島奇譚》連載第9回",
           "subtitle": "11.24-11.30 上市首週限時0元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/314048",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "むじもり 老師BL新書上架！",
           "subtitle": "天然呆後輩×傲嬌美男",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/314294",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "楓書坊【擺脫負擔，放鬆身心靈！】",
@@ -542,13 +556,6 @@
           "is_new": false
         },
         {
-          "title": "異世界主題書展79折起！",
-          "subtitle": "滿額領券再折50元+限時套書優惠",
-          "period_text": null,
-          "url": "https://cp.bookwalker.com.tw/event/2026/20261104_isekai",
-          "is_new": false
-        },
-        {
           "title": "11.4-12.4 《蝴蝶家族》新書上市",
           "subtitle": "延伸書展單書88折，雙書82折",
           "period_text": null,
@@ -721,13 +728,6 @@
           "subtitle": "特價最低99元！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/cite_202612",
-          "is_new": false
-        },
-        {
-          "title": "今夜，鬼故事不散場",
-          "subtitle": "10.23-11.24 單本85折，2本8折",
-          "period_text": null,
-          "url": "https://www.bookwalker.com.tw/event/crescent_2026halloween",
           "is_new": false
         },
         {
