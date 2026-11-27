@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "parser_version": 3,
-  "updated_at": "2026-11-27T08:30+08:00",
+  "updated_at": "2026-11-28T07:59+08:00",
   "has_new_items": true,
   "new_platforms": [
     "BookWalker"
@@ -282,53 +282,88 @@
       "error": null,
       "items": [
         {
+          "title": "11.28-11.29 全館77折起",
+          "subtitle": "消費滿1,000元再9折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/leaderboard/month/index",
+          "is_new": true
+        },
+        {
+          "title": "《設計師一定要懂的基礎印刷學》",
+          "subtitle": "11.28-12.28 單書88折，雙書85折",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/event/cubepress_261128",
+          "is_new": true
+        },
+        {
+          "title": "《22趟自由式》新書上市85折",
+          "subtitle": "BookTok年度暢銷書獎",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/314707",
+          "is_new": true
+        },
+        {
+          "title": "《害怕活下去的人》新書85折",
+          "subtitle": "什麼樣的人，才算真正活著？",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/314710",
+          "is_new": true
+        },
+        {
+          "title": "《你真的有看見自己的價值嗎？》",
+          "subtitle": "你的價值，再也不打折！",
+          "period_text": null,
+          "url": "https://www.bookwalker.com.tw/product/314708",
+          "is_new": true
+        },
+        {
           "title": "台灣角川．精選講談社作品",
           "subtitle": "85折 再送電子書卡",
           "period_text": null,
           "url": "https://cp.bookwalker.com.tw/event/2026/20261127_kadokawa",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《Toby King 托比王 2》新書上市",
           "subtitle": "金漫獎年度漫畫獎續集上市！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/314517",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《覺知你已死亡》新書上市88折",
           "subtitle": "去活著，也死去──且不留遺憾",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/314383",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《錯置的靈魂》新書上市",
           "subtitle": "不正常戀愛與非常規命案",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/314436",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《萬節不復》系列新書上市",
           "subtitle": "別人過節，他們過劫！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/search?series=14289",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《我在唐朝等嫁人》新書上市",
           "subtitle": null,
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/product/314437",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "11.27-12.10 講談社冬季寫真展 ➊",
           "subtitle": "人氣日文寫真7折起！",
           "period_text": null,
           "url": "https://www.bookwalker.com.tw/event/kodansha20261127/9949",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "《巴黎時間》新書上市85折",
